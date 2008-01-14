@@ -1,0 +1,1 @@
+<span class="project-header" tal:content="view/project_title" />
