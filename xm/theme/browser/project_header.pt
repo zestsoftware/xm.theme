@@ -1,1 +1,2 @@
-<span class="project-header" tal:content="view/project_title" />
+<h1 id="project-header"><a tal:attributes="href view/project_url"
+                              tal:content="view/project_title" /></h1>

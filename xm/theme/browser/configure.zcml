@@ -18,6 +18,15 @@
         class=".viewlets.ProjectHeader"
         permission="zope2.View"
         />
+        
+    <!-- The search box -->
+    <browser:viewlet
+        name="xm.searchbox"
+        manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+        class=".viewlets.XMSearchBoxViewlet"
+        permission="zope2.View" 
+        template="searchbox.pt"
+        />
 
 
     <!-- Zope 3 browser resources -->

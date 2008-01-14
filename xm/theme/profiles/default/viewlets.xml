@@ -4,13 +4,19 @@
  <order manager="plone.portalheader" skinname="eXtremeManagement">
   <viewlet name="plone.skip_links"/>
   <viewlet name="plone.site_actions"/>
-  <viewlet name="plone.searchbox"/>
+  <viewlet name="xm.searchbox"/>
   <viewlet name="xm.project_header"/>
   <viewlet name="plone.global_sections"/>
  </order>
 
  <hidden manager="plone.portalheader" skinname="eXtremeManagement">
-  <viewlet name="plone.logo" />
+  <viewlet name="plone.logo"/>
+  <viewlet name="plone.searchbox"/>
+ </hidden>
+ 
+ <hidden manager="plone.portalfooter" skinname="eXtremeManagement">
+  <viewlet name="plone.footer" />
+  <viewlet name="plone.colophon" />
  </hidden>
 
 </object>
