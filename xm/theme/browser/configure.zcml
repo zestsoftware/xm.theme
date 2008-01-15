@@ -10,12 +10,36 @@
         name="eXtremeManagement"
         />
 
+    <!-- Viewlets manager -->
+    <browser:viewletManager
+        name="xm.project_tabs_manager"
+        provides="xm.theme.browser.interfaces.IProjectTabsManager"
+        permission="zope2.View"
+        class="plone.app.viewletmanager.manager.OrderedViewletManager"
+        />
+
     <!-- Viewlets registration -->
     <browser:viewlet
         name="xm.project_header"
         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
         layer=".interfaces.IThemeSpecific"
         class=".viewlets.XMProjectHeaderViewlet"
+        permission="zope2.View"
+        />
+
+    <browser:viewlet
+        name="xm.project_tabs"
+        manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+        layer=".interfaces.IThemeSpecific"
+        class=".viewlets_project_tabs.XMProjectTabsViewlet"
+        permission="zope2.View"
+        />
+
+    <browser:viewlet
+        name="xm.project_tab_current"
+        manager="xm.theme.browser.interfaces.IProjectTabsManager"
+        layer=".interfaces.IThemeSpecific"
+        class=".viewlets_project_tabs.CurrentIterationViewlet"
         permission="zope2.View"
         />
 

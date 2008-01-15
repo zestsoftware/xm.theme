@@ -1,0 +1,10 @@
+<li id=""
+    class=""
+    tal:attributes="id string:portaltab-${view/title};
+                    class view/tab_class;">
+  <a href=""
+     class=""
+     tal:attributes="href view/url;
+                     class view/tab_class;"
+     tal:content="view/title" />
+</li>

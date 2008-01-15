@@ -6,14 +6,15 @@
   <viewlet name="plone.site_actions"/>
   <viewlet name="xm.searchbox"/>
   <viewlet name="xm.project_header"/>
-  <viewlet name="plone.global_sections"/>
+  <viewlet name="xm.project_tabs"/>
  </order>
 
  <hidden manager="plone.portalheader" skinname="eXtremeManagement">
   <viewlet name="plone.logo"/>
   <viewlet name="plone.searchbox"/>
+  <viewlet name="plone.global_sections"/>
  </hidden>
- 
+
  <hidden manager="plone.portalfooter" skinname="eXtremeManagement">
   <viewlet name="plone.footer" />
   <viewlet name="plone.colophon" />
