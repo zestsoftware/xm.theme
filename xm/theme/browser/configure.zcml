@@ -15,16 +15,16 @@
         name="xm.project_header"
         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
         layer=".interfaces.IThemeSpecific"
-        class=".viewlets.ProjectHeader"
+        class=".viewlets.XMProjectHeaderViewlet"
         permission="zope2.View"
         />
-        
+
     <!-- The search box -->
     <browser:viewlet
         name="xm.searchbox"
         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
         class=".viewlets.XMSearchBoxViewlet"
-        permission="zope2.View" 
+        permission="zope2.View"
         template="searchbox.pt"
         />
 

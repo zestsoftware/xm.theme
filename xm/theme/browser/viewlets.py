@@ -46,7 +46,7 @@ class XMPersonalBarViewlet(ViewletBase):
                 self.user_name = fullname
             else:
                 self.user_name = userid
-                
+
         # The above is the default personal_bar code
         pview = getMultiAdapter((self.context, self.request), name=u'myprojects')
         pbrains = pview.projectlist
@@ -58,9 +58,9 @@ class XMPersonalBarViewlet(ViewletBase):
         self.my_projects = projects
         if len(self.my_projects) > 1:
             self.has_projects = True
-        
 
-class ProjectHeader(ViewletBase):
+
+class XMProjectHeaderViewlet(ViewletBase):
     render = ViewPageTemplateFile('project_header.pt')
 
     def update(self):
@@ -69,7 +69,7 @@ class ProjectHeader(ViewletBase):
         self.portal_url = portal_state.portal_url()
         self.project_title = self._get_project_title()
         self.project_url = self._get_project_url()
-                                        
+
     def _get_project(self):
         try:
             project = self.context.getProject()
@@ -89,8 +89,8 @@ class ProjectHeader(ViewletBase):
         if project is not None:
             return project.absolute_url()
         else:
-            return self.portal_url        
-        
+            return self.portal_url
+
 
 class XMSearchBoxViewlet(ViewletBase):
     render = ViewPageTemplateFile('searchbox.pt')
