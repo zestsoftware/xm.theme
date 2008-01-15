@@ -5,6 +5,8 @@ from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from Products.CMFCore.utils import getToolByName
 from plone.app.layout.viewlets.common import ViewletBase
 
+from urllib import quote_plus
+
 
 class XMPersonalBarViewlet(ViewletBase):
     """ A view that returns a list of active projects, in addition to the
@@ -17,7 +19,8 @@ class XMPersonalBarViewlet(ViewletBase):
                                             name=u'plone_portal_state')
         context_state = getMultiAdapter((self.context, self.request),
                                         name=u'plone_context_state')
-        tools = getMultiAdapter((self.context, self.request), name=u'plone_tools')
+        tools = getMultiAdapter((self.context, self.request),
+                                name=u'plone_tools')
 
         sm = getSecurityManager()
 
@@ -35,10 +38,12 @@ class XMPersonalBarViewlet(ViewletBase):
             member = portal_state.member()
             userid = member.getId()
 
-            if sm.checkPermission('Portlets: Manage own portlets', self.context):
+            if sm.checkPermission('Portlets: Manage own portlets',
+                                  self.context):
                 self.homelink_url = self.portal_url + '/dashboard'
             else:
-                self.homelink_url = self.portal_url + '/author/' + quote_plus(userid)
+                self.homelink_url = self.portal_url + '/author/' + \
+                                    quote_plus(userid)
 
             member_info = tools.membership().getMemberInfo(member.getId())
             fullname = member_info.get('fullname', '')
@@ -48,7 +53,8 @@ class XMPersonalBarViewlet(ViewletBase):
                 self.user_name = userid
 
         # The above is the default personal_bar code
-        pview = getMultiAdapter((self.context, self.request), name=u'myprojects')
+        pview = getMultiAdapter((self.context, self.request),
+                                name=u'myprojects')
         pbrains = pview.projectlist
         projects = []
         for pbrain in pbrains:
@@ -56,6 +62,7 @@ class XMPersonalBarViewlet(ViewletBase):
                                  url = pbrain.getURL(),
                                  description = pbrain.Description))
         self.my_projects = projects
+        self.has_projects = False
         if len(self.my_projects) > 1:
             self.has_projects = True
 
@@ -104,7 +111,8 @@ class XMSearchBoxViewlet(ViewletBase):
         self.portal_url = portal_state.portal_url()
 
         props = getToolByName(self.context, 'portal_properties')
-        livesearch = props.site_properties.getProperty('enable_livesearch', False)
+        livesearch = props.site_properties.getProperty('enable_livesearch',
+                                                       False)
         if livesearch:
             self.search_input_id = "searchGadget"
         else:
