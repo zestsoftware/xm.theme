@@ -49,7 +49,7 @@
         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
         class=".viewlets.XMSearchBoxViewlet"
         permission="zope2.View"
-        template="searchbox.pt"
+        template="templates/searchbox.pt"
         />
 
 

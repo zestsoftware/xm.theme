@@ -12,7 +12,7 @@ class XMPersonalBarViewlet(ViewletBase):
     """ A view that returns a list of active projects, in addition to the
     default personal_bar.
     """
-    render = ViewPageTemplateFile('xm_personal_bar.pt')
+    render = ViewPageTemplateFile('templates/xm_personal_bar.pt')
 
     def update(self):
         portal_state = getMultiAdapter((self.context, self.request),
@@ -68,7 +68,7 @@ class XMPersonalBarViewlet(ViewletBase):
 
 
 class XMProjectHeaderViewlet(ViewletBase):
-    render = ViewPageTemplateFile('project_header.pt')
+    render = ViewPageTemplateFile('templates/project_header.pt')
 
     def update(self):
         portal_state = getMultiAdapter((self.context, self.request),
@@ -100,7 +100,7 @@ class XMProjectHeaderViewlet(ViewletBase):
 
 
 class XMSearchBoxViewlet(ViewletBase):
-    render = ViewPageTemplateFile('searchbox.pt')
+    render = ViewPageTemplateFile('templates/searchbox.pt')
 
     def update(self):
         portal_state = getMultiAdapter((self.context, self.request),
