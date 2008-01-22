@@ -1,0 +1,38 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: xm.theme 0.1\n"
+"POT-Creation-Date: 2008-01-22 16:09+0000\n"
+"PO-Revision-Date: 2008-01-22 16:59+0100\n"
+"Last-Translator: Mark van Lent <m.vanlent@zestsoftware.nl>\n"
+"Language-Team: Zest Software <info@zestsoftware.nl>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: nl\n"
+"Language-Name: Nederlands\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: xm.theme\n"
+"X-Is-Fallback-For: nl-be nl-nl\n"
+
+#: ./browser/viewlets_project_tabs.py:152
+msgid "Closed"
+msgstr "Afgesloten"
+
+#: ./browser/viewlets_project_tabs.py:93
+msgid "Current"
+msgstr "Huidig"
+
+#: ./browser/viewlets_project_tabs.py:56
+msgid "Example"
+msgstr "Voorbeeld"
+
+#: ./browser/viewlets_project_tabs.py:128
+msgid "Open"
+msgstr "Open"
+
+#. Default: "My Projects"
+#: ./browser/templates/xm_personal_bar.pt:23
+msgid "label_my_projects"
+msgstr "Mijn projecten"
+

@@ -3,6 +3,7 @@ from plone.memoize.view import memoize
 
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
+from xm.theme import xmMessageFactory as _
 
 TAB_SELECTED = u'selected'
 TAB_NORMAL = u'plain'
@@ -51,7 +52,7 @@ class ProjectTabsBaseViewlet(ViewletBase):
 
     @memoize
     def _get_title(self):
-        return u'Example'
+        return _(u'Example')
 
     @memoize
     def _get_url(self):
@@ -88,7 +89,7 @@ class CurrentIterationsViewlet(ProjectTabsBaseViewlet):
 
     @memoize
     def _get_title(self):
-        return u'Current'
+        return _(u'Current')
 
     @memoize
     def _get_items(self):
@@ -123,7 +124,7 @@ class OpenIterationsViewlet(CurrentIterationsViewlet):
 
     @memoize
     def _get_title(self):
-        return u'Open'
+        return _(u'Open')
 
     @memoize
     def _get_items(self):
@@ -147,7 +148,7 @@ class ClosedIterationsViewlet(CurrentIterationsViewlet):
 
     @memoize
     def _get_title(self):
-        return u'Closed'
+        return _(u'Closed')
 
     @memoize
     def _get_items(self):

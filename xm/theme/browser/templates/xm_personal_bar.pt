@@ -6,7 +6,7 @@
 <ul id="portal-personaltools"
     class="visualInline">
    <tal:block condition="not: view/anonymous">
-       <li><a 
+       <li><a
            id="user-name"
            tal:attributes="href view/homelink_url"
           ><img src="" tal:replace="structure here/user.gif" />
@@ -19,7 +19,10 @@
          <dl id="my_projects_menu" class="actionMenu deactivated"
              tal:condition="view/has_projects">
              <dt class="actionMenuHeader label-my-projects">
-               <a id="" href="#">My Projects <span class="arrowDownAlternative">&#9660;</span><a/>
+               <a id="" href="#">
+                 <span i18n:domain="xm.theme"
+                       i18n:translate="label_my_projects">My Projects</span>
+                 <span class="arrowDownAlternative">&#9660;</span><a/>
             </dt>
              <dd class="actionMenuContent">
                <ul>
@@ -45,7 +48,7 @@
             <a href=""
                tal:attributes="href action/url;
                                class python:icon is not None and 'visualIconPadding' or nothing;"
-            ><tal:actionname i18n:translate="" 
+            ><tal:actionname i18n:translate=""
                              tal:content="action/title">dummy</tal:actionname
             ></a>
         </li>
