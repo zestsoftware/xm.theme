@@ -1,10 +1,33 @@
 <li id=""
     class=""
+    tal:condition="view/one_item"
     tal:attributes="id string:portaltab-${view/title};
                     class view/tab_class;">
   <a href=""
-     class=""
-     tal:attributes="href view/url;
-                     class view/tab_class;"
+     tal:attributes="href view/url;"
      tal:content="view/title" />
+</li>
+
+<li id=""
+    class=""
+    tal:condition="view/more_items"
+    tal:attributes="id string:portaltab-${view/title};
+                    class view/tab_class;">
+
+  <a href=""
+     tal:attributes="href view/url;"
+     tal:content="view/title" />
+  <ul>
+    <tal:actions repeat="item view/items">
+      <li id=""
+          class=""
+          tal:attributes="id string:portaltab-${view/title}-${item/id};
+                          class item/tab_class;">
+        <a href=""
+           tal:attributes="href item/url;"
+           tal:content="item/title">
+        </a>
+      </li>
+    </tal:actions>
+  </ul>
 </li>

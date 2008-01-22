@@ -1,5 +1,9 @@
 /* Stylesheet for the 'eXtremeManagement' Plone theme */
 
+h1#project-header {
+    border-style: none;
+}
+
 h1#project-header a {
     font-weight: bold;
     font-size: 200%;
@@ -24,3 +28,6 @@ h1#project-header a {
     display:block;
 }
 
+#portal-globalnav li.plain a {
+    background: transparent;
+}
