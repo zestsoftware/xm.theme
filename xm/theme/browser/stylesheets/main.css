@@ -35,7 +35,3 @@ h1#project-header a {
 .hide-tab-submenu ul {
     display: none;
  }
-
-.show-tab-submenu ul {
-    display: block;
- }
