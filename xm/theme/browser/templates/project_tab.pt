@@ -15,8 +15,10 @@
                     class string:${view/tab_class} tab-submenu hide-tab-submenu;">
 
   <a href=""
-     tal:attributes="href view/url;"
-     tal:content="view/title" />
+     tal:attributes="href view/url;">
+    <span tal:replace="view/title" />
+    <span class="arrowDownAlternative">&#9660;</span>
+  </a>
   <ul>
     <tal:actions repeat="item view/items">
       <li id=""
