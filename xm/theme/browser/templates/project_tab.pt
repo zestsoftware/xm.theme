@@ -24,7 +24,7 @@
       <li id=""
           class=""
           tal:attributes="id string:portaltab-${view/title}-${item/id};
-                          class $item/tab_class;">
+                          class item/tab_class;">
         <a href=""
            tal:attributes="href item/url;"
            tal:content="item/title">
