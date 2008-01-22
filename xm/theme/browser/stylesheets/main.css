@@ -28,10 +28,60 @@ h1#project-header a {
     display:block;
 }
 
+/* *** The Global Project tabs. *** */
+#project-globalnav {
+  background-color: transparent;
+  padding: 0em 0em 0em 2em;
+  white-space: nowrap;
+  list-style: none;
+  margin: 0;
+  height: auto;
+  line-height: normal;
+  position: relative;
+}
+
+#project-globalnav li {
+  display: inline;
+}
+
+#project-globalnav li a {
+  background-color: transparent;
+  border-color: #8CACBB;
+  border-width: 1px;
+  border-style: solid solid none solid;
+  height: auto;
+  margin-right: 0.5em;
+  padding: 0em 1.25em;
+  text-decoration: none;
+  text-transform: &dtml-textTransform;;
+}
+
+#project-globalnav li.selected a,
+#project-globalnav li a:hover {
+  background-color: #DEE7EC;
+  border: 1px solid #8CACBB;;
+  border-bottom: 1px solid #DEE7EC;
+}
+
 #portal-globalnav li.plain a {
-    background: transparent;
+  background: transparent;
+}
+
+/* Start submenu */
+.project-submenu {
+  position: absolute !important;
+}
+
+.project-submenu li.test {
+  margin: 0;
+  padding: 0 2px;
+  display: block;
+}
+
+.project-submenu li a {
+  border: none !important;
 }
 
 .hide-tab-submenu ul {
-    display: none;
- }
+  display: none;
+}
