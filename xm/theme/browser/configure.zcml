@@ -39,7 +39,23 @@
         name="xm.project_tab_current"
         manager="xm.theme.browser.interfaces.IProjectTabsManager"
         layer=".interfaces.IThemeSpecific"
-        class=".viewlets_project_tabs.CurrentIterationViewlet"
+        class=".viewlets_project_tabs.CurrentIterationsViewlet"
+        permission="zope2.View"
+        />
+
+    <browser:viewlet
+        name="xm.project_tab_open"
+        manager="xm.theme.browser.interfaces.IProjectTabsManager"
+        layer=".interfaces.IThemeSpecific"
+        class=".viewlets_project_tabs.OpenIterationsViewlet"
+        permission="zope2.View"
+        />
+
+    <browser:viewlet
+        name="xm.project_tab_closed"
+        manager="xm.theme.browser.interfaces.IProjectTabsManager"
+        layer=".interfaces.IThemeSpecific"
+        class=".viewlets_project_tabs.ClosedIterationsViewlet"
         permission="zope2.View"
         />
 
