@@ -12,7 +12,7 @@
     class=""
     tal:condition="view/more_items"
     tal:attributes="id string:portaltab-${view/title};
-                    class view/tab_class;">
+                    class string:${view/tab_class} tab-submenu hide-tab-submenu;">
 
   <a href=""
      tal:attributes="href view/url;"

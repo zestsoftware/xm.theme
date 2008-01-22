@@ -31,3 +31,11 @@ h1#project-header a {
 #portal-globalnav li.plain a {
     background: transparent;
 }
+
+.hide-tab-submenu ul {
+    display: none;
+ }
+
+.show-tab-submenu ul {
+    display: block;
+ }

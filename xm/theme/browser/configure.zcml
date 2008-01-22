@@ -85,4 +85,10 @@
         layer=".interfaces.IThemeSpecific"
         />
 
+    <!-- Create a resource for the KSS stylesheet -->
+    <browser:resource
+        name="xm.theme.kss"
+        file="xm_theme.kss"
+        />
+
 </configure>
