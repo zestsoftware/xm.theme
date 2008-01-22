@@ -9,6 +9,12 @@
   <viewlet name="xm.project_tabs"/>
  </order>
 
+ <order manager="xm.project_tabs_manager" skinname="eXtremeManagement">
+  <viewlet name="xm.project_tab_current"/>
+  <viewlet name="xm.project_tab_open"/>
+  <viewlet name="xm.project_tab_closed"/>
+ </order>
+
  <hidden manager="plone.portalheader" skinname="eXtremeManagement">
   <viewlet name="plone.logo"/>
   <viewlet name="plone.searchbox"/>
