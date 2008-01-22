@@ -1,19 +1,13 @@
 .tab-submenu:click {
-    action-client: log;
-    log-message: 'triggered .tab-submenu:click';
     evt-click-allowbubbling: True;
     action-client: toggleClass;
     toggleClass-value: hide-tab-submenu;
 }
 
 .tab-submenu a:click {
-   action-client: log;
-   log-message: 'triggered click on tab';
    evt-click-preventdefault: True;
 }
 
 .tab-submenu ul li a:click {
-    action-client: log;
-    log-message: 'clicked on ul a';
     evt-click-preventdefault: False;
 }
