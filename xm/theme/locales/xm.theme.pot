@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2008-01-23 10:53+0000\n"
+"POT-Creation-Date: 2008-01-23 14:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,39 +17,51 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: xm.theme\n"
 
-#: ./browser/viewlets_project_tabs.py:174
+#: ./browser/viewlets_project_tabs.py:282
+msgid "Attachment"
+msgstr ""
+
+#: ./browser/viewlets_project_tabs.py:280
+msgid "Attachments"
+msgstr ""
+
+#: ./browser/viewlets_project_tabs.py:198
 msgid "Closed"
 msgstr ""
 
-#: ./browser/viewlets_project_tabs.py:178
+#: ./browser/viewlets_project_tabs.py:203
 msgid "Closed iterations"
 msgstr ""
 
-#: ./browser/viewlets_project_tabs.py:101
+#: ./browser/viewlets_project_tabs.py:116
 msgid "Current"
 msgstr ""
 
-#: ./browser/viewlets_project_tabs.py:105
+#: ./browser/viewlets_project_tabs.py:121
 msgid "Current iterations"
 msgstr ""
 
-#: ./browser/viewlets_project_tabs.py:60
+#: ./browser/viewlets_project_tabs.py:65
 msgid "Example"
 msgstr ""
 
-#: ./browser/viewlets_project_tabs.py:64
+#: ./browser/viewlets_project_tabs.py:70
 msgid "Example tab"
 msgstr ""
 
-#: ./browser/viewlets_project_tabs.py:194
+#: ./browser/viewlets_project_tabs.py:224
+msgid "Offer"
+msgstr ""
+
+#: ./browser/viewlets_project_tabs.py:222
 msgid "Offers"
 msgstr ""
 
-#: ./browser/viewlets_project_tabs.py:154
+#: ./browser/viewlets_project_tabs.py:175
 msgid "Open"
 msgstr ""
 
-#: ./browser/viewlets_project_tabs.py:158
+#: ./browser/viewlets_project_tabs.py:180
 msgid "Open iterations"
 msgstr ""
 

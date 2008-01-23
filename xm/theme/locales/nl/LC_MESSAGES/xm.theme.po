@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: xm.theme 0.1\n"
-"POT-Creation-Date: 2008-01-23 10:53+0000\n"
-"PO-Revision-Date: 2008-01-23 11:52+0100\n"
+"POT-Creation-Date: 2008-01-23 14:11+0000\n"
+"PO-Revision-Date: 2008-01-23 15:11+0100\n"
 "Last-Translator: Mark van Lent <m.vanlent@zestsoftware.nl>\n"
 "Language-Team: Zest Software <info@zestsoftware.nl>\n"
 "MIME-Version: 1.0\n"
@@ -15,39 +15,51 @@ msgstr ""
 "Domain: xm.theme\n"
 "X-Is-Fallback-For: nl-be nl-nl\n"
 
-#: ./browser/viewlets_project_tabs.py:174
+#: ./browser/viewlets_project_tabs.py:282
+msgid "Attachment"
+msgstr "Bijlage"
+
+#: ./browser/viewlets_project_tabs.py:280
+msgid "Attachments"
+msgstr "Bijlagen"
+
+#: ./browser/viewlets_project_tabs.py:198
 msgid "Closed"
 msgstr "Afgesloten"
 
-#: ./browser/viewlets_project_tabs.py:178
+#: ./browser/viewlets_project_tabs.py:203
 msgid "Closed iterations"
 msgstr "Afgesloten iteraties"
 
-#: ./browser/viewlets_project_tabs.py:101
+#: ./browser/viewlets_project_tabs.py:116
 msgid "Current"
 msgstr "Lopend"
 
-#: ./browser/viewlets_project_tabs.py:105
+#: ./browser/viewlets_project_tabs.py:121
 msgid "Current iterations"
 msgstr "Lopende iteraties"
 
-#: ./browser/viewlets_project_tabs.py:60
+#: ./browser/viewlets_project_tabs.py:65
 msgid "Example"
 msgstr "Voorbeeld"
 
-#: ./browser/viewlets_project_tabs.py:64
+#: ./browser/viewlets_project_tabs.py:70
 msgid "Example tab"
 msgstr "Voorbeeld tab"
 
-#: ./browser/viewlets_project_tabs.py:194
+#: ./browser/viewlets_project_tabs.py:224
+msgid "Offer"
+msgstr "Offerte"
+
+#: ./browser/viewlets_project_tabs.py:222
 msgid "Offers"
 msgstr "Offertes"
 
-#: ./browser/viewlets_project_tabs.py:154
+#: ./browser/viewlets_project_tabs.py:175
 msgid "Open"
 msgstr "Open"
 
-#: ./browser/viewlets_project_tabs.py:158
+#: ./browser/viewlets_project_tabs.py:180
 msgid "Open iterations"
 msgstr "Open iteraties"
 

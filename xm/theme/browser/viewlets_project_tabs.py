@@ -5,9 +5,12 @@ from plone.app.layout.viewlets.common import ViewletBase
 from plone.memoize.view import memoize
 
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+from Products.CMFCore.utils import getToolByName
 
 from xm.theme import xmMessageFactory as _
 from Products.eXtremeManagement.interfaces import IXMOffer
+from Products.eXtremeManagement.interfaces import IXMIteration
+from Products.eXtremeManagement.interfaces import IXMProject
 
 TAB_SELECTED = u'selected'
 TAB_NORMAL = u''
@@ -215,7 +218,12 @@ class OffersViewlet(CurrentIterationsViewlet):
     @memoize
     def _get_title(self):
         """Return the title of the tab."""
-        return _(u'Offers')
+        if self._is_more():
+            return _(u'Offers')
+        elif self._is_single():
+            return _(u'Offer')
+        else:
+            return u''
 
     @memoize
     def _description(self):
@@ -257,6 +265,87 @@ class OffersViewlet(CurrentIterationsViewlet):
         selected_id = self._get_selected_offer()
         items = self._get_items()
         if selected_id in [offer['id'] for offer in items]:
+            return TAB_SELECTED
+        else:
+            return TAB_NORMAL
+
+
+class AttachmentsViewlet(ProjectTabsBaseViewlet):
+    """Viewlet for the attachments tab."""
+
+    @memoize
+    def _get_title(self):
+        """Return the title of the tab."""
+        if self._is_more():
+            return _(u'Attachments')
+        elif self._is_single():
+            return _(u'Attachment')
+        else:
+            return u''
+
+    @memoize
+    def _get_description(self):
+        """Return a description of the tab."""
+        if self._is_more():
+            return _(u'Attachments')
+        elif self._is_single():
+            items = self._get_items()
+            return u'"%s"' % items[0]['title']
+        else:
+            return u''
+
+    @memoize
+    def _get_items(self):
+        """Return the items for the tab."""
+        context = aq_inner(self.context)
+        project = self._get_project()
+        if not project:
+            return []
+        portal_props = getToolByName(self, 'portal_properties')
+        site_props = portal_props['site_properties']
+        view_types = site_props.typesUseViewActionInListings
+        project_view = project.restrictedTraverse('@@project')
+        attachmentbrains = project_view.attachments()
+        if not attachmentbrains:
+            return []
+        attachments = []
+        for brain in attachmentbrains:
+            url = brain.getURL()
+            tab_class = TAB_NORMAL
+            if url in context.absolute_url():
+                tab_class = TAB_SELECTED
+            if brain.portal_type in view_types:
+                url += '/view'
+            attachments.append(dict(id = brain.getId,
+                                    title = brain.Title,
+                                    url = url,
+                                    tab_class = tab_class,
+                                    ))
+        return attachments
+
+    @memoize
+    def _get_tab_class(self):
+        """Return the class for the tab.
+        When we encounter a Project in the acquisition chain before we
+        find an Iteration or Offer, we're looking at an attachment."""
+        project = self._get_project()
+        if not project:
+            return TAB_NORMAL
+        context = aq_inner(self.context)
+        # When we are at a project, we are not at an attachment
+        if IXMProject.providedBy(context):
+            return TAB_NORMAL
+
+        chain = aq_chain(context)
+        project = None
+        for item in chain:
+            if IXMOffer.providedBy(item) or IXMIteration.providedBy(item):
+                project = False
+                break
+            elif IXMProject.providedBy(item):
+                project = True
+                break
+        if project:
             return TAB_SELECTED
         else:
             return TAB_NORMAL

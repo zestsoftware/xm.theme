@@ -14,6 +14,7 @@
   <viewlet name="xm.project_tab_open"/>
   <viewlet name="xm.project_tab_closed"/>
   <viewlet name="xm.project_tab_offer"/>
+  <viewlet name="xm.project_tab_attachment"/>
  </order>
 
  <hidden manager="plone.portalheader" skinname="eXtremeManagement">
