@@ -36,35 +36,38 @@ class ProjectTabsBaseViewlet(ViewletBase):
 
     @memoize
     def _is_available(self):
+        """Return whether the viewlet/tab is available."""
         return self._get_project() and (self._is_single() or
                                         self._is_more())
 
     @memoize
     def _is_single(self):
+        """Return if there is just a single item."""
         return len(self._get_items()) == 1
 
     @memoize
     def _is_more(self):
+        """Return if there are more than one items."""
         return len(self._get_items()) > 1
 
     @memoize
     def _get_tab_class(self):
+        """Return the class for the tab."""
         return TAB_NORMAL
 
     @memoize
-    def _get_url(self):
-        return u'#'
-
-    @memoize
     def _get_title(self):
+        """Return the title of the tab."""
         return _(u'Example')
 
     @memoize
     def _get_description(self):
+        """Return a description of the tab."""
         return _(u'Example tab')
 
     @memoize
     def _get_url(self):
+        """Return the url for the tab."""
         project = self._get_project()
         if not project:
             return None
@@ -78,6 +81,7 @@ class ProjectTabsBaseViewlet(ViewletBase):
 
     @memoize
     def _get_project(self):
+        """Return the project of this context."""
         try:
             project = self.context.getProject()
         except AttributeError:
@@ -86,26 +90,34 @@ class ProjectTabsBaseViewlet(ViewletBase):
 
     @memoize
     def _get_iteration(self):
+        """Return the iteration of this context."""
         try:
             iteration = self.context.getIteration()
         except AttributeError:
             iteration = None
         return iteration
 
+    @memoize
+    def _get_items(self):
+        """Return the items for the tab."""
+        return []
 
 class CurrentIterationsViewlet(ProjectTabsBaseViewlet):
     """Viewlet for the current iteration tab."""
 
     @memoize
     def _get_title(self):
+        """Return the title of the tab."""
         return _(u'Current')
 
     @memoize
     def _description(self):
+        """Helper function which returns the default description of the tab."""
         return _(u'Current iterations')
 
     @memoize
     def _get_description(self):
+        """Return a description of the tab."""
         if self._is_more():
             return self._description()
         elif self._is_single():
@@ -116,6 +128,7 @@ class CurrentIterationsViewlet(ProjectTabsBaseViewlet):
 
     @memoize
     def _iterations(self):
+        """Helper function to retrieve the relevant iterations."""
         project = self._get_project()
         if not project:
             return []
@@ -124,6 +137,7 @@ class CurrentIterationsViewlet(ProjectTabsBaseViewlet):
 
     @memoize
     def _get_items(self):
+        """Return the items for the tab."""
         selected = self._get_iteration()
         iterations = self._iterations()
         for iteration in iterations:
@@ -136,6 +150,7 @@ class CurrentIterationsViewlet(ProjectTabsBaseViewlet):
 
     @memoize
     def _get_tab_class(self):
+        """Return the class for the tab."""
         selected = self._get_iteration()
         if not selected:
             return TAB_NORMAL
@@ -151,14 +166,17 @@ class OpenIterationsViewlet(CurrentIterationsViewlet):
 
     @memoize
     def _get_title(self):
+        """Return the title of the tab."""
         return _(u'Open')
 
     @memoize
     def _description(self):
+        """Helper function which returns the default description of the tab."""
         return _(u'Open iterations')
 
     @memoize
     def _iterations(self):
+        """Helper function to retrieve the relevant iterations."""
         project = self._get_project()
         if not project:
             return []
@@ -171,14 +189,17 @@ class ClosedIterationsViewlet(CurrentIterationsViewlet):
 
     @memoize
     def _get_title(self):
+        """Return the title of the tab."""
         return _(u'Closed')
 
     @memoize
     def _description(self):
+        """Helper function which returns the default description of the tab."""
         return _(u'Closed iterations')
 
     @memoize
     def _iterations(self):
+        """Helper function to retrieve the relevant iterations."""
         project = self._get_project()
         if not project:
             return []
@@ -191,26 +212,17 @@ class OffersViewlet(CurrentIterationsViewlet):
 
     @memoize
     def _get_title(self):
+        """Return the title of the tab."""
         return _(u'Offers')
 
     @memoize
     def _description(self):
+        """Helper function which returns the default description of the tab."""
         return _(u'Offers')
 
     @memoize
-    def _iterations(self):
-        project = self._get_project()
-        if not project:
-            return []
-        project_view = project.restrictedTraverse('@@project')
-        offers = project_view.offers()
-        if offers is None:
-            return []
-        else:
-            return offers
-
-    @memoize
     def _get_selected_offer(self):
+        """Helper function to determine the selected offer."""
         context = aq_inner(self.context)
         chain = aq_chain(context)
         for item in chain:
@@ -220,6 +232,7 @@ class OffersViewlet(CurrentIterationsViewlet):
 
     @memoize
     def _get_items(self):
+        """Return the items for the tab."""
         project = self._get_project()
         selected_id = self._get_selected_offer()
         if not project:
@@ -238,6 +251,7 @@ class OffersViewlet(CurrentIterationsViewlet):
 
     @memoize
     def _get_tab_class(self):
+        """Return the class for the tab."""
         selected_id = self._get_selected_offer()
         items = self._get_items()
         if selected_id in [offer['id'] for offer in items]:
