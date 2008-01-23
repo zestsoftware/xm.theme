@@ -1,9 +1,13 @@
+from Acquisition import aq_inner
+from Acquisition import aq_chain
+
 from plone.app.layout.viewlets.common import ViewletBase
 from plone.memoize.view import memoize
 
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
 from xm.theme import xmMessageFactory as _
+from Products.eXtremeManagement.interfaces import IXMOffer
 
 TAB_SELECTED = u'selected'
 TAB_NORMAL = u'plain'
@@ -180,3 +184,63 @@ class ClosedIterationsViewlet(CurrentIterationsViewlet):
             return []
         project_view = project.restrictedTraverse('@@project')
         return project_view.finished_iterations()
+
+
+class OffersViewlet(CurrentIterationsViewlet):
+    """Viewlet for the offers tab."""
+
+    @memoize
+    def _get_title(self):
+        return _(u'Offers')
+
+    @memoize
+    def _description(self):
+        return _(u'Offers')
+
+    @memoize
+    def _iterations(self):
+        project = self._get_project()
+        if not project:
+            return []
+        project_view = project.restrictedTraverse('@@project')
+        offers = project_view.offers()
+        if offers is None:
+            return []
+        else:
+            return offers
+
+    @memoize
+    def _get_selected_offer(self):
+        context = aq_inner(self.context)
+        chain = aq_chain(context)
+        for item in chain:
+            if IXMOffer.providedBy(item):
+                return item.getId()
+        return None
+
+    @memoize
+    def _get_items(self):
+        project = self._get_project()
+        selected_id = self._get_selected_offer()
+        if not project:
+            return []
+        project_view = project.restrictedTraverse('@@project')
+        offers = project_view.offers()
+        if offers is None:
+            return []
+        for offer in offers:
+            offer['id'] = offer['brain'].getId
+            if selected_id == offer['id']:
+                offer['tab_class'] = TAB_SELECTED
+            else:
+                offer['tab_class'] = TAB_NORMAL
+        return offers
+
+    @memoize
+    def _get_tab_class(self):
+        selected_id = self._get_selected_offer()
+        items = self._get_items()
+        if selected_id in [offer['id'] for offer in items]:
+            return TAB_SELECTED
+        else:
+            return TAB_NORMAL
