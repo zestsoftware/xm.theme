@@ -25,6 +25,7 @@ class ProjectTabsBaseViewlet(ViewletBase):
     render = ViewPageTemplateFile('templates/project_tab.pt')
 
     def update(self):
+        """Update method for the viewlet."""
         self.available = self._is_available()
         self.one_item = self._is_single()
         self.more_items = self._is_more()
@@ -101,6 +102,7 @@ class ProjectTabsBaseViewlet(ViewletBase):
     def _get_items(self):
         """Return the items for the tab."""
         return []
+
 
 class CurrentIterationsViewlet(ProjectTabsBaseViewlet):
     """Viewlet for the current iteration tab."""
