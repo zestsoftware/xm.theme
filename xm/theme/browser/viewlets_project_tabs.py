@@ -10,7 +10,7 @@ from xm.theme import xmMessageFactory as _
 from Products.eXtremeManagement.interfaces import IXMOffer
 
 TAB_SELECTED = u'selected'
-TAB_NORMAL = u'plain'
+TAB_NORMAL = u''
 
 
 class XMProjectTabsViewlet(ViewletBase):

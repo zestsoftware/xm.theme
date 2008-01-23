@@ -37,11 +37,11 @@ h1#project-header a {
   margin: 0;
   height: auto;
   line-height: normal;
-  position: relative;
 }
 
 #project-globalnav li {
   display: inline;
+  position: relative;
 }
 
 #project-globalnav li a {
@@ -59,7 +59,7 @@ h1#project-header a {
 #project-globalnav li.selected a,
 #project-globalnav li a:hover {
   background-color: #DEE7EC;
-  border: 1px solid #8CACBB;;
+  border: 1px solid #8CACBB;
   border-bottom: 1px solid #DEE7EC;
 }
 
@@ -70,16 +70,26 @@ h1#project-header a {
 /* Start submenu */
 .project-submenu {
   position: absolute !important;
-}
-
-.project-submenu li.test {
+  background-color: #DEE7EC;
+  border: 1px solid #8CACBB;
+  left: 0;
+  text-align: left;
+  top: 13px;
+  z-index: 100 !important;
   margin: 0;
-  padding: 0 2px;
-  display: block;
 }
 
-.project-submenu li a {
+.project-submenu li {
+  margin: 0 !important;
+  padding: 0 2px !important;
+  display: block !important;
+}
+
+.project-submenu li a,
+.project-submenu li a:hover {
   border: none !important;
+  padding: 2px !important;
+  z-index: 40 !important;
 }
 
 .hide-tab-submenu ul {
