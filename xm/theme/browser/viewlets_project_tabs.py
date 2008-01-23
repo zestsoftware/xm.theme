@@ -27,6 +27,7 @@ class ProjectTabsBaseViewlet(ViewletBase):
         self.tab_class = self._get_tab_class()
         self.url = self._get_url()
         self.title = self._get_title()
+        self.description = self._get_description()
         self.items = self._get_items()
 
     @memoize
@@ -53,6 +54,10 @@ class ProjectTabsBaseViewlet(ViewletBase):
     @memoize
     def _get_title(self):
         return _(u'Example')
+
+    @memoize
+    def _get_description(self):
+        return _(u'Example tab')
 
     @memoize
     def _get_url(self):
@@ -92,13 +97,31 @@ class CurrentIterationsViewlet(ProjectTabsBaseViewlet):
         return _(u'Current')
 
     @memoize
-    def _get_items(self):
+    def _description(self):
+        return _(u'Current iterations')
+
+    @memoize
+    def _get_description(self):
+        if self._is_more():
+            return self._description()
+        elif self._is_single():
+            items = self._get_items()
+            return u'"%s"' % items[0]['title']
+        else:
+            return u''
+
+    @memoize
+    def _iterations(self):
         project = self._get_project()
-        selected = self._get_iteration()
         if not project:
             return []
         project_view = project.restrictedTraverse('@@project')
-        iterations = project_view.current_iterations()
+        return project_view.current_iterations()
+
+    @memoize
+    def _get_items(self):
+        selected = self._get_iteration()
+        iterations = self._iterations()
         for iteration in iterations:
             iteration['id'] = iteration['brain'].getId
             if selected and selected.getId() == iteration['id']:
@@ -127,41 +150,33 @@ class OpenIterationsViewlet(CurrentIterationsViewlet):
         return _(u'Open')
 
     @memoize
-    def _get_items(self):
+    def _description(self):
+        return _(u'Open iterations')
+
+    @memoize
+    def _iterations(self):
         project = self._get_project()
-        selected = self._get_iteration()
         if not project:
             return []
         project_view = project.restrictedTraverse('@@project')
-        iterations = project_view.open_iterations()
-        for iteration in iterations:
-            iteration['id'] = iteration['brain'].getId
-            if selected and selected.getId() == iteration['id']:
-                iteration['tab_class'] = TAB_SELECTED
-            else:
-                iteration['tab_class'] = TAB_NORMAL
-        return iterations
+        return project_view.open_iterations()
 
 
 class ClosedIterationsViewlet(CurrentIterationsViewlet):
-    """Viewlet for the open iterations tab."""
+    """Viewlet for the closed iterations tab."""
 
     @memoize
     def _get_title(self):
         return _(u'Closed')
 
     @memoize
-    def _get_items(self):
+    def _description(self):
+        return _(u'Closed iterations')
+
+    @memoize
+    def _iterations(self):
         project = self._get_project()
-        selected = self._get_iteration()
         if not project:
             return []
         project_view = project.restrictedTraverse('@@project')
-        iterations = project_view.finished_iterations()
-        for iteration in iterations:
-            iteration['id'] = iteration['brain'].getId
-            if selected and selected.getId() == iteration['id']:
-                iteration['tab_class'] = TAB_SELECTED
-            else:
-                iteration['tab_class'] = TAB_NORMAL
-        return iterations
+        return project_view.finished_iterations()

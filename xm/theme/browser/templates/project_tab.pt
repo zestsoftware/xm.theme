@@ -4,7 +4,8 @@
     tal:attributes="id string:portaltab-${view/title};
                     class view/tab_class;">
   <a href=""
-     tal:attributes="href view/url;"
+     tal:attributes="href view/url;
+                     title view/description;"
      tal:content="view/title" />
 </li>
 
@@ -15,7 +16,8 @@
                     class string:${view/tab_class} tab-submenu hide-tab-submenu;">
 
   <a href=""
-     tal:attributes="href view/url;">
+     tal:attributes="href view/url;
+                     title view/description">
     <span tal:replace="view/title" />
     <span class="arrowDownAlternative">&#9660;</span>
   </a>

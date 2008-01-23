@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2008-01-22 16:09+0000\n"
+"POT-Creation-Date: 2008-01-23 09:31+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,20 +17,36 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: xm.theme\n"
 
-#: ./browser/viewlets_project_tabs.py:152
+#: ./browser/viewlets_project_tabs.py:170
 msgid "Closed"
 msgstr ""
 
-#: ./browser/viewlets_project_tabs.py:93
+#: ./browser/viewlets_project_tabs.py:174
+msgid "Closed iterations"
+msgstr ""
+
+#: ./browser/viewlets_project_tabs.py:97
 msgid "Current"
+msgstr ""
+
+#: ./browser/viewlets_project_tabs.py:101
+msgid "Current iterations"
 msgstr ""
 
 #: ./browser/viewlets_project_tabs.py:56
 msgid "Example"
 msgstr ""
 
-#: ./browser/viewlets_project_tabs.py:128
+#: ./browser/viewlets_project_tabs.py:60
+msgid "Example tab"
+msgstr ""
+
+#: ./browser/viewlets_project_tabs.py:150
 msgid "Open"
+msgstr ""
+
+#: ./browser/viewlets_project_tabs.py:154
+msgid "Open iterations"
 msgstr ""
 
 #. Default: "My Projects"
