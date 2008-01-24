@@ -74,6 +74,7 @@ h1#project-header a {
   top: 13px;
   margin: 0;
   padding: 0;
+  z-index: 3 !important;
 }
 
 .project-submenu li {
@@ -85,9 +86,9 @@ h1#project-header a {
 .project-submenu li a:hover {
   margin: 0 !important;
   padding: 2px !important;
-  z-index: 40 !important;
+  z-index: 4 !important;
   border: none !important;
-
+  overflow: visible;
 }
 
 .project-submenu li a {
@@ -95,8 +96,10 @@ h1#project-header a {
   display: block;
 }
 
-.project-submenu li a:hover {
-  background-color: #8CACBB !important;  
+.project-submenu li a:hover,
+.project-submenu li.selected a {
+  background-color: #8CACBB !important;
+  color: #000;
 }
 
 .hide-tab-submenu ul {
