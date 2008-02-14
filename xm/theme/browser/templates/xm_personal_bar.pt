@@ -16,7 +16,7 @@
            </span
        ></a></li>
        <li>
-         <dl id="my_projects_menu" class="actionMenu deactivated"
+         <dl id="my-projects-menu" class="actionMenu deactivated"
              tal:condition="view/has_projects">
              <dt class="actionMenuHeader label-my-projects">
                <a id="" href="#">
@@ -24,7 +24,7 @@
                        i18n:translate="label_my_projects">My Projects</span>
                  <span class="arrowDownAlternative">&#9660;</span><a/>
             </dt>
-             <dd class="actionMenuContent">
+             <dd class="actionMenuContent project-submenu">
                <ul>
                  <tal:actions repeat="project view/my_projects">
                  <li>
