@@ -9,8 +9,6 @@ from Products.CMFCore.utils import getToolByName
 
 from xm.theme import xmMessageFactory as _
 from Products.eXtremeManagement.interfaces import IXMOffer
-from Products.eXtremeManagement.interfaces import IXMIteration
-from Products.eXtremeManagement.interfaces import IXMProject
 
 TAB_SELECTED = u'selected'
 TAB_NORMAL = u''
@@ -297,55 +295,103 @@ class AttachmentsViewlet(ProjectTabsBaseViewlet):
     @memoize
     def _get_items(self):
         """Return the items for the tab."""
+        # get the project
         context = aq_inner(self.context)
         project = self._get_project()
         if not project:
             return []
+        # get the types which need a /view url
         portal_props = getToolByName(self, 'portal_properties')
-        site_props = portal_props['site_properties']
-        view_types = site_props.typesUseViewActionInListings
-        project_view = project.restrictedTraverse('@@project')
-        attachmentbrains = project_view.attachments()
+        view_types = portal_props['site_properties'].typesUseViewActionInListings
+        # get the attachments
+        cfilter = dict(portal_type=('Iteration', 'Offer',
+                                    'PoiTracker'))
+        exclude_ids = [item.id for item in
+                       project.getFolderContents(cfilter)]
+        all_brains = project.getFolderContents()
+        attachmentbrains = [brain for brain in all_brains
+                  if brain.id not in exclude_ids]
         if not attachmentbrains:
             return []
+        # setup a dict with the necessary info
         attachments = []
         for brain in attachmentbrains:
+            selected = False
             url = brain.getURL()
             tab_class = TAB_NORMAL
             if url in context.absolute_url():
                 tab_class = TAB_SELECTED
+                selected = True
             if brain.portal_type in view_types:
                 url += '/view'
             attachments.append(dict(id = brain.getId,
                                     title = brain.Title,
                                     url = url,
                                     tab_class = tab_class,
+                                    selected = selected,
                                     ))
         return attachments
 
     @memoize
     def _get_tab_class(self):
-        """Return the class for the tab.
-        When we encounter a Project in the acquisition chain before we
-        find an Iteration or Offer, we're looking at an attachment."""
+        """Return the class for the tab."""
+        value = TAB_NORMAL
+        items = self._get_items()
+        for item in items:
+            if item['selected']:
+                value = TAB_SELECTED
+        return value
+
+
+class IssueTrackerViewlet(ProjectTabsBaseViewlet):
+    """Viewlet for an issue tracker."""
+
+    @memoize
+    def _get_title(self):
+        """Return the title of the tab."""
+        return _(u'Issues')
+
+    @memoize
+    def _get_description(self):
+        """Return a description of the tab."""
+        if self._is_more():
+            return _(u'Issue trackers')
+        elif self._is_single():
+            return _(u'Issue tracker')
+        else:
+            return u''
+
+    @memoize
+    def _get_items(self):
+        """Return the items for the tab."""
+        context = aq_inner(self.context)
         project = self._get_project()
         if not project:
-            return TAB_NORMAL
-        context = aq_inner(self.context)
-        # When we are at a project, we are not at an attachment
-        if IXMProject.providedBy(context):
-            return TAB_NORMAL
+            return []
+        cfilter = dict(portal_type=('PoiTracker'))
+        tracker_brains = project.getFolderContents(cfilter)
+        trackers = []
+        for brain in tracker_brains:
+            selected = False
+            url = brain.getURL()
+            tab_class = TAB_NORMAL
+            if url in context.absolute_url():
+                tab_class = TAB_SELECTED
+                selected = True
+            trackers.append(dict(id = brain.getId,
+                                 title = brain.Title,
+                                 url = url,
+                                 tab_class = tab_class,
+                                 selected = selected,
+                                 ))
+        return trackers
 
-        chain = aq_chain(context)
-        project = None
-        for item in chain:
-            if IXMOffer.providedBy(item) or IXMIteration.providedBy(item):
-                project = False
-                break
-            elif IXMProject.providedBy(item):
-                project = True
-                break
-        if project:
-            return TAB_SELECTED
-        else:
-            return TAB_NORMAL
+    @memoize
+    def _get_tab_class(self):
+        """Return the class for the tab."""
+        value = TAB_NORMAL
+        items = self._get_items()
+        for item in items:
+            if item['selected']:
+                value = TAB_SELECTED
+        return value
