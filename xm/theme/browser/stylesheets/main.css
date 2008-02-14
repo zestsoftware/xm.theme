@@ -72,6 +72,10 @@ h1#project-header a {
   color: #436976;
 }
 
+#project-globalnav .actionMenu .actionMenuContent {
+  right: auto;
+}
+
 #my-projects-menu .project-submenu ul,
 #project-globalnav .project-submenu ul {
   background-color: #DEE7EC;
