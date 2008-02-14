@@ -13,25 +13,32 @@
     class=""
     tal:condition="view/more_items"
     tal:attributes="id string:portaltab-${view/title};
-                    class string:${view/tab_class} tab-submenu hide-tab-submenu;">
-
-  <a href=""
-     tal:attributes="href view/url;
-                     title view/description">
-    <span tal:replace="view/title" />
-    <span class="arrowDownAlternative">&#9660;</span>
-  </a>
-  <ul class="project-submenu">
-    <tal:actions repeat="item view/items">
-      <li id=""
-          class=""
-          tal:attributes="id string:portaltab-${view/title}-${item/id};
-                          class item/tab_class;">
-        <a href=""
-           tal:attributes="href item/url;"
-           tal:content="item/title">
-        </a>
-      </li>
-    </tal:actions>
-  </ul>
+                    class string:${view/tab_class}">
+  <dl id=""
+      class="actionMenu deactivated"
+      tal:attributes="id string:portaltab-menu-${view/title}">
+    <dt class="actionMenuHeader">
+      <a href=""
+         tal:attributes="href view/url;
+                         title view/description">
+        <span tal:replace="view/title" />
+        <span class="arrowDownAlternative">&#9660;</span>
+      </a>
+    </dt>
+    <dd class="actionMenuContent project-submenu">
+      <ul>
+        <tal:actions repeat="item view/items">
+          <li id=""
+              class=""
+              tal:attributes="id string:portaltab-${view/title}-${item/id};
+                              class item/tab_class;">
+            <a href=""
+               tal:attributes="href item/url;"
+               tal:content="item/title">
+            </a>
+          </li>
+        </tal:actions>
+      </ul>
+    </dd>
+  </dl>
 </li>

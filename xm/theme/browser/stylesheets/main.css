@@ -34,24 +34,22 @@ h1#project-header a {
   padding: 0em 0em 0em 2em;
   white-space: nowrap;
   list-style: none;
-  margin: 0;
+  margin: 0 0 1.4em 0;
   line-height: normal;
+  text-align: left;
 }
 
 #project-globalnav li {
-  display: inline;
-  position: relative;
+  float: left;
 }
 
 #project-globalnav li a {
   border-color: #8CACBB;
   border-width: 1px;
   border-style: solid solid none solid;
-  height: auto;
   margin-right: 0.5em;
-  padding: 0em 1.25em;
+  padding: 0 1.25em;
   text-decoration: none;
-  text-transform: &dtml-textTransform;;
 }
 
 #project-globalnav li.selected a,
@@ -66,42 +64,47 @@ h1#project-header a {
 }
 
 /* Start submenu */
-.project-submenu {
-  position: absolute !important;
+#project-globalnav .actionMenu {
+  margin-top: -1px;
+}
+
+#project-globalnav .actionMenu .actionMenuHeader a {
+  color: #436976;
+}
+
+#project-globalnav .project-submenu ul {
   background-color: #DEE7EC;
   border: 1px solid #8CACBB;
-  left: 0;
-  top: 13px;
+}
+
+#project-globalnav .project-submenu li {
+  float: none;
+  text-align: left;
+  border-width: 0;
+}
+
+#project-globalnav .project-submenu li a {
+  border-width: 0;
+  margin: 0;
+  padding: 0 3px 0 3px;
+}
+
+#project-globalnav .project-submenu li a:hover {
+  color: #FFFFFF;
+  background-color: #8CACBB;
+}
+
+#project-globalnav .project-submenu li.selected {
+  border-width: 0;
+  margin: 0;
+  padding: 0 3px 0 3px;
+  color: #FFFFFF;
+  background-color: #8CACBB;
+}
+
+#project-globalnav .project-submenu li.selected a {
+  color: #FFFFFF;
+  background-color: #8CACBB;
   margin: 0;
   padding: 0;
-  z-index: 3 !important;
-}
-
-.project-submenu li {
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-.project-submenu li a,
-.project-submenu li a:hover {
-  margin: 0 !important;
-  padding: 2px !important;
-  z-index: 4 !important;
-  border: none !important;
-  overflow: visible;
-}
-
-.project-submenu li a {
-  background-color: #DEE7EC !important;
-  display: block;
-}
-
-.project-submenu li a:hover,
-.project-submenu li.selected a {
-  background-color: #8CACBB !important;
-  color: #000;
-}
-
-.hide-tab-submenu ul {
-  display: none;
 }
