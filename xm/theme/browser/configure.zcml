@@ -20,6 +20,14 @@
 
     <!-- Viewlets registration -->
     <browser:viewlet
+        name="xm.personal_bar"
+        manager="plone.app.layout.viewlets.interfaces.IPortalTop"
+        layer=".interfaces.IThemeSpecific"
+        class=".viewlets.XMPersonalBarViewlet"
+        permission="zope2.View"
+        />
+
+    <browser:viewlet
         name="xm.project_header"
         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
         layer=".interfaces.IThemeSpecific"
@@ -87,6 +95,7 @@
     <browser:viewlet
         name="xm.searchbox"
         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+        layer=".interfaces.IThemeSpecific"
         class=".viewlets.XMSearchBoxViewlet"
         permission="zope2.View"
         template="templates/searchbox.pt"
