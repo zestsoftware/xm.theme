@@ -19,11 +19,69 @@ class XMProjectTabsViewlet(ViewletBase):
 
     render = ViewPageTemplateFile('templates/project_tabs_viewlet.pt')
 
+    @memoize
+    def get_project(self):
+        """Return the project of this context."""
+        try:
+            project = aq_inner(self.context).getProject()
+        except AttributeError:
+            project = None
+        return project
+
+    @memoize
+    def get_iteration(self):
+        """Return the iteration of this context."""
+        try:
+            iteration = aq_inner(self.context).getIteration()
+        except AttributeError:
+            iteration = None
+        return iteration
+
+    @memoize
+    def get_contents(self):
+        """Get the contents of the project in a single structure."""
+        project = self.get_project()
+        if not project:
+            return {}
+        contents = {'Iteration': [],
+                    'Offer': [],
+                    'PoiTracker': [],
+                    'Attachment': [],
+                    }
+        portal_props = getToolByName(self, 'portal_properties')
+        site_props = portal_props['site_properties']
+        view_types = site_props.typesUseViewActionInListings
+        project_contents = project.getFolderContents()
+        for brain in project_contents:
+            url = brain.getURL()
+            if brain.portal_type in view_types:
+                url += '/view'
+            item = dict(id = brain.getId,
+                        title = brain.Title,
+                        state = brain.review_state,
+                        url = url,
+                        raw_url = brain.getURL(),
+                        tab_class = TAB_NORMAL,
+                        selected = False,
+                       )
+            if brain.portal_type not in contents.keys():
+                contents['Attachment'].append(item)
+            else:
+                contents[brain.portal_type].append(item)
+        return contents
+
 
 class ProjectTabsBaseViewlet(ViewletBase):
     """Base viewlet for the project tabs."""
 
     render = ViewPageTemplateFile('templates/project_tab.pt')
+
+    def __init__(self, context, request, view, manager):
+        super(ProjectTabsBaseViewlet, self).__init__(context, request,
+                                                     view, manager)
+        self.project = view.get_project()
+        self.iteration = view.get_iteration()
+        self.contents = view.get_contents()
 
     def update(self):
         """Update method for the viewlet."""
@@ -39,8 +97,8 @@ class ProjectTabsBaseViewlet(ViewletBase):
     @memoize
     def _is_available(self):
         """Return whether the viewlet/tab is available."""
-        return self._get_project() and (self._is_single() or
-                                        self._is_more())
+        return self.project and (self._is_single() or
+                                 self._is_more())
 
     @memoize
     def _is_single(self):
@@ -55,7 +113,12 @@ class ProjectTabsBaseViewlet(ViewletBase):
     @memoize
     def _get_tab_class(self):
         """Return the class for the tab."""
-        return TAB_NORMAL
+        value = TAB_NORMAL
+        items = self._get_items()
+        for item in items:
+            if item['selected']:
+                value = TAB_SELECTED
+        return value
 
     @memoize
     def _get_title(self):
@@ -70,34 +133,15 @@ class ProjectTabsBaseViewlet(ViewletBase):
     @memoize
     def _get_url(self):
         """Return the url for the tab."""
-        project = self._get_project()
-        if not project:
+        if not self.project:
             return None
         if self._is_more():
-            return project.absolute_url()
+            return self.project.absolute_url()
         elif self._is_single():
             items = self._get_items()
             return items[0].get('url', None)
         else:
             return None
-
-    @memoize
-    def _get_project(self):
-        """Return the project of this context."""
-        try:
-            project = self.context.getProject()
-        except AttributeError:
-            project = None
-        return project
-
-    @memoize
-    def _get_iteration(self):
-        """Return the iteration of this context."""
-        try:
-            iteration = self.context.getIteration()
-        except AttributeError:
-            iteration = None
-        return iteration
 
     @memoize
     def _get_items(self):
@@ -132,36 +176,22 @@ class CurrentIterationsViewlet(ProjectTabsBaseViewlet):
     @memoize
     def _iterations(self):
         """Helper function to retrieve the relevant iterations."""
-        project = self._get_project()
-        if not project:
-            return []
-        project_view = project.restrictedTraverse('@@project')
-        return project_view.current_iterations()
+        iterations = []
+        for item in self.contents.get('Iteration', []):
+            if item.get('state', None) in ['in-progress']:
+                iterations.append(item)
+        return iterations
 
     @memoize
     def _get_items(self):
         """Return the items for the tab."""
-        selected = self._get_iteration()
+        selected = self.iteration
         iterations = self._iterations()
         for iteration in iterations:
-            iteration['id'] = iteration['brain'].getId
             if selected and selected.getId() == iteration['id']:
                 iteration['tab_class'] = TAB_SELECTED
-            else:
-                iteration['tab_class'] = TAB_NORMAL
+                iteration['selected'] = True
         return iterations
-
-    @memoize
-    def _get_tab_class(self):
-        """Return the class for the tab."""
-        selected = self._get_iteration()
-        if not selected:
-            return TAB_NORMAL
-        items = self._get_items()
-        if selected.getId() in [it['brain'].getId for it in items]:
-            return TAB_SELECTED
-        else:
-            return TAB_NORMAL
 
 
 class OpenIterationsViewlet(CurrentIterationsViewlet):
@@ -180,11 +210,11 @@ class OpenIterationsViewlet(CurrentIterationsViewlet):
     @memoize
     def _iterations(self):
         """Helper function to retrieve the relevant iterations."""
-        project = self._get_project()
-        if not project:
-            return []
-        project_view = project.restrictedTraverse('@@project')
-        return project_view.open_iterations()
+        iterations = []
+        for item in self.contents.get('Iteration', []):
+            if item.get('state', None) in ['new']:
+                iterations.append(item)
+        return iterations
 
 
 class ClosedIterationsViewlet(CurrentIterationsViewlet):
@@ -203,11 +233,11 @@ class ClosedIterationsViewlet(CurrentIterationsViewlet):
     @memoize
     def _iterations(self):
         """Helper function to retrieve the relevant iterations."""
-        project = self._get_project()
-        if not project:
-            return []
-        project_view = project.restrictedTraverse('@@project')
-        return project_view.finished_iterations()
+        iterations = []
+        for item in self.contents.get('Iteration', []):
+            if item.get('state', None) in ['completed', 'invoiced']:
+                iterations.append(item)
+        return iterations
 
 
 class OffersViewlet(CurrentIterationsViewlet):
@@ -241,31 +271,13 @@ class OffersViewlet(CurrentIterationsViewlet):
     @memoize
     def _get_items(self):
         """Return the items for the tab."""
-        project = self._get_project()
+        offers = self.contents.get('Offer', [])
         selected_id = self._get_selected_offer()
-        if not project:
-            return []
-        project_view = project.restrictedTraverse('@@project')
-        offers = project_view.offers()
-        if offers is None:
-            return []
         for offer in offers:
-            offer['id'] = offer['brain'].getId
             if selected_id == offer['id']:
                 offer['tab_class'] = TAB_SELECTED
-            else:
-                offer['tab_class'] = TAB_NORMAL
+                offer['selected'] = True
         return offers
-
-    @memoize
-    def _get_tab_class(self):
-        """Return the class for the tab."""
-        selected_id = self._get_selected_offer()
-        items = self._get_items()
-        if selected_id in [offer['id'] for offer in items]:
-            return TAB_SELECTED
-        else:
-            return TAB_NORMAL
 
 
 class AttachmentsViewlet(ProjectTabsBaseViewlet):
@@ -295,52 +307,13 @@ class AttachmentsViewlet(ProjectTabsBaseViewlet):
     @memoize
     def _get_items(self):
         """Return the items for the tab."""
-        # get the project
-        context = aq_inner(self.context)
-        project = self._get_project()
-        if not project:
-            return []
-        # get the types which need a /view url
-        portal_props = getToolByName(self, 'portal_properties')
-        view_types = portal_props['site_properties'].typesUseViewActionInListings
-        # get the attachments
-        cfilter = dict(portal_type=('Iteration', 'Offer',
-                                    'PoiTracker'))
-        exclude_ids = [item.id for item in
-                       project.getFolderContents(cfilter)]
-        all_brains = project.getFolderContents()
-        attachmentbrains = [brain for brain in all_brains
-                  if brain.id not in exclude_ids]
-        if not attachmentbrains:
-            return []
-        # setup a dict with the necessary info
-        attachments = []
-        for brain in attachmentbrains:
-            selected = False
-            url = brain.getURL()
-            tab_class = TAB_NORMAL
-            if url in context.absolute_url():
-                tab_class = TAB_SELECTED
-                selected = True
-            if brain.portal_type in view_types:
-                url += '/view'
-            attachments.append(dict(id = brain.getId,
-                                    title = brain.Title,
-                                    url = url,
-                                    tab_class = tab_class,
-                                    selected = selected,
-                                    ))
+        attachments = self.contents.get('Attachment', [])
+        current_url = aq_inner(self.context).absolute_url()
+        for attachment in attachments:
+            if attachment['raw_url'] in current_url:
+                attachment['tab_class'] = TAB_SELECTED
+                attachment['selected'] = True
         return attachments
-
-    @memoize
-    def _get_tab_class(self):
-        """Return the class for the tab."""
-        value = TAB_NORMAL
-        items = self._get_items()
-        for item in items:
-            if item['selected']:
-                value = TAB_SELECTED
-        return value
 
 
 class IssueTrackerViewlet(ProjectTabsBaseViewlet):
@@ -364,34 +337,10 @@ class IssueTrackerViewlet(ProjectTabsBaseViewlet):
     @memoize
     def _get_items(self):
         """Return the items for the tab."""
-        context = aq_inner(self.context)
-        project = self._get_project()
-        if not project:
-            return []
-        cfilter = dict(portal_type=('PoiTracker'))
-        tracker_brains = project.getFolderContents(cfilter)
-        trackers = []
-        for brain in tracker_brains:
-            selected = False
-            url = brain.getURL()
-            tab_class = TAB_NORMAL
-            if url in context.absolute_url():
-                tab_class = TAB_SELECTED
-                selected = True
-            trackers.append(dict(id = brain.getId,
-                                 title = brain.Title,
-                                 url = url,
-                                 tab_class = tab_class,
-                                 selected = selected,
-                                 ))
+        trackers = self.contents.get('PoiTracker', [])
+        current_url = aq_inner(self.context).absolute_url()
+        for tracker in trackers:
+            if tracker['raw_url'] in current_url:
+                tracker['tab_class'] = TAB_SELECTED
+                tracker['selected'] = True
         return trackers
-
-    @memoize
-    def _get_tab_class(self):
-        """Return the class for the tab."""
-        value = TAB_NORMAL
-        items = self._get_items()
-        for item in items:
-            if item['selected']:
-                value = TAB_SELECTED
-        return value
