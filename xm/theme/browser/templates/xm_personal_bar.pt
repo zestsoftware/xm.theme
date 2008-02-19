@@ -15,9 +15,18 @@
                 John
            </span
        ></a></li>
-       <li>
-         <dl id="my-projects-menu" class="actionMenu deactivated"
-             tal:condition="view/has_projects">
+       <li id="my-project-link" tal:condition="view/has_single_project">
+         <a href=""
+            tal:define="project python:view.my_projects[0]"
+            tal:attributes="href project/url;
+                            title project/description"
+            i18n:domain="xm.theme"
+            i18n:translate="label_my_project">
+           My Project
+         </a>
+       </li>
+       <li tal:condition="view/has_projects">
+         <dl id="my-projects-menu" class="actionMenu deactivated">
              <dt class="actionMenuHeader label-my-projects">
                <a id="" href="#">
                  <span i18n:domain="xm.theme"

@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2008-01-23 14:11+0000\n"
+"POT-Creation-Date: 2008-02-19 12:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,56 +17,73 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: xm.theme\n"
 
-#: ./browser/viewlets_project_tabs.py:282
+#: ./browser/viewlets_project_tabs.py:292
 msgid "Attachment"
 msgstr ""
 
-#: ./browser/viewlets_project_tabs.py:280
+#: ./browser/viewlets_project_tabs.py:290
 msgid "Attachments"
 msgstr ""
 
-#: ./browser/viewlets_project_tabs.py:198
+#: ./browser/viewlets_project_tabs.py:226
 msgid "Closed"
 msgstr ""
 
-#: ./browser/viewlets_project_tabs.py:203
+#: ./browser/viewlets_project_tabs.py:231
 msgid "Closed iterations"
 msgstr ""
 
-#: ./browser/viewlets_project_tabs.py:116
+#: ./browser/viewlets_project_tabs.py:158
 msgid "Current"
 msgstr ""
 
-#: ./browser/viewlets_project_tabs.py:121
+#: ./browser/viewlets_project_tabs.py:163
 msgid "Current iterations"
 msgstr ""
 
-#: ./browser/viewlets_project_tabs.py:65
+#: ./browser/viewlets_project_tabs.py:126
 msgid "Example"
 msgstr ""
 
-#: ./browser/viewlets_project_tabs.py:70
+#: ./browser/viewlets_project_tabs.py:131
 msgid "Example tab"
 msgstr ""
 
-#: ./browser/viewlets_project_tabs.py:224
+#: ./browser/viewlets_project_tabs.py:333
+msgid "Issue tracker"
+msgstr ""
+
+#: ./browser/viewlets_project_tabs.py:331
+msgid "Issue trackers"
+msgstr ""
+
+#: ./browser/viewlets_project_tabs.py:325
+msgid "Issues"
+msgstr ""
+
+#: ./browser/viewlets_project_tabs.py:252
 msgid "Offer"
 msgstr ""
 
-#: ./browser/viewlets_project_tabs.py:222
+#: ./browser/viewlets_project_tabs.py:250
 msgid "Offers"
 msgstr ""
 
-#: ./browser/viewlets_project_tabs.py:175
+#: ./browser/viewlets_project_tabs.py:203
 msgid "Open"
 msgstr ""
 
-#: ./browser/viewlets_project_tabs.py:180
+#: ./browser/viewlets_project_tabs.py:208
 msgid "Open iterations"
 msgstr ""
 
+#. Default: "My Project"
+#: ./browser/templates/xm_personal_bar.pt:19
+msgid "label_my_project"
+msgstr ""
+
 #. Default: "My Projects"
-#: ./browser/templates/xm_personal_bar.pt:23
+#: ./browser/templates/xm_personal_bar.pt:32
 msgid "label_my_projects"
 msgstr ""
 

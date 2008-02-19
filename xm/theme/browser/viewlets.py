@@ -62,9 +62,14 @@ class XMPersonalBarViewlet(ViewletBase):
                                  url = pbrain.getURL(),
                                  description = pbrain.Description))
         self.my_projects = projects
+
         self.has_projects = False
         if len(self.my_projects) > 1:
             self.has_projects = True
+
+        self.has_single_project = False
+        if len(self.my_projects) == 1:
+            self.has_single_project = True
 
 
 class XMProjectHeaderViewlet(ViewletBase):
