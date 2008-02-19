@@ -1,5 +1,6 @@
 from Acquisition import aq_inner
 from Acquisition import aq_chain
+from DateTime import DateTime
 
 from plone.app.layout.viewlets.common import ViewletBase
 from plone.memoize.view import memoize
@@ -21,11 +22,19 @@ class XMProjectTabsViewlet(ViewletBase):
 
     @memoize
     def get_project(self):
-        """Return the project of this context."""
+        """Return the project of this context.
+        Also set a cookie with the project id. This can be used to redirect
+        after logging in.
+        """
         try:
             project = aq_inner(self.context).getProject()
         except AttributeError:
             project = None
+        expires = (DateTime() + 90).toZone('GMT').rfc822()
+        self.request.response.setCookie('last_project',
+                                        project.getId(),
+                                        path = '/',
+                                        expires = expires)
         return project
 
     @memoize
