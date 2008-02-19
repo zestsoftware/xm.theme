@@ -28,13 +28,13 @@ class XMProjectTabsViewlet(ViewletBase):
         """
         try:
             project = aq_inner(self.context).getProject()
+            expires = (DateTime() + 90).toZone('GMT').rfc822()
+            self.request.response.setCookie('last_project',
+                                            project.getId(),
+                                            path = '/',
+                                            expires = expires)
         except AttributeError:
             project = None
-        expires = (DateTime() + 90).toZone('GMT').rfc822()
-        self.request.response.setCookie('last_project',
-                                        project.getId(),
-                                        path = '/',
-                                        expires = expires)
         return project
 
     @memoize
