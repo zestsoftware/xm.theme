@@ -118,4 +118,19 @@
         layer=".interfaces.IThemeSpecific"
         />
 
+    <!-- Project content -->
+    <adapter
+        name="xm.project-content"
+        provides="zope.contentprovider.interfaces.IContentProvider"
+        factory=".project.ProjectContentProvider"
+        />
+
+    <browser:page
+        name="project_content"
+        for="Products.eXtremeManagement.interfaces.IXMProject"
+        class=".project.ProjectContentView"
+        template="templates/project_content_page.pt"
+        permission="zope2.View"
+        />
+
 </configure>
