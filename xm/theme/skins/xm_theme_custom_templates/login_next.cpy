@@ -9,7 +9,8 @@
 ##title=Login next actions
 ##
 
-from Products.CMFPlone import PloneMessageFactory as _
+from Products.CMFPlone import PloneMessageFactory as PMF
+from xm.theme import xmMessageFactory as _
 from DateTime import DateTime
 import ZTUtils
 
@@ -19,10 +20,10 @@ util = context.plone_utils
 membership_tool=context.portal_membership
 if membership_tool.isAnonymousUser():
     REQUEST.RESPONSE.expireCookie('__ac', path='/')
-    util.addPortalMessage(_(u'Login failed'), 'error')
+    util.addPortalMessage(PMF(u'Login failed'), 'error')
     return state.set(status='failure')
 
-util.addPortalMessage(_(u'Welcome! You are now logged in.'))
+util.addPortalMessage(PMF(u'Welcome! You are now logged in.'))
 
 # Get all projects, sorted on modification date.
 catalog = context.portal_catalog

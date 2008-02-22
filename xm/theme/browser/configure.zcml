@@ -67,30 +67,6 @@
         permission="zope2.View"
         />
 
-    <browser:viewlet
-        name="xm.project_tab_offer"
-        manager="xm.theme.browser.interfaces.IProjectTabsManager"
-        layer=".interfaces.IThemeSpecific"
-        class=".viewlets_project_tabs.OffersViewlet"
-        permission="zope2.View"
-        />
-
-    <browser:viewlet
-        name="xm.project_tab_attachment"
-        manager="xm.theme.browser.interfaces.IProjectTabsManager"
-        layer=".interfaces.IThemeSpecific"
-        class=".viewlets_project_tabs.AttachmentsViewlet"
-        permission="zope2.View"
-        />
-
-    <browser:viewlet
-        name="xm.project_tab_issues"
-        manager="xm.theme.browser.interfaces.IProjectTabsManager"
-        layer=".interfaces.IThemeSpecific"
-        class=".viewlets_project_tabs.IssueTrackerViewlet"
-        permission="zope2.View"
-        />
-
     <!-- The search box -->
     <browser:viewlet
         name="xm.searchbox"

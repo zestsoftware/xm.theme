@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2008-02-19 12:37+0000\n"
+"POT-Creation-Date: 2008-02-22 16:44+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,64 +17,61 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: xm.theme\n"
 
-#: ./browser/viewlets_project_tabs.py:292
-msgid "Attachment"
-msgstr ""
-
-#: ./browser/viewlets_project_tabs.py:290
-msgid "Attachments"
-msgstr ""
-
-#: ./browser/viewlets_project_tabs.py:226
+#: ./browser/viewlets_project_tabs.py:264
 msgid "Closed"
 msgstr ""
 
-#: ./browser/viewlets_project_tabs.py:231
+#: ./browser/viewlets_project_tabs.py:271
 msgid "Closed iterations"
 msgstr ""
 
-#: ./browser/viewlets_project_tabs.py:158
+#: ./browser/viewlets_project_tabs.py:262
+msgid "Closed&hellip;"
+msgstr ""
+
+#: ./browser/viewlets_project_tabs.py:152
 msgid "Current"
 msgstr ""
 
-#: ./browser/viewlets_project_tabs.py:163
+#: ./browser/viewlets_project_tabs.py:159
 msgid "Current iterations"
 msgstr ""
 
-#: ./browser/viewlets_project_tabs.py:126
+#: ./browser/viewlets_project_tabs.py:150
+msgid "Current&hellip;"
+msgstr ""
+
+#: ./browser/viewlets_project_tabs.py:125
 msgid "Example"
 msgstr ""
 
-#: ./browser/viewlets_project_tabs.py:131
+#: ./browser/viewlets_project_tabs.py:130
 msgid "Example tab"
 msgstr ""
 
-#: ./browser/viewlets_project_tabs.py:333
-msgid "Issue tracker"
-msgstr ""
-
-#: ./browser/viewlets_project_tabs.py:331
-msgid "Issue trackers"
-msgstr ""
-
-#: ./browser/viewlets_project_tabs.py:325
-msgid "Issues"
-msgstr ""
-
-#: ./browser/viewlets_project_tabs.py:252
-msgid "Offer"
-msgstr ""
-
-#: ./browser/viewlets_project_tabs.py:250
-msgid "Offers"
-msgstr ""
-
-#: ./browser/viewlets_project_tabs.py:203
-msgid "Open"
+#. Default: "No content found"
+#: ./browser/templates/project_content.pt:12
+msgid "No content found"
 msgstr ""
 
 #: ./browser/viewlets_project_tabs.py:208
+msgid "Open"
+msgstr ""
+
+#: ./browser/viewlets_project_tabs.py:215
 msgid "Open iterations"
+msgstr ""
+
+#: ./browser/viewlets_project_tabs.py:206
+msgid "Open&hellip;"
+msgstr ""
+
+#: ./skins/xm_theme_custom_templates/login_next.cpy:43
+msgid "You have been redirected to the last project you visited."
+msgstr ""
+
+#: ./skins/xm_theme_custom_templates/login_next.cpy:70
+msgid "You have been redirected to your most recent project."
 msgstr ""
 
 #. Default: "My Project"
