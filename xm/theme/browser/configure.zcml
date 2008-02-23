@@ -77,6 +77,13 @@
         template="templates/searchbox.pt"
         />
 
+    <browser:viewlet
+        name="xm.links.googlesearch"
+        manager="plone.app.layout.viewlets.interfaces.IHtmlHeadLinks"
+        class=".viewlets.GoogleSearchViewlet"
+        permission="zope2.View" 
+        />
+
 
     <!-- Zope 3 browser resources -->
 

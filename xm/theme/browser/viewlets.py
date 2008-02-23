@@ -125,3 +125,8 @@ class XMSearchBoxViewlet(ViewletBase):
 
         folder = context_state.folder()
         self.folder_path = '/'.join(folder.getPhysicalPath())
+        
+
+class GoogleSearchViewlet(ViewletBase):
+
+        render = ViewPageTemplateFile('templates/googlesearch.pt')

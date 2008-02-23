@@ -1,0 +1,9 @@
+<tal:search define="portal_url view/portal_url;
+                    portal_title view/portal_title">
+    <link rel="search"
+          href=""
+          title="Search"
+          type="application/opensearchdescription+xml"
+          tal:attributes="title string:$portal_title;
+                          href string:$portal_url/search.xml" />
+</tal:search>
