@@ -37,4 +37,8 @@
   <viewlet name="plone.colophon" />
  </hidden>
 
+ <hidden manager="plone.belowcontentbody" skinname="eXtremeManagement">
+  <viewlet name="plone.belowcontentbody.workflowhistory" />
+ </hidden>
+
 </object>
