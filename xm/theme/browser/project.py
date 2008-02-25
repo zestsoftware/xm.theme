@@ -12,6 +12,7 @@ from plone.memoize.view import memoize
 from xm.theme.browser.interfaces import IProjectContentView
 from xm.theme.browser.interfaces import IProjectContentProvider
 
+from Products.CMFCore.utils import getToolByName
 from Products.Five.browser import BrowserView
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
@@ -97,6 +98,12 @@ class ProjectContentProvider(Explicit):
         """Return all other content of a project,
         not being iterations, offers or trackers.
         """
+        # First gather which content types should be treated differently.
+        portal_props = getToolByName(self, 'portal_properties')
+        site_props = portal_props['site_properties']
+        view_types = site_props.typesUseViewActionInListings
+
+        # Gather the content
         context = aq_inner(self.context)
         content_types = set([t.content_meta_type for t in
                          context.allowedContentTypes()])
@@ -104,10 +111,15 @@ class ProjectContentProvider(Explicit):
         filter_types = tuple(content_types - ignore_types)
         cfilter = dict(meta_type = filter_types)
         brains = context.getFolderContents(cfilter)
+
+        # Build the result set
         result_list = []
         for brain in brains:
+            url = brain.getURL()
+            if brain.portal_type in view_types:
+ 	                url += '/view'
             result_list.append(dict(title = brain.Title,
-                                    url = brain.getURL(),
+                                    url = url,
                                     ))
         return result_list
 
