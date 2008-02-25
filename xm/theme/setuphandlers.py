@@ -3,6 +3,7 @@ from zope.component import getUtility, getMultiAdapter
 from plone.portlets.interfaces import IPortletManager
 from plone.portlets.interfaces import IPortletAssignmentMapping
 from plone.app.portlets import portlets as plone_portlets
+from xm.portlets import project
 
 
 def configure_portlets(site, logger):
@@ -19,6 +20,7 @@ def configure_portlets(site, logger):
     # Then we can add the portlets we actually need.
     assignments = [
         plone_portlets.login.Assignment(),
+        project.Assignment(),
         plone_portlets.classic.Assignment('portlet_poi', 'portlet'),
         plone_portlets.classic.Assignment('portlet_tasks', 'portlet'),
         plone_portlets.classic.Assignment('portlet_stories', 'portlet'),
