@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <object>
 
- <order manager="plone.portaltop" skinname="eXtremeManagement">
+ <order manager="plone.portaltop" skinname="eXtremeManagement" purge="True">
    <viewlet name="plone.header"/>
-   <viewlet name="xm.personal_bar"/>
+   <viewlet name="plone.personal_bar"/>
    <viewlet name="plone.path_bar"/>
  </order>
 
@@ -21,8 +21,7 @@
   <viewlet name="xm.project_tab_closed"/>
  </order>
 
- <hidden manager="plone.portaltop" skinname="eXtremeManagement">
-   <viewlet name="plone.personal_bar"/>
+ <hidden manager="plone.portaltop" skinname="eXtremeManagement" purge="True">
    <viewlet name="plone.app.i18n.locales.languageselector"/>
  </hidden>
 

@@ -11,23 +11,6 @@ h1#project-header a {
     padding:0.2em 0.5em 0 1em;
 }
 
-#portal-personaltools li dt {
-    clear: right;
-    float: right;
-}
-
-#portal-personaltools a {
-    padding:0pt 0.5em;
-}
-
-.actionMenu .actionMenuHeader a {
-    color:#578308;
-    cursor:pointer;
-    padding:0pt 0.5em;
-    text-decoration:none;
-    display:block;
-}
-
 /* *** The Global Project tabs. *** */
 #project-globalnav {
   background-color: transparent;
