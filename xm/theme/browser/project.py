@@ -105,11 +105,7 @@ class ProjectContentProvider(Explicit):
 
         # Gather the content
         context = aq_inner(self.context)
-        content_types = set([t.content_meta_type for t in
-                         context.allowedContentTypes()])
-        ignore_types = set(['Iteration', 'Offer', 'PoiTracker'])
-        filter_types = tuple(content_types - ignore_types)
-        cfilter = dict(meta_type = filter_types)
+        cfilter = {'portal_type': ('File', 'Image')}
         brains = context.getFolderContents(cfilter)
 
         # Build the result set
