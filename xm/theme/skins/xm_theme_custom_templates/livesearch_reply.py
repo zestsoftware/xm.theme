@@ -4,7 +4,7 @@
 ##bind namespace=
 ##bind script=script
 ##bind subpath=traverse_subpath
-##parameters=q,limit=10,path=None
+##parameters=q,limit=10,path=None,portal_type=None
 ##title=Determine whether to show an id in an edit form
 
 from Products.CMFCore.utils import getToolByName
@@ -36,6 +36,9 @@ MAX_DESCRIPTION = 93
 catalog = context.portal_catalog
 
 friendly_types = ploneUtils.getUserFriendlyTypes()
+if portal_type:
+    friendly_types = portal_type
+
 
 def quotestring(s):
     return '"%s"' % s

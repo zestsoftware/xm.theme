@@ -25,7 +25,7 @@ var livesearch = function (){
         return false;
     };
 
-    function _searchfactory($form, $inputnode) {
+    function _searchfactory($form, $inputnode, $types) {
         // returns the search functions in a dictionary.
         // we need a factory to get a local scope for the event, this is
         // necessary, because IE doesn't have a way to get the target of
@@ -81,7 +81,7 @@ var livesearch = function (){
             }
             // Do nothing as long as we have less then two characters - 
             // the search results makes no sense, and it's harder on the server.
-            if ($inputnode.value.length < 2) {
+            if ($inputnode.value.length < 3) {
                 _hide();
                 return;
             }
@@ -89,6 +89,19 @@ var livesearch = function (){
                 $$current_path = "&path=" + encodeURIComponent($path.value);
             } else {
                 $$current_path = "";
+            }
+            // Add types to search for
+            if (($types.length == 1) && ($types[0].checked == true)) {
+                var $$current_types = "&portal_type=" + $types[0].value;
+            } else if ($types.length > 1) {
+                var $$current_types = "";
+                for (i=0; i<$types.length; i++) {
+                    if ($types[i].checked == true) {
+                        $$current_types = $$current_types + "&portal_type=" + $types[i].value;
+                    }
+                }
+            } else {
+                var $$current_types = "";
             }
             // check cache
             if ($cache[$$current_path]) {
@@ -115,7 +128,7 @@ var livesearch = function (){
                     $cache[$$current_path][$lastsearch] = $request.responseText;
                 }
             };
-            $request.open("GET", $querytarget + encodeURIComponent($inputnode.value) + $$current_path);
+            $request.open("GET", $querytarget + encodeURIComponent($inputnode.value) + $$current_path + $$current_types);
             $lastsearch = $inputnode.value;
             // start the actual request
             $request.send(null);
@@ -240,7 +253,7 @@ var livesearch = function (){
         }
     };
 
-    function _setup($inputnode, $number) {
+    function _setup($inputnode, $number, $types) {
         // set up all the event handlers and other stuff
         var $form = findContainer($inputnode, _isform);
 
@@ -250,7 +263,7 @@ var livesearch = function (){
         $inputnode.setAttribute("autocomplete","off");
 
         var $key_handler = _keyhandlerfactory($form);
-        _search_handlers[$form.id] = _searchfactory($form, $inputnode);
+        _search_handlers[$form.id] = _searchfactory($form, $inputnode, $types);
         $form.onsubmit = $key_handler.submit;
         _registerEventListener($inputnode, "keydown", $key_handler.handler);
         _registerEventListener($inputnode, "focus", _search_handlers[$form.id].search_delayed);
@@ -262,8 +275,9 @@ var livesearch = function (){
             return; // the browser doesn't support enough functions
         // find all search fields and set them up
         var $gadgets = _cssQuery("#searchGadget, input.portlet-search-gadget");
+        var $types = _cssQuery(".searchGadgetType");
         for (var i=0; i < $gadgets.length; i++) {
-            _setup($gadgets[i], i);
+            _setup($gadgets[i], i, $types);
         }
     };
 
