@@ -118,13 +118,6 @@ h3, h4, h5, h6 {
     margin: 1em 0em 1em 2em;
 }
 
-/* The skin switcher at the top, only shows up if you have multiple skins available */
-#portal-skinswitcher {
-}
-#portal-skinswitcher a {
-    display: block;
-    float: left;
-}
 #portal-top {
     /* Top section */
     margin: 0;
@@ -403,13 +396,6 @@ form.searchPage input.searchButton {
 }
 .visualCaseSensitive {
     text-transform: none;
-}
-#portal-languageselector {
-    margin: 0 1em 0 1em;
-    float:right;
-}
-#portal-languageselector li {
-    display: inline;
 }
 #portal-breadcrumbs {
     /* The path bar, including breadcrumbs and add to favorites */
@@ -805,59 +791,6 @@ ul.discreet {
 textarea.proportional {
     font: 100% <dtml-var fontFamily>;
 }
-.productCredits {
-    text-align: right;
-    font-size: &dtml-fontSmallSize;;
-    clear: both;
-    font-weight: normal;
-    color: &dtml-discreetColor;;
-}
-#portal-footer {
-    background-color: &dtml-globalBackgroundColor;;
-    border-top: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
-    border-bottom: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
-    float: none;
-    line-height: 1.2em;
-    margin: 2em 0em 1em 0em;
-    padding: 0.5em 0em 1em 0em;
-    text-align: center;
-}
-#portal-footer p {
-    margin: 0.25em 0;
-}
-#portal-footer a {
-    text-decoration: none;
-    color: &dtml-linkColor;;
-    border: none;
-}
-#portal-footer a:visited {
-    color: &dtml-linkColor;;
-}
-#portal-footer a:hover {
-    text-decoration: underline;
-}
-#portal-colophon {
-    float: none;
-    margin: 0 0 1em 0;
-    padding: 0 0 1em 0;
-    text-align: center;
-    color: #666;
-}
-#portal-colophon ul {
-    list-style-image: none;
-    list-style-type: none;
-}
-#portal-colophon ul li {
-    display: inline !important;
-    font-size: &dtml-fontSmallSize;;
-    padding: 0 0.75em;
-}
-#portal-colophon ul li a {
-    text-decoration: none;
-    border-bottom: 1px #ccc solid;
-    color: #666;
-}
-
 .feedButton {
     display: block; 
     float: right; 
@@ -870,73 +803,6 @@ textarea.proportional {
     font-weight: normal;
     color: &dtml-discreetColor;;
     text-align: right;
-}
-
-/* Sitemap styles */
-#portal-sitemap {
-    list-style: none;
-    list-style-image: none;
-    margin: 0;
-    font-size: 90%;
-    border: none;
-}
-#portal-sitemap a {
-    border: &dtml-borderWidth; &dtml-borderStyle; &dtml-backgroundColor;;
-}
-#portal-sitemap a:hover {
-    border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
-}
-#portal-sitemap .navTreeLevel1 {
-    padding-left: 1em;
-    border-left: 0.5em solid &dtml-globalBorderColor;;
-    margin: 0 0 0 0.5em;
-}
-#portal-sitemap .navTreeLevel2 {
-    padding-left: 1em;
-    border-left: 0.5em solid &dtml-globalBackgroundColor;;
-    margin: 0 0 0 0.6em;
-}
-
-/* Album view classes */
-.photoAlbumEntry {
-    float: left;
-    height: 185px;
-    width: 143px;
-    margin: 0em;
-    padding: 0px 6px 0px 9px;
-    text-align: center;
-    background-image: url('&dtml-portal_url;/polaroid-single.png');
-    background-repeat: no-repeat;
-}
-.photoAlbumEntry img {
-    border: 1px solid #ccc;
-    display: block;
-    margin: 0 auto;
-}
-.photoAlbumEntryWrapper {
-    /*display: block;*/
-    height: 130px;
-    width: 128px;
-    margin-bottom: 7px;
-}
-.photoAlbumEntry a {
-    display: block;
-    text-decoration: none;
-    font-size: &dtml-fontSmallSize;;
-    height: 169px;
-    width: 130px;
-    margin: 16px auto 0px;
-}
-.photoAlbumFolder {
-    background-image: url('&dtml-portal_url;/polaroid-multi.png');
-    background-repeat: no-repeat;
-}
-.photoAlbumEntryTitle {
-    color: &dtml-discreetColor;;
-    display: block;
-    overflow: hidden;
-    width: 128px;
-    height: 3.6em;
 }
 
 /* Link types */
@@ -1037,21 +903,6 @@ a.link-parent {
     opacity: 0.2;
 }
 
-/* Fullscreen */
-body.fullscreen #portal-logo,
-body.fullscreen #portal-siteactions {
-    display: none;
-}
-body.fullscreen #portal-globalnav {
-    margin-top: 4em;
-}
-body.fullscreen #portal-searchbox {
-    margin: 0.5em 2em 0 0.5em;
-    padding: 0;
-    position: relative;
-    z-index: 3;
-}
-
 /* Kupu image alignment classes */
 .image-left {
    float: left;
@@ -1075,92 +926,13 @@ dd.image-caption {
 dl.captioned {
    padding: 10px;
 }
-
-/* Dashboard */
-#dashboard-info-message {
-    padding-top: 0.5em;
-}
-
-#dashboard {
-    width: 68em;
-}
-
-#dashboard-portlets1,
-#dashboard-portlets2,
-#dashboard-portlets3
-{
-    float:left;
-    width:16em;
-    padding:0.7em 1.3em 0 0;
-}
-
-#dashboard-portlets4 {
-    float:left;
-    width:16em;
-    padding-top:0.7em;
-}
-
-#dashboard-portlets1 a,
-#dashboard-portlets2 a,
-#dashboard-portlets3 a,
-#dashboard-portlets4 a {
-    border-bottom:medium none;
-}
-
-#dashboard-portlets1 dl.portlet,
-#dashboard-portlets2 dl.portlet,
-#dashboard-portlets3 dl.portlet,
-#dashboard-portlets4 dl.portlet {
-    margin-bottom:1.5em;
-}
-
 div.managedPortlet.portlet {
     border-bottom:none;
 }
-#dashboard select {
-    width:100%;
-}
-
 .portletAssignments {
     margin-top:1.5em;
 }
 
-#dashboard-portlets1 div.managedPortlet a,
-#dashboard-portlets2 div.managedPortlet a,
-#dashboard-portlets3 div.managedPortlet a,
-#dashboard-portlets4 div.managedPortlet a {
-    text-decoration: none;
-    color: &dtml-globalFontColor;;
-    border-bottom:1px solid &dtml-globalFontColor;;
-}
-
-#dashboard-portlets1 div.managedPortlet span a,
-#dashboard-portlets2 div.managedPortlet span a,
-#dashboard-portlets3 div.managedPortlet span a,
-#dashboard-portlets4 div.managedPortlet span a{
-    border-bottom:none;
-}
-
-#dashboard-actions {
-    float:right;
-}
-
-#dashboard-actions ul {
-    list-style-image:none;
-    list-style-position:outside;
-    list-style-type:none;    
-    margin-top:0;
-}
-
-#dashboard-actions ul li {
-    display:inline;
-    padding-left:0.7em;
-}
-
-#dashboard-actions ul li.portalUser {
-    background:transparent url(&dtml-portal_url;/user.gif) no-repeat scroll left center;
-    padding-left:18px;
-}
 
 /* manage portlets */
 
