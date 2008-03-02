@@ -25,6 +25,41 @@ if membership_tool.isAnonymousUser():
 
 util.addPortalMessage(PMF(u'Welcome! You are now logged in.'))
 
+came_from = REQUEST.get('came_from', None)
+
+# if we weren't called from something that set 'came_from' or if HTTP_REFERER
+# is the 'logged_out' page, return the default 'login_success' form
+if came_from is not None:
+    scheme, location, path, parameters, query, fragment = util.urlparse(came_from)
+    template_id = path.split('/')[-1]
+    if template_id in ['login', 'login_success', 'login_password', 'login_failed',
+                       'login_form', 'logged_in', 'logged_out', 'registered',
+                       'mail_password', 'mail_password_form', 'join_form',
+                       'require_login', 'member_search_results',
+                       # We need localhost in the list, or Five.testbrowser tests
+                       # won't be able to log in via login_form (since r17128).
+                       'localhost']:
+        came_from = ''
+    # It is probably a good idea in general to filter out urls outside the portal.
+    # An added bonus: this fixes some problems with a Zope bug that doesn't
+    # properly unmangle the VirtualHostMonster stuff when setting ACTUAL_URL
+    if not context.portal_url.isURLInPortal(came_from):
+        came_from = ''
+    if came_from == context.portal_url.getPortalObject().absolute_url():
+        came_from = None
+
+if came_from:
+    # If javascript is not enabled, it is possible that cookies are not enabled.
+    # If cookies aren't enabled, the redirect will log the user out, and confusion
+    # may arise.  Redirect only if we know for sure that cookies are enabled.
+
+    util.addPortalMessage(_(u'Welcome! You are now logged in.'))
+    came_from = util.urlunparse((scheme, location, path, parameters, query, fragment))
+
+    # redirect immediately
+    return REQUEST.RESPONSE.redirect(came_from)
+
+
 # Get all projects, sorted on modification date.
 catalog = context.portal_catalog
 projectbrains = catalog.searchResults(portal_type='Project',
@@ -63,7 +98,7 @@ elif len(projectbrains) > 1:
                                                review_state=('open', 'to-do'),
                                                path=searchpath)
             if len(taskbrains) > 0:
-                next_url = taskbrains[0].getURL()
+                next_url = projectbrain.getURL()
                 break
         if not next_url:
             next_url = context.portal_url.getPortalObject().absolute_url()
