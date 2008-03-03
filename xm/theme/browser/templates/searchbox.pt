@@ -22,6 +22,19 @@
                type="submit"
                value="Search"
                i18n:attributes="value label_search;" />
+        <br />
+        <input name="portal_type"
+               type="checkbox"
+               value="Project"
+               class="searchGadgetType"/> Projects
+        <input name="portal_type"
+               type="checkbox"
+               class="searchGadgetType"
+               value="Story"/> Stories
+        <input name="portal_type"
+               type="checkbox"
+               class="searchGadgetType"
+               value="Task"/> Tasks
     
         <div class="LSResult" id="LSResult" style=""><div class="LSShadow" id="LSShadow"></div></div>
         </div>
