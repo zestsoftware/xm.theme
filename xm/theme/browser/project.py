@@ -72,7 +72,7 @@ class ProjectContentProvider(Explicit):
         Optionally take the state into account, when requested.
         """
         state_map = {'open': ('new', ),
-                     'closed': ('completed', 'invoiced'),
+                     'closed': ('completed', 'invoiced', 'own-account'),
                      'current': ('in-progress', ),
                      }
         states = state_map.get(self.state, None)
