@@ -61,6 +61,28 @@ div.pageBreak {
     page-break-before: always;
 }
 
+h1#project-header {
+  font-size: 16pt;
+  margin-bottom: 5px;
+  margin-top: 0px;
+}
+
+h1.documentFirstHeading {
+  font-size: 14pt;
+  margin-bottom: 5px;
+  margin-top: 0px;
+}
+
+#offerView,
+.storyTitle-storyEstimate td {
+  border: none !important;
+}
+
+#offerViewHeader h2 {
+  border-bottom: none !important;
+}
+
+
 /* Uncomment these to get link addresses inserted along with the link text
    when you print.
 #content a:link:after, 
@@ -94,6 +116,7 @@ div.top,
  #kss-spinner,
  #review-history,
  .listingBar,
-.visualNoPrint {
+.visualNoPrint,
+#offerView img {
     display: none;
 }
