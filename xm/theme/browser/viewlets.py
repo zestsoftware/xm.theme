@@ -9,9 +9,9 @@ class XMProjectHeaderViewlet(ViewletBase):
     render = ViewPageTemplateFile('templates/project_header.pt')
 
     def update(self):
-        portal_state = getMultiAdapter((self.context, self.request),
+        self.portal_state = getMultiAdapter((self.context, self.request),
                                             name=u'plone_portal_state')
-        self.portal_url = portal_state.portal_url()
+        self.site_url = self.portal_state.portal_url()
         self.project_title = self._get_project_title()
         self.project_url = self._get_project_url()
 
@@ -34,20 +34,18 @@ class XMProjectHeaderViewlet(ViewletBase):
         if project is not None:
             return project.absolute_url()
         else:
-            return self.portal_url
+            return self.site_url
 
 
 class XMSearchBoxViewlet(ViewletBase):
     render = ViewPageTemplateFile('templates/searchbox.pt')
 
     def update(self):
-        portal_state = getMultiAdapter((self.context, self.request),
+        self.portal_state = getMultiAdapter((self.context, self.request),
                                             name=u'plone_portal_state')
+        self.site_url = self.portal_state.portal_url()
         context_state = getMultiAdapter((self.context, self.request),
                                         name=u'plone_context_state')
-
-        self.portal_url = portal_state.portal_url()
-
         props = getToolByName(self.context, 'portal_properties')
         livesearch = props.site_properties.getProperty('enable_livesearch',
                                                        False)
