@@ -5,9 +5,13 @@ from plone.portlets.interfaces import IPortletAssignmentMapping
 from plone.app.portlets import portlets as plone_portlets
 from xm.portlets import project
 
+# BBB configure_portlets can be removed completely after we drop 3.0 support
 
 def configure_portlets(site, logger):
-    """Set up the portlets."""
+    """Set up the portlets. This is here for backward compatibility with Plone 3.0.
+    As of Plone 3.1 Portlet Assignments are being managed by portlets.xml """
+    
+
     # Get some definitions.
     column = getUtility(IPortletManager, name="plone.leftcolumn", context=site)
     manager = getMultiAdapter((site, column), IPortletAssignmentMapping)
