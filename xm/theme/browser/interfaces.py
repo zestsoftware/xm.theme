@@ -41,3 +41,25 @@ class IProjectContentProvider(Interface):
         """Return the iterations."""
 
 directlyProvides(IProjectContentProvider, ITALNamespaceData)
+
+
+class IEmployeesView(IBrowserView):
+    """A view which displays all employees and their billable percentages
+    per month.
+    """
+    
+    def items():
+        """ Returns a list of months each month contains a list of employees
+        and each employee is a dict.
+        
+        [{'month':'April',
+          'employees':[ {'name':'Mark van Lent',
+                         'month_url': 'http://example.com/booking_month?memberid=mark',
+                         'percentage': '70 %'},
+                        {'name':'Mark van Lent',
+                         'month_url': 'http://example.com/booking_month?memberid=mark',
+                         'percentage': '70 %'},
+                      ],
+        ]
+        
+        """

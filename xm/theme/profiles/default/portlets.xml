@@ -84,6 +84,16 @@
   </assignment>
 
   <assignment
+    type="xm.portlets.managers"
+    manager="plone.leftcolumn"
+    category="context"
+    key="/"
+    name="managers.portlet"
+    insert-before="*"
+    >
+  </assignment>
+
+  <assignment
     type="xm.portlets.project"
     manager="plone.leftcolumn"
     category="context"
