@@ -36,13 +36,12 @@ class EmployeesView(BrowserView):
         # from now.
         y = self.year
         for x in range(11):
-            i = x + 1
-            m = self.month - i
+            m = self.month - x + 1
             if m <= 0:
                 m += 12
                 if y == self.year:
                     y -= 1
-            self.months.append(datetime(y, m, self.now.day))
+            self.months.append(datetime(y, m, 1))
 
     @memoize
     def items(self):
@@ -57,18 +56,17 @@ class EmployeesView(BrowserView):
                 # percentages and a url to the month view.
                 results = []
                 for m in self.months:
-                    view = WeekBookingOverview(aq_inner(self.context),
-                                                      self.request,
-                                                      year=m.year,
-                                                      month=m.month,
-                                                      memberid=userid)
+                    opts = dict(year=m.year, month=m.month, memberid=userid)
+                    view = WeekBookingOverview(self.context, self.request,
+                                               **opts)
                     val = view.main()
-                    url = "%s/booking_month?memberid=%s&month=%r" % \
+                    url = "%s/booking_month?memberid=%s&month=%r&year=%r" % \
                                                 (self.site_url, userid,
-                                                m.month)
+                                                m.month, m.year)
                     perc_dict = dict(percentage = val['perc_billable'],
                                    url = url)
                     results.append(perc_dict)
+                results.reverse()
                 empldict['monthly_percentages'] = results
             data.append(empldict)
 
@@ -79,12 +77,13 @@ class EmployeesView(BrowserView):
         """ Return a list of translated month names used for the header of the
         table.
         """
-        result = []
+        results = []
         for m in self.months:
             month = _(safe_unicode(m.strftime('%B')))
             year = safe_unicode(str(m.year))
-            result.append(' '.join([month, year]))
-        return result
+            results.append(' '.join([month, year]))
+        results.reverse()
+        return results
 
     @memoize
     def get_employees(self):
