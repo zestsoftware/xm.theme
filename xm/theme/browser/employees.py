@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import date
 
 from zope.interface import implements
 from plone.memoize.view import memoize
@@ -28,23 +28,22 @@ class EmployeesView(BrowserView):
         self.site_url = portal_url()
         self.catalog = getToolByName(context, 'portal_catalog')
         self.mtool = getToolByName(context, 'portal_membership')
-        self.now = datetime.now()
-        self.month = self.now.month
-        self.months = [self.now]
-        self.year = self.now.year
-        # months is a list of datetime object of the past 12 months counting
-        # from now.
-        y = self.year
-        for x in range(11):
-            m = self.month - x + 1
+        today = date.today()
+        self.months = []
+        # months is a list of date objects of the past 12 months
+        # counting backwards from now.
+        m = today.month
+        y = today.year
+        for x in range(12):
+            self.months.append(date(y, m, 1))
+            m = m - 1
             if m <= 0:
                 m += 12
-                if y == self.year:
-                    y -= 1
-            self.months.append(datetime(y, m, 1))
+                y -= 1
 
     @memoize
     def items(self):
+        context = aq_inner(self.context)
         data = []
         employees = self.get_employees()
         for userid in employees:
@@ -57,7 +56,7 @@ class EmployeesView(BrowserView):
                 results = []
                 for m in self.months:
                     opts = dict(year=m.year, month=m.month, memberid=userid)
-                    view = WeekBookingOverview(self.context, self.request,
+                    view = WeekBookingOverview(context, self.request,
                                                **opts)
                     val = view.main()
                     url = "%s/booking_month?memberid=%s&month=%r&year=%r" % \
