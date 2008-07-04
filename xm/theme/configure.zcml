@@ -5,13 +5,13 @@
     xmlns:i18n="http://namespaces.zope.org/i18n"
     i18n_domain="xm.theme">
 
-   <five:registerPackage package="." initialize=".initialize" />
+  <five:registerPackage package="." initialize=".initialize" />
 
-   <i18n:registerTranslations directory="locales" />
+  <i18n:registerTranslations directory="locales" />
 
-   <include package=".browser" />
+  <include package=".browser" />
 
-   <include file="skins.zcml" />
-   <include file="profiles.zcml" />
+  <include file="skins.zcml" />
+  <include file="profiles.zcml" />
 
 </configure>
