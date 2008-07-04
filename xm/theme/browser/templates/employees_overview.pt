@@ -21,12 +21,14 @@
           </tr>
           <tr tal:repeat="employee view/items">
             <td tal:content="employee/name">
-                 Jean-Paul Ladage
+              Jean-Paul Ladage
             </td>
-            <td tal:repeat="month employee/monthly_percentages"><a
-                         tal:attributes="href python:month['url']"
-                         tal:content="python:month['percentage']"
-                         >60 %</a></td>
+            <td tal:repeat="month employee/monthly_percentages">
+              <a tal:attributes="href python:month['url']"
+                 tal:content="python:month['percentage']">
+                60 %
+              </a>
+            </td>
           </tr>
         </table>
       </div>
