@@ -1,19 +1,15 @@
 from datetime import date
 
-from zope.interface import implements
-from plone.memoize.view import memoize
-
-from interfaces import IEmployeesView
-
 from Acquisition import aq_inner
-
 from Products.CMFCore.utils import getToolByName
-from Products.Five.browser import BrowserView
 from Products.CMFPlone.utils import safe_unicode
+from Products.Five.browser import BrowserView
+from plone.memoize.view import memoize
+from zope.interface import implements
 
 from Products.eXtremeManagement.browser.bookings import WeekBookingOverview
-
 from xm.theme import xmMessageFactory as _
+from interfaces import IEmployeesView
 
 
 class EmployeesView(BrowserView):
