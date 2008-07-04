@@ -1,11 +1,8 @@
 from Acquisition import aq_inner
 from DateTime import DateTime
-
+from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone.app.layout.viewlets.common import ViewletBase
 from plone.memoize.view import memoize
-
-from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-from Products.CMFCore.utils import getToolByName
 
 from xm.theme import xmMessageFactory as _
 
