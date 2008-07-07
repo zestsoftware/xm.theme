@@ -84,6 +84,7 @@ elif len(projectbrains) > 1:
     member = membership_tool.getAuthenticatedMember()
     memberid = member.id
     projectbrain = projectbrains[0]
+    next_url = None
     if 'Customer' in member.getRolesInContext(
         projectbrain.getObject()):
         next_url = projectbrains[0].getURL()
@@ -100,8 +101,8 @@ elif len(projectbrains) > 1:
             if len(taskbrains) > 0:
                 next_url = projectbrain.getURL()
                 break
-        if not next_url:
-            next_url = context.portal_url.getPortalObject().absolute_url()
+    if not next_url:
+        next_url = context.portal_url.getPortalObject().absolute_url()
     util.addPortalMessage(_(u'You have been redirected to your '
                             u'most recent project.'))
 else:
