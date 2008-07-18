@@ -164,16 +164,17 @@ h3, h4, h5, h6 {
 /* Searchbox style and positioning */
 
 #portal-searchbox {
-    float: right;
-    clear: right;
-    background-color: transparent;
-    margin: 1.5em 0 0 0;
-    padding: 0 2em 0 0;
-    text-align: right;
-    text-transform: &dtml-textTransform;;
-    white-space: nowrap;
-    z-index: 2;
+  float: right;
+  clear: right;
+  background-color: transparent;
+  margin: 0.5em 0 0 0;
+  padding: 0 2em 0 0;
+  text-align: right;
+  text-transform: &dtml-textTransform;;
+  white-space: nowrap;
+  z-index: 2;
 }
+
 #portal-advanced-search {
     margin-top: 0.2em;
     clear: both;
@@ -317,13 +318,13 @@ form.searchPage input.searchButton {
 
 /* The global section tabs. */
 #portal-globalnav {
-    background-color: transparent;
-    padding: 0em 0em 0em 2em;
-    white-space: nowrap;
-    list-style: none;
-    margin: 0;
-    height: auto;
-    line-height: normal;
+  background-color: transparent;
+  padding: 0em 0em 0em 2em;
+  white-space: nowrap;
+  list-style: none;
+  margin: 7px 0 0 0;
+  height: auto;
+  line-height: normal;
 }
 #portal-globalnav li {
     display: inline;
