@@ -44,23 +44,31 @@
 .portletFooter a:visited {
     color: &dtml-linkColor;;
 }
+
 .portletHeader {
-    background-color: &dtml-globalBackgroundColor;;
-    border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
-    padding: 0em 1em;
-    text-transform: &dtml-textTransform;;
-    font-weight: normal;
-    line-height: 1.6em;
+  background: url(++resource++xm.theme.images/gradientBG.jpg) repeat-x;
+  border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
+  padding: 0em 1em;
+  text-transform: &dtml-textTransform;;
+  font-weight: normal;
+  line-height: 1.6em;
 }
+
 .portletHeader a {
     color: &dtml-fontColor;;
 }
+
 .portletItem {
-    margin: 0;
-    padding: 1em;
-    border-left: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
-    border-right: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
+  margin: 0;
+  padding: 0.5em 1em;
+  border-left: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
+  border-right: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
 }
+
+.portlet .even {
+  background-color: #fff !important;
+}
+
 .portletItem ol {
     margin: 0 0 0 1em;
 }
