@@ -42,3 +42,36 @@ h1#project-header a {
   margin: 0;
   padding: 0;
 }
+
+table .IterationTitle th {
+  background: url(++resource++xm.theme.images/iterationBG.jpg) repeat-x;
+  white-space: nowrap;
+  font-weight: bold;
+}
+
+table .IterationTitle a {
+  color: #000;
+}
+
+#story-listing a:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+.progress_percentage span {
+  display: none;
+}
+
+#story-listing #task-list-for-story {
+  font-size: 100%;
+}
+
+#story-listing .StatusOfStories th {
+  background-color: #d8e8bb;
+}
+
+#totalTasks th {
+  font-weight: bold;
+  background-color: #edebeb;
+  text-transform: capitalize;
+}

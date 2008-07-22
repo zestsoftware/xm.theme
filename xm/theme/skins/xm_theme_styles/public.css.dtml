@@ -643,25 +643,26 @@ table.listing,
 .stx table {
     /* The default table for document listings. Contains name, document types, modification times etc in a file-browser-like fashion */
     border-collapse: collapse;
-    border-left: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
-    border-bottom: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
+    border-left: &dtml-borderWidth; &dtml-borderStyle; #c0bfbf;;
+    border-bottom: &dtml-borderWidth; &dtml-borderStyle; #c0bfbf;
+    border-right: &dtml-borderWidth; &dtml-borderStyle; #c0bfbf;;
     font-size: &dtml-fontSmallSize;;
     margin: 1em 0em 1em 0em;
 }
 table.listing th,
 .stx table th {
-    background: &dtml-globalBackgroundColor;;
-    border-top: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
-    border-bottom: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
-    border-right: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
+    background-color: #d8e8bb;
+    border-top: &dtml-borderWidth; &dtml-borderStyle; #c0bfbf;
+    border-bottom: &dtml-borderWidth; &dtml-borderStyle; #c0bfbf;
+    border-right: &dtml-borderWidth; &dtml-borderStyle; #c0bfbf;
     font-weight: normal;
     padding: 0.25em 0.5em;
     text-transform: &dtml-textTransform;;
 }
 table.listing .top {
-    border-left: &dtml-borderWidth; &dtml-borderStyle; &dtml-backgroundColor;;
-    border-top: &dtml-borderWidth; &dtml-borderStyle; &dtml-backgroundColor; ! important;
-    border-right: &dtml-borderWidth; &dtml-borderStyle; &dtml-backgroundColor; ! important;
+    border-left: &dtml-borderWidth; &dtml-borderStyle; #c0bfbf;
+    border-top: &dtml-borderWidth; &dtml-borderStyle; #c0bfbf !important;
+    border-right: &dtml-borderWidth; &dtml-borderStyle; #c0bfbf !important;
     text-align: right ! important;
     padding: 0em 0em 1em 0em;
 }
@@ -670,7 +671,7 @@ table.listing .listingCheckbox {
 }
 table.listing td,
 .stx table td {
-    border-right: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
+    border-right: &dtml-borderWidth; &dtml-borderStyle; #c0bfbf;
     padding: 0.25em 0.5em;
 }
 table.listing a {
