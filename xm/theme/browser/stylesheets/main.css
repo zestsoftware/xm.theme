@@ -70,8 +70,31 @@ table .IterationTitle a {
   background-color: #d8e8bb;
 }
 
-#totalTasks th {
+#story-listing .storyHeader {
+  width: 50%;
+}
+
+#story-listing .statusHeader {
+  width: 10%;
+}
+
+#story-listing .initEstimateHeader {
+  width: 10%;  
+}
+
+#story-listing .tasksEstimateHeader {
+  width: 10%;
+}
+
+#story-listing .actualHoursHeader {
+  width: 10%;
+}
+
+#story-listing .totalOfProject th {
+  text-align: right;
   font-weight: bold;
-  background-color: #edebeb;
-  text-transform: capitalize;
+  text-transform: none;
+  background-color: #EDEBEB;
+  padding: 6px 3px;
+  font-size: 110%;
 }
