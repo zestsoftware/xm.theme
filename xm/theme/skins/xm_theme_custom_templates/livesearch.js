@@ -80,11 +80,9 @@ var livesearch = function (){
                         $$current_types[i] = $types[i].value;
                     }
                 }
-            } else {
-                var $$current_types = "";
+                $$query['portal_type'] = $$current_types
             }
-            $$query['portal_type'] = $$current_types
-                
+   
             // turn into a string for use as a cache key
             $$query = jq.param($$query);
 
