@@ -34,9 +34,8 @@ MAX_DESCRIPTION = 93
 
 # generate a result set for the query
 catalog = context.portal_catalog
-
 friendly_types = ploneUtils.getUserFriendlyTypes()
-if portal_type:
+if portal_type and len(portal_type) > 0:
     friendly_types = portal_type
 
 
