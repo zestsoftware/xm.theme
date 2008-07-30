@@ -1,20 +1,18 @@
 from Acquisition import Explicit
 from Acquisition import aq_inner
-
-from zope.component import adapts
-from zope.interface import implements
-from zope.interface import Interface
-from zope.contentprovider.interfaces import IContentProvider
-from zope.publisher.interfaces.browser import IDefaultBrowserLayer
-from zope.publisher.interfaces.browser import IBrowserView
-from plone.memoize.view import memoize
-
-from xm.theme.browser.interfaces import IProjectContentView
-from xm.theme.browser.interfaces import IProjectContentProvider
-
 from Products.CMFCore.utils import getToolByName
 from Products.Five.browser import BrowserView
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+from plone.memoize.view import memoize
+from zope.component import adapts
+from zope.contentprovider.interfaces import IContentProvider
+from zope.interface import Interface
+from zope.interface import implements
+from zope.publisher.interfaces.browser import IBrowserView
+from zope.publisher.interfaces.browser import IDefaultBrowserLayer
+
+from xm.theme.browser.interfaces import IProjectContentView
+from xm.theme.browser.interfaces import IProjectContentProvider
 
 
 class ProjectContentView(BrowserView):
@@ -113,7 +111,7 @@ class ProjectContentProvider(Explicit):
         for brain in brains:
             url = brain.getURL()
             if brain.portal_type in view_types:
- 	                url += '/view'
+                        url += '/view'
             result_list.append(dict(title = brain.Title,
                                     url = url,
                                     ))

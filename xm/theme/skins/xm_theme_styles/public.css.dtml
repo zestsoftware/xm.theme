@@ -164,16 +164,17 @@ h3, h4, h5, h6 {
 /* Searchbox style and positioning */
 
 #portal-searchbox {
-    float: right;
-    clear: right;
-    background-color: transparent;
-    margin: 1.5em 0 0 0;
-    padding: 0 2em 0 0;
-    text-align: right;
-    text-transform: &dtml-textTransform;;
-    white-space: nowrap;
-    z-index: 2;
+  float: right;
+  clear: right;
+  background-color: transparent;
+  margin: 0.5em 0 0 0;
+  padding: 0 2em 0 0;
+  text-align: right;
+  text-transform: &dtml-textTransform;;
+  white-space: nowrap;
+  z-index: 2;
 }
+
 #portal-advanced-search {
     margin-top: 0.2em;
     clear: both;
@@ -317,13 +318,13 @@ form.searchPage input.searchButton {
 
 /* The global section tabs. */
 #portal-globalnav {
-    background-color: transparent;
-    padding: 0em 0em 0em 2em;
-    white-space: nowrap;
-    list-style: none;
-    margin: 0;
-    height: auto;
-    line-height: normal;
+  background-color: transparent;
+  padding: 0em 0em 0em 2em;
+  white-space: nowrap;
+  list-style: none;
+  margin: 7px 0 0 0;
+  height: auto;
+  line-height: normal;
 }
 #portal-globalnav li {
     display: inline;
@@ -354,23 +355,25 @@ form.searchPage input.searchButton {
     border-bottom-color: &dtml-globalBackgroundColor;;
     color: &dtml-globalFontColor;;
 }
+
 #portal-personaltools {
-    /* Bar with personalized menu (user preferences, favorites etc) */
-    background-color: &dtml-globalBackgroundColor;;
-    border-top-color: &dtml-globalBorderColor;;
-    border-top-style: &dtml-borderStyle;;
-    border-top-width: &dtml-borderWidth;;
-    border-bottom-color: &dtml-globalBorderColor;;
-    border-bottom-style: &dtml-borderStyle;;
-    border-bottom-width: &dtml-borderWidth;;
-    line-height: 1.6em;
-    color: &dtml-fontColor;;
-    padding: 0em 3em 0em 3em;
-    margin: 0;
-    text-align: right;
-    text-transform: &dtml-textTransform;;
-    list-style: none;
+  /* Bar with personalized menu (user preferences, favorites etc) */
+  background: url(++resource++xm.theme.images/gradientBG.jpg) repeat-x;
+  border-top-color: &dtml-globalBorderColor;;
+  border-top-style: &dtml-borderStyle;;
+  border-top-width: &dtml-borderWidth;;
+  border-bottom-color: &dtml-globalBorderColor;;
+  border-bottom-style: &dtml-borderStyle;;
+  border-bottom-width: &dtml-borderWidth;;
+  line-height: 1.6em;
+  color: &dtml-fontColor;;
+  padding: 0em 3em 0em 3em;
+  margin: 0;
+  text-align: right;
+  text-transform: &dtml-textTransform;;
+  list-style: none;
 }
+
 #portal-personaltools .portalUser {
     background: transparent url(&dtml-portal_url;/user.gif) center left no-repeat;
     padding-left: 18px;
@@ -640,25 +643,26 @@ table.listing,
 .stx table {
     /* The default table for document listings. Contains name, document types, modification times etc in a file-browser-like fashion */
     border-collapse: collapse;
-    border-left: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
-    border-bottom: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
+    border-left: &dtml-borderWidth; &dtml-borderStyle; #c0bfbf;;
+    border-bottom: &dtml-borderWidth; &dtml-borderStyle; #c0bfbf;
+    border-right: &dtml-borderWidth; &dtml-borderStyle; #c0bfbf;;
     font-size: &dtml-fontSmallSize;;
     margin: 1em 0em 1em 0em;
 }
 table.listing th,
 .stx table th {
-    background: &dtml-globalBackgroundColor;;
-    border-top: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
-    border-bottom: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
-    border-right: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
+    background-color: #d8e8bb;
+    border-top: &dtml-borderWidth; &dtml-borderStyle; #c0bfbf;
+    border-bottom: &dtml-borderWidth; &dtml-borderStyle; #c0bfbf;
+    border-right: &dtml-borderWidth; &dtml-borderStyle; #c0bfbf;
     font-weight: normal;
     padding: 0.25em 0.5em;
     text-transform: &dtml-textTransform;;
 }
 table.listing .top {
-    border-left: &dtml-borderWidth; &dtml-borderStyle; &dtml-backgroundColor;;
-    border-top: &dtml-borderWidth; &dtml-borderStyle; &dtml-backgroundColor; ! important;
-    border-right: &dtml-borderWidth; &dtml-borderStyle; &dtml-backgroundColor; ! important;
+    border-left: &dtml-borderWidth; &dtml-borderStyle; #c0bfbf;
+    border-top: &dtml-borderWidth; &dtml-borderStyle; #c0bfbf !important;
+    border-right: &dtml-borderWidth; &dtml-borderStyle; #c0bfbf !important;
     text-align: right ! important;
     padding: 0em 0em 1em 0em;
 }
@@ -667,7 +671,7 @@ table.listing .listingCheckbox {
 }
 table.listing td,
 .stx table td {
-    border-right: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
+    border-right: &dtml-borderWidth; &dtml-borderStyle; #c0bfbf;
     padding: 0.25em 0.5em;
 }
 table.listing a {

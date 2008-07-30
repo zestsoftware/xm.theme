@@ -1,8 +1,7 @@
-from zope.component import getMultiAdapter
-
-from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from Products.CMFCore.utils import getToolByName
+from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone.app.layout.viewlets.common import ViewletBase
+from zope.component import getMultiAdapter
 
 
 class XMProjectHeaderViewlet(ViewletBase):
@@ -56,7 +55,7 @@ class XMSearchBoxViewlet(ViewletBase):
 
         folder = context_state.folder()
         self.folder_path = '/'.join(folder.getPhysicalPath())
-        
+
 
 class GoogleSearchViewlet(ViewletBase):
 

@@ -42,3 +42,59 @@ h1#project-header a {
   margin: 0;
   padding: 0;
 }
+
+table .IterationTitle th {
+  background: url(++resource++xm.theme.images/iterationBG.jpg) repeat-x;
+  white-space: nowrap;
+  font-weight: bold;
+}
+
+table .IterationTitle a {
+  color: #000;
+}
+
+#story-listing a:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+.progress_percentage span {
+  display: none;
+}
+
+#story-listing #task-list-for-story {
+  font-size: 100%;
+}
+
+#story-listing .StatusOfStories th {
+  background-color: #d8e8bb;
+}
+
+#story-listing .storyHeader {
+  width: 50%;
+}
+
+#story-listing .statusHeader {
+  width: 10%;
+}
+
+#story-listing .initEstimateHeader {
+  width: 10%;  
+}
+
+#story-listing .tasksEstimateHeader {
+  width: 10%;
+}
+
+#story-listing .actualHoursHeader {
+  width: 10%;
+}
+
+#story-listing .totalOfProject th {
+  text-align: right;
+  font-weight: bold;
+  text-transform: none;
+  background-color: #EDEBEB;
+  padding: 6px 3px;
+  font-size: 110%;
+}
