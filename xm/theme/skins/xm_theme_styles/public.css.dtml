@@ -185,6 +185,11 @@ h3, h4, h5, h6 {
     text-transform: &dtml-textTransform;;
 }
 
+.searchGadgetType {
+  border: 0;
+  background: #fff;
+}
+
 /* Search results elements */
 
 dl.searchResults dt {
@@ -322,7 +327,7 @@ form.searchPage input.searchButton {
   padding: 0em 0em 0em 2em;
   white-space: nowrap;
   list-style: none;
-  margin: 7px 0 0 0;
+  margin: 12px 0 0 0;
   height: auto;
   line-height: normal;
 }

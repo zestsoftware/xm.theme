@@ -98,3 +98,11 @@ table .IterationTitle a {
   padding: 6px 3px;
   font-size: 110%;
 }
+
+table.employees-overview td {
+  padding: 4px;
+}
+
+.employees-overview .name-employee {
+  white-space: nowrap;
+}
