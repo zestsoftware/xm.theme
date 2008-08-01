@@ -46,7 +46,7 @@
 }
 
 .portletHeader {
-  background: url(++resource++xm.theme.images/gradientBG.jpg) repeat-x;
+  background: url(++resource++xm.theme.images/gradientBG.jpg) repeat-x bottom;
   border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
   padding: 0em 1em;
   text-transform: &dtml-textTransform;;

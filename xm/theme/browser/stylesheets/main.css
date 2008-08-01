@@ -44,7 +44,7 @@ h1#project-header a {
 }
 
 table .IterationTitle th {
-  background: url(++resource++xm.theme.images/iterationBG.jpg) repeat-x;
+  background: url(++resource++xm.theme.images/IterationBG.jpg) repeat-x bottom;
   white-space: nowrap;
   font-weight: bold;
 }

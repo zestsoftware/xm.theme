@@ -363,7 +363,7 @@ form.searchPage input.searchButton {
 
 #portal-personaltools {
   /* Bar with personalized menu (user preferences, favorites etc) */
-  background: url(++resource++xm.theme.images/gradientBG.jpg) repeat-x;
+  background: url(++resource++xm.theme.images/gradientBG.jpg) repeat-x bottom;
   border-top-color: &dtml-globalBorderColor;;
   border-top-style: &dtml-borderStyle;;
   border-top-width: &dtml-borderWidth;;
