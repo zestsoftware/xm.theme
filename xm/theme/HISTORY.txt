@@ -4,16 +4,16 @@ History for xm.theme
 (name of developer listed in brackets)
 
 
-xm.theme 0.7.2 (unreleased)
----------------------------
+xm.theme 0.8 (unreleased)
+-------------------------
 
-- Started HISTORY.txt.  [maurits]
+- Made gradient images bigger in height for layout reasons. [mirella]
 
+- Fixed name typo in css. [mirella]
 
-xm.theme 0.7.1 (2008-07-31)
----------------------------
+- Placed the gradient images in bottom in the used classes. [mirella]
 
-- No history recorded.
+- Started HISTORY.txt (merged from 0.7.2).  [maurits]
 
 
 xm.theme 0.7 (2008-05-15)
