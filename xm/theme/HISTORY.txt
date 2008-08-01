@@ -4,7 +4,7 @@ History for xm.theme
 (name of developer listed in brackets)
 
 
-xm.theme 0.7.2 (unreleased)
+xm.theme 0.7.2 (2008-08-01)
 ---------------------------
 
 - Merged relevant parts of r69219:69346 from trunk [maurits]:
