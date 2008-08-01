@@ -4,6 +4,12 @@ History for xm.theme
 (name of developer listed in brackets)
 
 
+xm.theme 0.7.3 (unreleased)
+---------------------------
+
+- nothing yet
+
+
 xm.theme 0.7.2 (2008-08-01)
 ---------------------------
 
