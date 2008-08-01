@@ -7,6 +7,9 @@ History for xm.theme
 xm.theme 0.8 (unreleased)
 -------------------------
 
+- Use gradient image in booking-per-month table heading.  [mirella]
+  (Moved from Products.eXtremeManagement trunk by Maurits.)
+
 - Made gradient images bigger in height for layout reasons. [mirella]
 
 - Fixed name typo in css. [mirella]
