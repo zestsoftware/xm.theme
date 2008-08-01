@@ -4,7 +4,7 @@ History for xm.theme
 (name of developer listed in brackets)
 
 
-xm.theme 0.7.3 (unreleased)
+xm.theme 0.7.3 (2008-08-01)
 ---------------------------
 
 - Use gradient image in booking-per-month table heading.  [mirella]
