@@ -1,9 +1,52 @@
-Changelog for xm.theme
+History for xm.theme
+====================
 
-    (name of developer listed in brackets)
+(name of developer listed in brackets)
 
-xm.theme - 0.1 Unreleased
 
-    - Initial package structure.
-      [zopeskel]
+xm.theme 0.7.2 (unreleased)
+---------------------------
 
+- Started HISTORY.txt.  [maurits]
+
+
+xm.theme 0.7.1 (2008-07-31)
+---------------------------
+
+- No history recorded.
+
+
+xm.theme 0.7 (2008-05-15)
+-------------------------
+
+- No history recorded.
+
+
+xm.theme 0.6 (2008-03-31
+-------------------------
+
+- No history recorded.
+
+
+xm.theme 0.5 (2008-03-03)
+-------------------------
+
+- No history recorded.
+
+
+xm.theme 0.4 (2008-02-27)
+-------------------------
+
+- No history recorded.
+
+
+xm.theme 0.3 (2008-02-26)
+-------------------------
+
+- No history recorded.
+
+
+xm.theme 0.2 (2008-02-25)
+-------------------------
+
+- No history recorded.
