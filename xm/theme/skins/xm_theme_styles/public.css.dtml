@@ -185,6 +185,11 @@ h3, h4, h5, h6 {
     text-transform: &dtml-textTransform;;
 }
 
+.searchGadgetType {
+  border: 0;
+  background: #fff;
+}
+
 /* Search results elements */
 
 dl.searchResults dt {
@@ -322,7 +327,7 @@ form.searchPage input.searchButton {
   padding: 0em 0em 0em 2em;
   white-space: nowrap;
   list-style: none;
-  margin: 7px 0 0 0;
+  margin: 12px 0 0 0;
   height: auto;
   line-height: normal;
 }
@@ -358,7 +363,7 @@ form.searchPage input.searchButton {
 
 #portal-personaltools {
   /* Bar with personalized menu (user preferences, favorites etc) */
-  background: url(++resource++xm.theme.images/gradientBG.jpg) repeat-x;
+  background: url(++resource++xm.theme.images/gradientBG.jpg) repeat-x bottom;
   border-top-color: &dtml-globalBorderColor;;
   border-top-style: &dtml-borderStyle;;
   border-top-width: &dtml-borderWidth;;

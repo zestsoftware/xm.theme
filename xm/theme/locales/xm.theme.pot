@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2008-07-30 21:23+0000\n"
+"POT-Creation-Date: 2008-08-01 12:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,39 +17,39 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: xm.theme\n"
 
-#: ./browser/employees.py:81
+#: ./browser/employees.py:77
 msgid "%B"
 msgstr ""
 
-#: ./browser/viewlets_project_tabs.py:230
+#: ./browser/viewlets_project_tabs.py:227
 msgid "Closed"
 msgstr ""
 
-#: ./browser/viewlets_project_tabs.py:237
+#: ./browser/viewlets_project_tabs.py:234
 msgid "Closed iterations"
 msgstr ""
 
-#: ./browser/viewlets_project_tabs.py:228
+#: ./browser/viewlets_project_tabs.py:225
 msgid "Closed&hellip;"
 msgstr ""
 
-#: ./browser/viewlets_project_tabs.py:118
+#: ./browser/viewlets_project_tabs.py:115
 msgid "Current"
 msgstr ""
 
-#: ./browser/viewlets_project_tabs.py:125
+#: ./browser/viewlets_project_tabs.py:122
 msgid "Current iterations"
 msgstr ""
 
-#: ./browser/viewlets_project_tabs.py:116
+#: ./browser/viewlets_project_tabs.py:113
 msgid "Current&hellip;"
 msgstr ""
 
-#: ./browser/viewlets_project_tabs.py:91
+#: ./browser/viewlets_project_tabs.py:88
 msgid "Example"
 msgstr ""
 
-#: ./browser/viewlets_project_tabs.py:96
+#: ./browser/viewlets_project_tabs.py:93
 msgid "Example tab"
 msgstr ""
 
@@ -58,15 +58,15 @@ msgstr ""
 msgid "No content found"
 msgstr ""
 
-#: ./browser/viewlets_project_tabs.py:174
+#: ./browser/viewlets_project_tabs.py:171
 msgid "Open"
 msgstr ""
 
-#: ./browser/viewlets_project_tabs.py:181
+#: ./browser/viewlets_project_tabs.py:178
 msgid "Open iterations"
 msgstr ""
 
-#: ./browser/viewlets_project_tabs.py:172
+#: ./browser/viewlets_project_tabs.py:169
 msgid "Open&hellip;"
 msgstr ""
 
@@ -78,42 +78,42 @@ msgstr ""
 msgid "You have been redirected to the last project you visited."
 msgstr ""
 
-#: ./skins/xm_theme_custom_templates/login_next.cpy:105
+#: ./skins/xm_theme_custom_templates/login_next.cpy:106
 msgid "You have been redirected to your most recent project."
 msgstr ""
 
+#. Default: "In the overview, you'll find for each employee how much billable he/she worked per month in %."
+#: ./browser/templates/employees_overview.pt:16
+msgid "description_employees_overview"
+msgstr ""
+
+#. Default: "Name"
+#: ./browser/templates/employees_overview.pt:23
+msgid "head_name"
+msgstr ""
+
 #. Default: "Advanced Search…"
-#: ./skins/xm_theme_custom_templates/livesearch_reply.py:86
+#: ./skins/xm_theme_custom_templates/livesearch_reply.py:85
 msgid "label_advanced_search"
 msgstr ""
 
 #. Default: "No matching results found."
-#: ./skins/xm_theme_custom_templates/livesearch_reply.py:85
+#: ./skins/xm_theme_custom_templates/livesearch_reply.py:84
 msgid "label_no_results_found"
 msgstr ""
 
-#. Default: "Projects"
-#: ./browser/templates/searchbox.pt:15
-msgid "label_projects"
-msgstr ""
-
 #. Default: "Show all…"
-#: ./skins/xm_theme_custom_templates/livesearch_reply.py:87
+#: ./skins/xm_theme_custom_templates/livesearch_reply.py:86
 msgid "label_show_all"
 msgstr ""
 
-#. Default: "Stories"
-#: ./browser/templates/searchbox.pt:24
-msgid "label_stories"
-msgstr ""
-
-#. Default: "Tasks"
-#: ./browser/templates/searchbox.pt:33
-msgid "label_tasks"
-msgstr ""
-
 #. Default: "LiveSearch &#8595;"
-#: ./skins/xm_theme_custom_templates/livesearch_reply.py:84
+#: ./skins/xm_theme_custom_templates/livesearch_reply.py:83
 msgid "legend_livesearch"
+msgstr ""
+
+#. Default: "Employees overview"
+#: ./browser/templates/employees_overview.pt:13
+msgid "title_employees_overview"
 msgstr ""
 

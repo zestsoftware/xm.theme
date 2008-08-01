@@ -7,6 +7,17 @@ History for xm.theme
 xm.theme 0.7.2 (unreleased)
 ---------------------------
 
+- Merged relevant parts of r69219:69346 from trunk [maurits]:
+  - Made gradient images bigger in height for layout reasons. [mirella]
+
+  - Fixed name typo in css. [mirella]
+
+  - Placed the gradient images in bottom in the used classes. [mirella]
+
+  - Added translations and description for employees overview. [mirella]
+
+  - Added odd color and padding to employees overview. [mirella]
+
 - Started HISTORY.txt.  [maurits]
 
 
