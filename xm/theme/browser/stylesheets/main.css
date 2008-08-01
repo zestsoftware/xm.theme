@@ -106,3 +106,8 @@ table.employees-overview td {
 .employees-overview .name-employee {
   white-space: nowrap;
 }
+
+.booking-per-month th {
+  background: transparent url(++resource++xm.theme.images/IterationBG.jpg) repeat-x top;
+  font-weight: bold !important;
+}
