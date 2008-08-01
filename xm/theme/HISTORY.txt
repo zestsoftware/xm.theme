@@ -13,7 +13,12 @@ xm.theme 0.8 (unreleased)
 
 - Placed the gradient images in bottom in the used classes. [mirella]
 
+- Added translations and description for employees overview. [mirella]
+
+- Added odd color and padding to employees overview. [mirella]
+
 - Started HISTORY.txt (merged from 0.7.2).  [maurits]
+
 
 
 xm.theme 0.7 (2008-05-15)
