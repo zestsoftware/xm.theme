@@ -13,7 +13,7 @@ var livesearch = function (){
     // constants for better compression
     var _LSHighlight = "LSHighlight";
 
-    function _searchfactory($form, $inputnode, $types) {
+    function _searchfactory($form, $inputnode) {
         // returns the search functions in a dictionary.
         // we need a factory to get a local scope for the event, this is
         // necessary, because IE doesn't have a way to get the target of
@@ -83,15 +83,15 @@ var livesearch = function (){
             }
             // Second iterate over the types and build a result
             if ($count > 0) {
-                $$selected_types = [$count];
-                $pos = 0;
+                var $$selected_types = [$count];
+                var $pos = 0;
                 for (i=0; i<$types.length; i++) {
                     if ($types[i].checked == true) {
                         $$selected_types[$pos] = $types[i].value;
                         $pos += 1;
                     }
                 }
-                $$query['portal_type'] = $$selected_types
+                $$query['portal_type'] = $$selected_types;
             }
 
             // turn into a string for use as a cache key

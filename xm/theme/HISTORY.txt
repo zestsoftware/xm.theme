@@ -7,7 +7,9 @@ History for xm.theme
 xm.theme 0.7.4 (unreleased)
 ---------------------------
 
-- nothing yet
+- Fixed the livesearch.js customization to work with Plone 3.1.x We have to drop
+  support for Plone 3.0.x for this one, because jquery.js is not available.
+  [jladage]
 
 
 xm.theme 0.7.3 (2008-08-01)
