@@ -103,7 +103,7 @@ class ProjectContentProvider(Explicit):
 
         # Gather the content
         context = aq_inner(self.context)
-        cfilter = {'portal_type': ('File', 'Image')}
+        cfilter = {'portal_type': ('File', 'Image', 'Story')}
         brains = context.getFolderContents(cfilter)
 
         # Build the result set
