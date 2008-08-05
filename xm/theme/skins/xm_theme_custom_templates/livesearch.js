@@ -73,25 +73,23 @@ var livesearch = function (){
                 $$query['path'] = $path.val();
                 
             // Add types to search for
-            var $$current_types = [$types.length];
-            var $count = 0;
             // First iterate over the types to see if any are selected
+            var $count = 0;
             for (i=0; i<$types.length; i++) {
-                if ($types[i].checked == true) {
+                if ($types[i].checked == true)
                     $count += 1;
-                }
             }
             // Second iterate over the types and build a result
             if ($count > 0) {
-                var $$selected_types = [$count];
+                var $selected_types = [$count];
                 var $pos = 0;
                 for (i=0; i<$types.length; i++) {
                     if ($types[i].checked == true) {
-                        $$selected_types[$pos] = $types[i].value;
+                        $selected_types[$pos] = $types[i].value;
                         $pos += 1;
                     }
-                }
-                $$query['portal_type'] = $$selected_types;
+                };
+                $$query['portal_type'] = $selected_types;
             }
 
             // turn into a string for use as a cache key
