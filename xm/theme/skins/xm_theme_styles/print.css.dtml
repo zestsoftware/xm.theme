@@ -15,50 +15,62 @@
 */
 
 body {
-    font-family: Baskerville, Georgia, Garamond, Times, serif;
-    font-size: 11pt !important;
+  font-family: Verdana, Arial, Sans-serif;
+  font-size: 10pt !important;
 }
+
+h1 {
+  font-size: 120%;
+}
+
+h2 {
+  font-size: 100%;
+}
+
 h1, h2, h3, h4, h5, h6 {
-    border: none;
-    font-family: Baskerville, Georgia, Garamond, Times, serif;
+  border: none;
+  font-family: Verdana, Arial, Sans-serif;
+  margin-bottom: 2px;
 }
+
 div, p, ul, dl, ol {
-    width: auto;
+  width: auto;
 }
+
 ul, ol, dl {
-    padding-right: 0.5em;	
+  padding-right: 0.5em;	
 }
+
 ul { 
-    list-style-type: square;
+  list-style-type: square;
 }
+
 .documentDescription {
-    font-weight: bold;
+  font-weight: bold;
 }
+
 pre {
-    border: 1pt dotted black;
-    white-space: pre;
-    font-size: 8pt;
-    overflow: auto;
-    padding: 1em 0;
+  border: 1pt dotted black;
+  white-space: pre;
+  font-size: 8pt;
+  overflow: auto;
+  padding: 1em 0;
 }
-table.listing,
-table.listing td {
-    border: 1pt solid black;
-    border-collapse: collapse;
-}
+
 a {
-    color: Black !important;
-    padding: 0 !important;
-    text-decoration: none !important;
+  color: Black !important;
+  padding: 0 !important;
+  text-decoration: none !important;
 }
+
 a:link, a:visited {
-    color: #520;
-    background: transparent;
+  color: #520;
+  background: transparent;
 }
 
 /* Page break class for use when printing */
 div.pageBreak {
-    page-break-before: always;
+  page-break-before: always;
 }
 
 h1#project-header {
@@ -72,16 +84,6 @@ h1.documentFirstHeading {
   margin-bottom: 5px;
   margin-top: 0px;
 }
-
-#offerView,
-.storyTitle-storyEstimate td {
-  border: none !important;
-}
-
-#offerViewHeader h2 {
-  border-bottom: none !important;
-}
-
 
 /* Uncomment these to get link addresses inserted along with the link text
    when you print.
@@ -117,6 +119,44 @@ div.top,
  #review-history,
  .listingBar,
 .visualNoPrint,
-#offerView img {
+#offerView img,
+.offers_listing img,
+.header_iteration_project_overview img,
+.iteration-state img,
+#project-header,
+.discussion input {
     display: none;
+}
+
+.td-story-title a {
+  font-weight: normal;
+}
+
+table.listing, .stx table {
+  border: 1px solid #C0BFBF !important;
+  font-size: 85%;
+  margin: 1em 0em;
+}
+
+table.listing td, .stx table td {
+  border: none;
+  border-top: 1px solid #C0BFBF;
+  padding: 0.25em 0.5em;
+  border-collapse: collapse;
+  border-spacing: none;
+}
+
+table.listing th, .stx table th {
+  border: none;
+  padding: 0.25em 0.5em;
+  text-transform: lowercase;
+}
+
+#totalTasks th {
+  border-top: 1px solid #C0BFBF;
+}
+
+.visualClear {
+  clear:both;
+  display:block;
 }
