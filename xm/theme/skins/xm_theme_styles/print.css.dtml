@@ -160,3 +160,29 @@ table.listing th, .stx table th {
   clear:both;
   display:block;
 }
+
+/* *** Offer print view ** */
+
+#offerView {
+  border: none !important;
+}
+
+#offerView h2 {
+  font-size: 100% !important;
+}
+
+h2.offer-story-estimate-header,
+h2.offer-story-header {
+  font-size: 100% !important;
+  font-weight: normal !important;
+}
+
+.storyTitle-storyEstimate td {
+  border-bottom: 1px solid #8CACBB !important;
+  border-top: none !important;
+  background-color: transparent;
+}
+
+#offerViewHeader h2 {
+  border-bottom: none !important;
+}
