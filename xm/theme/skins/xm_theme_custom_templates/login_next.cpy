@@ -53,7 +53,6 @@ if came_from:
     # If cookies aren't enabled, the redirect will log the user out, and confusion
     # may arise.  Redirect only if we know for sure that cookies are enabled.
 
-    util.addPortalMessage(_(u'Welcome! You are now logged in.'))
     came_from = util.urlunparse((scheme, location, path, parameters, query, fragment))
 
     # redirect immediately
