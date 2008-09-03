@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2008-08-01 12:57+0000\n"
+"POT-Creation-Date: 2008-09-03 18:32+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -70,15 +70,11 @@ msgstr ""
 msgid "Open&hellip;"
 msgstr ""
 
-#: ./skins/xm_theme_custom_templates/login_next.cpy:56
-msgid "Welcome! You are now logged in."
-msgstr ""
-
-#: ./skins/xm_theme_custom_templates/login_next.cpy:78
+#: ./skins/xm_theme_custom_templates/login_next.cpy:77
 msgid "You have been redirected to the last project you visited."
 msgstr ""
 
-#: ./skins/xm_theme_custom_templates/login_next.cpy:106
+#: ./skins/xm_theme_custom_templates/login_next.cpy:105
 msgid "You have been redirected to your most recent project."
 msgstr ""
 
