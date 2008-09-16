@@ -4,7 +4,7 @@ History for xm.theme
 (name of developer listed in brackets)
 
 
-xm.theme 0.8 (unreleased)
+xm.theme 0.8 (2008-09-16)
 -------------------------
 
 - Added locales/en to work around i18n bug: with e.g. Dutch and
