@@ -3,9 +3,14 @@ History for xm.theme
 
 (name of developer listed in brackets)
 
+0.9 (unreleased)
+----------------
 
-xm.theme 0.8 (2008-09-16)
--------------------------
+- Nothing yet
+
+
+0.8 (2008-09-16)
+----------------
 
 - Added locales/en to work around i18n bug: with e.g. Dutch and
   English as allowed languages, Dutch as site default, English as
@@ -18,8 +23,8 @@ xm.theme 0.8 (2008-09-16)
   [jladage]
 
 
-xm.theme 0.7.3 (2008-08-01)
----------------------------
+0.7.3 (2008-08-01)
+------------------
 
 - Use gradient image in booking-per-month table heading.  [mirella]
   (Moved from Products.eXtremeManagement trunk by Maurits.)
@@ -38,37 +43,37 @@ xm.theme 0.7.3 (2008-08-01)
 
 
 
-xm.theme 0.7 (2008-05-15)
--------------------------
+0.7 (2008-05-15)
+----------------
 
 - No history recorded.
 
 
-xm.theme 0.6 (2008-03-31
--------------------------
+0.6 (2008-03-31)
+----------------
 
 - No history recorded.
 
 
-xm.theme 0.5 (2008-03-03)
--------------------------
+0.5 (2008-03-03)
+----------------
 
 - No history recorded.
 
 
-xm.theme 0.4 (2008-02-27)
--------------------------
+0.4 (2008-02-27)
+----------------
 
 - No history recorded.
 
 
-xm.theme 0.3 (2008-02-26)
--------------------------
+0.3 (2008-02-26)
+----------------
 
 - No history recorded.
 
 
-xm.theme 0.2 (2008-02-25)
--------------------------
+0.2 (2008-02-25)
+----------------
 
 - No history recorded.
