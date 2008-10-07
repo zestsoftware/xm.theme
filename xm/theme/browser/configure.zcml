@@ -120,7 +120,7 @@
       for="*"
       class=".employees.EmployeesView"
       template="templates/employees_overview.pt"
-      permission="zope2.View"
+      permission="cmf.ManagePortal"
       />
 
 </configure>
