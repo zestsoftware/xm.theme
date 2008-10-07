@@ -6,7 +6,12 @@ History for xm.theme
 0.9 (unreleased)
 ----------------
 
-- Nothing yet
+- Made the employees overview page much much faster.  The billable
+  percentages are not quite the same as from the bookings per month
+  pages they point to, but that is for another day.  [maurits]
+
+- Protecting the big employees overview page with the Manage Portal
+  permission now.  [maurits]
 
 
 0.8 (2008-09-16)
