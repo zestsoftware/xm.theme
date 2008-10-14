@@ -87,11 +87,62 @@
 }
 
 /* Elements that enable layout with rounded corners */
-.portletTopLeft {}
-.portletTopRight {}
-.portletBottomLeft {}
-.portletBottomRight {}
+/* *** background on the dt tag is the main bg image *** */
 
+#portal-column-one .portletHeader {
+  background: url(&dtml-portal_url;/PortletHeaderBlueBG.gif) repeat-x top;
+}
+
+/* *** On the a-tag we place the right rounded corner *** */
+#portal-column-one .portletHeader a {
+  padding: 3px 0 7px;
+  display: block;
+  color: #ffffff;
+  background: url(&dtml-portal_url;/PortletBlueRightTop.gif) no-repeat top right;
+}
+
+#portal-column-one .portletItem {
+  margin: 0;
+  padding: 5px 5px 1px 5px;
+}
+
+#portal-column-one .portletItem {
+  border-left: 1px solid #0083C4;
+  border-right: 1px solid #0083C4;
+}
+
+/* *** On the span in dt-tag we place the left rounded corner image *** */
+#portal-column-one .portletTopLeft {
+  float: left;
+  height: 23px;
+  width: 8px;
+  background: url(&dtml-portal_url;/PortletBlueLeftTop.gif) no-repeat top left;
+}
+
+#portal-column-one .portletBottom {
+  padding: 0;
+  margin: 0;
+  display: block;
+  height: 9px;
+  background: url(&dtml-portal_url;/PortletBlueBottom.gif) repeat-x;
+}
+
+.portletBottomLeft,
+.portletBottomRight {
+  height: 9px;
+  width: 9px;
+  display: block;
+}
+
+#portal-column-one .portletBottomLeft {
+  background: url(&dtml-portal_url;/PortletBlueLeftBottom.gif) no-repeat bottom left;
+  float: left;
+}
+
+#portal-column-one .portletBottomRight {
+  background: url(&dtml-portal_url;/PortletBlueRightBottom.gif) no-repeat bottom right;
+  float: right;
+}
 
 .managePortletsLink {
     text-align: center;
