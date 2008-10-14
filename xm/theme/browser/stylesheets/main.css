@@ -1,14 +1,23 @@
 /* Stylesheet for the 'eXtremeManagement' Plone theme */
 
-h1#project-header {
-    border-style: none;
+#portal-header {
+    background-color: #FEFEFE;
+    height: 60px;
 }
 
-h1#project-header a {
+h1#project-header {
+    margin: 0;
+    padding: 0;
+    border-style: none;
+    font-size: 190%;
     font-weight: bold;
-    font-size: 200%;
-    color: #436976 !important;
-    padding:0.2em 0.5em 0 1em;
+    position: relative;
+    top: 12px;
+    left: 34px;
+}
+
+h1#project-header a{
+    color: #21BEE8 !important;
 }
 
 /* *** Start submenus *** */

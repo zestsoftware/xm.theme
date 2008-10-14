@@ -179,7 +179,8 @@ h3, h4, h5, h6 {
   white-space: nowrap;
   z-index: 2;
   position: absolute;
-  top: 92px;
+  top: 90px;
+  height: 100%;
 }
 
 #portal-advanced-search {
@@ -374,7 +375,7 @@ form.searchPage input.searchButton {
   border-color: #fff;
   border-style: &dtml-borderStyle;;
   border-width: &dtml-borderWidth;;
-  color: #fff;
+  color: #e9f6f8;
   padding: 0em 3em 0em 3em;
   height: 32px;
   position: relative;
@@ -383,6 +384,14 @@ form.searchPage input.searchButton {
   text-align: right;
   text-transform: &dtml-textTransform;;
   list-style: none;
+}
+
+#portal-personaltools-wrapper ul{
+    line-height: 26px;
+}
+
+#portal-personaltools-wrapper {
+    border-top: 1px solid red;
 }
 
 #portal-personaltools .portalUser {
@@ -428,6 +437,7 @@ form.searchPage input.searchButton {
 
 #portal-breadcrumbs a {
     text-decoration: none;
+    color: #fff;
 }
 .breadcrumbSeparator {
     font-size: 120%;
