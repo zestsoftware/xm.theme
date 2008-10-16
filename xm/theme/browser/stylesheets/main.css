@@ -1,18 +1,17 @@
 /* Stylesheet for the 'eXtremeManagement' Plone theme */
 
 #portal-header {
-    background-color: #FEFEFE;
     height: 60px;
+    background: #FEFEFE url(++resource++xm.theme.images/gradientBG.jpg) repeat-x 10px;
 }
 
 h1#project-header {
     margin: 0;
-    padding: 0;
+    padding: 28px 0 0 0;
     border-style: none;
     font-size: 190%;
     font-weight: bold;
     position: relative;
-    top: 12px;
     left: 34px;
 }
 
