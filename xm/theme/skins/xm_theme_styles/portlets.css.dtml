@@ -98,7 +98,6 @@
   padding: 3px 0 7px;
   display: block;
   color: #ffffff;
-  background: url(&dtml-portal_url;/PortletBlueRightTop.gif) no-repeat top right;
 }
 
 #portal-column-one .portletItem {
@@ -112,11 +111,19 @@
 }
 
 /* *** On the span in dt-tag we place the left rounded corner image *** */
+
 #portal-column-one .portletTopLeft {
   float: left;
   height: 23px;
   width: 8px;
-  background: url(&dtml-portal_url;/PortletBlueLeftTop.gif) no-repeat top left;
+  background: url(++resource++xm.theme.images/rounded_top_left.gif) no-repeat top left;
+}
+
+#portal-column-one .portletTopRight {
+  float: right;
+  height: 23px;
+  width: 8px;
+  background: url(++resource++xm.theme.images/rounded_top_right.gif) no-repeat top right;
 }
 
 #portal-column-one .portletBottom {
@@ -124,7 +131,7 @@
   margin: 0;
   display: block;
   height: 9px;
-  background: url(&dtml-portal_url;/PortletBlueBottom.gif) repeat-x;
+  border-bottom: 1px solid #ccc;
 }
 
 .portletBottomLeft,
@@ -135,12 +142,12 @@
 }
 
 #portal-column-one .portletBottomLeft {
-  background: url(&dtml-portal_url;/PortletBlueLeftBottom.gif) no-repeat bottom left;
+  background: url(++resource++xm.theme.images/rounded_bottom_left.gif) no-repeat bottom left;
   float: left;
 }
 
 #portal-column-one .portletBottomRight {
-  background: url(&dtml-portal_url;/PortletBlueRightBottom.gif) no-repeat bottom right;
+  background: url(++resource++xm.theme.images/rounded_bottom_right.gif) no-repeat bottom right;
   float: right;
 }
 
