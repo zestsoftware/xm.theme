@@ -90,7 +90,7 @@
 /* *** background on the dt tag is the main bg image *** */
 
 #portal-column-one .portletHeader {
-  background: url(&dtml-portal_url;/PortletHeaderBlueBG.gif) repeat-x top;
+  background-color: transparent;
 }
 
 /* *** On the a-tag we place the right rounded corner *** */
@@ -98,6 +98,7 @@
   padding: 3px 0 7px;
   display: block;
   color: #ffffff;
+  background: url(++resource++xm.theme.images/rounded_top_right.gif) no-repeat top right;
 }
 
 #portal-column-one .portletItem {
@@ -117,13 +118,6 @@
   height: 23px;
   width: 8px;
   background: url(++resource++xm.theme.images/rounded_top_left.gif) no-repeat top left;
-}
-
-#portal-column-one .portletTopRight {
-  float: right;
-  height: 23px;
-  width: 8px;
-  background: url(++resource++xm.theme.images/rounded_top_right.gif) no-repeat top right;
 }
 
 #portal-column-one .portletBottom {
