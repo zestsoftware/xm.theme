@@ -40,7 +40,6 @@
              type="submit"
              value="Search"
              i18n:attributes="value label_search;" />
-        <span />
        </div>
 
       <div class="LSResult" id="LSResult" style=""><div class="LSShadow" id="LSShadow"></div></div>

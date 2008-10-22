@@ -13,13 +13,13 @@ h1#project-header {
 
 h1#project-header a{
     border: none;
-    background: transparent url(++resource++xm.theme.images/logo-xm.gif) no-repeat scroll 9px 0px;
+    background: transparent url(++resource++xm.theme.images/logo-xm.gif) no-repeat scroll 9px 1px;
     color: #21BEE8;
     font-weight: bold;
     left: 2px;
     padding-left: 40px;
     position: relative;
-    top: 20px;
+    top: 19px;
     white-space: nowrap;
 }
 
