@@ -14,7 +14,7 @@ try:
     from Products.eXtremeManagement.utils import getPrevYearMonth
     from Products.eXtremeManagement.utils import getEndOfMonth
 except ImportError:
-    # BBB for Products.eXtremeManagement before 2.0 beta 1
+    # BBB for Products.eXtremeManagement before 2.0 alpha 3
     from Products.eXtremeManagement.browser.bookings import getNextYearMonth
     from Products.eXtremeManagement.browser.bookings import getPrevYearMonth
     from Products.eXtremeManagement.browser.bookings import getEndOfMonth
