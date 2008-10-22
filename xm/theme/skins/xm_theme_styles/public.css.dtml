@@ -114,7 +114,8 @@ h3, h4, h5, h6 {
     padding: 0;
     margin: 0 auto;
     background-color: #faf9f4;
-    width: 999px;
+    width: 957px;
+    background-color:#FAF9F4;
 }
 
 /* Logo properties */
@@ -165,6 +166,7 @@ h3, h4, h5, h6 {
     background-color: &dtml-globalBackgroundColor;;
     color: &dtml-globalFontColor;;
     border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
+    border-color: #C9E5EE;
 }
 
 /* Searchbox style and positioning */
@@ -419,11 +421,12 @@ form.searchPage input.searchButton {
 #portal-breadcrumbs {
     /* The path bar, including breadcrumbs and add to favorites */
     position: relative;
-    bottom: 31px;
-    background-color: #35b4e0;
+    bottom: 34px;
+    background: #35b4e0 url(++resource++xm.theme.images/breadcrumbs_bg.gif) repeat-x scroll 9px 0px;
     border-color: #2797BD #75DBFF #CFCFCF #2797BD;
     border-style: &dtml-borderStyle;;
     border-width: &dtml-borderWidth;;
+    border-top: none;
     color: #FFFFFF;
     font-size: 120%;
     font-weight: bold;

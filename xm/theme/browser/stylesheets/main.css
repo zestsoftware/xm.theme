@@ -1,21 +1,26 @@
 /* Stylesheet for the 'eXtremeManagement' Plone theme */
 
 #portal-header {
+    position: relative;
+    top: 0;
     height: 60px;
-    background: #FEFEFE url(++resource++xm.theme.images/gradientBG.jpg) repeat-x 10px;
+    background: #FEFEFE url(++resource++xm.theme.images/background_top.gif) no-repeat 0 0;
 }
 
 h1#project-header {
-    padding: 28px 0 0 0;
-    border-style: none;
-    font-size: 190%;
-    font-weight: bold;
-    position: relative;
-    left: 34px;
+    border: none;
 }
 
 h1#project-header a{
-    color: #21BEE8 !important;
+    border: none;
+    background: transparent url(++resource++xm.tracker.images/logo-xm.gif) no-repeat scroll 9px 0px;
+    color: #21BEE8;
+    font-weight: bold;
+    left: 2px;
+    padding-left: 40px;
+    position: relative;
+    top: 20px;
+    white-space: nowrap;
 }
 
 /* *** Start submenus *** */
