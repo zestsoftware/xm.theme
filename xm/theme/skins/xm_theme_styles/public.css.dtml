@@ -129,7 +129,7 @@ h3, h4, h5, h6 {
     /* Top section */
     margin: 0;
     padding: 0;
-    background-color: #fff;
+    background: #FEFEFE url(++resource++xm.theme.images/background_top.gif) no-repeat scroll 0 0;
 }
 
 /* Site-wide action menu - font size, contact, index, sitemap etc */
@@ -373,12 +373,12 @@ form.searchPage input.searchButton {
 
 #portal-personaltools {
   /* Bar with personalized menu (user preferences, favorites etc) */
-  background: url(++resource++xm.theme.images/gradientBG.jpg) repeat-x bottom;
-  border-color: #fff;
+  background: #F9F7F0 url(++resource++xm.theme.images/backgroundheader.gif) repeat-x scroll 0 0;
+  border-color: #FFFFFF #D6D4D4 #FFFFFF #FFFFFF;
   border-style: &dtml-borderStyle;;
   border-width: &dtml-borderWidth;;
   color: #e9f6f8;
-  padding: 0em 3em 0em 3em;
+  padding: 0;
   height: 32px;
   position: relative;
   top: 25px;
@@ -422,11 +422,10 @@ form.searchPage input.searchButton {
     /* The path bar, including breadcrumbs and add to favorites */
     position: relative;
     bottom: 34px;
-    background: #35b4e0 url(++resource++xm.theme.images/breadcrumbs_bg.gif) repeat-x scroll 9px 0px;
+    background-color: #35b4e0;
     border-color: #2797BD #75DBFF #CFCFCF #2797BD;
     border-style: &dtml-borderStyle;;
     border-width: &dtml-borderWidth;;
-    border-top: none;
     color: #FFFFFF;
     font-size: 120%;
     font-weight: bold;

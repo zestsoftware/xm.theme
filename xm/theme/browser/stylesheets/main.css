@@ -3,8 +3,8 @@
 #portal-header {
     position: relative;
     top: 0;
-    height: 60px;
-    background: #FEFEFE url(++resource++xm.theme.images/background_top.gif) no-repeat 0 0;
+    height: 62px;
+    background: transparent url(++resource++xm.theme.images/portal-header_bg.gif) repeat-x 0 bottom;
 }
 
 h1#project-header {
@@ -13,7 +13,7 @@ h1#project-header {
 
 h1#project-header a{
     border: none;
-    background: transparent url(++resource++xm.tracker.images/logo-xm.gif) no-repeat scroll 9px 0px;
+    background: transparent url(++resource++xm.theme.images/logo-xm.gif) no-repeat scroll 9px 0px;
     color: #21BEE8;
     font-weight: bold;
     left: 2px;
