@@ -115,12 +115,4 @@
       permission="zope2.View"
       />
 
-  <browser:page
-      name="employees_overview"
-      for="*"
-      class=".employees.EmployeesView"
-      template="templates/employees_overview.pt"
-      permission="cmf.ManagePortal"
-      />
-
 </configure>

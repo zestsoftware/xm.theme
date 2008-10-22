@@ -6,6 +6,9 @@ History for xm.theme
 0.9 (unreleased)
 ----------------
 
+- Moved the employees_overview page to Products.eXtremeManagement.
+  [maurits]
+
 - Made the employees overview page much much faster.  The billable
   percentages are not quite the same as from the bookings per month
   pages they point to, but that is for another day.  [maurits]
