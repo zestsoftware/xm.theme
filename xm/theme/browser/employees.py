@@ -95,7 +95,7 @@ class EmployeesView(BrowserView):
                             if bb.getBillable:
                                 day_billable += bb.actual_time
                         # XXX Turn this into 1 hour.
-                        if day_total >= 0:
+                        if day_total > 0:
                             # If the employee worked 1 hour or less we
                             # assume it is just an hour on Saturday or
                             # something and we ignore this day to
