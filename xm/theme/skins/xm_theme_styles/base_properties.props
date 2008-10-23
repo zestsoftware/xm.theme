@@ -21,7 +21,7 @@ borderStyleAnnotations:string=dashed
 
 globalBorderColor:string=#cccccc
 globalBackgroundColor:string=#eef8fc
-globalFontColor:string=#436976
+globalFontColor:string=#3a849d
 
 headingFontFamily:string="Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif
 

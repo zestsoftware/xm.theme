@@ -48,7 +48,7 @@
 .portletHeader {
   background: url(++resource++xm.theme.images/gradientBG.jpg) repeat-x bottom;
   border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
-  padding: 0em 1em;
+  padding: 0;
   text-transform: &dtml-textTransform;;
   font-weight: normal;
   line-height: 1.6em;
@@ -80,7 +80,7 @@
 .portletFooter {
     background-color: &dtml-evenRowBackgroundColor;;
     margin: 0;
-    padding: 0.25em 1em;
+    padding: 0 0 8px 0;
     border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
     border-style: dotted &dtml-borderStyle; none &dtml-borderStyle;;
     text-align: right;
@@ -97,7 +97,6 @@
 #portal-column-one .portletHeader a {
   padding: 3px 0 7px;
   display: block;
-  color: #ffffff;
   background: url(++resource++xm.theme.images/rounded_top_right.gif) no-repeat top right;
 }
 

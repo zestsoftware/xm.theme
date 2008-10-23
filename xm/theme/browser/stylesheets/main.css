@@ -2,6 +2,8 @@
 
 .searchGadgetFix {
     float: left;
+    position: relative;
+    top: 2px;
 }
 
   /* begin grey buttons */
