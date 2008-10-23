@@ -1,25 +1,67 @@
 /* Stylesheet for the 'eXtremeManagement' Plone theme */
 
-#portal-header {
+.searchGadgetFix {
+    float: left;
+}
+
+  /* begin grey buttons */
+    
+.searchDiv {
+    float: left;
     position: relative;
-    top: 0;
-    height: 62px;
+    bottom: 3px;
+    background: transparent url(++resource++xm.theme.images/side-left-grey.gif) no-repeat 4px 0;
+    margin: 0;
+    padding: 0 0 0 8px;
+}
+
+.searchButton {
+    float: left;
+    margin: 0;
+    padding: 0;
+    height: 26px;
+    background: #d8d6cf url(++resource++xm.theme.images/gradient-grey.gif) repeat-x;
+    border: 0;
+    cursor: pointer;
+  }
+
+.searchDiv span{
+    background: transparent url(++resource++xm.theme.images/side-right-grey.gif) no-repeat;
+    float: left;
+    width: 4px;
+    height: 25px;
+}
+ /* end grey buttons*/
+ 
+  /*search- icon fix*/
+.searchIcon{
+    float: left;
+    background: transparent url(++resource++xm.theme.images/search_icon.gif) 0 4px no-repeat;
+    width: 16px;
+    height: 26px;
+}
+  
+#portal-header {
     background: transparent url(++resource++xm.theme.images/portal-header_bg.gif) repeat-x 0 bottom;
+    height: 62px;
+    position: relative;
 }
 
 h1#project-header {
     border: none;
 }
 
+#project-header {
+    position: absolute;
+    top: 20px;
+    left: 2px;
+}
+
 h1#project-header a{
-    border: none;
     background: transparent url(++resource++xm.theme.images/logo-xm.gif) no-repeat scroll 9px 1px;
     color: #21BEE8;
     font-weight: bold;
-    left: 2px;
     padding-left: 40px;
-    position: relative;
-    top: 19px;
     white-space: nowrap;
 }
 

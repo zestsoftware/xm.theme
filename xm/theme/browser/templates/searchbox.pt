@@ -8,6 +8,7 @@
            i18n:translate="text_search">Search Site</label>
     <div class="LSBox">
       <i18n:block i18n:domain="xm.theme">
+      <div class="searchGadgetFix">
       <input name="portal_type"
              type="checkbox"
              value="Project"
@@ -23,8 +24,9 @@
              class="searchGadgetType"
              value="Task"/>
         <span i18n:translate>Tasks</span>
+      </div>
       </i18n:block>
-
+    
       <input name="SearchableText"
              type="text"
              size="18"
@@ -35,16 +37,22 @@
              tal:attributes="value request/SearchableText|nothing;
                              id view/search_input_id"
              class="inputLabel" />
-      <div class="searchDiv">
-      <input class="searchButton"
-             type="submit"
-             value="Search"
-             i18n:attributes="value label_search;" />
-       </div>
+             
+       <div class="searchIcon"></div>
+       <div class="searchDiv">
+                <input class="searchButton"
+                        type="submit"
+                        value="Search"
+                        i18n:attributes="value label_search;" />
+                 <span></span>
 
+       </div>             
+       
       <div class="LSResult" id="LSResult" style=""><div class="LSShadow" id="LSShadow"></div></div>
     </div>
   </form>
+  
+
 
   <div id="portal-advanced-search"
        class="hiddenStructure">

@@ -53,7 +53,8 @@ input[type=checkbox] {
 
 #searchGadget {
     border: &dtml-borderWidth; solid &dtml-globalBorderColor;;
-    margin-left: 4px;
+    margin: 0 0 0 12px;
+    float: left;
 }
 
 button {
@@ -165,12 +166,8 @@ dl.enableFormTabbing dd {
 input.searchButton {
     margin-bottom: &dtml-borderWidth; ! important;
     color: &dtml-fontColor;;
-    font-size: &dtml-fontSmallSize;;
-    background: &dtml-backgroundColor; url(&dtml-portal_url;/search_icon.gif) 2px 1px no-repeat;
-    cursor: pointer;
-    padding: 1px 1px 1px 19px;
+    padding: 1px 4px;
     text-transform: &dtml-textTransform;;
-    border: &dtml-borderWidth; solid &dtml-globalBorderColor;;
 }
 .searchSection {
     color: &dtml-discreetColor;;

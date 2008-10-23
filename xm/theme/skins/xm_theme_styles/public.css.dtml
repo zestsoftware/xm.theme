@@ -111,6 +111,7 @@ h3, h4, h5, h6 {
 /* End edit form elements */
 
 #visual-portal-wrapper {
+    position: relative;
     padding: 0;
     margin: 0 auto;
     background-color: #faf9f4;
@@ -174,17 +175,16 @@ h3, h4, h5, h6 {
 /* Searchbox style and positioning */
 
 #portal-searchbox {
-  float: left;
-  margin-left: 36px;
-  clear: right;
   background-color: transparent;
-  text-align: right;
+  text-align: left;
   text-transform: &dtml-textTransform;;
-  white-space: nowrap;
-  z-index: 20;
+  white-space: nowrap; 
+  float: left;
+  display: block;
+  clear: both;
   position: absolute;
   top: 90px;
-  /*height: 100%;*/
+  left: 44px;
 }
 
 #portal-advanced-search {
@@ -267,10 +267,11 @@ form.searchPage input.searchButton {
     position: relative;
     display: block;
     text-align: right;
-    padding-top: 5px;
+    padding-top: 0;
     margin: 0;
     left: 3px;
-    z-index: 3;
+    top: 40px;
+    z-index: 100;
 }
 .LSShadow {
     position: relative;
@@ -321,7 +322,7 @@ form.searchPage input.searchButton {
 .LSBox {
     clear: left;
     float: left;
-    text-align: right;
+    text-align: left;
     padding-right: 1px;
     display:block;
 }
@@ -375,19 +376,18 @@ form.searchPage input.searchButton {
 
 #portal-personaltools {
   /* Bar with personalized menu (user preferences, favorites etc) */
-  background: #F9F7F0 url(++resource++xm.theme.images/backgroundheader.gif) repeat-x scroll 0 0;
-  border-color: #FFFFFF #D6D4D4 #FFFFFF #FFFFFF;
-  border-style: &dtml-borderStyle;;
-  border-width: &dtml-borderWidth;;
-  color: #e9f6f8;
-  padding: 0 28px 0 0;
-  height: 32px;
-  position: relative;
-  top: 22px;
-  margin: 0;
-  text-align: right;
-  text-transform: &dtml-textTransform;;
-  list-style: none;
+    background: #F9F7F0 url(++resource++xm.theme.images/backgroundheader.gif) repeat-x scroll 0 0;
+    border-color: #FFFFFF #D6D4D4 #FFFFFF #FFFFFF;
+    border-style: &dtml-borderStyle;;
+    border-width: &dtml-borderWidth;;
+    color: #e9f6f8;
+    padding: 0 28px 0 0;
+    height: 32px;
+    top: 22px;
+    margin: 0;
+    text-align: right;
+    text-transform: &dtml-textTransform;;
+    list-style: none;
 }
 
 #portal-personaltools-wrapper ul{
@@ -422,8 +422,6 @@ form.searchPage input.searchButton {
 }
 #portal-breadcrumbs {
     /* The path bar, including breadcrumbs and add to favorites */
-    position: relative;
-    bottom: 34px;
     background-color: #35b4e0;
     border-color: #2797BD #75DBFF #CFCFCF #2797BD;
     border-style: &dtml-borderStyle;;
@@ -432,7 +430,7 @@ form.searchPage input.searchButton {
     font-size: 120%;
     font-weight: bold;
     margin: 0;
-    padding: 1px 0 3px 35px;
+    padding: 1px 0 3px 44px;
 }
 
 #portal-breadcrumbs a {

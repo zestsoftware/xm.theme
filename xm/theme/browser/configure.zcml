@@ -63,7 +63,7 @@
   <!-- The search box -->
   <browser:viewlet
       name="xm.searchbox"
-      manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+      manager="plone.app.layout.viewlets.interfaces.IPortalTop"
       layer=".interfaces.IThemeSpecific"
       class=".viewlets.XMSearchBoxViewlet"
       permission="zope2.View"

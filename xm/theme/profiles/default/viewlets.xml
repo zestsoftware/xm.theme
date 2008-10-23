@@ -3,14 +3,14 @@
 
  <order manager="plone.portaltop" skinname="eXtremeManagement" purge="True">
    <viewlet name="plone.header"/>
-   <viewlet name="plone.personal_bar"/>
    <viewlet name="plone.path_bar"/>
+   <viewlet name="plone.personal_bar"/>
+   <viewlet name="xm.searchbox"/>
  </order>
 
  <order manager="plone.portalheader" skinname="eXtremeManagement">
   <viewlet name="plone.skip_links"/>
   <viewlet name="plone.site_actions"/>
-  <viewlet name="xm.searchbox"/>
   <viewlet name="xm.project_header"/>
   <viewlet name="xm.project_tabs"/>
  </order>
