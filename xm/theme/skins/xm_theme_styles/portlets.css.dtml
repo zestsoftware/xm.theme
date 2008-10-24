@@ -52,6 +52,7 @@
 .portletItem a,
 .portletFooter a {
     border-bottom: none;
+    border-top: none;
 }
 
 .portletItem a:visited,
@@ -94,7 +95,10 @@
 .portletFooter {
     background-color: transparent;
     margin: 0;
+    /*
     padding: 0 0 7px 0;
+    */
+    height: 7px;
     text-align: right;
 }
 
