@@ -34,8 +34,15 @@
     display: block;
 }
 
+.myProject {
+    border-left: 1px solid #dfdeda;
+    border-right: 1px solid #dfdeda;
+    display: block;
+    padding-right: 2px;
+}
+
 .portlet .management_portletHeader,
-.portlet .portletHeader a {
+.portlet .ProjectAdministration {
     margin-left: 5px;
     display: block;
 }
