@@ -98,6 +98,7 @@ h3, h4, h5, h6 {
 
 #contentTopRight{
     float: right;
+    clear: right;
     height: 8px;
     width: 8px;
     background: url(++resource++xm.theme.images/rounded_top_right.gif) no-repeat top right;
