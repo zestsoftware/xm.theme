@@ -96,15 +96,14 @@
   padding: 3px 0 7px;
 }
 
-  #portal-column-one .portletTopRight {
+#portal-column-one .portletTopRight {
   float: right;
   height: 23px;
   width: 8px;
   background: url(++resource++xm.theme.images/rounded_top_right.gif) no-repeat top right;
 }
 
-  
-  #portal-column-one .portletItem {
+#portal-column-one .portletItem {
   margin: 0;
   padding: 5px 5px 1px 5px;
 }

@@ -22,7 +22,7 @@
 #portal-column-content {
     vertical-align: top;
     border-collapse: collapse;
-    padding: 1em 1em 0 1em;
+    padding: 74px 0 0 29px;
     margin: 0em 0em 2em 0em;
 }
 #portal-column-two {

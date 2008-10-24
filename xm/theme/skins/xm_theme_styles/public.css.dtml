@@ -56,7 +56,6 @@ h3, h4, h5, h6 {
 
 .documentContent {
     font-size: 110%;
-    padding: 1em 1em 2em 1em !important;
     background: &dtml-backgroundColor;;
 }
 .documentContent ul {
@@ -84,6 +83,41 @@ h3, h4, h5, h6 {
 #content a:target {
     background-color: #fd7 !important;
 }
+#content {
+    padding: 1em 1em 2em 1em !important;
+    border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
+}
+
+/* rounded corners content */
+#contentTopLeft{
+    float: left;
+    height: 23px;
+    width: 8px;
+    background: url(++resource++xm.theme.images/rounded_top_left.gif) no-repeat top left;
+}
+
+#contentTopRight{
+    float: right;
+    height: 23px;
+    width: 8px;
+    background: url(++resource++xm.theme.images/rounded_top_right.gif) no-repeat top right;
+}
+
+#contentBottomLeft{
+    float: left;
+    height: 23px;
+    width: 8px;
+    background: url(++resource++xm.theme.images/rounded_bottom_left.gif) no-repeat top left;
+}
+
+#contentBottomRight{
+    float: right;
+    height: 23px;
+    width: 8px;
+    background: url(++resource++xm.theme.images/rounded_bottom_right.gif) no-repeat top right;
+}
+
+
 .documentContent li a {
     text-decoration: none;
     border-bottom: 1px #cccccc solid;
@@ -168,7 +202,7 @@ h3, h4, h5, h6 {
 #portal-siteactions li a:hover {
     background-color: &dtml-globalBackgroundColor;;
     color: &dtml-globalFontColor;;
-    border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
+    border: &dtml-borderWidth; &dtml-borderStyle;;
     border-color: #C9E5EE;
 }
 
