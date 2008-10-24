@@ -46,12 +46,12 @@
 }
 
 .portletHeader {
-  background: url(++resource++xm.theme.images/gradientBG.jpg) repeat-x bottom;
-  border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
+  background-color: #faf9f4;
   padding: 0;
   text-transform: &dtml-textTransform;;
   font-weight: normal;
   line-height: 1.6em;
+  border-bottom: 1px solid #CCC;
 }
 
 .portletHeader a {
@@ -78,25 +78,15 @@
     color: &dtml-fontColor;;
 }
 .portletFooter {
-    background-color: &dtml-evenRowBackgroundColor;;
+    background-color: transparent;
     margin: 0;
-    padding: 0 0 8px 0;
-    border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
-    border-style: dotted &dtml-borderStyle; none &dtml-borderStyle;;
+    padding: 0 0 7px 0;
     text-align: right;
-}
-
-/* Elements that enable layout with rounded corners */
-/* *** background on the dt tag is the main bg image *** */
-
-#portal-column-one .portletHeader {
-  background-color: transparent;
 }
 
 /* *** On the a-tag we place the right rounded corner *** */
 #portal-column-one .portletHeader a {
   padding: 3px 0 7px;
-  display: block;
 }
 
   #portal-column-one .portletTopRight {
@@ -113,8 +103,17 @@
 }
 
 #portal-column-one .portletItem {
-  border-left: 1px solid #0083C4;
-  border-right: 1px solid #0083C4;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+#portal-column-one .hoursBooked {
+  border-top: 1px solid #bfe1eb;
+  border-bottom: 1px solid #bfe1eb;
+  border-left: 1px solid #dfdeda;
+  border-right: 1px solid #dfdeda;
+  background-color: #fbfdfe !important;
+  color: #1c718e;
 }
 
 /* *** On the span in dt-tag we place the left rounded corner image *** */
@@ -130,14 +129,14 @@
   padding: 0;
   margin: 0;
   display: block;
-  height: 9px;
+  height: 8px;
   border-bottom: 1px solid #ccc;
 }
 
 .portletBottomLeft,
 .portletBottomRight {
-  height: 9px;
-  width: 9px;
+  height: 8px;
+  width: 8px;
   display: block;
 }
 
