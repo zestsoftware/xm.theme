@@ -91,32 +91,37 @@ h3, h4, h5, h6 {
 /* rounded corners content */
 #contentTopLeft{
     float: left;
-    height: 23px;
+    height: 8px;
     width: 8px;
     background: url(++resource++xm.theme.images/rounded_top_left.gif) no-repeat top left;
 }
 
 #contentTopRight{
     float: right;
-    height: 23px;
+    height: 8px;
     width: 8px;
     background: url(++resource++xm.theme.images/rounded_top_right.gif) no-repeat top right;
 }
 
 #contentBottomLeft{
     float: left;
-    height: 23px;
+    height: 8px;
     width: 8px;
     background: url(++resource++xm.theme.images/rounded_bottom_left.gif) no-repeat top left;
 }
 
 #contentBottomRight{
     float: right;
-    height: 23px;
+    height: 8px;
     width: 8px;
     background: url(++resource++xm.theme.images/rounded_bottom_right.gif) no-repeat top right;
 }
 
+/* bottom corners position fix*/
+#contentBottomLeft, #contentBottomRight {
+    position: relative;
+    bottom: 8px;
+}
 
 .documentContent li a {
     text-decoration: none;
