@@ -1,5 +1,10 @@
 /* Stylesheet for the 'eXtremeManagement' Plone theme */
 
+.headerTitle {
+    position: relative;
+    bottom: 20px;
+}
+
 .searchGadgetFix {
     float: left;
     position: relative;
