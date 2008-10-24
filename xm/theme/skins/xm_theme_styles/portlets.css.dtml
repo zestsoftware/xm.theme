@@ -34,6 +34,13 @@
     display: block;
 }
 
+.portlet .management_portletHeader,
+.portlet .portletHeader a {
+    margin-left: 5px;
+    display: block;
+}
+
+
 /* XXX: The two below rules should really be in the rule above, but that makes the items grow/shrink on :hover (navtree) - need to investigate how to make it not do that. ~limi, Dec 2005 */
 .portletItem a,
 .portletFooter a {
@@ -123,6 +130,7 @@
   height: 23px;
   width: 8px;
   background: url(++resource++xm.theme.images/rounded_top_left.gif) no-repeat top left;
+  position: absolute;
 }
 
 #portal-column-one .portletBottom {
