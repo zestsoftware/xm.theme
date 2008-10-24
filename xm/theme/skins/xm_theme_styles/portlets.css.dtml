@@ -93,11 +93,11 @@
     color: &dtml-fontColor;;
 }
 .portletFooter {
-    background-color: transparent;
+    background-color: #fff;
     margin: 0;
     padding: 0 0 7px 0;
     text-align: right;
-}
+}   
 
 /* *** On the a-tag we place the right rounded corner *** */
 #portal-column-one .portletHeader a {
