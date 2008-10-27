@@ -24,7 +24,7 @@ body.smallText { font-size: 60%; }
 /* Padding for the columns */
 
 #portal-column-one .visualPadding {
-    padding: 46px 0 11px 22px;
+    padding: 48px 0 11px 22px;
 }
 #portal-column-two .visualPadding {
     padding: 2em 2em 1em 0em;
@@ -52,7 +52,7 @@ h3, h4, h5, h6 {
 
 .documentFirstHeading {
     color: #505050;
-    bottom: 60px;
+    bottom: 70px;
     margin: 0 0 -20px;
     position: relative;
     border-top: none;
