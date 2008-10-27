@@ -43,7 +43,7 @@
 
 .portlet .management_portletHeader,
 .portlet .ProjectAdministration {
-    margin-left: 5px;
+    margin-left: 8px;
     display: block;
 }
 
@@ -71,13 +71,6 @@
 
 .portletHeader, .portletHeader a {
     color: #3e3e3e;
-}
-
-.portletItem {
-  margin: 0;
-  padding: 0.5em 1em;
-  border-left: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
-  border-right: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
 }
 
 .portlet .even {
@@ -113,7 +106,7 @@
 
 #portal-column-one .portletItem {
   margin: 0;
-  padding: 5px 5px 1px 5px;
+  padding: 5px 5px 1px 8px;
 }
 
 #portal-column-one .portletItem {
