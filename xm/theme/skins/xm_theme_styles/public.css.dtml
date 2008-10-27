@@ -434,7 +434,7 @@ form.searchPage input.searchButton {
 }
 
 #portal-personaltools-wrapper ul{
-    line-height: 26px;
+    line-height: 30px;
 }
 
 #portal-personaltools .portalUser {
