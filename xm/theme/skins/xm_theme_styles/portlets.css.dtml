@@ -159,6 +159,8 @@
 
 .managePortletsLink {
     text-align: center;
+    color: #3A849D;
+    text-decoration: none;
 }
 
 div.portlets-manager div.section {

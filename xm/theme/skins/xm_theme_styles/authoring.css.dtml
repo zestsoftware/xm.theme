@@ -28,6 +28,8 @@
     border-top-width: 0px;
     border-left-width: 0px;
     border-right-width: 0px;
+    position: relative;
+    top: 14px;
 }
 .contentViews li {
     display: inline;
@@ -63,7 +65,7 @@
 ** begin ECMAScript Content Action Menus
 */
 .contentActions {
-    background-color: &dtml-contentViewBackgroundColor;;
+    background-color: #fff;
     border-left: &dtml-borderWidth; &dtml-borderStyle; &dtml-contentViewBorderColor;;
     border-right: &dtml-borderWidth; &dtml-borderStyle; &dtml-contentViewBorderColor;;
     color: &dtml-contentViewFontColor;;
@@ -72,6 +74,7 @@
     padding: 0 0 0 1em;
     z-index: 2;
     position:relative;
+    top: 14px;
     height: 1.6em;
 }
 .contentActions ul,
@@ -86,7 +89,9 @@
 .contentActions li {
     float: right;
     z-index: 4;
-    border-left: &dtml-borderWidth; &dtml-borderStyle; &dtml-contentViewBorderColor;;
+    background-color: #ebeae6;
+    border-left: &dtml-borderWidth; &dtml-borderStyle; #d8d5ca;
+    border-bottom: &dtml-borderWidth; &dtml-borderStyle; #d8d5ca;
 }
 .contentActions a {
     text-decoration: none;

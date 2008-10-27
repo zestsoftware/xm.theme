@@ -65,7 +65,8 @@ h1#project-header {
 }
 
 h1#project-header a{
-    background: transparent url(++resource++xm.theme.images/logo-xm.gif) no-repeat scroll 9px 1px;
+    background-color: transparent;
+/*    background: url(++resource++xm.theme.images/logo-xm.gif) no-repeat scroll 9px 1px; */
     color: #21BEE8;
     font-weight: bold;
     padding-left: 40px;

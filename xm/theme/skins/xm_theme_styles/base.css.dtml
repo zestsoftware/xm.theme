@@ -51,7 +51,7 @@ hr {
     margin: 0.5em 0 1em 0;
 }
 h1, h2, h3, h4, h5, h6 {
-    color: &dtml-fontColor;;
+    color: #505050;
     font-family: <dtml-var headingFontFamily>;
     margin: 0.75em 0 0.25em 0;
 }

@@ -52,7 +52,7 @@ input[type=checkbox] {
 
 
 #searchGadget {
-    border: &dtml-borderWidth; solid &dtml-globalBorderColor;;
+    border: 1px inset #ccc;
     margin: 0 0 0 12px;
     float: left;
 }

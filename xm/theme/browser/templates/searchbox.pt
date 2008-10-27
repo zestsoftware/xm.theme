@@ -29,7 +29,7 @@
     
       <input name="SearchableText"
              type="text"
-             size="18"
+             size="24"
              value=""
              title="Search Site"
              accesskey="4"

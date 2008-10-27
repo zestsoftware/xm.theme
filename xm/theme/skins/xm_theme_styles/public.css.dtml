@@ -24,7 +24,7 @@ body.smallText { font-size: 60%; }
 /* Padding for the columns */
 
 #portal-column-one .visualPadding {
-    padding: 2em 0em 1em 2em;
+    padding: 46px 0 11px 22px;
 }
 #portal-column-two .visualPadding {
     padding: 2em 2em 1em 0em;
@@ -32,7 +32,7 @@ body.smallText { font-size: 60%; }
 
 /* Content area */
 h1, h2 {
-    border-bottom: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
+    border-top: &dtml-borderWidth; &dtml-borderStyle; #E3E3E3;
     font-weight: normal;
 }
 /* Compensate for the inline editing hover, since we have a 1px border */
@@ -51,7 +51,11 @@ h3, h4, h5, h6 {
 }
 
 .documentFirstHeading {
-    margin-top: 0;
+    color: #505050;
+    bottom: 60px;
+    margin: 0 0 -20px;
+    position: relative;
+    border-top: none;
 }
 
 .documentContent {
