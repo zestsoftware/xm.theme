@@ -89,16 +89,21 @@
 .contentActions li {
     float: right;
     z-index: 4;
-    background-color: #ebeae6;
-    border-left: &dtml-borderWidth; &dtml-borderStyle; #d8d5ca;
-    border-bottom: &dtml-borderWidth; &dtml-borderStyle; #d8d5ca;
+    background: #ebeae6 url(++resource++xm.theme.images/background_content-menu-display.gif) no-repeat scroll 0px 0px;
+    border: none;
 }
 .contentActions a {
+    background: transparent;
     text-decoration: none;
-    color: &dtml-contentViewFontColor;;
-    padding: 0 0.5em;
+    color: #565655;
+    padding: 0 5px 0 0;
+    height: 20px; 
     cursor: pointer;
 }
+.contentActions span {
+    padding: 0 0 2px 0;
+}
+    
 .contentActions span.subMenuTitle {
     padding: 0em 0.5em;
     position: relative;
@@ -128,10 +133,12 @@
     z-index: 10;
 }
 .actionMenu .actionMenuHeader a {
+    background: transparent url(++resource++xm.theme.images/active_content-menu-display.gif) no-repeat scroll 10px 3px;
     display: block;
+    padding: 0 5px 0 28px;
 }
 .arrowDownAlternative {
-    font-size: 0.85em;
+    display: none;
 }
 .actionMenu .actionMenuContent {
     display: none;
@@ -158,11 +165,11 @@
 }
 .actionMenu .actionMenuContent ul {
     display: block;
-    background: &dtml-contentViewBackgroundColor;;
+    background: #ebeae6;
     border: &dtml-borderWidth; &dtml-contentViewBorderColor;;
     border-style: none &dtml-borderStyle; &dtml-borderStyle; &dtml-borderStyle;;
     margin: -2px 0 0 0;
-    padding: 0;
+    padding: 0 0 0 10px;
 }
 .actionMenu .actionMenuContent li {
     float: none;

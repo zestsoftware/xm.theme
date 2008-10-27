@@ -160,9 +160,13 @@
 .managePortletsLink {
     text-align: center;
     color: #3A849D;
-    text-decoration: none;
 }
 
+.managePortletsLink a{
+    color: #3A849D;
+    text-decoration: none;
+}
+    
 div.portlets-manager div.section {
     padding-top: 1em !important;
 }
