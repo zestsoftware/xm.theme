@@ -55,8 +55,13 @@
     border-top: none;
 }
 
-.portletItem a:visited,
-.portletFooter a:visited {
+.portletFooter a {
+    color: #1C718E;
+    background: url(++resource++xm.theme.images/active_project.gif) no-repeat 10px 1px;
+    padding: 0 0 0 27px;
+}
+
+.portletItem a:visited {
     color: &dtml-linkColor;;
 }
 
@@ -89,7 +94,7 @@
     border: none !important;
     margin: 0;
     padding: 0 0 7px 0;
-    text-align: right;
+    text-align: left;
 }   
 
 /* *** On the a-tag we place the right rounded corner *** */
