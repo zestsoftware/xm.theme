@@ -30,7 +30,8 @@
     border-bottom: 1px solid #bebebe;
     border-left: 1px solid #ccc;
     position: relative;
-    top: 14px;
+    top: 24px;
+    z-index: 3;
 }
 .contentViews li {
     display: inline;
@@ -48,11 +49,11 @@
 .contentViews .selected a {
     background-color: &dtml-contentViewBackgroundColor;;
     border-bottom: &dtml-contentViewBackgroundColor; &dtml-borderWidth; &dtml-borderStyle;;
-    color: #434343;
+    color: #1C718E;
 }
 .contentViews li a:hover {
     background-color: &dtml-contentViewBackgroundColor;;
-    color: &dtml-contentViewFontColor;;
+    color: #1C718E;
 }
 .configlet .contentViews {
     font-size: 90%;
@@ -62,7 +63,6 @@
 ** begin ECMAScript Content Action Menus
 */
 .contentActions {
-    background-color: #fff;
     border-left: &dtml-borderWidth; &dtml-borderStyle; &dtml-contentViewBorderColor;;
     border-right: &dtml-borderWidth; &dtml-borderStyle; &dtml-contentViewBorderColor;;
     color: &dtml-contentViewFontColor;;
@@ -71,13 +71,14 @@
     padding: 0 0 0 1em;
     z-index: 2;
     position:relative;
-    top: 14px;
-    height: 1.6em;
+    top: 24px;
+    height: 20px;
+    display: block;
 }
 .contentActions ul,
 .contentActions li {
     margin: 0;
-    padding: 0 0 0 4px;
+    padding: 0 0 0 10px;
     list-style: none;
     list-style-image: none;
     color: &dtml-fontColor;;
@@ -112,8 +113,7 @@
 }
 .contentActions li {
     display: block;
-    height: 20px ;
-    white-space: nowrap;
+    height: 20px;
 }
 
 .actionMenu {
@@ -135,8 +135,8 @@
     z-index: 10;
 }
 .actionMenu .actionMenuHeader a {
-    background: transparent url(++resource++xm.theme.images/active_content-menu-display.gif) no-repeat scroll 6px 2px;
-    padding: 0 5px 0 24px;
+    background: transparent url(++resource++xm.theme.images/active_content-menu-display.gif) no-repeat scroll 0 1px;
+    padding: 0 5px 0 18px;
 }
 .arrowDownAlternative {
     display: none;
@@ -376,10 +376,6 @@ dl.collapsedInlineCollapsible dt.collapsibleHeader {
 
 .configlet .documentEditable {
     padding: 0em !important;
-}
-.documentEditable .documentContent {
-    border: none;
-    padding: 0;
 }
 .label {
     font-weight: bold;
