@@ -32,7 +32,7 @@ a {
     background-color: transparent;
 }
 a:hover {
-    font-weight: bold;
+    text-decoration: underline !important;
 }
 img {
     border: none;
@@ -56,7 +56,7 @@ hr {
 h1, h2, h3, h4, h5, h6 {
     color: #505050;
     font-family: <dtml-var headingFontFamily>;
-    margin: 0.75em 0 0.25em 0;
+    margin: 13px 0 4px 0;
 }
 h1 a,
 h2 a,

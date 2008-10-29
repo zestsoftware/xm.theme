@@ -738,7 +738,7 @@ table.listing,
 
 table.listing th,
 .stx table th {
-    background: #eafaff url(++resource++xm.theme.images/background_tableHeader.gif) 0 0 repeat-x;
+    background: #eefcff url(++resource++xm.theme.images/background_tableHeader.gif) 0 0 repeat-x;
     border-top: 1px &dtml-borderStyle; #fff ;
     font-weight: normal;
     color: #1C718E;
