@@ -18,10 +18,27 @@
 
 /* Editable border */
 
+  /*LS- rounded corners ContentViews */
+.contentViewsLeft {
+    background: transparent url(++resource++xm.theme.images/rounded_contentViewsLeft.gif) no-repeat scroll 0 0;
+    height: 25px;
+    width: 5px;
+    display: block;
+    position: relative;
+    z-index: 4;
+    float: left;
+    right: 1px;
+    /*LS note- this one provides the padding for the list items*/
+    padding-right: 20px;
+    bottom: 1px;
+}
+
+.contentViewsRight {
+}
+
 .contentViews {
-  /* ie7 fix : 0 1px*/
+  /*LS- ie7 fix : 0 1px*/
     background: #fbf9f1 url(++resource++xm.theme.images/background_contentViews.gif) repeat-x scroll 0 1px;
-    padding-left: 0;
     line-height: 0;
     margin: 0;
     list-style: none;
@@ -39,21 +56,30 @@
 .contentViews li a {
     background-color: transparent;
     color: &dtml-contentViewFontColor;;
-    height: auto;
     padding: 6px 10px;
+    height: auto;
+    width: auto;
     line-height: 24px;
     text-decoration: none;
     text-transform: &dtml-textTransform;;
     z-index: 1;
 }
+
+.contentViews .selected .contentViewsTabRight {
+    background: transparent url(++resource++xm.theme.images/selectedTab_left.gif) no-repeat scroll 0 bottom;
+    padding-bottom: 6px;
+    padding-right: 3px;
+    padding-top: 6px;
+}
+
 .contentViews .selected a {
-    background-color: &dtml-contentViewBackgroundColor;;
+    background: transparent url(++resource++xm.theme.images/selectedTab_contentViews.gif) repeat-x scroll 0 bottom;
     border-bottom: &dtml-contentViewBackgroundColor; &dtml-borderWidth; &dtml-borderStyle;;
     color: #1C718E;
 }
 .contentViews li a:hover {
-    background-color: &dtml-contentViewBackgroundColor;;
-    color: #1C718E;
+    background: #ffffff url(++resource++xm.theme.images/hoverTab_contentViews.gif) repeat-x scroll 0 bottom;
+    border-bottom: &dtml-contentViewBackgroundColor; &dtml-borderWidth; &dtml-borderStyle;;
 }
 .configlet .contentViews {
     font-size: 90%;
@@ -75,6 +101,7 @@
     height: 20px;
     display: block;
 }
+
 .contentActions ul,
 .contentActions li {
     margin: 0;

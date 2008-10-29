@@ -144,13 +144,15 @@ dl.enableFormTabbing dd {
 .context,
 .formControls .actionButtons .button,
 .documentEditable * .context {
-    background: transparent url(&dtml-portal_url;/linkTransparent.gif) 9px 1px no-repeat;
+    background: #FBFDFE url(++resource++xm.theme.images/ico_tools.gif) 4px 1px no-repeat;
+    border-color:#DFDEDA #BFE1EB #BFE1EB;
+    border-style:outset outset solid;
+    border-width: &dtml-borderWidth; 
     color: &dtml-fontColor;;
     cursor: pointer;
     font-size: &dtml-fontSmallSize;;
-    padding: 1px 1px 1px 15px;
+    padding: 1px 1px 1px 18px;
     text-transform: &dtml-textTransform;;
-    border: &dtml-borderWidth; solid &dtml-globalBorderColor;;
 }
 .destructive,
 .documentEditable * .destructive {

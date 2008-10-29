@@ -29,7 +29,7 @@ contentViewBorderColor:string=#cccccc
 contentViewBackgroundColor:string=#ffffff
 contentViewFontColor:string=#5b5b5b
 
-inputFontColor:string=Black
+inputFontColor:string= #1C718E
 
 textTransform:string=lowercase
 

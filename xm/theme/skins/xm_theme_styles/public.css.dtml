@@ -24,7 +24,7 @@ body.smallText { font-size: 60%; }
 /* Padding for the columns */
 
 #portal-column-one .visualPadding {
-    padding: 48px 0 11px 22px;
+    padding: 35px 0 11px 22px;
 }
 #portal-column-two .visualPadding {
     padding: 2em 2em 1em 0em;
@@ -221,12 +221,15 @@ h3, h4, h5, h6 {
     color: &dtml-globalFontColor;;
     border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
 }
+
+/*LS-  no hover-background
 #portal-siteactions li a:hover {
     background-color: &dtml-globalBackgroundColor;;
     color: &dtml-globalFontColor;;
     border: &dtml-borderWidth; &dtml-borderStyle;;
     border-color: #C9E5EE;
 }
+*/
 
 /* Searchbox style and positioning */
 
@@ -481,8 +484,8 @@ form.searchPage input.searchButton {
 }
 #portal-breadcrumbs {
     /* The path bar, including breadcrumbs and add to favorites */
-    background-color: #35b4e0;
-    border-color: #2797BD #75DBFF #CFCFCF #2797BD;
+    background: #35b4e0 url(++resource++xm.theme.images/breadcrumbs_bg.gif) 0 0 repeat-x;
+    border-color: #4aabcb #75DBFF #CFCFCF #4AABCB;
     border-style: &dtml-borderStyle;;
     border-width: &dtml-borderWidth;;
     color: #FFFFFF;
@@ -726,19 +729,18 @@ table.listing,
 .stx table {
     /* The default table for document listings. Contains name, document types, modification times etc in a file-browser-like fashion */
     border-collapse: collapse;
-    border-left: &dtml-borderWidth; &dtml-borderStyle; #c0bfbf;;
+    border-left: &dtml-borderWidth; &dtml-borderStyle; #c0bfbf;
     border-bottom: &dtml-borderWidth; &dtml-borderStyle; #c0bfbf;
-    border-right: &dtml-borderWidth; &dtml-borderStyle; #c0bfbf;;
+    border-right: &dtml-borderWidth; &dtml-borderStyle; #c0bfbf;
     font-size: &dtml-fontSmallSize;;
     margin: 1em 0em 1em 0em;
 }
 table.listing th,
 .stx table th {
-    background-color: #f2fbd8;
-    border-color: #bed99d;
-    border-style: solid;
-    border-width: 1px;
+    background: #fff url(++resource++xm.theme.images/background_tableHeader.gif) 0 0 repeat-x;
+    border-top: 1px &dtml-borderStyle; #BFE1EB;
     font-weight: normal;
+    color: #1C718E;
     padding: 0.25em 0.5em;
     text-transform: &dtml-textTransform;;
 }
@@ -759,9 +761,6 @@ table.listing td,
 }
 table.listing a {
     text-decoration: none;
-}
-table.listing a:hover {
-    text-decoration: underline;
 }
 table.listing img {
     vertical-align: middle;

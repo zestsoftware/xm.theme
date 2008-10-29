@@ -114,5 +114,14 @@
       template="templates/project_content_page.pt"
       permission="zope2.View"
       />
-
+      
+  <!-- Content views (tabs) -->
+  <browser:viewlet
+      name="plone.contentviews"
+      layer=".interfaces.IThemeSpecific"
+      manager="plone.app.layout.viewlets.interfaces.IContentViews"
+      template="templates/contentviews.pt"
+      permission="zope2.View"
+      />
+        
 </configure>
