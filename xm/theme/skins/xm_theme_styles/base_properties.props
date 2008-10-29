@@ -20,7 +20,7 @@ borderStyle:string=solid
 borderStyleAnnotations:string=dashed
 
 globalBorderColor:string=#cccccc
-globalBackgroundColor:string=#eef8fc
+globalBackgroundColor:string=#FBFDFE
 globalFontColor:string=#3a849d
 
 headingFontFamily:string="Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif
@@ -33,7 +33,7 @@ inputFontColor:string= #1C718E
 
 textTransform:string=lowercase
 
-evenRowBackgroundColor:string=#eef3f5 
+evenRowBackgroundColor:string=#fbfdfe  
 oddRowBackgroundColor:string=transparent
 
 notifyBorderColor:string=#ffa500

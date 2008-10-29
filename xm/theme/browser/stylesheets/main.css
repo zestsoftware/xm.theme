@@ -75,14 +75,13 @@ h1#project-header a{
 
 /* *** Start submenus *** */
 #my-projects-menu .project-submenu ul {
-  background-color: #DEE7EC;
-  border: 1px solid #8CACBB;
+  background-color: #fff;
 }
 
 .project-submenu li a {
   border-width: 0;
   margin: 0;
-  padding: 0 5px 0 5px;
+  padding-right: 10px;
 }
 
 #my-projects-menu .project-submenu li a:hover {

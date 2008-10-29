@@ -728,17 +728,18 @@ dl.searchResults span.documentByLine {
 table.listing,
 .stx table {
     /* The default table for document listings. Contains name, document types, modification times etc in a file-browser-like fashion */
+    border-left: 1px &dtml-borderStyle; #fff;
+    border-bottom: 1px &dtml-borderStyle; #DFDEDA;
+    border-right: 1px &dtml-borderStyle; #fff;
     border-collapse: collapse;
-    border-left: &dtml-borderWidth; &dtml-borderStyle; #c0bfbf;
-    border-bottom: &dtml-borderWidth; &dtml-borderStyle; #c0bfbf;
-    border-right: &dtml-borderWidth; &dtml-borderStyle; #c0bfbf;
     font-size: &dtml-fontSmallSize;;
     margin: 1em 0em 1em 0em;
 }
+
 table.listing th,
 .stx table th {
-    background: #fff url(++resource++xm.theme.images/background_tableHeader.gif) 0 0 repeat-x;
-    border-top: 1px &dtml-borderStyle; #BFE1EB;
+    background: #eafaff url(++resource++xm.theme.images/background_tableHeader.gif) 0 0 repeat-x;
+    border-top: 1px &dtml-borderStyle; #fff ;
     font-weight: normal;
     color: #1C718E;
     padding: 0.25em 0.5em;
@@ -756,7 +757,7 @@ table.listing .listingCheckbox {
 }
 table.listing td,
 .stx table td {
-    border-right: &dtml-borderWidth; &dtml-borderStyle; #c0bfbf;
+    border-right: medium none !important;
     padding: 0.25em 0.5em;
 }
 table.listing a {
