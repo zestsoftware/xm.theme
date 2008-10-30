@@ -24,7 +24,7 @@ body.smallText { font-size: 60%; }
 /* Padding for the columns */
 
 #portal-column-one .visualPadding {
-    padding: 35px 0 11px 22px;
+    padding: 20px 0 11px 22px;
 }
 #portal-column-two .visualPadding {
     padding: 2em 2em 1em 0em;
@@ -738,7 +738,7 @@ table.listing,
 
 table.listing th,
 .stx table th {
-    background: #edfdff url(++resource++xm.theme.images/background_tableHeader.gif) 0 0 repeat-x;
+    background: #d9f5fc url(++resource++xm.theme.images/background_tableHeader.gif) 0 0 repeat-x;
     border-top: 1px &dtml-borderStyle; #fff ;
     font-weight: normal;
     color: #1C718E;
