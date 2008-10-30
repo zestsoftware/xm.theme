@@ -52,9 +52,6 @@ h3, h4, h5, h6 {
 
 .documentFirstHeading {
     color: #505050;
-    bottom: 70px;
-    margin: 0 0 -20px;
-    position: relative;
     border-top: none;
 }
 
@@ -88,7 +85,7 @@ h3, h4, h5, h6 {
     background-color: #fd7 !important;
 }
 #content {
-    padding: 1em 1em 2em 1em !important;
+    padding: 12px 14px !important;
 }
 
 /* rounded corners content */
@@ -758,7 +755,7 @@ table.listing .listingCheckbox {
 table.listing td,
 .stx table td {
     border-right: medium none !important;
-    padding: 0.25em 0.5em;
+    padding: 4px 2x;
 }
 table.listing a {
     text-decoration: none;
