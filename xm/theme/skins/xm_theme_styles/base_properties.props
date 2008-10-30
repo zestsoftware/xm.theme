@@ -29,11 +29,11 @@ contentViewBorderColor:string=#cccccc
 contentViewBackgroundColor:string=#ffffff
 contentViewFontColor:string=#5b5b5b
 
-inputFontColor:string= #1C718E
+inputFontColor:string= #000000
 
 textTransform:string=lowercase
 
-evenRowBackgroundColor:string=#fbfdfe  
+evenRowBackgroundColor:string=#fafafa  
 oddRowBackgroundColor:string=transparent
 
 notifyBorderColor:string=#ffa500

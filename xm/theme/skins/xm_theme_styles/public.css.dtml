@@ -729,7 +729,7 @@ table.listing,
 .stx table {
     /* The default table for document listings. Contains name, document types, modification times etc in a file-browser-like fashion */
     border-left: 1px &dtml-borderStyle; #fff;
-    border-bottom: 1px &dtml-borderStyle; #DFDEDA;
+    border-bottom: 1px &dtml-borderStyle; #edecea;
     border-right: 1px &dtml-borderStyle; #fff;
     border-collapse: collapse;
     font-size: &dtml-fontSmallSize;;
@@ -738,7 +738,7 @@ table.listing,
 
 table.listing th,
 .stx table th {
-    background: #eefcff url(++resource++xm.theme.images/background_tableHeader.gif) 0 0 repeat-x;
+    background: #edfdff url(++resource++xm.theme.images/background_tableHeader.gif) 0 0 repeat-x;
     border-top: 1px &dtml-borderStyle; #fff ;
     font-weight: normal;
     color: #1C718E;
