@@ -133,9 +133,8 @@ dl.enableFormTabbing dd {
 
 .standalone,
 .documentEditable * .standalone {
-    color: #1C718E;
-    background: #f3fcfe url(++resource++xm.theme.images/ico_tools.gif) 4px 1px no-repeat;
-    border-color: #DFDEDA #BFE1EB #BFE1EB;
+    background: #fafafa url(++resource++xm.theme.images/ico_tools.gif) 4px 1px no-repeat;
+    border-color:#DFDEDA #ccc #ccc;
     border-style: outset outset solid;
     border-width: &dtml-borderWidth; 
     cursor: pointer;
@@ -146,9 +145,8 @@ dl.enableFormTabbing dd {
 .context,
 .formControls .actionButtons .button,
 .documentEditable * .context {
-    color: #1C718E;
-    background: #f3fcfe url(++resource++xm.theme.images/ico_tools.gif) 4px 1px no-repeat;
-    border-color:#DFDEDA #BFE1EB #BFE1EB;
+    background: #fafafa url(++resource++xm.theme.images/ico_tools.gif) 4px 1px no-repeat;
+    border-color:#DFDEDA #ccc #ccc;
     border-style:outset outset solid;
     border-width: &dtml-borderWidth; 
     color: &dtml-fontColor;;

@@ -38,7 +38,7 @@
 
 .contentViews {
   /*LS- ie7 fix : 0 1px*/
-    background: #fbf9f1 url(++resource++xm.theme.images/background_contentViews.gif) repeat-x scroll 0 1px;
+    background: #eceae3 url(++resource++xm.theme.images/background_contentViews.gif) repeat-x scroll 0 1px;
     line-height: 0;
     margin: 0;
     list-style: none;
