@@ -53,7 +53,7 @@ hr {
 h1, h2, h3, h4, h5, h6 {
     color: #505050;
     font-family: <dtml-var headingFontFamily>;
-    margin: 13px 0 4px 0;
+    margin: 8px 0 4px 0;
 }
 h1 a,
 h2 a,

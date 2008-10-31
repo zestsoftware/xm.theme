@@ -54,13 +54,9 @@
     position: relative;
 }
 
-h1#project-header {
-    border: none;
-}
-
 #project-header {
     position: absolute;
-    top: 20px;
+    top: 25px;
     left: 2px;
 }
 
@@ -74,6 +70,10 @@ h1#project-header a{
 }
 
 /* *** Start submenus *** */
+#my-projects-menu .project-submenu {
+    position: relative !important;
+}
+
 #my-projects-menu .project-submenu ul {
   background-color: #fff;
 }

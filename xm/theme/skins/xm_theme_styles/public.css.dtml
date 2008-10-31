@@ -32,7 +32,6 @@ body.smallText { font-size: 60%; }
 
 /* Content area */
 h1, h2 {
-    border-top: &dtml-borderWidth; &dtml-borderStyle; #E3E3E3;
     font-weight: normal;
 }
 /* Compensate for the inline editing hover, since we have a 1px border */
@@ -249,8 +248,7 @@ h3, h4, h5, h6 {
   clear: both;
   float: left;
   margin: 0;
-  padding: 0;
-  padding-left: 40px;
+  padding: 0 0 0 42px;
 }
 
 #portal-advanced-search {
@@ -496,7 +494,7 @@ form.searchPage input.searchButton {
     font-size: 120%;
     font-weight: bold;
     margin: 0;
-    padding: 0 0 1px 44px;
+    padding: 1px 0 3px 43px;
 }
 
 #portal-breadcrumbs a {

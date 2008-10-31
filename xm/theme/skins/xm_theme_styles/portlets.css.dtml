@@ -44,7 +44,7 @@
 
 .portlet .management_portletHeader,
 .portlet .ProjectAdministration {
-    margin-left: 8px;
+    margin-right: 14px;
     display: block;
 }
 
@@ -76,6 +76,7 @@
 
 .portletHeader, .portletHeader a {
     color: #3e3e3e;
+    white-space: nowrap;
 }
 
 .portlet .even {
@@ -101,6 +102,9 @@
 #portal-column-one  a:hover {
     text-decoration: underline;
 }
+.myProject a:hover {
+    text-decoration: none;
+}
 
 /* *** On the a-tag we place the right rounded corner *** */
 #portal-column-one .portletHeader a {
@@ -109,7 +113,7 @@
 
 #portal-column-one .portletTopRight {
   float: right;
-  height: 23px;
+  height: 8px;
   width: 8px;
   background: url(++resource++xm.theme.images/rounded_top_right.gif) no-repeat top right;
 }
@@ -137,7 +141,9 @@
 
 #portal-column-one .portletTopLeft {
   float: left;
-  height: 23px;
+  position: relative;
+  top: 18px;
+  height: 8px;
   width: 8px;
   background: url(++resource++xm.theme.images/rounded_top_left.gif) no-repeat top left;
 }
