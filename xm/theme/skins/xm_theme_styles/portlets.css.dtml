@@ -48,7 +48,6 @@
     display: block;
 }
 
-
 /* XXX: The two below rules should really be in the rule above, but that makes the items grow/shrink on :hover (navtree) - need to investigate how to make it not do that. ~limi, Dec 2005 */
 .portletItem a,
 .portletFooter a {
@@ -97,6 +96,11 @@
     padding: 0 0 7px 0;
     text-align: left;
 }   
+
+/*LS- underline hover:a*/
+#portal-column-one  a:hover {
+    text-decoration: underline;
+}
 
 /* *** On the a-tag we place the right rounded corner *** */
 #portal-column-one .portletHeader a {

@@ -55,9 +55,89 @@ h3, h4, h5, h6 {
     border-top: none;
 }
 
+#content a:target {
+    background-color: #fd7 !important;
+}
+
+/* rounded corners content */
+#contentTopLeft, #contentTopRight, #contentBottomLeft, #contentBottomRight {
+    position: relative;
+}
+#contentTopLeft{
+    float: left;
+    height: 8px;
+    width: 8px;
+    right: 15px;
+    background: url(++resource++xm.theme.images/rounded_top_left.gif) no-repeat top left;
+}
+
+#contentTopRight{
+    float: right;
+    clear: right;
+    height: 8px;
+    width: 8px;
+    left: 15px;
+    background: url(++resource++xm.theme.images/rounded_top_right.gif) no-repeat top right;
+}
+
+#contentBottomLeft{
+    float: left;
+    height: 8px;
+    width: 8px;
+    right: 15px;
+    background: url(++resource++xm.theme.images/rounded_bottom_left.gif) no-repeat top left;
+}
+
+#contentBottomRight{
+    float: right;
+    height: 8px;
+    width: 8px;
+    left: 15px;
+    background: url(++resource++xm.theme.images/rounded_bottom_right.gif) no-repeat top right;
+}
+
+/* bottom corners position fix*/
+#contentBottomLeft, #contentBottomRight {
+    position: relative;
+    top: 5px;
+}
+
+#contentTopLeft, #contentTopRight {
+    bottom: 13px;
+}
+
 .documentContent {
     font-size: 110%;
     background: &dtml-backgroundColor;;
+    border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
+    padding: 12px 14px !important;
+}
+.documentContent a {
+    text-decoration: none;
+}
+.documentContent a:hover {
+    text-decoration: underline;
+}
+.documentContent li a {
+    text-decoration: none;
+}
+.documentContent li a:visited {
+    color: &dtml-linkVisitedColor;;
+}
+.documentContent li a:active {
+    color: &dtml-linkActiveColor;;
+}
+.documentContent dd a {
+    text-decoration: none;
+    border-bottom: 1px #cccccc solid;
+}
+.documentContent dd a:visited {
+    color: &dtml-linkVisitedColor;;
+    background-color: transparent;
+}
+.documentContent dd a:active {
+    color: &dtml-linkActiveColor;;
+    background-color: transparent;
 }
 .documentContent ul {
     list-style-image: url(&dtml-portal_url;/bullet.gif);
@@ -81,84 +161,7 @@ h3, h4, h5, h6 {
     color: &dtml-linkActiveColor;;
     background-color: transparent;
 }
-#content a:target {
-    background-color: #fd7 !important;
-}
-#content {
-    padding: 12px 14px !important;
-}
 
-/* rounded corners content */
-#contentTopLeft, #contentTopRight, #contentBottomLeft, #contentBottomRight {
-    position: relative;
-}
-#contentTopLeft{
-    float: left;
-    height: 8px;
-    width: 8px;
-    right: 1px;
-    background: url(++resource++xm.theme.images/rounded_top_left.gif) no-repeat top left;
-}
-
-#contentTopRight{
-    float: right;
-    clear: right;
-    height: 8px;
-    width: 8px;
-    left: 1px;
-    background: url(++resource++xm.theme.images/rounded_top_right.gif) no-repeat top right;
-}
-
-#contentBottomLeft{
-    float: left;
-    height: 8px;
-    width: 8px;
-    right: 1px;
-    background: url(++resource++xm.theme.images/rounded_bottom_left.gif) no-repeat top left;
-}
-
-#contentBottomRight{
-    float: right;
-    height: 8px;
-    width: 8px;
-    left: 1px;
-    background: url(++resource++xm.theme.images/rounded_bottom_right.gif) no-repeat top right;
-}
-
-/* bottom corners position fix*/
-#contentBottomLeft, #contentBottomRight {
-    position: relative;
-    bottom: 7px;
-}
-
-#contentTopLeft, #contentTopRight {
-    bottom: 1px;
-}
-
-.documentContent {
-    border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
-}
-.documentContent li a {
-    text-decoration: none;
-}
-.documentContent li a:visited {
-    color: &dtml-linkVisitedColor;;
-}
-.documentContent li a:active {
-    color: &dtml-linkActiveColor;;
-}
-.documentContent dd a {
-    text-decoration: none;
-    border-bottom: 1px #cccccc solid;
-}
-.documentContent dd a:visited {
-    color: &dtml-linkVisitedColor;;
-    background-color: transparent;
-}
-.documentContent dd a:active {
-    color: &dtml-linkActiveColor;;
-    background-color: transparent;
-}
 /* End links */
 
 /* End edit form elements */
@@ -205,13 +208,17 @@ h3, h4, h5, h6 {
 }
 #portal-siteactions li a {
     background-color: transparent;
-    border: 1px solid &dtml-backgroundColor;;
     color: &dtml-discreetColor;;
     height: auto;
     padding: 0.2em;
     margin-right: 0.2em;
     text-decoration: none;
     text-transform: &dtml-textTransform;;
+}
+#portal-siteactions li a:hover {
+    color: #fff;
+    background-color: #4bb6de;
+    text-decoration: underline;
 }
 #portal-siteactions li.selected a {
     background-color: &dtml-globalBackgroundColor;;
@@ -496,6 +503,11 @@ form.searchPage input.searchButton {
     text-decoration: none;
     color: #fff;
 }
+
+#portal-breadcrumbs a:hover {
+    text-decoration: underline;
+}
+
 .breadcrumbSeparator {
     font-size: 120%;
 }

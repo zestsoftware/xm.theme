@@ -31,9 +31,6 @@ a {
     color: &dtml-linkColor;;
     background-color: transparent;
 }
-a:hover {
-    text-decoration: underline !important;
-}
 img {
     border: none;
     vertical-align: middle;
