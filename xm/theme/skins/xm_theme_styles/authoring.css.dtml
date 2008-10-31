@@ -42,15 +42,20 @@
     list-style: none;
     border-top: 1px solid #ccc;
     border-right: 1px solid #ccc;
-    border-bottom: 1px solid #bebebe;
+    border-bottom: 1px solid #d8d5ca;
     border-left: 1px solid #ccc;
     position: relative;
     top: 26px;
-    z-index: 3;
+    height: 24px;
+    z-index: 1;
 }
+
+/*LS - li spacing fix: instead of display:inline > float:left */
 .contentViews li {
-    display: inline;
+    float: left;
+    display: block;
 }
+
 .contentViews li a {
     background-color: transparent;
     color: &dtml-contentViewFontColor;;
@@ -63,8 +68,15 @@
     z-index: 1;
 }
 
-.contentViews .selected .contentViewsTabRight {
+.contentViews .selected .contentViewsTabLeft {
     background: transparent url(++resource++xm.theme.images/selectedTab_left.gif) no-repeat scroll 0 bottom;
+    padding-bottom: 6px;
+    padding-right: 3px;
+    padding-top: 6px;
+}
+
+.contentViews .selected .contentViewsTabRight {
+    background: transparent url(++resource++xm.theme.images/selectedTab_right.gif) no-repeat scroll 0 bottom;
     padding-bottom: 6px;
     padding-right: 3px;
     padding-top: 6px;
@@ -72,12 +84,10 @@
 
 .contentViews .selected a {
     background: transparent url(++resource++xm.theme.images/selectedTab_contentViews.gif) repeat-x scroll 0 bottom;
-    border-bottom: &dtml-contentViewBackgroundColor; &dtml-borderWidth; &dtml-borderStyle;;
     color: #1C718E;
 }
 .contentViews li a:hover {
-    background: #ffffff url(++resource++xm.theme.images/hoverTab_contentViews.gif) repeat-x scroll 0 bottom;
-    border-bottom: &dtml-contentViewBackgroundColor; &dtml-borderWidth; &dtml-borderStyle;;
+    color: #1C718E;
 }
 .configlet .contentViews {
     font-size: 90%;
@@ -219,8 +229,8 @@
     margin: 0.2em 0;
 }
 .actionMenu .actionMenuContent li a:hover {
-    background-color: #cccccc;
-    color: White;
+    background-color: #35B4E0;
+    color: #ffffff;
 }
 .actionMenu .actionMenuContent .actionSeparator a {
     padding-top: 0.2em;

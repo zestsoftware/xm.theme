@@ -7,8 +7,8 @@
 
 .searchGadgetFix {
     float: left;
-    position: relative;
-    top: 2px;
+    padding: 4px 10px 0 10px;
+    white-space: normal !important;
 }
 
   /* begin grey buttons */
@@ -44,7 +44,7 @@
 .searchIcon{
     float: left;
     background: transparent url(++resource++xm.theme.images/search_icon.gif) 0 4px no-repeat;
-    width: 16px;
+    width: 14px;
     height: 26px;
 }
   
@@ -70,12 +70,15 @@ h1#project-header a{
 }
 
 /* *** Start submenus *** */
+/*LS- position/placement fix project-submenu*/
 #my-projects-menu .project-submenu {
     position: relative !important;
+    top: 0 !important;
 }
 
 #my-projects-menu .project-submenu ul {
   background-color: #fff;
+  border: #fff;
 }
 
 .project-submenu li a {
@@ -85,8 +88,7 @@ h1#project-header a{
 }
 
 #my-projects-menu .project-submenu li a:hover {
-  color: #FFFFFF;
-  background-color: #8CACBB;
+    background-color: #35B4E0;
 }
 
 .project-submenu li.selected {

@@ -248,7 +248,7 @@ h3, h4, h5, h6 {
   clear: both;
   float: left;
   margin: 0;
-  padding: 0 0 0 42px;
+  padding: 0 0 0 14px;
 }
 
 #portal-advanced-search {
@@ -333,7 +333,7 @@ form.searchPage input.searchButton {
     text-align: right;
     padding-top: 0;
     margin: 0;
-    left: 3px;
+    right: 274px;
     top: 40px;
     z-index: 100;
 }
@@ -355,7 +355,7 @@ form.searchPage input.searchButton {
     text-align: left;
     color: &dtml-globalFontColor;;
     border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
-    width: 30em;
+    width: 180px;
     text-transform: none;
 }
 * html .livesearchContainer {
@@ -441,7 +441,7 @@ form.searchPage input.searchButton {
 #portal-personaltools {
   /* Bar with personalized menu (user preferences, favorites etc) */
     background: #F9F7F0 url(++resource++xm.theme.images/backgroundheader.gif) repeat-x scroll 0 0;
-    border-color: #FFFFFF #D6D4D4 #FFFFFF #FFFFFF;
+    border-color: #FFFFFF #D6D4D4 #FFFFFF #FFFFFF; 
     border-style: &dtml-borderStyle;;
     border-width: &dtml-borderWidth;;
     color: #e9f6f8;
@@ -452,6 +452,7 @@ form.searchPage input.searchButton {
     text-align: right;
     text-transform: &dtml-textTransform;;
     list-style: none;
+    border-left: none !important;
 }
 
 #portal-personaltools-wrapper ul{
@@ -484,9 +485,15 @@ form.searchPage input.searchButton {
 .visualCaseSensitive {
     text-transform: none;
 }
+
+/*LS -disabled you are here*/
+#breadcrumbs-you-are-here {
+    display: none;
+}
+
 #portal-breadcrumbs {
     /* The path bar, including breadcrumbs and add to favorites */
-    background: #35b4e0 url(++resource++xm.theme.images/breadcrumbs_bg.gif) 0 0 repeat-x;
+    background: #4BB6DE url(++resource++xm.theme.images/breadcrumbs_bg.gif) 0 0 repeat-x;
     border-color: #4aabcb #75DBFF #CFCFCF #4AABCB;
     border-style: &dtml-borderStyle;;
     border-width: &dtml-borderWidth;;
@@ -494,7 +501,7 @@ form.searchPage input.searchButton {
     font-size: 120%;
     font-weight: bold;
     margin: 0;
-    padding: 1px 0 3px 43px;
+    padding: 0 0 1px 43px;
 }
 
 #portal-breadcrumbs a {

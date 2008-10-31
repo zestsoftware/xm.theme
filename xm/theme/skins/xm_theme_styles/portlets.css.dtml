@@ -42,6 +42,11 @@
     padding-left: 10px;
 }
 
+/*LS- underline NO-hover:a*/
+.myProject a:hover {
+    text-decoration: none !important;
+}
+
 .portlet .management_portletHeader,
 .portlet .ProjectAdministration {
     margin-right: 14px;
@@ -57,7 +62,7 @@
 
 .portletFooter a {
     color: #1C718E;
-    background: url(++resource++xm.theme.images/active_project.gif) no-repeat 10px 1px;
+    background: url(++resource++xm.theme.images/active_project.gif) no-repeat 10px 3px;
     padding: 0 0 0 27px;
 }
 
@@ -102,10 +107,6 @@
 #portal-column-one  a:hover {
     text-decoration: underline;
 }
-.myProject a:hover {
-    text-decoration: none;
-}
-
 /* *** On the a-tag we place the right rounded corner *** */
 #portal-column-one .portletHeader a {
   padding: 3px 0 7px;
