@@ -250,6 +250,8 @@ h3, h4, h5, h6 {
   float: left;
   margin: 0;
   padding: 0 0 0 14px;
+  position: relative;
+  z-index: 10;
 }
 
 #portal-advanced-search {
@@ -289,114 +291,120 @@ form.searchPage input.searchButton {
 
 /* LiveSearch styles */
 .LSRes {
-    font-family:  <dtml-var fontFamily>;
-    visibility: visible;
-    color: &dtml-globalFontColor;;
-    background-color: &dtml-backgroundColor;;
-    vertical-align: middle;
-    display:block;
-    list-style-image: none;
-    list-style-type: none;
-    text-align: left;
-    min-width: 16.5em;
-    text-transform: none;
-    margin-left: 0;
-    line-height: 1.1em;
+font-family: <dtml-var fontFamily>;
+visibility: visible;
+color: &dtml-globalFontColor;;
+background-color: &dtml-backgroundColor;;
+vertical-align: middle;
+display:block;
+list-style-image: none;
+list-style-type: none;
+text-align: left;
+min-width: 16.5em;
+text-transform: none;
+margin-left: 0;
+line-height: 1.1em;
 }
+
 #LSHighlight,
 .LSHighlight {
-    background-color: &dtml-globalBackgroundColor;;
-    border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
-    color: &dtml-globalFontColor;;
+background-color: &dtml-globalBackgroundColor;;
+border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
+color: &dtml-globalFontColor;;
+}
+.LSTable {
+margin: 1em 0;
 }
 .LSRow {
-    border: &dtml-borderWidth; &dtml-borderStyle; &dtml-backgroundColor;;
-    white-space: normal;
-    padding:0;
-    margin: 0;
-    list-style-image: none;
-    list-style-type: none;
+border: &dtml-borderWidth; &dtml-borderStyle; &dtml-backgroundColor;;
+white-space: normal;
+padding:0;
+margin: 0;
+list-style-image: none;
+list-style-type: none;
 }
 .LSRow a {
-    text-decoration: none;
-    font-weight:bold;
-    white-space:nowrap
+text-decoration: none;
+font-weight:bold;
+white-space:nowrap
 }
 .LSDescr {
-    color: &dtml-discreetColor;;
-    text-transform: &dtml-textTransform;;
-    padding-left:2.1em;
-    margin-top:-0.1em;
+color: &dtml-discreetColor;;
+text-transform: &dtml-textTransform;;
+padding-left:2.1em;
+margin-top:-0.1em;
 }
+
 .LSResult {
-    position: relative;
-    display: block;
-    text-align: right;
-    padding-top: 0;
-    margin: 0;
-    right: 274px;
-    top: 40px;
-    z-index: 100;
+position: relative;
+display: block;
+text-align: right;
+padding-top: 5px;
+margin: 0;
+left: 3px;
+z-index: 3;
 }
+
 .LSShadow {
-    position: relative;
-    text-align: right;
+position: relative;
+text-align: right;
 }
 .livesearchContainer {
     background-color: &dtml-backgroundColor;;
     margin-top: 0;
     padding: 0 !important;
     position: absolute;
-    right: 0px;
     /* Currently exposes a rendering bug in Mozilla */
-    top: 0;
+    top: 35px;
+    left: 0;
     white-space: normal;
-    font-family:  <dtml-var fontFamily>;
+    font-family: <dtml-var fontFamily>;
     visibility: visible;
     text-align: left;
     color: &dtml-globalFontColor;;
     border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
-    width: 180px;
+    width: 200px;
     text-transform: none;
 }
+
 * html .livesearchContainer {
-    padding: &dtml-borderWidth; !important;
-    padding-top: 0 !important;
-    background-color: &dtml-globalBorderColor;;
-    border: 0;
+padding: &dtml-borderWidth; !important;
+padding-top: 0 !important;
+background-color: &dtml-globalBorderColor;;
+border: 0;
 }
 #livesearchLegend {
-    line-height: 1em;
-    margin-top: -2em;
-    margin-left: -0.1em;
-    border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
-    border-bottom: 0;
+line-height: 1em;
+margin-top: -2em;
+margin-left: -0.1em;
+border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
+border-bottom: 0;
 }
 * html #livesearchLegend {
-    margin-top: -1.9em;
-    margin-left: -8px;
-    position: relative;
+margin-top: -1.9em;
+margin-left: -8px;
+position: relative;
 }
 
 /* Workaround for Internet Explorer's broken z-index implementation */
 .LSIEFix {
-    background-color: &dtml-backgroundColor;;
-    padding: 0.5em !important;
-    z-index: 20;
+background-color: &dtml-backgroundColor;;
+padding: 0.5em !important;
+z-index: 20;
 }
 .LSBox {
-    clear: left;
-    float: left;
-    text-align: left;
-    padding-top: 6px;
-    display:block;
+clear: left;
+float: left;
+text-align: right;
+padding-right: 1px;
+display:block;
 }
 #LSNothingFound {
-    text-align: center;
-    padding: 2px;
+text-align: center;
+padding: 2px;
 }
 .LSBox label {
-    font-weight: normal;
+font-weight: normal;
 }
 
 /* The global section tabs. */
@@ -744,9 +752,7 @@ dl.searchResults span.documentByLine {
 table.listing,
 .stx table {
     /* The default table for document listings. Contains name, document types, modification times etc in a file-browser-like fashion */
-    border-left: 1px &dtml-borderStyle; #fff;
-    border-bottom: 1px &dtml-borderStyle; #edecea;
-    border-right: 1px &dtml-borderStyle; #fff;
+    border: 1px &dtml-borderStyle; #d1d0cb;
     border-collapse: collapse;
     font-size: &dtml-fontSmallSize;;
     margin: 1em 0em 1em 0em;

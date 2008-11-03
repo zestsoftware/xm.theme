@@ -72,6 +72,11 @@ h1#project-header a{
 
 /* *** Start submenus *** */
 /*LS- position/placement fix project-submenu*/
+
+#my-projects-menu {
+    z-index: 2;
+}
+
 #my-projects-menu .project-submenu {
     position: relative !important;
     top: 0 !important;
