@@ -396,7 +396,7 @@ z-index: 20;
 clear: left;
 float: left;
 text-align: right;
-padding-right: 1px;
+padding: 6px 1px 0 0;
 display:block;
 }
 #LSNothingFound {
@@ -748,7 +748,30 @@ dl.searchResults span.documentByLine {
     border: 1px solid black;
 }
 
-/* The table used for listings - horizontal and vertical variants */
+/* LS - table extra-design*/
+.nosort {
+    background: transparent url(++resource++xm.theme.images/background_tableNosort.gif) 0 0 repeat-y;
+    border-top: &dtml-borderWidth; &dtml-borderStyle; #d1d0cb;
+    border-bottom: &dtml-borderWidth; &dtml-borderStyle; #d1d0cb;
+    border-right: &dtml-borderWidth; &dtml-borderStyle; #deddda;
+}
+
+table.listing .even,
+.stx table .even {
+    background: &dtml-evenRowBackgroundColor; url(++resource++xm.theme.images/background_tableEvenFix.gif) 0 0 repeat-x !important;
+    border-top: &dtml-borderWidth; &dtml-borderStyle; #eeede8;
+    border-bottom: &dtml-borderWidth; &dtml-borderStyle; #eeede8;
+}
+
+table.listing .odd,
+.stx table .odd {
+    background: #fff;
+}
+
+.list-in-iteration {
+    background: #fff !important;
+}
+
 table.listing,
 .stx table {
     /* The default table for document listings. Contains name, document types, modification times etc in a file-browser-like fashion */
@@ -758,10 +781,15 @@ table.listing,
     margin: 1em 0em 1em 0em;
 }
 
+table.listing tr,
+.stx table tr {
+    background: #f0efea url(++resource++xm.theme.images/background_tableHeader.gif) 0 0 repeat-x;
+}
+
+/* The table used for listings - horizontal and vertical variants */
 table.listing th,
 .stx table th {
-    background: #f0efea url(++resource++xm.theme.images/background_tableHeader.gif) 0 0 repeat-x;
-    border-top: 1px &dtml-borderStyle; #fff ;
+
     font-weight: normal;
     color: #505050;
     padding: 4px 10px;
