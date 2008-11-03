@@ -501,8 +501,9 @@ form.searchPage input.searchButton {
     color: #FFFFFF;
     font-size: 120%;
     font-weight: bold;
+    height: 20px;
     margin: 0;
-    padding: 0 0 1px 43px;
+    padding: 0 0 0 43px;
 }
 
 #portal-breadcrumbs a {
