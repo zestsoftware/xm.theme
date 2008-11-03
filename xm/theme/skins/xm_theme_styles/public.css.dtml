@@ -109,6 +109,7 @@ h3, h4, h5, h6 {
     font-size: 110%;
     background: &dtml-backgroundColor;;
     border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
+    margin: 0 0 40px 0;
     padding: 12px 14px !important;
 }
 .documentContent a {
