@@ -54,6 +54,10 @@ h3, h4, h5, h6 {
     border-top: none;
 }
 
+.documentFirstHeading img {
+    display: none;
+}
+
 #content a:target {
     background-color: #fd7 !important;
 }
@@ -750,7 +754,6 @@ dl.searchResults span.documentByLine {
 
 /* LS - table extra-design*/
 .nosort {
-    background: transparent url(++resource++xm.theme.images/background_tableNosort.gif) 0 0 repeat-y;
     border-top: &dtml-borderWidth; &dtml-borderStyle; #d1d0cb;
     border-bottom: &dtml-borderWidth; &dtml-borderStyle; #d1d0cb;
     border-right: &dtml-borderWidth; &dtml-borderStyle; #deddda;
@@ -789,10 +792,10 @@ table.listing tr,
 /* The table used for listings - horizontal and vertical variants */
 table.listing th,
 .stx table th {
-
     font-weight: normal;
     color: #505050;
     padding: 4px 10px;
+    text-align: left;
     text-transform: &dtml-textTransform;;
 }
 table.listing .top {
