@@ -152,10 +152,13 @@ h3, h4, h5, h6 {
     margin: 0.5em 0 0 2.5em;
 }
 
+.documentContent p {
+    font-size: 95%;
+}
+
 /* Links with differently colored link underlines - only for content */
 .documentContent p a {
     text-decoration: none;
-    border-bottom: 1px #ccc solid;
 }
 .documentContent p a:visited {
     color: &dtml-linkVisitedColor;;
@@ -666,6 +669,7 @@ dl.error dd {
     display: block;
     margin: 0em 0em 0.5em 0em;
     line-height: 1.5em;
+    color: #505050;
 }
 .documentByLine {
     font-size: &dtml-fontSmallSize;;
@@ -758,21 +762,15 @@ dl.searchResults span.documentByLine {
     border-bottom: &dtml-borderWidth; &dtml-borderStyle; #d1d0cb;
     border-right: &dtml-borderWidth; &dtml-borderStyle; #deddda;
 }
-
+/* LS- background instead of background-color */
 table.listing .even,
 .stx table .even {
-    background: &dtml-evenRowBackgroundColor; url(++resource++xm.theme.images/background_tableEvenFix.gif) 0 0 repeat-x !important;
-    border-top: &dtml-borderWidth; &dtml-borderStyle; #eeede8;
-    border-bottom: &dtml-borderWidth; &dtml-borderStyle; #eeede8;
+    background: &dtml-evenRowBackgroundColor; url(++resource++xm.theme.images/background_tableFix.gif) 0 0 repeat-x !important;
 }
 
 table.listing .odd,
 .stx table .odd {
-    background: #fff;
-}
-
-.list-in-iteration {
-    background: #fff !important;
+    background: #fff url(++resource++xm.theme.images/background_tableFix.gif) 0 0 repeat-x;
 }
 
 table.listing,
@@ -781,17 +779,18 @@ table.listing,
     border: 1px &dtml-borderStyle; #d1d0cb;
     border-collapse: collapse;
     font-size: &dtml-fontSmallSize;;
-    margin: 1em 0em 1em 0em;
+    margin: 5px 0 10px 0;
 }
 
 table.listing tr,
 .stx table tr {
-    background: #f0efea url(++resource++xm.theme.images/background_tableHeader.gif) 0 0 repeat-x;
+    background: #fff url(++resource++xm.theme.images/background_tableFix.gif) repeat-x scroll 0 0;
 }
 
 /* The table used for listings - horizontal and vertical variants */
 table.listing th,
 .stx table th {
+    background: #f0efea url(++resource++xm.theme.images/background_tableHeader.gif) 0 0 repeat-x;
     font-weight: normal;
     color: #505050;
     padding: 4px 10px;
