@@ -419,10 +419,10 @@ font-weight: normal;
 /* The global section tabs. */
 #portal-globalnav {
   background-color: transparent;
-  padding: 0 0 0 40px;
+  padding: 0 0 0 30px;
   white-space: nowrap;
   list-style: none;
-  margin: 12px 0 0 0;
+  margin: 4px 0 0 0;
   height: auto;
   line-height: normal;
 }
@@ -432,28 +432,22 @@ font-weight: normal;
 #portal-globalnav li a {
     /* The normal, unselected tabs. They are all links */
     background-color: transparent;
-    border-color: &dtml-globalBorderColor;;
-    border-width: &dtml-borderWidth;;
-    border-style: &dtml-borderStyle; &dtml-borderStyle; none &dtml-borderStyle;;
-    color: &dtml-globalFontColor;;
+    color: #76797C;
     height: auto;
     margin-right: 0.5em;
-    padding: 0em 1.25em;
+    padding: 0.25em 1.25em;
     text-decoration: none;
     text-transform: &dtml-textTransform;;
 }
+
 #portal-globalnav li.selected a {
     /* The selected tab. There's only one of this */
-    background-color: &dtml-globalBackgroundColor;;
-    border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
-    border-bottom: &dtml-globalBackgroundColor; &dtml-borderWidth; &dtml-borderStyle;;
-    color: &dtml-globalFontColor;;
 }
+
 #portal-globalnav li a:hover {
-    background-color: &dtml-globalBackgroundColor;;
-    border-color: &dtml-globalBorderColor;;
-    border-bottom-color: &dtml-globalBackgroundColor;;
-    color: &dtml-globalFontColor;;
+    background-color: #4BB6DE;
+    color: #FFFFFF;
+    text-decoration: underline;
 }
 
 #portal-personaltools {

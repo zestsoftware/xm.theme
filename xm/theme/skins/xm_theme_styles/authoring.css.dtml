@@ -181,6 +181,9 @@
     background: transparent url(++resource++xm.theme.images/active_content-menu-display.gif) no-repeat scroll 0 1px;
     padding: 0 5px 0 18px;
 }
+.actionMenu .actionMenuHeader a:hover {
+    background-position: 0 -17px;
+}
 .arrowDownAlternative {
     display: none;
 }

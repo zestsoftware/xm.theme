@@ -64,8 +64,12 @@
 
 .portletFooter a {
     color: #1C718E;
-    background: url(++resource++xm.theme.images/active_project.gif) no-repeat 10px 3px;
+    background: transparent url(++resource++xm.theme.images/active_content-menu-display.gif) no-repeat scroll 10px -33px;
     padding: 0 0 0 27px;
+}
+
+.portletFooter a:hover {
+    background-position: 0 -36px;
 }
 
 .portletItem a:hover {
@@ -185,7 +189,7 @@
 
 #portal-column-one .lastItem  a{
     display: block;
-    padding-left: 10px;
+    padding-left: 9px;
     border-left: 1px solid #ccc;
     border-right: 1px solid #ccc;
 }
