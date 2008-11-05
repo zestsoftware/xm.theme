@@ -23,6 +23,15 @@
     padding: 0 0 0 8px;
 }
 
+#sharing-save-button {
+ /*LS- added background ico for shared searh button*/
+    background:#FAFAFA url(++resource++xm.theme.images/ico_tools.gif) no-repeat scroll 4px 4px;
+    height: 22px;
+    margin: 0;
+    padding: 0 0 0 18px;
+    float: none;
+}
+
 .searchButton {
     float: left;
     margin: 0;

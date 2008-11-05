@@ -32,7 +32,9 @@
     text-decoration: none;
 }
 .portlet a.tile {
+/*LS - disabled, because of displacement of portletTopLeft ----------
     display: block;
+ */
 }
 
 .myProject {
@@ -80,7 +82,7 @@
 }
 
 .portletHeader, .portletHeader a {
-    color: #3e3e3e;
+    color: #343434;
     white-space: nowrap;
 }
 
@@ -172,6 +174,24 @@
 #portal-column-one .portletBottomRight {
   background: url(++resource++xm.theme.images/rounded_bottom_right.gif) no-repeat bottom right;
   float: right;
+}
+
+/* LS- LoginPage portletsBottom's fix*/
+#portal-column-one .lastItem {
+    height: 24px;
+    padding: 0;
+    border: none !important;
+}
+
+#portal-column-one .lastItem  a{
+    display: block;
+    padding-left: 10px;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+
+.portletLogin {
+    width: 178px;
 }
 
 .managePortletsLink {

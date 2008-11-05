@@ -419,7 +419,6 @@ font-weight: normal;
 /* The global section tabs. */
 #portal-globalnav {
   background-color: transparent;
-  border-bottom: 1px solid #eaeaea;
   padding: 0 0 0 40px;
   white-space: nowrap;
   list-style: none;
