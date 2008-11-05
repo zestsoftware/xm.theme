@@ -154,6 +154,8 @@ h3, h4, h5, h6 {
 
 .documentContent p {
     font-size: 95%;
+    /*LS-  padding contentTopRight fix*/
+    clear: left;
 }
 
 /* Links with differently colored link underlines - only for content */
@@ -762,7 +764,7 @@ dl.searchResults span.documentByLine {
 .nosort {
     border-top: &dtml-borderWidth; &dtml-borderStyle; #d1d0cb;
     border-bottom: &dtml-borderWidth; &dtml-borderStyle; #d1d0cb;
-    border-right: &dtml-borderWidth; &dtml-borderStyle; #deddda;
+    border-right: &dtml-borderWidth; &dtml-borderStyle; #e2e1dd;
 }
 /* LS- background instead of background-color */
 table.listing .even,
@@ -795,7 +797,7 @@ table.listing th,
     background: #f0efea url(++resource++xm.theme.images/background_tableHeader.gif) 0 0 repeat-x;
     font-weight: normal;
     color: #505050;
-    padding: 4px 10px;
+    padding: 4px 7px;
     text-align: left;
     text-transform: &dtml-textTransform;;
 }
