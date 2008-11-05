@@ -35,7 +35,6 @@
 }
 
 .contentViews {
-  /*LS- ie7 fix : 0 1px*/
     background: #eceae3 url(++resource++xm.theme.images/background_contentViews.gif) repeat-x scroll 0 0;
     line-height: 0;
     margin: 0;
@@ -52,39 +51,41 @@
 
 /*LS - li spacing fix: instead of display:inline > float:left */
 .contentViews li {
-    float: left;
     display: block;
+    float: left;
 }
 
 .contentViews li a {
     background-color: transparent;
+    display: block;
+    float: left;
     color: &dtml-contentViewFontColor;;
-    padding: 6px 10px;
-    height: auto;
+    padding: 0 10px;
+    height: 24px;
     width: auto;
     line-height: 24px;
     text-decoration: none;
     text-transform: &dtml-textTransform;;
-    z-index: 1;
+}
+
+.contentViews .selected {
+    padding-top: 1px;
 }
 
 .contentViews .selected .contentViewsTabLeft {
     background: transparent url(++resource++xm.theme.images/selectedTab_left.gif) no-repeat scroll 0 bottom;
+    display: block;
+    float: left;
+    height: 24px;
     width: 3px;
-    height: 22px;
-    /*display: inline-block; */
-    padding-bottom: 6px;
-    padding-right: 3px;
-    padding-top: 6px;
 }
 
 .contentViews .selected .contentViewsTabRight {
     background: transparent url(++resource++xm.theme.images/selectedTab_right.gif) no-repeat scroll 0 bottom;
+    display: block;
+    float: left;
     width: 3px;
-    height: 22px;
-    padding-bottom: 6px;
-    padding-right: 3px;
-    padding-top: 6px;
+    height: 24px;
 }
 
 .contentViews .selected a {
