@@ -113,9 +113,6 @@ h1#project-header a{
 }
 
 table .IterationTitle th {
-  background: url(++resource++xm.theme.images/IterationBG.jpg) repeat-x bottom;
-  white-space: nowrap;
-  font-weight: bold;
 }
 
 table .IterationTitle a {
@@ -136,11 +133,10 @@ table .IterationTitle a {
 }
 
 #story-listing .StatusOfStories th {
-  background-color: #d8e8bb;
 }
 
 #story-listing .storyHeader {
-  width: 50%;
+  width: 10%;
 }
 
 #story-listing .statusHeader {
