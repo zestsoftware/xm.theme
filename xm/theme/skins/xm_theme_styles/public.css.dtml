@@ -539,6 +539,8 @@ font-weight: normal;
 .documentEditable {
     padding: 0em 1em 1em 1em !important;
     margin: 0 -1em;
+    position: relative;
+    bottom: 26px;
 }
 #content-news h1 {
     margin-bottom: 1em;

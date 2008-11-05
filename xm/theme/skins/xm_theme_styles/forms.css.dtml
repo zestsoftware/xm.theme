@@ -134,9 +134,9 @@ dl.enableFormTabbing dd {
 .standalone,
 .documentEditable * .standalone {
     background: #fafafa url(++resource++xm.theme.images/ico_tools.gif) 4px 1px no-repeat;
-    border-color:#DFDEDA #EDECEA #EDECEA;
+    border-color:#DFDEDA #ccc #ccc;
     border-style: outset outset solid;
-    border-width: &dtml-borderWidth; 
+    border-width: &dtml-borderWidth;; 
     cursor: pointer;
     font-size: &dtml-fontSmallSize;;
     padding: 1px 1px 1px 18px;
@@ -148,7 +148,7 @@ dl.enableFormTabbing dd {
     background: #fafafa url(++resource++xm.theme.images/ico_tools.gif) 4px 1px no-repeat;
     border-color:#DFDEDA #ccc #ccc;
     border-style:outset outset solid;
-    border-width: &dtml-borderWidth; 
+    border-width: &dtml-borderWidth;; 
     color: &dtml-fontColor;;
     cursor: pointer;
     font-size: &dtml-fontSmallSize;;
