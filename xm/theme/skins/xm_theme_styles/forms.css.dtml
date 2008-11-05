@@ -117,11 +117,11 @@ dl.enableFormTabbing dd {
     clear: none;
 }
 #login-form input {
-    font-size: 150%;
+    font-size: 140%;
 }
 #login-form input.context {
     padding: 1px 10px 1px 20px;
-    background-position: 9px 5px;
+    background-position: 5px 5px;
     margin-bottom: 1em;
 }
 
