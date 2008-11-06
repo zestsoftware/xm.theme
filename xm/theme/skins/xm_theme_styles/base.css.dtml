@@ -25,7 +25,8 @@ body {
     padding: 0;
 }
 table {
-    font-size: 100%;
+    /*LS- made 101 because of a displacement bug portletTopLeft is some page views*/
+    font-size: 101%;
 }
 a {
     color: &dtml-linkColor;;

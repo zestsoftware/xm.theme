@@ -102,10 +102,6 @@ h1#project-header a{
   padding-right: 10px;
 }
 
-#my-projects-menu .project-submenu li a:hover {
-    background-color: #35B4E0;
-}
-
 .project-submenu li.selected {
   border-width: 0;
   margin: 0;

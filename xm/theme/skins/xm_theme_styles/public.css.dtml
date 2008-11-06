@@ -227,7 +227,6 @@ h3, h4, h5, h6 {
 #portal-siteactions li a:hover {
     color: #fff;
     background-color: #4bb6de;
-    text-decoration: underline;
 }
 #portal-siteactions li.selected a {
     background-color: &dtml-globalBackgroundColor;;
@@ -418,13 +417,21 @@ font-weight: normal;
 
 /* The global section tabs. */
 #portal-globalnav {
+  /*LS-  101 because of a displacement bug portletTopLeft in portletOne, where the fontsize is 101%. 
+     Isn't effected by portal-globalnav, but gives it the same font-size as portletOne*/
+  font-size: 101%;
   background-color: transparent;
-  padding: 0 0 0 30px;
+  padding: 0;
   white-space: nowrap;
   list-style: none;
-  margin: 4px 0 0 0;
+  margin: 0;
+  float: left;
   height: auto;
   line-height: normal;
+  position: absolute;
+  top: 140px;
+  left: 234px;
+  z-index: 10;
 }
 #portal-globalnav li {
     display: inline;
@@ -432,10 +439,10 @@ font-weight: normal;
 #portal-globalnav li a {
     /* The normal, unselected tabs. They are all links */
     background-color: transparent;
-    color: #76797C;
+    color: #3A849D;
     height: auto;
-    margin-right: 0.5em;
-    padding: 0.25em 1.25em;
+    margin-right: 1em;
+    padding: 0;
     text-decoration: none;
     text-transform: &dtml-textTransform;;
 }
@@ -445,8 +452,6 @@ font-weight: normal;
 }
 
 #portal-globalnav li a:hover {
-    background-color: #4BB6DE;
-    color: #FFFFFF;
     text-decoration: underline;
 }
 

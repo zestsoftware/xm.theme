@@ -117,7 +117,7 @@ dl.enableFormTabbing dd {
     clear: none;
 }
 #login-form input {
-    font-size: 140%;
+    font-size: 100%;
 }
 #login-form input.context {
     padding: 1px 10px 1px 20px;

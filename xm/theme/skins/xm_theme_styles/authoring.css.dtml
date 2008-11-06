@@ -184,6 +184,9 @@
 .actionMenu .actionMenuHeader a:hover {
     background-position: 0 -17px;
 }
+.activated .actionMenuHeader a {
+    background-position: 0 -17px;
+}
 .arrowDownAlternative {
     display: none;
 }

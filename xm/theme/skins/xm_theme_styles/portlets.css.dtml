@@ -68,10 +68,6 @@
     padding: 0 0 0 27px;
 }
 
-.portletFooter a:hover {
-    background-position: 0 -36px;
-}
-
 .portletItem a:hover {
     color: #1C718E;
 }
@@ -88,6 +84,10 @@
 .portletHeader, .portletHeader a {
     color: #343434;
     white-space: nowrap;
+}
+
+.portletHeader a {
+    color: &dtml-globalFontColor;;
 }
 
 .portlet .even {
