@@ -177,6 +177,7 @@ h3, h4, h5, h6 {
 
 #visual-portal-wrapper {
     position: relative;
+    z-index: 1;
     padding: 0;
     margin: 0 auto;
     background-color: #faf9f4;
@@ -194,6 +195,7 @@ h3, h4, h5, h6 {
 #portal-top {
     /* Top section */
     position: relative;
+    z-index: 2;
     top: 1px;
     margin: 0;
     padding: 0;
@@ -259,7 +261,7 @@ h3, h4, h5, h6 {
   margin: 0;
   padding: 0 0 0 14px;
   position: relative;
-  z-index: 10;
+  z-index: 40;
 }
 
 #portal-advanced-search {
@@ -345,12 +347,13 @@ margin-top:-0.1em;
 
 .LSResult {
 position: relative;
+z-index: 555;
 display: block;
 text-align: right;
 padding-top: 5px;
 margin: 0;
 left: 3px;
-z-index: 3;
+z-index: 14;
 }
 
 .LSShadow {
@@ -362,6 +365,7 @@ text-align: right;
     margin-top: 0;
     padding: 0 !important;
     position: absolute;
+    z-index: 666;
     /* Currently exposes a rendering bug in Mozilla */
     top: 35px;
     left: 0;
@@ -371,7 +375,6 @@ text-align: right;
     text-align: left;
     color: &dtml-globalFontColor;;
     border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
-    width: 200px;
     text-transform: none;
 }
 
@@ -431,7 +434,7 @@ font-weight: normal;
   position: absolute;
   top: 140px;
   left: 234px;
-  z-index: 10;
+  z-index: 30;
 }
 #portal-globalnav li {
     display: inline;

@@ -62,10 +62,12 @@
     background: transparent url(++resource++xm.theme.images/portal-header_bg.gif) repeat-x 0 bottom;
     height: 62px;
     position: relative;
+    z-index: 3;
 }
 
 #project-header {
     position: absolute;
+    z-index: 4;
     top: 25px;
     left: 2px;
 }
@@ -83,11 +85,12 @@ h1#project-header a{
 /*LS- position/placement fix project-submenu*/
 
 #my-projects-menu {
-    z-index: 2;
+    z-index: 3;
 }
 
 #my-projects-menu .project-submenu {
     position: relative !important;
+    z-index: 4;
     top: 0 !important;
 }
 

@@ -18,7 +18,9 @@
     vertical-align: top;
     width: <dtml-var columnOneWidth missing="16em">;
     border-collapse: collapse;
-    padding: 0; 
+    padding: 0;
+    position: relative;
+    z-index: 1;    
 }
 #portal-column-content {
     vertical-align: top;
