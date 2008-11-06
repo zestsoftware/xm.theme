@@ -826,6 +826,11 @@ table.listing td a label,
     cursor: pointer;
 }
 
+/*LS- this disables the default arrow in the story-listing*/
+#default_arrow {
+    visibility: hidden;
+}
+
 /* Vertical addition class */
 table.vertical {
     background-color: &dtml-backgroundColor;;	

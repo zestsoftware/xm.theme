@@ -125,8 +125,7 @@ table .IterationTitle a {
 }
 
 #story-listing a:hover {
-  color: #000;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .progress_percentage span {
