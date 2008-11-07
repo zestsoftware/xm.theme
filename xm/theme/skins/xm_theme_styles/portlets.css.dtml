@@ -25,8 +25,8 @@
 .portlet {
     text-transform: &dtml-textTransform;;
     margin: 1px 0 1em 0;
-    border-bottom: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
     background-color: &dtml-backgroundColor;;
+    width: 172px;
 }
 .portlet a {
     text-decoration: none;
@@ -68,6 +68,16 @@
     padding: 0 0 0 27px;
 }
 
+.portletFooter {
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
+    margin: 0;
+    padding: 0 0 7px 0;
+    text-align: left;
+}   
+
 .portletItem a:hover {
     color: #1C718E;
 }
@@ -102,12 +112,6 @@
     display: block;
     color: &dtml-fontColor;;
 }
-.portletFooter {
-    border: none !important;
-    margin: 0;
-    padding: 0 0 7px 0;
-    text-align: left;
-}   
 
 /*LS- underline hover:a*/
 #portal-column-one  a:hover {

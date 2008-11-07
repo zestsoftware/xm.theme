@@ -233,6 +233,10 @@
     white-space: nowrap;
     margin: 0.2em 0;
 }
+
+#portal-column-one .actionMenu .actionMenuContent li a {
+  white-space: normal;
+}
 .actionMenu .actionMenuContent .selected {
     display: block;
     white-space: nowrap;

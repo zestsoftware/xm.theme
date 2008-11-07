@@ -115,6 +115,7 @@ h3, h4, h5, h6 {
     border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
     margin: 0 0 40px 0;
     padding: 12px 14px !important;
+    xwidth: 690px;
 }
 .documentContent a {
     text-decoration: none;
@@ -541,8 +542,10 @@ font-weight: normal;
     vertical-align: bottom;
 }
 .documentEditable {
+/*LS- xm theme > not necessary?
     padding: 0em 1em 1em 1em !important;
     margin: 0 -1em;
+    */
     position: relative;
     bottom: 26px;
 }

@@ -26,7 +26,7 @@
 #portal-column-content {
     vertical-align: top;
     margin: 0;
-    padding: 39px 30px 0 19px;
+    padding: 39px 20px 0 19px;
     border-collapse: collapse;
 }
 #portal-column-two {
