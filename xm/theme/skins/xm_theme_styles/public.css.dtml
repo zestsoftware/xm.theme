@@ -347,7 +347,6 @@ margin-top:-0.1em;
 
 .LSResult {
 position: relative;
-z-index: 555;
 display: block;
 text-align: right;
 padding-top: 5px;
@@ -362,10 +361,12 @@ text-align: right;
 }
 .livesearchContainer {
     background-color: &dtml-backgroundColor;;
+    border: &dtml-borderWidth; #fff;
+    border-style: outset;
     margin-top: 0;
     padding: 0 !important;
     position: absolute;
-    z-index: 666;
+    z-index: 15;
     /* Currently exposes a rendering bug in Mozilla */
     top: 35px;
     left: 0;
@@ -374,7 +375,6 @@ text-align: right;
     visibility: visible;
     text-align: left;
     color: &dtml-globalFontColor;;
-    border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
     text-transform: none;
 }
 
@@ -388,7 +388,7 @@ border: 0;
 line-height: 1em;
 margin-top: -2em;
 margin-left: -0.1em;
-border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
+border: &dtml-borderWidth; outset &dtml-globalBorderColor;;
 border-bottom: 0;
 }
 * html #livesearchLegend {
@@ -433,7 +433,7 @@ font-weight: normal;
   line-height: normal;
   position: absolute;
   top: 140px;
-  left: 234px;
+  left: 212px;
   z-index: 30;
 }
 #portal-globalnav li {

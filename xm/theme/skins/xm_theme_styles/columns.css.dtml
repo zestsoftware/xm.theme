@@ -15,6 +15,7 @@
     border-spacing: 0;
 }
 #portal-column-one {
+    width: 200px;
     vertical-align: top;
     width: <dtml-var columnOneWidth missing="16em">;
     border-collapse: collapse;

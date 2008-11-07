@@ -137,7 +137,7 @@
 .contentActions a {
     text-decoration: none;
     color: #565655;
-    padding: 0 5px 0 0;
+    padding: 0 5px;
     cursor: pointer;
 }
 .contentActions span {
@@ -145,14 +145,12 @@
 }
     
 .contentActions span.subMenuTitle {
-    padding: 0em 0.5em;
+    padding: 0;
     position: relative;
     white-space: nowrap;
     display: inline;
 }
 .contentActions a span.subMenuTitle {
-    padding: 0px;
-    display: inline;
 }
 .contentActions li {
     display: block;
@@ -215,11 +213,11 @@
 }
 .actionMenu .actionMenuContent ul {
     display: block;
-    background: #ebeae6;
+    background-color: #ebeae6;
     border: &dtml-borderWidth; &dtml-contentViewBorderColor;;
     border-style: outset;
     margin: 0;
-    padding: 0 0 0 10px;
+    padding: 0;
 }
 .actionMenu .actionMenuContent li {
     float: none;
