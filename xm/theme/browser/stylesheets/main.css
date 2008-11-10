@@ -95,8 +95,9 @@ h1#project-header a{
 }
 
 #my-projects-menu .project-submenu ul {
-  background-color: #fff;
+  background-color: transparent;
   border: none !important;
+  text-indent: 7px;
 }
 
 .project-submenu li a {
@@ -143,7 +144,7 @@ table .IterationTitle a {
 }
 
 #story-listing .storyHeader {
-  width: 10%;
+  width: 50%;
 }
 
 #story-listing .statusHeader {

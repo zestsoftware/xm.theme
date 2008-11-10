@@ -177,14 +177,14 @@
     z-index: 6;
 }
 .actionMenu .actionMenuHeader a {
-    background: transparent url(++resource++xm.theme.images/active_content-menu-display.gif) no-repeat scroll 0 1px;
+    background: transparent url(++resource++xm.theme.images/arrow_green_inactive.gif) no-repeat scroll 0 1px;
     padding: 0 5px 0 18px;
 }
 .actionMenu .actionMenuHeader a:hover {
-    background-position: 0 -17px;
+    background: transparent url(++resource++xm.theme.images/arrow_green_active.gif) no-repeat scroll 0 1px;
 }
 .activated .actionMenuHeader a {
-    background-position: 0 -17px;
+    background: transparent url(++resource++xm.theme.images/arrow_green_active.gif) no-repeat scroll 0 1px;
 }
 .arrowDownAlternative {
     display: none;

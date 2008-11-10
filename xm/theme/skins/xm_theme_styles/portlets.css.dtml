@@ -41,7 +41,7 @@
     border-left: 1px solid #ccc;
     border-right: 1px solid #ccc;
     display: block;
-    padding-left: 10px;
+    padding-left: 9px;
 }
 
 /*LS- underline NO-hover:a*/
@@ -64,7 +64,7 @@
 
 .portletFooter a {
     color: #1C718E;
-    background: transparent url(++resource++xm.theme.images/active_content-menu-display.gif) no-repeat scroll 10px -33px;
+    background: transparent url(++resource++xm.theme.images/arrow_blue_inactive.gif) no-repeat scroll 16px 3px;
     padding: 0 0 0 27px;
 }
 

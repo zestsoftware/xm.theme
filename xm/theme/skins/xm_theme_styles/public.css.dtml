@@ -115,7 +115,6 @@ h3, h4, h5, h6 {
     border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
     margin: 0 0 40px 0;
     padding: 12px 14px !important;
-    xwidth: 690px;
 }
 .documentContent a {
     text-decoration: none;
@@ -421,9 +420,7 @@ font-weight: normal;
 
 /* The global section tabs. */
 #portal-globalnav {
-  /*LS-  101 because of a displacement bug portletTopLeft in portletOne, where the fontsize is 101%. 
-     Isn't effected by portal-globalnav, but gives it the same font-size as portletOne*/
-  font-size: 101%;
+  font-size: 100%;
   background-color: transparent;
   padding: 0;
   white-space: nowrap;
@@ -434,7 +431,7 @@ font-weight: normal;
   line-height: normal;
   position: absolute;
   top: 140px;
-  left: 212px;
+  left: 228px;
   z-index: 30;
 }
 #portal-globalnav li {
@@ -766,7 +763,7 @@ dl.searchResults span.documentByLine {
 }
 
 /* LS - table extra-design*/
-.nosort {
+.nosort, #user-group-sharing-head th {
     border-top: &dtml-borderWidth; &dtml-borderStyle; #d1d0cb;
     border-bottom: &dtml-borderWidth; &dtml-borderStyle; #d1d0cb;
     border-right: &dtml-borderWidth; &dtml-borderStyle; #e2e1dd;
