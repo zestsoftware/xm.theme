@@ -290,13 +290,14 @@ form.searchPage {
     text-align: center;
 }
 
-input.searchPage {
-    font-size: 200% !important;
+input.searchPage  {
+}
+
+.searchPage .discreet {
+    padding: 10px 0 0;
 }
 
 form.searchPage input.searchButton {
-    background-position:5px 7px;
-    padding:1px 10px 1px 25px;
 }
 
 /* LiveSearch styles */
@@ -771,7 +772,7 @@ dl.searchResults span.documentByLine {
 /* LS- background instead of background-color */
 table.listing .even,
 .stx table .even {
-    background: &dtml-evenRowBackgroundColor; url(++resource++xm.theme.images/background_tableFix.gif) 0 0 repeat-x !important;
+    background: #fff url(++resource++xm.theme.images/background_tableFix.gif) 0 0 repeat-x;
 }
 
 table.listing .odd,
@@ -831,7 +832,7 @@ table.listing td a label,
 
 /*LS- this disables the default arrow in the story-listing*/
 #default_arrow {
-    visibility: hidden;
+    display: none;
 }
 
 /* Vertical addition class */

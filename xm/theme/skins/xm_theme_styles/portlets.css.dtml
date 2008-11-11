@@ -187,9 +187,10 @@
 
 /* LS- LoginPage portletsBottom's fix*/
 #portal-column-one .lastItem {
-    height: 24px;
+    height: 25px;
     padding: 0;
     border: none !important;
+    border-bottom: 1px solid #ccc !important;
 }
 
 #portal-column-one .lastItem  a{
@@ -246,6 +247,10 @@ div.managedPortlet {
 
 .managedPortletActions a.delete {
     color:red !important;
+}
+
+.portlets-manager {
+    margin-top: 8px;
 }
 
 /* Table of Contents styling - essentially a portlet with smaller fonts and aligned right + limited in width */
