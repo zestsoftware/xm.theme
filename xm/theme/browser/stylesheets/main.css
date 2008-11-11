@@ -23,7 +23,7 @@
     padding: 0 0 0 8px;
 }
 
-#sharing-save-button, .searchPage .searchButton {
+#sharing-save-button, .searchPage .searchButton, .configlet .searchButton {
  /*LS- added background ico for shared searh button*/
     background:#FAFAFA url(++resource++xm.theme.images/ico_tools.gif) no-repeat scroll 4px 4px;
     height: 22px;

@@ -772,12 +772,12 @@ dl.searchResults span.documentByLine {
 /* LS- background instead of background-color */
 table.listing .even,
 .stx table .even {
-    background: #fff url(++resource++xm.theme.images/background_tableFix.gif) 0 0 repeat-x;
+    background: #F9F9F9 url(++resource++xm.theme.images/background_tableFix.gif) 0 0 repeat-x;
 }
 
 table.listing .odd,
 .stx table .odd {
-    background: #fff url(++resource++xm.theme.images/background_tableFix.gif) 0 0 repeat-x;
+    background: #F9F9F9 url(++resource++xm.theme.images/background_tableFix.gif) 0 0 repeat-x;
 }
 
 table.listing,
@@ -791,7 +791,7 @@ table.listing,
 
 table.listing tr,
 .stx table tr {
-    background: #fff url(++resource++xm.theme.images/background_tableFix.gif) repeat-x scroll 0 0;
+    background: #F9F9F9 url(++resource++xm.theme.images/background_tableFix.gif) repeat-x scroll 0 0;
 }
 
 /* The table used for listings - horizontal and vertical variants */
