@@ -26,7 +26,8 @@
 #sharing-save-button, .searchPage .searchButton, .configlet .searchButton {
  /*LS- added background ico for shared searh button*/
     background:#FAFAFA url(++resource++xm.theme.images/ico_tools.gif) no-repeat scroll 4px 4px;
-    height: 22px;
+    /*LS-  little hack for IE7- by putting an !important after the heigth, IE doesn't go weird with the submit-height*/
+    height: 22px !important;
     margin: 0;
     padding: 0 0 0 18px;
     float: none;

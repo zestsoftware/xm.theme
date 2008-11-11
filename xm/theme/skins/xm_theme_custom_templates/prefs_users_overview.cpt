@@ -22,20 +22,27 @@
            tal:condition="python:checkPermission('Manage users', here)">
 
            <ul class="contentViews">
+              <span class="contentViewsLeft"></span>
               <li class="selected">
+              <span class="contentViewsTabLeft"></span>
                 <a href=""
                    tal:attributes="href template_id"
                    i18n:translate="label_users">Users</a>
+              <span class="contentViewsTabRight"></span>
               </li>
               <li>
+              <span class="contentViewsTabLeft"></span>
                 <a href=""
                    tal:attributes="href string:$portal_url/prefs_groups_overview"
                    i18n:translate="label_groups">Groups</a>
+              <span class="contentViewsTabRight"></span>
               </li>
               <li>
+              <span class="contentViewsTabLeft"></span>
                 <a href=""
                    tal:attributes="href string:$portal_url/@@usergroup-controlpanel"
                    i18n:translate="label_usergroup_settings">Settings</a>
+              <span class="contentViewsTabRight"></span>
               </li>
             </ul>
 
@@ -44,6 +51,8 @@
             </div>
 
             <div class="documentContent" id="content">
+              <span id="contentTopLeft"></span>
+              <span id="contentTopRight"></span>
                 <a name="documentContent"></a>
 
       <div metal:use-macro="here/global_statusmessage/macros/portal_message">
@@ -245,16 +254,17 @@
         <input tal:replace="structure context/@@authenticator/authenticator" />
 
         </form>
-
+           <span id="contentBottomLeft"></span>
+           <span id="contentBottomRight"></span>
       </div>
     </div>
       </div>
-
       <div id="content" class="documentEditable"
            tal:condition="python:not checkPermission('Manage users', here)">
         <tal:block replace="here/raiseUnauthorized" />
       </div>
-    </div>
+
+      </div>
   </body>
 </html>
 

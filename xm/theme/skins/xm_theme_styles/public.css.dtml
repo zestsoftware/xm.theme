@@ -114,7 +114,7 @@ h3, h4, h5, h6 {
     background: &dtml-backgroundColor;;
     border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
     margin: 0 0 40px 0;
-    padding: 12px 14px !important;
+    padding: 14px 14px !important;
 }
 .documentContent a {
     text-decoration: none;
@@ -672,7 +672,6 @@ dl.error dd {
 
 .documentDescription {
     /* The summary text describing the document */
-    font-weight: bold;
     display: block;
     margin: 0em 0em 0.5em 0em;
     line-height: 1.5em;
@@ -772,12 +771,12 @@ dl.searchResults span.documentByLine {
 /* LS- background instead of background-color */
 table.listing .even,
 .stx table .even {
-    background: #F9F9F9 url(++resource++xm.theme.images/background_tableFix.gif) 0 0 repeat-x;
+    background: &dtml-evenRowBackgroundColor;; url(++resource++xm.theme.images/background_tableFix.gif) 0 0 repeat-x;
 }
 
 table.listing .odd,
 .stx table .odd {
-    background: #F9F9F9 url(++resource++xm.theme.images/background_tableFix.gif) 0 0 repeat-x;
+    background: &dtml-evenRowBackgroundColor;; url(++resource++xm.theme.images/background_tableFix.gif) 0 0 repeat-x;
 }
 
 table.listing,
@@ -791,7 +790,7 @@ table.listing,
 
 table.listing tr,
 .stx table tr {
-    background: #F9F9F9 url(++resource++xm.theme.images/background_tableFix.gif) repeat-x scroll 0 0;
+    background: #fdfdfc url(++resource++xm.theme.images/background_tableFix.gif) repeat-x scroll 0 0;
 }
 
 /* The table used for listings - horizontal and vertical variants */
@@ -815,7 +814,8 @@ table.listing .listingCheckbox {
     text-align: center;
 }
 table.listing td,
-.stx table td {
+.stx table td,
+.td-story-title {
     border-right: medium none !important;
     padding: 4px 10px;
 }
@@ -828,6 +828,10 @@ table.listing img {
 table.listing td a label,
 .stx table td a label {
     cursor: pointer;
+}
+
+.progressfirstcolumn {
+    background-color: #fff;
 }
 
 /*LS- this disables the default arrow in the story-listing*/
@@ -991,19 +995,17 @@ a.link-parent {
 
 /* Handling external/internal links, we first set the icon on all links, then 
    remove it from the ones that are local - for both http and https */
+#content a:hover {
+    text-decoration: none;
+}
+   
 #content a[href ^="http:"],
 #content a.link-external {
-    background: transparent url(&dtml-portal_url;/link_icon.gif) 0px 1px no-repeat;
-    padding: 1px 0px 1px 16px;
 }
 #content a[href ^="https:"],
 #content a.link-https {
-    background: transparent url(&dtml-portal_url;/lock_icon.gif) 0px 1px no-repeat;
-    padding: 1px 0px 1px 16px;
 }
 #content a[href ^="&dtml-portal_url;"] {
-    background: none;
-    padding: 0;
 }
 
 
@@ -1011,12 +1013,12 @@ a.link-parent {
 #content a[href ^="mailto:"],
 #content a.link-mailto  {
     background: transparent url(&dtml-portal_url;/mail_icon.gif) 0px 1px no-repeat;
-    padding: 1px 0px 1px 16px;
+    padding: 1px 0 1px 16px;
 }
 #content a[href ^="news:"],
 #content a.link-news {
     background: transparent url(&dtml-portal_url;/topic_icon.gif) 0px 1px no-repeat;
-    padding: 1px 0px 1px 16px;
+    padding: 1px 0 1px 16px;
 }
 #content a[href ^="ftp:"],
 #content a.link-ftp {

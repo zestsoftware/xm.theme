@@ -139,7 +139,8 @@
   border-right: 1px solid #ccc;
 }
 
-#portal-column-one .hoursBooked {
+#portal-column-one .hoursBooked,
+.listingBar {
   border-top: 1px solid #bfe1eb;
   border-bottom: 1px solid #bfe1eb;
   border-left: 1px solid #dfdeda;
