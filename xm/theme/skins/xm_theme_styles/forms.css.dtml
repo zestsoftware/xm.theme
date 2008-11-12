@@ -51,12 +51,6 @@ input[type=checkbox] {
 }
 
 
-#searchGadget {
-    border: 1px inset #ccc;
-    margin: 0 0 0 12px;
-    float: left;
-}
-
 button {
     font-family: <dtml-var fontFamily>;
     visibility: visible;
@@ -131,11 +125,15 @@ dl.enableFormTabbing dd {
     margin: 0 1em;
 }
 
-.standalone,
+.standalone, input[type=submit],
 .documentEditable * .standalone, 
 #sharing-save-button,
 .searchPage .searchButton,
- .configlet .searchButton {
+.configlet .searchButton,
+.context, 
+.formControls .actionButtons .button,
+.documentEditable * .context 
+ {
     background: #fafafa url(++resource++xm.theme.images/ico_tools.gif) 4px 1px no-repeat;
     border-color:#DFDEDA #ccc #ccc;
     border-style: outset outset solid;
@@ -145,20 +143,7 @@ dl.enableFormTabbing dd {
     padding: 1px 1px 1px 18px;
     text-transform: &dtml-textTransform;;
 }
-.context,
-.formControls .actionButtons .button,
-.documentEditable * .context {
-    background: #fafafa url(++resource++xm.theme.images/ico_tools.gif) 4px 1px no-repeat;
-    border-color:#DFDEDA #ccc #ccc;
-    border-style:outset outset solid;
-    border-width: &dtml-borderWidth;; 
-    color: &dtml-fontColor;;
-    cursor: pointer;
-    font-size: &dtml-fontSmallSize;;
-    margin: 6px 0 0;
-    padding: 1px 1px 1px 18px;
-    text-transform: &dtml-textTransform;;
-}
+
 .destructive,
 .documentEditable * .destructive {
     background: &dtml-notifyBackgroundColor; url(++resource++xm.theme.images/ico_notify.gif) 4px 1px no-repeat;
@@ -171,12 +156,7 @@ dl.enableFormTabbing dd {
     padding: 1px 1px 1px 18px;
     text-transform: &dtml-textTransform;;
 }
-input.searchButton {
-    margin-bottom: &dtml-borderWidth; ! important;
-    color: &dtml-fontColor;;
-    padding: 1px 4px;
-    text-transform: &dtml-textTransform;;
-}
+
 .searchSection {
     color: &dtml-discreetColor;;
     margin-top: 0.25em;
@@ -189,7 +169,7 @@ input.searchButton {
 .field {
     top: 0;
     left: 0;
-    margin: 5px 12px 12px 0;
+    margin: 5px 12px 5px 0;
     clear: both;
 }
 .field .field {
@@ -264,6 +244,54 @@ tr.selected {
   top: 0;
   right: 0;
   z-index: 999;
+}
+
+  /* begin grey buttons */
+.searchDiv {
+    float: left;
+    position: relative;
+    bottom: 3px;
+    background: transparent url(++resource++xm.theme.images/side-left-grey.gif) no-repeat 4px 0;
+    margin: 0;
+    padding: 0 0 0 8px;
+}
+
+#sharing-save-button, .searchPage .searchButton, 
+.configlet .searchButton {
+ /*LS- added background ico for shared search button*/
+    background:#FAFAFA url(++resource++xm.theme.images/ico_tools.gif) no-repeat scroll 4px 4px;
+    /*LS-  little hack for IE7- by putting an !important after the heigth, IE doesn't go weird with the submit-height*/
+    height: 22px !important;
+    margin: 0;
+    padding: 0 0 0 18px;
+    float: none;
+}
+
+input.searchButton  {
+    font-size: 115%;
+    text-transform: &dtml-textTransform;;
+    color: &dtml-fontColor;;
+    float: left;
+    margin: 0;
+    padding: 1px 4px;
+    height: 26px;
+    background: #d8d6cf url(++resource++xm.theme.images/gradient-grey.gif) repeat-x;
+    border: 0;
+    cursor: pointer;
+}
+
+.searchDiv span{
+    background: transparent url(++resource++xm.theme.images/side-right-grey.gif) no-repeat;
+    float: left;
+    width: 4px;
+    height: 25px;
+}
+ /* end grey buttons*/
+
+#searchGadget {
+    border: 1px inset #ccc;
+    margin: 0 0 0 12px;
+    float: left;
 }
 
 /* </dtml-with> */

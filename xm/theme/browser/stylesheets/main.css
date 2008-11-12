@@ -11,45 +11,6 @@
     padding: 2px 10px;
     white-space: normal !important;
 }
-
-  /* begin grey buttons */
-    
-.searchDiv {
-    float: left;
-    position: relative;
-    bottom: 3px;
-    background: transparent url(++resource++xm.theme.images/side-left-grey.gif) no-repeat 4px 0;
-    margin: 0;
-    padding: 0 0 0 8px;
-}
-
-#sharing-save-button, .searchPage .searchButton, .configlet .searchButton {
- /*LS- added background ico for shared searh button*/
-    background:#FAFAFA url(++resource++xm.theme.images/ico_tools.gif) no-repeat scroll 4px 4px;
-    /*LS-  little hack for IE7- by putting an !important after the heigth, IE doesn't go weird with the submit-height*/
-    height: 22px !important;
-    margin: 0;
-    padding: 0 0 0 18px;
-    float: none;
-}
-
-.searchButton {
-    float: left;
-    margin: 0;
-    padding: 0;
-    height: 26px;
-    background: #d8d6cf url(++resource++xm.theme.images/gradient-grey.gif) repeat-x;
-    border: 0;
-    cursor: pointer;
-  }
-
-.searchDiv span{
-    background: transparent url(++resource++xm.theme.images/side-right-grey.gif) no-repeat;
-    float: left;
-    width: 4px;
-    height: 25px;
-}
- /* end grey buttons*/
  
   /*search- icon fix*/
 .searchIcon{
@@ -175,6 +136,7 @@ table .IterationTitle a {
 
 table.employees-overview td {
   padding: 4px;
+  white-space: nowrap;
 }
 
 .employees-overview .name-employee {

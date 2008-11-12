@@ -785,7 +785,7 @@ table.listing,
     border: 1px &dtml-borderStyle; #d1d0cb;
     border-collapse: collapse;
     font-size: &dtml-fontSmallSize;;
-    margin: 5px 0 0 0;
+    margin: 5px 0;
 }
 
 table.listing tr,
@@ -828,10 +828,6 @@ table.listing img {
 table.listing td a label,
 .stx table td a label {
     cursor: pointer;
-}
-
-.progressfirstcolumn {
-    background-color: #fff;
 }
 
 /*LS- this disables the default arrow in the story-listing*/
