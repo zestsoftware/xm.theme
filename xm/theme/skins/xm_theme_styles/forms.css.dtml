@@ -155,6 +155,7 @@ dl.enableFormTabbing dd {
     color: &dtml-fontColor;;
     cursor: pointer;
     font-size: &dtml-fontSmallSize;;
+    margin: 6px 0 0;
     padding: 1px 1px 1px 18px;
     text-transform: &dtml-textTransform;;
 }
