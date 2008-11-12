@@ -102,11 +102,11 @@ h3, h4, h5, h6 {
 /* bottom corners position fix*/
 #contentBottomLeft, #contentBottomRight {
     position: relative;
-    top: 5px;
+    top: 7px;
 }
 
 #contentTopLeft, #contentTopRight {
-    bottom: 13px;
+    bottom: 15px;
 }
 
 .documentContent {
@@ -115,6 +115,7 @@ h3, h4, h5, h6 {
     border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
     margin: 0 0 40px 0;
     padding: 14px 14px !important;
+    
 }
 .documentContent a {
     text-decoration: none;
@@ -154,8 +155,7 @@ h3, h4, h5, h6 {
 
 .documentContent p {
     font-size: 95%;
-    /*LS-  padding contentTopRight fix*/
-    clear: left;
+    clear: both;
 }
 
 /* Links with differently colored link underlines - only for content */
@@ -785,7 +785,7 @@ table.listing,
     border: 1px &dtml-borderStyle; #d1d0cb;
     border-collapse: collapse;
     font-size: &dtml-fontSmallSize;;
-    margin: 5px 0 10px 0;
+    margin: 5px 0 0 0;
 }
 
 table.listing tr,
