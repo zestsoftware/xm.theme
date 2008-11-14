@@ -386,6 +386,8 @@ background-color: &dtml-globalBorderColor;;
 border: 0;
 }
 #livesearchLegend {
+color: #767676;
+font-weight:bold;
 line-height: 1em;
 margin-top: -2em;
 margin-left: -0.1em;
