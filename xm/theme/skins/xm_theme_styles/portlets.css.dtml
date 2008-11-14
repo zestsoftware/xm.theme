@@ -64,8 +64,12 @@
 
 .portletFooter a {
     color: #1C718E;
-    background: transparent url(++resource++xm.theme.images/arrow_blue_inactive.gif) no-repeat scroll 16px 3px;
+    background: transparent url(++resource++xm.theme.images/arrow_blue_inactive.gif) no-repeat scroll 10px 1px;
     padding: 0 0 0 27px;
+}
+
+#my-projects-menu .project-submenu ul li a {
+    background-position: 16px 3px;
 }
 
 .portletFooter {
