@@ -375,7 +375,7 @@ text-align: right;
     font-family: <dtml-var fontFamily>;
     visibility: visible;
     text-align: left;
-    color: &dtml-globalFontColor;;
+    color: #565655;
     text-transform: none;
 }
 
