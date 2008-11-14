@@ -26,6 +26,7 @@ textarea {
 }
 input {
     font-family: <dtml-var fontFamily>;
+    text-indent: 0.25em;
     visibility: visible;
     border: 1px solid #ddd;
     border-color:#666 #ddd #ddd #666;

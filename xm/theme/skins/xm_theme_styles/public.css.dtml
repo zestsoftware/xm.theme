@@ -534,7 +534,8 @@ font-weight: normal;
 }
 
 .breadcrumbSeparator {
-    font-size: 120%;
+/*LS-  > creates displacement?
+        font-size: 120%; */
 }
 .addFavorite {
     vertical-align: bottom;
