@@ -44,9 +44,8 @@ input {
     background-color: transparent;
 }
 
-input[type=checkbox] {
-    border: none;
-    margin: 0;
+input[type="checkbox"] {
+    border: 1px solid red;
     background: none;
     background-color: transparent;
 }
@@ -126,7 +125,7 @@ dl.enableFormTabbing dd {
     margin: 0 1em;
 }
 
-.standalone, input[type=submit],
+.standalone, input[type="submit"],
 .documentEditable * .standalone, 
 #sharing-save-button,
 .searchPage .searchButton,
@@ -291,7 +290,7 @@ input.searchButton  {
 
 #searchGadget {
     border: 1px inset #ccc;
-    margin: 0 0 0 12px;
+    margin: 1px 0 0 12px;
     float: left;
 }
 
