@@ -70,7 +70,7 @@
 }
 
 .contentViews .selected {
-    padding-top: 1px;
+    border-bottom: 1px solid #F5F7F7;
 }
 
 .contentViews .selected .contentViewsTabLeft {
