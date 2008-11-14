@@ -115,7 +115,7 @@ dl.enableFormTabbing dd {
 }
 #login-form input.context {
     padding: 1px 10px 1px 20px;
-    background-position: 5px 5px;
+    background-position: 5px 2px;
     margin-bottom: 1em;
 }
 
