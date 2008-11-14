@@ -45,7 +45,6 @@ input {
 }
 
 input[type="checkbox"] {
-    border: 1px solid red;
     background: none;
     background-color: transparent;
 }
