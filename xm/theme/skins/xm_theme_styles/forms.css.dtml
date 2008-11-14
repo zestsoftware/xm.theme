@@ -45,8 +45,10 @@ input {
 }
 
 input[type="checkbox"] {
+    border: none;
     background: none;
     background-color: transparent;
+    /* LS- portal-searchbox causes problem in IE>>>  margin: 0; */
 }
 
 

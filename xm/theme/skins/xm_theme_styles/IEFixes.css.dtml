@@ -4,6 +4,11 @@
 
 /* <dtml-with base_properties> */
 
+
+.searchGadgetFix {
+    top: 1px;
+}
+
 * html #portal-columns {
   width: 100%;
 }
