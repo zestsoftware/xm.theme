@@ -53,6 +53,7 @@
 .contentViews li {
     display: block;
     float: left;
+    margin-bottom: 0;
 }
 
 .contentViews li a {
