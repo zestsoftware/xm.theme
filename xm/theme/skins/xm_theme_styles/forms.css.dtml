@@ -135,8 +135,8 @@ dl.enableFormTabbing dd {
 .documentEditable * .context 
  {
     background: #fafafa url(++resource++xm.theme.images/ico_tools.gif) 4px 1px no-repeat;
-    border-color:#DFDEDA #ccc #ccc;
-    border-style: outset outset solid;
+    border-color: #eee #c3c1ba #c3c1ba #eee;
+    border-style: &dtml-borderStyle;;
     border-width: &dtml-borderWidth;; 
     cursor: pointer;
     font-size: &dtml-fontSmallSize;;
@@ -148,7 +148,7 @@ dl.enableFormTabbing dd {
 .documentEditable * .destructive {
     background: &dtml-notifyBackgroundColor; url(++resource++xm.theme.images/ico_notify.gif) 4px 1px no-repeat;
     border-color: &dtml-notifyBorderColor; &dtml-notifyBorderColor; &dtml-notifyBorderColor;;
-    border-style:outset outset solid;
+    border-style: &dtml-borderStyle;
     border-width: &dtml-borderWidth; 
     color: &dtml-fontColor;;
     cursor: pointer;
