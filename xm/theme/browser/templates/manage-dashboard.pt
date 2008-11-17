@@ -21,7 +21,7 @@
     present from main_template.
 </tal:comment>
 
-<metal:left fill-slot="column_one_slot" />
+<!-- <metal:left fill-slot="column_one_slot" /> --> 
 <metal:right fill-slot="column_two_slot" />
 
 <metal:main fill-slot="content"
@@ -34,16 +34,20 @@
              i18n:translate="heading_content_views">Content views</h5>
 
         <ul class="contentViews">
+        <span class="contentViewsLeft"></span>
           <li>
             <a href=""
                tal:attributes="href string:${portal_url}/dashboard"
                i18n:translate="label_dashboard">Dashboard</a>
           </li>
           <li class="selected">
+          <span class="contentViewsTabLeft"></span>
             <a href=""
                tal:attributes="href string:${portal_url}/@@manage-dashboard"
                i18n:translate="label_edit">Edit</a>
+          <span class="contentViewsTabRight"></span>
           </li>
+        <span class="contentViewsRight"></span>
         </ul>
 
         <div class="contentActions">

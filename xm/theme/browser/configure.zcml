@@ -123,5 +123,24 @@
       template="templates/contentviews.pt"
       permission="zope2.View"
       />
-        
+      
+  <!-- XM theme dashboard -->
+   <browser:page
+      for="Products.CMFCore.interfaces.ISiteRoot"
+      name="dashboard"
+      permission="plone.app.portlets.ManageOwnPortlets"
+      class="plone.app.layout.dashboard.dashboard.DashboardView"
+      template="templates/dashboard.pt"
+      layer=".interfaces.IThemeSpecific"
+      />
+ 
+ <browser:page
+      for="Products.CMFCore.interfaces.ISiteRoot"
+      name="manage-dashboard"
+      permission="plone.app.portlets.ManageOwnPortlets"
+      class="plone.app.portlets.browser.manage.ManageDashboardPortlets"
+      template="templates/manage-dashboard.pt"
+      layer=".interfaces.IThemeSpecific"
+      />
+
 </configure>
