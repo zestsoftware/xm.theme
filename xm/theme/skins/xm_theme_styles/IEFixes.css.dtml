@@ -4,7 +4,6 @@
 
 /* <dtml-with base_properties> */
 
-
 .searchGadgetFix {
     top: 1px;
 }
