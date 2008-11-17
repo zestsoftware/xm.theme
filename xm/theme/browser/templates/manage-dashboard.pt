@@ -55,6 +55,8 @@
         </div>
 
         <div class="documentContent" id="content">
+          <span id="contentTopLeft"></span>
+          <span id="contentTopRight"></span>
 
             <a name="documentContent"></a>
                     
@@ -78,7 +80,8 @@
             </div>
 
             <div class="visualClear"><!-- --></div>
-
+      <span id="contentBottomLeft"></span>
+      <span id="contentBottomRight"></span>
     </div> <!-- end simulated tabs -->
 
     </tal:main-macro>

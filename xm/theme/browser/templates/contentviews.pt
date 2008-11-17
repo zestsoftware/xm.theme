@@ -11,7 +11,7 @@
 
         <ul class="contentViews"
             i18n:domain="plone">
-        <span class="contentViewsLeft"></span>
+          <span class="contentViewsLeft"></span>
             <tal:views repeat="action view_actions">
               <li tal:define="selected action/selected|nothing;"
                   tal:attributes="id string:contentview-${action/id};
@@ -26,7 +26,7 @@
               <span class="contentViewsTabRight"></span>
               </li>
             </tal:views>
-        <span class="contentViewsRight"></span>
+          <span class="contentViewsRight"></span>
         </ul>
         
     </tal:block>
