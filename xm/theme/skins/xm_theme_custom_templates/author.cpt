@@ -55,18 +55,22 @@
         
         <ul class="contentViews"
             tal:condition="isOwner">
+          <span class="contentViewsLeft"></span>
           <li class="selected">
+              <span class="contentViewsTabLeft"></span>
             <a href=""
                 tal:define="url_quote_plus python:modules['Products.PythonScripts.standard'].url_quote_plus;
                             memberurl python:url_quote_plus(member.getId())"
                tal:attributes="href string:${portal_url}/author/${memberurl}"
                i18n:translate="label_view">View</a>
+              <span class="contentViewsTabRight"></span>
           </li>
           <li>
             <a href=""
                tal:attributes="href string:${portal_url}/personalize_form"
                i18n:translate="label_edit">Edit</a>
           </li>
+          <span class="contentViewsRight"></span>
         </ul>
 
         <div class="contentActions"
@@ -75,6 +79,8 @@
         </div>
 
         <div class="documentContent" id="content">
+          <span id="contentTopLeft"></span>
+          <span id="contentTopRight"></span>
 
             <a name="documentContent"></a>
                     
@@ -287,7 +293,8 @@
                 </a>
 
             </tal:authorContent>
-
+          <span id="contentBottomLeft"></span>
+          <span id="contentBottomRight"></span>
         </div>
     </div> <!-- end simulated tabs -->
         
