@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2008-09-03 18:32+0000\n"
+"POT-Creation-Date: 2008-11-17 13:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,32 +17,20 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: xm.theme\n"
 
-#: ./browser/employees.py:77
-msgid "%B"
-msgstr ""
-
-#: ./browser/viewlets_project_tabs.py:227
+#: ./browser/viewlets_project_tabs.py:218
 msgid "Closed"
 msgstr ""
 
-#: ./browser/viewlets_project_tabs.py:234
+#: ./browser/viewlets_project_tabs.py:225
 msgid "Closed iterations"
 msgstr ""
 
-#: ./browser/viewlets_project_tabs.py:225
-msgid "Closed&hellip;"
-msgstr ""
-
-#: ./browser/viewlets_project_tabs.py:115
+#: ./browser/viewlets_project_tabs.py:112
 msgid "Current"
 msgstr ""
 
-#: ./browser/viewlets_project_tabs.py:122
+#: ./browser/viewlets_project_tabs.py:119
 msgid "Current iterations"
-msgstr ""
-
-#: ./browser/viewlets_project_tabs.py:113
-msgid "Current&hellip;"
 msgstr ""
 
 #: ./browser/viewlets_project_tabs.py:88
@@ -53,21 +41,22 @@ msgstr ""
 msgid "Example tab"
 msgstr ""
 
+#. Default: "Iterations"
+#: ./browser/templates/project_tabs_viewlet.pt:3
+msgid "Iterations"
+msgstr ""
+
 #. Default: "No content found"
 #: ./browser/templates/project_content.pt:12
 msgid "No content found"
 msgstr ""
 
-#: ./browser/viewlets_project_tabs.py:171
+#: ./browser/viewlets_project_tabs.py:165
 msgid "Open"
 msgstr ""
 
-#: ./browser/viewlets_project_tabs.py:178
+#: ./browser/viewlets_project_tabs.py:172
 msgid "Open iterations"
-msgstr ""
-
-#: ./browser/viewlets_project_tabs.py:169
-msgid "Open&hellip;"
 msgstr ""
 
 #: ./skins/xm_theme_custom_templates/login_next.cpy:77
@@ -76,16 +65,6 @@ msgstr ""
 
 #: ./skins/xm_theme_custom_templates/login_next.cpy:105
 msgid "You have been redirected to your most recent project."
-msgstr ""
-
-#. Default: "In the overview, you'll find for each employee how much billable he/she worked per month in %."
-#: ./browser/templates/employees_overview.pt:16
-msgid "description_employees_overview"
-msgstr ""
-
-#. Default: "Name"
-#: ./browser/templates/employees_overview.pt:23
-msgid "head_name"
 msgstr ""
 
 #. Default: "Advanced Search…"
@@ -106,10 +85,5 @@ msgstr ""
 #. Default: "LiveSearch &#8595;"
 #: ./skins/xm_theme_custom_templates/livesearch_reply.py:83
 msgid "legend_livesearch"
-msgstr ""
-
-#. Default: "Employees overview"
-#: ./browser/templates/employees_overview.pt:13
-msgid "title_employees_overview"
 msgstr ""
 

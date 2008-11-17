@@ -1,4 +1,5 @@
 <h5 class="hiddenStructure">Project sections</h5>
 <ul id="portal-globalnav">
+  <li class="" id="portaltab-Iterations" tal:condition="view/has_iterations"><span i18n:domain="xm.theme" i18n:translate="" >Iterations</span>:</li>
   <div tal:replace="structure provider:xm.project_tabs_manager" />
 </ul>

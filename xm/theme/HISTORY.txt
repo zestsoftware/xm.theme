@@ -6,6 +6,9 @@ History for xm.theme
 0.9 (unreleased)
 ----------------
 
+- Added 'Iterations:' in front of the open/current/closed iterations list and
+  show it only if we have iterations in the project.  [fredvd]
+  
 - Moved the employees_overview page to Products.eXtremeManagement.
   [maurits]
 

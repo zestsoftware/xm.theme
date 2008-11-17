@@ -41,6 +41,16 @@ class XMProjectTabsViewlet(ViewletBase):
             iteration = None
         return iteration
 
+    @memoize
+    def has_iterations(self):
+
+        thisproject = self.get_project()
+        if thisproject == None:
+            return False
+        cfilter = dict(portal_type = 'Iteration',)
+        brains = thisproject.getFolderContents(cfilter)
+
+        return len(brains)>0
 
 class ProjectTabsBaseViewlet(ViewletBase):
     """Base viewlet for the project tabs."""

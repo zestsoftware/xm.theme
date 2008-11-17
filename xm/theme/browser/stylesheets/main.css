@@ -44,6 +44,11 @@ h1#project-header a{
     white-space: nowrap;
 }
 
+#portal-globalnav #portaltab-Iterations {
+    color:#343434;
+    margin-right: 0.5em;
+}
+
 /* *** Start submenus *** */
 /*LS- position/placement fix project-submenu*/
 
