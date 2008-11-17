@@ -118,6 +118,40 @@
     color: &dtml-fontColor;;
 }
 
+/* LS - dashboard portlets - start */
+.portletRecent, .managedPortlet {
+    width: auto;
+}
+
+.portletRecent .portletHeader, .portletRecent dd a {
+    border-bottom: none;
+}
+
+.portletRecent .portletHeader {
+    background: &dtml-backgroundColor;;
+    margin-bottom: 1em;
+}
+
+.portletRecent .portletItem {
+    margin: 0 0 0 20px;
+    line-height: 1em;
+}
+
+.portletRecent .portletFooter {
+    padding: 0;
+}
+
+.portletRecent .portletFooter a {
+    background-position: 0 2px;
+    padding: 0 0 0 18px;
+}
+
+.managedPortlet {
+    margin: 0;
+}
+    
+/* dashboard portlets - finish*/
+
 /*LS- underline hover:a*/
 #portal-column-one  a:hover {
     text-decoration: underline;

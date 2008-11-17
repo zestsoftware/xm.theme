@@ -148,3 +148,26 @@ table.employees-overview td {
 .employees-overview .name-employee {
   white-space: nowrap;
 }
+
+/* LS-  dashboard - start*/
+#dashboard-actions {
+    clear: left;
+    float: right;
+}
+
+#dashboard-actions ul{
+    margin: 0;
+    list-style-image: none;
+    list-style-type: none;
+}
+
+#dashboard-actions li {
+    display: inline;
+    margin-right: 1em;
+}
+
+.heading_dashboard {
+    clear: both;
+}
+
+/* LS-  dashboard - finish*/

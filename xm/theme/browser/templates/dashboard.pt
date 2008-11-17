@@ -92,7 +92,7 @@
                 </ul>
             </div>
             
-            <h1 class="documentFirstHeading" i18n:translate="heading_dashboard">
+            <h1 class="documentFirstHeading heading_dashboard" i18n:translate="heading_dashboard">
                 <span tal:replace="name" i18n:name="user_name" />'s dashboard
             </h1>
             

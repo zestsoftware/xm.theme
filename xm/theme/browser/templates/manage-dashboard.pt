@@ -64,7 +64,7 @@
                 Portal status message
             </div>
 
-            <h1 class="documentFirstHeading" i18n:translate="title_edit_dashboard">
+            <h1 class="documentFirstHeading heading_dashboard" i18n:translate="title_edit_dashboard">
                 Edit your dashboard
             </h1>
 
