@@ -109,10 +109,7 @@ class CurrentIterationsViewlet(ProjectTabsBaseViewlet):
     @memoize
     def _get_title(self):
         """Return the title of the tab."""
-        if len(self._get_items()) > 1:
-            return _(u'Current&hellip;')
-        else:
-            return _(u'Current')
+        return _(u'Current')
 
     @memoize
     def _get_description(self):
@@ -165,10 +162,7 @@ class OpenIterationsViewlet(ProjectTabsBaseViewlet):
     @memoize
     def _get_title(self):
         """Return the title of the tab."""
-        if len(self._get_items()) > 1:
-            return _(u'Open&hellip;')
-        else:
-            return _(u'Open')
+        return _(u'Open')
 
     @memoize
     def _get_description(self):
@@ -221,10 +215,7 @@ class ClosedIterationsViewlet(ProjectTabsBaseViewlet):
     @memoize
     def _get_title(self):
         """Return the title of the tab."""
-        if len(self._get_items()) > 1:
-            return _(u'Closed&hellip;')
-        else:
-            return _(u'Closed')
+        return _(u'Closed')
 
     @memoize
     def _get_description(self):
