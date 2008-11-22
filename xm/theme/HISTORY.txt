@@ -6,6 +6,9 @@ History for xm.theme
 0.9 (unreleased)
 ----------------
 
+- The username in the personal_bar now links to the author page instead of the
+  dashboard. [jladage]
+
 - Added 'Iterations:' in front of the open/current/closed iterations list and
   show it only if we have iterations in the project.  [fredvd]
   

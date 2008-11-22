@@ -72,6 +72,14 @@
       template="templates/searchbox.pt"
       />
 
+  <browser:viewlet
+      name="xm.personal_bar"
+      manager="plone.app.layout.viewlets.interfaces.IPortalTop"
+      layer=".interfaces.IThemeSpecific"
+      class=".viewlets.XMPersonalBarViewlet"
+      permission="zope2.View"
+      />
+      
   <!-- TODO move this to project.setup
        <browser:viewlet
        name="xm.links.googlesearch"
