@@ -1,5 +1,10 @@
 /* Stylesheet for the 'eXtremeManagement' Plone theme */
 
+/* LS- adds a z-index to fix the display of jscalender */
+.calendar {
+    z-index: 4;
+}
+
 .headerTitle {
     position: relative;
     bottom: 20px;
