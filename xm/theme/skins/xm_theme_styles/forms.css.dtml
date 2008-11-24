@@ -135,11 +135,12 @@ dl.enableFormTabbing dd {
 .formControls .actionButtons .button,
 .documentEditable * .context 
  {
-    background: #fafafa 4px 1px no-repeat;
-    border-color: #eee #c3c1ba #c3c1ba #eee;
+    background: #FAFAFA 4px 1px no-repeat;
+    border-color: #C7CED0 #3e6f80 #3e6f80 #C7CED0;
     border-style: &dtml-borderStyle;;
     border-width: &dtml-borderWidth;; 
     cursor: pointer;
+    color: #3c616e; 
     font-size: &dtml-fontSmallSize;;
     padding: 1px;
     text-transform: &dtml-textTransform;;
