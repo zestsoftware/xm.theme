@@ -15,12 +15,6 @@
   <viewlet name="xm.project_tabs"/>
  </order>
 
- <order manager="xm.project_tabs_manager" skinname="eXtremeManagement">
-  <viewlet name="xm.project_tab_current"/>
-  <viewlet name="xm.project_tab_open"/>
-  <viewlet name="xm.project_tab_closed"/>
- </order>
-
  <hidden manager="plone.portaltop" skinname="eXtremeManagement" purge="True">
    <viewlet name="plone.app.i18n.locales.languageselector"/>
    <viewlet name="plone.personal_bar"/>
@@ -41,5 +35,14 @@
  <hidden manager="plone.belowcontentbody" skinname="eXtremeManagement">
   <viewlet name="plone.belowcontentbody.workflowhistory" />
  </hidden>
+
+ <!-- Moved the iteration links to a portlet
+      This can be remove after releasing 2.0 -->
+  <hidden manager="xm.project_tabs_manager" skinname="eXtremeManagement">
+   <viewlet name="xm.project_tab_current"/>
+   <viewlet name="xm.project_tab_open"/>
+   <viewlet name="xm.project_tab_closed"/>
+  </hidden>
+
 
 </object>

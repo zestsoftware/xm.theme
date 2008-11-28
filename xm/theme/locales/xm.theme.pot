@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2008-11-17 13:59+0000\n"
+"POT-Creation-Date: 2008-11-28 09:00+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,27 +17,27 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: xm.theme\n"
 
-#: ./browser/viewlets_project_tabs.py:218
+#: ./browser/viewlets_project_tabs.py:228
 msgid "Closed"
 msgstr ""
 
-#: ./browser/viewlets_project_tabs.py:225
+#: ./browser/viewlets_project_tabs.py:235
 msgid "Closed iterations"
 msgstr ""
 
-#: ./browser/viewlets_project_tabs.py:112
+#: ./browser/viewlets_project_tabs.py:122
 msgid "Current"
 msgstr ""
 
-#: ./browser/viewlets_project_tabs.py:119
+#: ./browser/viewlets_project_tabs.py:129
 msgid "Current iterations"
 msgstr ""
 
-#: ./browser/viewlets_project_tabs.py:88
+#: ./browser/viewlets_project_tabs.py:98
 msgid "Example"
 msgstr ""
 
-#: ./browser/viewlets_project_tabs.py:93
+#: ./browser/viewlets_project_tabs.py:103
 msgid "Example tab"
 msgstr ""
 
@@ -51,11 +51,11 @@ msgstr ""
 msgid "No content found"
 msgstr ""
 
-#: ./browser/viewlets_project_tabs.py:165
+#: ./browser/viewlets_project_tabs.py:175
 msgid "Open"
 msgstr ""
 
-#: ./browser/viewlets_project_tabs.py:172
+#: ./browser/viewlets_project_tabs.py:182
 msgid "Open iterations"
 msgstr ""
 

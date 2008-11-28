@@ -68,11 +68,6 @@
     padding: 0 0 0 27px;
 }
 
-/* LS - this corrects the position for arrow_blue_inactive because it's generated different in the customer view*/
-#my-projects-menu .project-submenu ul li a {
-    background-position: 16px 3px;
-}
-
 .portletFooter {
     border-top: none !important;
     border-left: none !important;

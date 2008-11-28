@@ -9,6 +9,9 @@ from xm.theme import xmMessageFactory as _
 TAB_SELECTED = u'selected'
 TAB_NORMAL = u''
 
+# This code is not being used at this moment, because we moved it to a portlet.
+# Let's not through this away right now, it might come in handy later.
+
 
 class XMProjectTabsViewlet(ViewletBase):
     """A view to render the Project Tabs Manager."""

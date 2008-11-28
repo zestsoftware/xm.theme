@@ -100,10 +100,6 @@
     font-size: 90%;
 }
 
-/*LS-  actionmenu portlet Project Links*/
-.actionMenuContent project-submenu {
-    position: relative;
-}
 /*
 ** begin ECMAScript Content Action Menus
 */
