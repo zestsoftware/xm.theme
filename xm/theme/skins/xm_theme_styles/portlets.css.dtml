@@ -87,7 +87,6 @@
   padding: 0;
   text-transform: capitalize;
   font-weight: normal;
-  line-height: 1.6em;
   border-bottom: 1px solid #CCC;
 }
 
@@ -189,7 +188,7 @@
   float: left;
   position: relative;
   z-index: 4;
-  top: 18px;
+  top: 16px;
   height: 8px;
   width: 8px;
   background: url(++resource++xm.theme.images/rounded_top_left.gif) no-repeat top left;
