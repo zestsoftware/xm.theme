@@ -204,6 +204,11 @@
 	right: 0;
 }
 
+.portlet .portletBottomLeft,
+.portlet .portletBottomRight {
+	bottom: 0;
+}
+
 .portlet .portletBottom {
   padding: 0;
   margin: 0;
