@@ -78,10 +78,12 @@ dl.toc {
 }
 
 .kupu-tb {
-  background-color:&dtml-contentViewBackgroundColor;;
-  padding-bottom:0px; margin:0;
-  width:99%;
-  border:1px solid &dtml-contentViewBorderColor;;
+  background: #F9F7F0 url(++resource++xm.theme.images/bg_kupu-tb.gif) repeat-x scroll 0 0;
+  padding-bottom: 0px; margin:0;
+  width: 99%;
+  border: 1px solid &dtml-contentViewBorderColor;;
+  border-left: 1px solid #DFDEDC;
+  border-right: 1px solid #DFDEDC;
 }
 
 ul.kupu-tabs li {
@@ -136,14 +138,14 @@ div.kupu-fulleditor-zoomed .kupu-editor-iframe {
 .kupu-tb-buttons button {
   width: 24px;
   height: 24px;
-  border-color:&dtml-contentViewBackgroundColor;;
+  border-color: #DFDEDC;
 /*  background-color: &dtml-contentViewBackgroundColor;; 
   background-position: center center;
 */
   margin-bottom:4px;
   margin-right:-2px;
 
-        background: transparent url("&dtml-portal_url;/plonekupuimages/kupu_sprite.png") 0 0 no-repeat;
+        background: #FDFCF7  url("&dtml-portal_url;/plonekupuimages/kupu_sprite.png") 0 0 no-repeat;
 
 }
 
