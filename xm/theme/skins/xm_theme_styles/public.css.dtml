@@ -650,9 +650,9 @@ dl.portalMessage dt {
     line-height: 1.25em;
 }
 dl.portalMessage dd {
-    background-color: #fff;
-    border: 1px solid #fff;
-    color: #767676;
+	background-color: #FBFDFE;
+	border: 1px solid #BFE1EB;
+	color: #1C718E;
     margin: 0;
     padding: 0 0 0 50px;
 }
