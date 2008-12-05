@@ -27,6 +27,8 @@
     margin: 1px 0 1em 0;
     background-color: &dtml-backgroundColor;;
     width: 172px;
+	position: relative;
+	z-index: 1;
 }
 .portlet a {
     text-decoration: none;
@@ -156,13 +158,6 @@
   padding: 3px 0 7px;
 }
 
-#portal-column-one .portletTopRight {
-  float: right;
-  height: 8px;
-  width: 8px;
-  background: url(++resource++xm.theme.images/rounded_top_right.gif) no-repeat top right;
-}
-
 #portal-column-one .portletItem {
   margin: 0;
   padding: 5px 5px 1px 8px;
@@ -184,18 +179,32 @@
 }
 
 /* *** On the span in dt-tag we place the left rounded corner image *** */
-
-#portal-column-one .portletTopLeft {
-  float: left;
-  position: relative;
-  z-index: 4;
-  top: 16px;
-  height: 8px;
-  width: 8px;
-  background: url(++resource++xm.theme.images/rounded_top_left.gif) no-repeat top left;
+.portlet .portletTopLeft, 
+.portlet .portletTopRight,
+.portlet .portletBottomLeft,
+.portlet .portletBottomRight {
+	display: block;
+	position: absolute;
+	height: 8px;
+	width: 8px;
+	z-index: 4;
+}
+.portlet .portletTopLeft, 
+.portlet .portletTopRight{
+	top: 16px;
 }
 
-#portal-column-one .portletBottom {
+.portlet .portletTopLeft {
+	background: url(++resource++xm.theme.images/rounded_top_left.gif) no-repeat 0 0;
+	left: 0;
+}
+
+.portlet .portletTopRight {
+	background: url(++resource++xm.theme.images/rounded_top_right.gif) no-repeat 0 0;
+	right: 0;
+}
+
+.portlet .portletBottom {
   padding: 0;
   margin: 0;
   display: block;
@@ -203,21 +212,14 @@
   border-bottom: 1px solid #ccc;
 }
 
-.portletBottomLeft,
-.portletBottomRight {
-  height: 8px;
-  width: 8px;
-  display: block;
+.portlet .portletBottomLeft {
+	background: url(++resource++xm.theme.images/rounded_bottom_left.gif) no-repeat 0 0;
+	left: 0;
 }
 
-#portal-column-one .portletBottomLeft {
-  background: url(++resource++xm.theme.images/rounded_bottom_left.gif) no-repeat bottom left;
-  float: left;
-}
-
-#portal-column-one .portletBottomRight {
-  background: url(++resource++xm.theme.images/rounded_bottom_right.gif) no-repeat bottom right;
-  float: right;
+.portlet .portletBottomRight {
+	background: url(++resource++xm.theme.images/rounded_bottom_right.gif) no-repeat 0 0;
+	right: 0;
 }
 
 /* LS- LoginPage portletsBottom's fix*/
