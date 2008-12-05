@@ -88,6 +88,7 @@
   text-transform: capitalize;
   font-weight: normal;
   border-bottom: 1px solid #CCC;
+  height: 16px;
 }
 
 .portletHeader, .portletHeader a {
