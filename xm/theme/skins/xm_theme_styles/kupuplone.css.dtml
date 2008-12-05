@@ -103,7 +103,10 @@ div div.kupu-panels {
   margin-bottom:4px;
 }
 
-body.documentContent { padding: 1em !important; }
+body.documentContent { 
+	padding: 1em !important; 
+	height: 100%;
+}
 
 html.kupu-html {
   font-size: &dtml-fontBaseSize;;
