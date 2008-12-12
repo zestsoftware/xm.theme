@@ -835,7 +835,7 @@ table.listing td a label,
 }
 
 /*LS- this disables the default arrow in the story-listing*/
-#default_arrow {
+.default_arrow {
     display: none;
 }
 
