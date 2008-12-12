@@ -6,6 +6,8 @@ History for xm.theme
 0.9 (unreleased)
 ----------------
 
+- Also show Documents as attachments. [mark]
+
 - Remove the viewlets which showed the iterations grouped by
   state since there is a porlet to do this. [mark]
 
