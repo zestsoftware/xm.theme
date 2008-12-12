@@ -79,7 +79,16 @@
       class=".viewlets.XMPersonalBarViewlet"
       permission="zope2.View"
       />
-      
+
+  <browser:page
+      for="*"
+      name="xm_fullname"
+      attribute="xm_fullname"
+      layer=".interfaces.IThemeSpecific"
+      class=".viewlets.KSSFullname"
+      permission="zope2.View"
+      />
+
   <!-- TODO move this to project.setup
        <browser:viewlet
        name="xm.links.googlesearch"

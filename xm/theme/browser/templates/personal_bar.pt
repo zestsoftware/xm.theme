@@ -9,12 +9,9 @@
    <tal:block condition="not: view/anonymous">
        <li><a 
            id="user-name"
-           tal:attributes="href view/homelink_url"
+           tal:attributes="href string:${view/site_url}/personalize_form"
           ><img src="" tal:replace="structure here/user.gif" />
-            <span class="visualCaseSensitive"
-                 tal:content="view/user_name">
-                John
-           </span
+            <span class="visualCaseSensitive userName"> John </span
        ></a></li>
    </tal:block>
 

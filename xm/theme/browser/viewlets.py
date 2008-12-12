@@ -3,6 +3,7 @@ from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone.app.layout.viewlets.common import ViewletBase
 from zope.component import getMultiAdapter
 from urllib import quote_plus
+from kss.core import KSSView, kssaction
 
 
 class XMProjectHeaderViewlet(ViewletBase):
@@ -80,12 +81,19 @@ class XMPersonalBarViewlet(ViewletBase):
         plone_utils = getToolByName(self.context, 'plone_utils')
         self.getIconFor = plone_utils.getIconFor
         self.anonymous = self.portal_state.anonymous()
-        if not self.anonymous:
-            member = self.portal_state.member()
-            userid = member.getId()
-            self.homelink_url = self.site_url + '/author/' + quote_plus(userid)
 
-            member_info = tools.membership().getMemberInfo(member.getId())
+
+class KSSFullname(KSSView):
+    # We have to use a page template to make sure CacheFu adds the headers
+
+    @kssaction
+    def xm_fullname(self):
+        """ replace span with username"""
+        mtool = getToolByName(self.context, "portal_membership")
+        anonymous = mtool.isAnonymousUser()
+        if not anonymous:
+            userid = mtool.getAuthenticatedMember().getId()
+            member_info = mtool.getMemberInfo(userid)
             # member_info is None if there's no Plone user object, as when
             # using OpenID.
             if member_info:
@@ -93,6 +101,9 @@ class XMPersonalBarViewlet(ViewletBase):
             else:
                 fullname = None
             if fullname:
-                self.user_name = fullname
+                user_name = fullname
             else:
-                self.user_name = userid
+                user_name = userid
+    
+            self.getCommandSet('core').replaceInnerHTML('.userName', user_name )
+        

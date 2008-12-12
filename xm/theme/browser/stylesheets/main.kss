@@ -1,0 +1,4 @@
+.userName:load {
+    action-client: cacheability-serverAction;
+    cacheability-serverAction-url: xm_fullname;
+}
