@@ -71,7 +71,7 @@ h3, h4, h5, h6 {
     height: 8px;
     width: 8px;
     right: 15px;
-    background: url(++resource++xm.theme.images/rounded_top_left.gif) no-repeat top left;
+    background: url(&dtml-portal_url;/rounded_top_left.gif) no-repeat top left;
 }
 
 #contentTopRight{
@@ -80,7 +80,7 @@ h3, h4, h5, h6 {
     height: 8px;
     width: 8px;
     left: 15px;
-    background: url(++resource++xm.theme.images/rounded_top_right.gif) no-repeat top right;
+    background: url(&dtml-portal_url;/rounded_top_right.gif) no-repeat top right;
 }
 
 #contentBottomLeft{
@@ -88,7 +88,7 @@ h3, h4, h5, h6 {
     height: 8px;
     width: 8px;
     right: 15px;
-    background: url(++resource++xm.theme.images/rounded_bottom_left.gif) no-repeat top left;
+    background: url(&dtml-portal_url;/rounded_bottom_left.gif) no-repeat top left;
 }
 
 #contentBottomRight{
@@ -96,7 +96,7 @@ h3, h4, h5, h6 {
     height: 8px;
     width: 8px;
     left: 15px;
-    background: url(++resource++xm.theme.images/rounded_bottom_right.gif) no-repeat top right;
+    background: url(&dtml-portal_url;/rounded_bottom_right.gif) no-repeat top right;
 }
 
 /* bottom corners position fix*/
@@ -199,7 +199,7 @@ h3, h4, h5, h6 {
     top: 1px;
     margin: 0;
     padding: 0;
-    background: #FEFEFE url(++resource++xm.theme.images/background_top.gif) no-repeat scroll 0 0;
+    background: #FEFEFE url(&dtml-portal_url;/background_top.gif) no-repeat scroll 0 0;
 }
 
 /* Site-wide action menu - font size, contact, index, sitemap etc */
@@ -249,7 +249,7 @@ h3, h4, h5, h6 {
 
 #portal-searchbox {
   /* ie7 FIX : backgroundheader.gif is included */
-  background: #F9F7F0 url(++resource++xm.theme.images/backgroundheader.gif) repeat-x scroll 0 0;
+  background: #F9F7F0 url(&dtml-portal_url;/backgroundheader.gif) repeat-x scroll 0 0;
   border-top: 1px solid #fff;
   border-left: 1px solid #fff;
   text-align: left;
@@ -461,7 +461,7 @@ font-weight: normal;
 
 #portal-personaltools {
   /* Bar with personalized menu (user preferences, favorites etc) */
-    background: #F9F7F0 url(++resource++xm.theme.images/backgroundheader.gif) repeat-x scroll 0 0;
+    background: #F9F7F0 url(&dtml-portal_url;/backgroundheader.gif) repeat-x scroll 0 0;
     border-color: #FFFFFF #D6D4D4 #FFFFFF #FFFFFF; 
     border-style: &dtml-borderStyle;;
     border-width: &dtml-borderWidth;;
@@ -514,7 +514,7 @@ font-weight: normal;
 
 #portal-breadcrumbs {
     /* The path bar, including breadcrumbs and add to favorites */
-    background: #4BB6DE url(++resource++xm.theme.images/breadcrumbs_bg.gif) 0 0 repeat-x;
+    background: #4BB6DE url(&dtml-portal_url;/breadcrumbs_bg.gif) 0 0 repeat-x;
     border-color: #4aabcb #75DBFF #CFCFCF #4AABCB;
     border-style: &dtml-borderStyle;;
     border-width: &dtml-borderWidth;;
@@ -774,12 +774,12 @@ dl.searchResults span.documentByLine {
 /* LS- background instead of background-color */
 table.listing .even,
 .stx table .even {
-    background: &dtml-evenRowBackgroundColor;; url(++resource++xm.theme.images/background_tableFix.gif) 0 0 repeat-x;
+    background: &dtml-evenRowBackgroundColor;; url(&dtml-portal_url;/background_tableFix.gif) 0 0 repeat-x;
 }
 
 table.listing .odd,
 .stx table .odd {
-    background: &dtml-evenRowBackgroundColor;; url(++resource++xm.theme.images/background_tableFix.gif) 0 0 repeat-x;
+    background: &dtml-evenRowBackgroundColor;; url(&dtml-portal_url;/background_tableFix.gif) 0 0 repeat-x;
 }
 
 table.listing,
@@ -793,13 +793,13 @@ table.listing,
 
 table.listing tr,
 .stx table tr {
-    background: #fdfdfc url(++resource++xm.theme.images/background_tableFix.gif) repeat-x scroll 0 0;
+    background: #fdfdfc url(&dtml-portal_url;/background_tableFix.gif) repeat-x scroll 0 0;
 }
 
 /* The table used for listings - horizontal and vertical variants */
 table.listing th,
 .stx table th {
-    background: #f0efea url(++resource++xm.theme.images/background_tableHeader.gif) 0 0 repeat-x;
+    background: #f0efea url(&dtml-portal_url;/background_tableHeader.gif) 0 0 repeat-x;
     font-weight: normal;
     color: #505050;
     padding: 4px 7px; /* important!!! don't change the 7px, or padding overflow will occure in some page views */

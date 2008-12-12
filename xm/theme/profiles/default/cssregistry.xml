@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <object name="portal_css">
  <stylesheet title=""  cacheable="True" compression="safe" cookable="True"
-    enabled="on" expression="" id="++resource++xm.theme.stylesheets/main.css"
+    enabled="on" expression="" id="main.css"
     media="screen" rel="stylesheet" rendering="import"/>
 
   <!-- Turn off unneeded stylesheets -->  

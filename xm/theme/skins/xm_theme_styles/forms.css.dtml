@@ -148,7 +148,7 @@ dl.enableFormTabbing dd {
 
 .destructive,
 .documentEditable * .destructive {
-    background: &dtml-notifyBackgroundColor; url(++resource++xm.theme.images/ico_notify.gif) 4px 1px no-repeat;
+    background: &dtml-notifyBackgroundColor; url(&dtml-portal_url;/ico_notify.gif) 4px 1px no-repeat;
     border-color: &dtml-notifyBorderColor; &dtml-notifyBorderColor; &dtml-notifyBorderColor;;
     border-style: &dtml-borderStyle;
     border-width: &dtml-borderWidth; 
@@ -253,7 +253,7 @@ tr.selected {
     float: left;
     position: relative;
     bottom: 3px;
-    background: transparent url(++resource++xm.theme.images/side-left-grey.gif) no-repeat 4px 0;
+    background: transparent url(&dtml-portal_url;/side-left-grey.gif) no-repeat 4px 0;
     margin: 0;
     padding: 0 0 0 8px;
 }
@@ -261,7 +261,7 @@ tr.selected {
 #sharing-save-button, .searchPage .searchButton, 
 .configlet .searchButton {
  /*LS- added background ico for shared search button*/
-    background:#FAFAFA url(++resource++xm.theme.images/ico_tools.gif) no-repeat scroll 4px 3px;
+    background:#FAFAFA url(&dtml-portal_url;/ico_tools.gif) no-repeat scroll 4px 3px;
     /*LS-  little hack for IE7- by putting an !important after the heigth, IE doesn't go weird with the submit-height*/
     height: 22px !important;
     margin: 0;
@@ -277,13 +277,13 @@ input.searchButton  {
     margin: 0;
     padding: 1px 4px;
     height: 26px;
-    background: #d8d6cf url(++resource++xm.theme.images/gradient-grey.gif) repeat-x;
+    background: #d8d6cf url(&dtml-portal_url;/gradient-grey.gif) repeat-x;
     border: 0;
     cursor: pointer;
 }
 
 .searchDiv span{
-    background: transparent url(++resource++xm.theme.images/side-right-grey.gif) no-repeat;
+    background: transparent url(&dtml-portal_url;/side-right-grey.gif) no-repeat;
     float: left;
     width: 4px;
     height: 25px;

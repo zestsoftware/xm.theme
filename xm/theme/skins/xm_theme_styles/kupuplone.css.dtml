@@ -78,7 +78,7 @@ dl.toc {
 }
 
 .kupu-tb {
-  background: #F9F7F0 url(++resource++xm.theme.images/bg_kupu-tb.gif) repeat-x scroll 0 0;
+  background: #F9F7F0 url(&dtml-portal_url;/bg_kupu-tb.gif) repeat-x scroll 0 0;
   padding-bottom: 0px; margin:0;
   width: 99%;
   border: 1px solid &dtml-contentViewBorderColor;;
