@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <object name="portal_kss">
  <stylesheet title=""  cacheable="True" compression="safe" cookable="True"
-    enabled="on" expression="" id="++resource++xm.theme.stylesheets/main.kss"
+    enabled="on" expression="" id="++resource++main.kss"
     media="screen" rel="stylesheet" rendering="import"/>
 </object>

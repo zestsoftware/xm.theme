@@ -6,6 +6,12 @@ History for xm.theme
 0.9 (unreleased)
 ----------------
 
+- The username is not rendered on each page but on DOM load. This allows for
+  caching based on roles instead of each user.[jladage]
+
+- Images are moved to a skins folder, so they get cached properly using the
+  HTTPCache. [jladage]
+
 - The username in the personal_bar now links to the author page instead of the
   dashboard. [jladage]
 
