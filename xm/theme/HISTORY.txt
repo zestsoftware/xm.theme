@@ -6,6 +6,9 @@ History for xm.theme
 0.9 (unreleased)
 ----------------
 
+- Remove the viewlets which showed the iterations grouped by
+  state since there is a porlet to do this. [mark]
+
 - The username is not rendered on each page but on DOM load. This allows for
   caching based on roles instead of each user.[jladage]
 
@@ -17,7 +20,7 @@ History for xm.theme
 
 - Added 'Iterations:' in front of the open/current/closed iterations list and
   show it only if we have iterations in the project.  [fredvd]
-  
+
 - Moved the employees_overview page to Products.eXtremeManagement.
   [maurits]
 

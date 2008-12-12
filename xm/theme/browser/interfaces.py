@@ -12,12 +12,6 @@ class IThemeSpecific(IDefaultPloneLayer):
     """
 
 
-class IProjectTabsManager(IViewletManager):
-    """A viewlet manager which will be used to display the tabs for
-    a project.
-    """
-
-
 class IProjectContentView(IBrowserView):
     """Return information about the contents of a project."""
 
