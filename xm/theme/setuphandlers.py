@@ -3,12 +3,12 @@ from zope.component import getUtility, getMultiAdapter
 from plone.portlets.interfaces import IPortletManager
 from plone.portlets.interfaces import IPortletAssignmentMapping
 from plone.app.portlets import portlets as plone_portlets
-from Products.eXtremeManagement.portlets import project
+from Products.eXtremeManagement.portlets import project, portlet_tasks
 
 # BBB configure_portlets can be removed completely after we drop 3.0 support
 
 
-def configure_portlets(site, logger):
+def UNUSED_configure_portlets(site, logger):
     """Set up the portlets.
 
     This is here for backward compatibility with Plone 3.0.
@@ -30,7 +30,8 @@ def configure_portlets(site, logger):
         plone_portlets.login.Assignment(),
         project.Assignment(),
         plone_portlets.classic.Assignment('portlet_poi', 'portlet'),
-        plone_portlets.classic.Assignment('portlet_tasks', 'portlet'),
+        portlet_tasks.Assignment(),
+# #        plone_portlets.classic.Assignment('portlet_tasks', 'portlet'),
         plone_portlets.classic.Assignment('portlet_stories', 'portlet'),
         ]
     for assignment in assignments:
@@ -54,4 +55,4 @@ def setup_various(context):
         return
     logger = context.getLogger('xm.theme')
     site = context.getSite()
-    configure_portlets(site, logger)
+#    configure_portlets(site, logger)

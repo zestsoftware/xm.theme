@@ -60,16 +60,14 @@
   </assignment>
 
   <assignment
-    type="portlets.Classic"
+    type="eXtremeManagement.TasksPortlet"
     manager="plone.leftcolumn"
     category="context"
     key="/"
     name="tasks.portlet"
     insert-before="*"
     >
-    <property name="template">portlet_tasks</property>
-    <property name="macro">portlet</property>
-  </assignment>    
+  </assignment>
 
   <assignment
     type="portlets.Classic"
