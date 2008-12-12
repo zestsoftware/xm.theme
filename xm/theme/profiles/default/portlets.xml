@@ -84,7 +84,7 @@
   </assignment>
 
   <assignment
-    type="xm.portlets.managers"
+    type="eXtremeManagement.managers"
     manager="plone.leftcolumn"
     category="context"
     key="/"
@@ -94,7 +94,7 @@
   </assignment>
 
   <assignment
-    type="xm.portlets.project"
+    type="eXtremeManagement.project"
     manager="plone.leftcolumn"
     category="context"
     key="/"

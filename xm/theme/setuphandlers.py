@@ -3,7 +3,7 @@ from zope.component import getUtility, getMultiAdapter
 from plone.portlets.interfaces import IPortletManager
 from plone.portlets.interfaces import IPortletAssignmentMapping
 from plone.app.portlets import portlets as plone_portlets
-from xm.portlets import project
+from Products.eXtremeManagement.portlets import project
 
 # BBB configure_portlets can be removed completely after we drop 3.0 support
 
