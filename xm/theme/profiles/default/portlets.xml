@@ -46,6 +46,16 @@
       />  
 
   <!-- Setup XM Theme assignments -->
+
+  <assignment
+    type="eXtremeManagement.iterations"
+    manager="plone.leftcolumn"
+    category="context"
+    key="/"
+    name="managers.portlet"
+    insert-before="*"
+    >
+  </assignment>
   
   <assignment
     type="portlets.Classic"

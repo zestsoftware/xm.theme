@@ -11,7 +11,7 @@
            id="user-name"
            tal:attributes="href string:${view/site_url}/personalize_form"
           ><img src="" tal:replace="structure here/user.gif" />
-            <span class="visualCaseSensitive userName"> John </span
+            <span class="visualCaseSensitive userName"> </span
        ></a></li>
    </tal:block>
 
