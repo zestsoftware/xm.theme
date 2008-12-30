@@ -136,7 +136,7 @@ dl.enableFormTabbing dd {
 .documentEditable * .context 
  {
     background: #FAFAFA 4px 1px no-repeat;
-    border-color: #C7CED0 #3e6f80 #3e6f80 #C7CED0;
+    border-color: #C7CED0 #879da3 #879da3 #C7CED0;
     border-style: &dtml-borderStyle;;
     border-width: &dtml-borderWidth;; 
     cursor: pointer;

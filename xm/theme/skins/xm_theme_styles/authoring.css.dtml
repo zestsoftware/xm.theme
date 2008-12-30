@@ -163,6 +163,7 @@
     position: relative;
     margin: 0;
     padding: 0;
+	z-index: 1;
 }
 .actionMenu .actionMenuHeader {
     margin: 0;
@@ -188,7 +189,7 @@
 }
 .actionMenu .actionMenuContent {
     display: none;
-    z-index: 5;
+    z-index: 7;
     position: absolute;
     top: 1.6em;
     left: -10px;
