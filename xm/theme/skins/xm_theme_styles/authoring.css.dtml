@@ -134,7 +134,7 @@
 .contentActions a {
     text-decoration: none;
     color: #565655;
-    padding: 0 5px;
+    padding: 0 10px;
     cursor: pointer;
 }
 .contentActions span {
@@ -232,8 +232,16 @@
 }
 
 #portal-column-one .actionMenu .actionMenuContent li a {
-  white-space: normal;
+	white-space: normal;
+	margin: 0.2em 0 0 1px;
+	padding-right: 4px;
 }
+
+#portal-column-one .actionMenu .actionMenuContent li a:hover {
+	text-decoration: none;
+}
+
+
 .actionMenu .actionMenuContent .selected {
     display: block;
     white-space: nowrap;

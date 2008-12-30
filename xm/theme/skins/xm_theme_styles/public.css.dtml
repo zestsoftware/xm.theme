@@ -493,7 +493,6 @@ font-weight: normal;
 }
 #portal-personaltools li {
     color: &dtml-globalFontColor;;
-    margin-left: 1em;
     display: inline;
 }
 #portal-personaltools li a {
