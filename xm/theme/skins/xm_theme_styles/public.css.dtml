@@ -318,7 +318,7 @@ line-height: 1.1em;
 
 #LSHighlight,
 .LSHighlight {
-background-color: &dtml-globalBackgroundColor;;
+background-color: #EFF8FB;
 border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
 color: &dtml-globalFontColor;;
 }
@@ -519,11 +519,11 @@ font-weight: normal;
     border-style: &dtml-borderStyle;;
     border-width: &dtml-borderWidth;;
     color: #FFFFFF;
-    font-size: 120%;
     font-weight: bold;
     height: 20px;
     margin: 0;
     padding: 0 0 0 43px;
+	line-height: 18px;
 }
 
 #portal-breadcrumbs a {
@@ -657,21 +657,22 @@ dl.portalMessage dd {
     margin: 0;
     padding: 0 0 0 50px;
 }
-dl.warning dt {
-    background-color: #d80; 
-    border: 1px solid #d80;
+dl.error dd, dl.warning dd {
+	color: #b00804;
 }
-dl.error dt {
-    background-color: #d00; 
+dl.error dd,
+dl.error dt,
+dl.warning dd,
+dl.warning dt {
     border-color: #d00;
 }
-dl.warning dd {
-    background-color: #fd7; 
-    border-color: #d80;
-}
+dl.warning dd,
 dl.error dd {
-    background-color: #fd7; 
-    border-color: #d80;
+    background-color: #fd7;
+}
+dl.warning dt, 
+dl.error dt {
+    background-color: #d00;
 }
 
 .documentDescription {
