@@ -163,16 +163,16 @@
     position: relative;
     margin: 0;
     padding: 0;
-	z-index: 1;
 }
+
 .actionMenu .actionMenuHeader {
     margin: 0;
     padding: 0;
     font-weight: normal;
+	z-index: 6;
 }
 .actionMenu.activated .actionMenuHeader {
     position: relative;
-    z-index: 6;
 }
 .actionMenu .actionMenuHeader a {
     background: transparent url(&dtml-portal_url;/arrow_green_inactive.gif) no-repeat scroll 0 1px;
@@ -191,8 +191,8 @@
     display: none;
     z-index: 7;
     position: absolute;
-    top: 1.6em;
-    left: -10px;
+	top: 1.6em;
+	left: -10px;
     height: auto;
     padding: 0;
     margin: 0;
@@ -201,12 +201,20 @@
     display: block !important;
 }
 .actionMenu.activated .actionMenuContent {
-    /* this one will be ignored by IE, it is here to fix the cut-off error in
-       Firefox */
-    display: table !important;
     border-collapse: collapse;
     border-spacing: 0;
 }
+
+.list-in-iteration .actionMenu .actionMenuContent {
+	top: -4px;
+	left: 55px;
+}
+
+.list-in-iteration .actionMenu .actionMenuHeader a:hover,
+.list-in-iteration .actionMenu.activated .actionMenuHeader a {
+	background: transparent url(&dtml-portal_url;/arrow_green_inactive.gif) no-repeat;
+}
+
 .actionMenu.deactivated .actionMenuContent {
     display: none !important;
 }

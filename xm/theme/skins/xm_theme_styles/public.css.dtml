@@ -466,7 +466,7 @@ font-weight: normal;
     border-style: &dtml-borderStyle;;
     border-width: &dtml-borderWidth;;
     color: #e9f6f8;
-    padding: 0 28px 0 0;
+    padding: 0 18px 0 0;
     height: 32px;
     top: 22px;
     margin: 0;
@@ -494,6 +494,10 @@ font-weight: normal;
 #portal-personaltools li {
     color: &dtml-globalFontColor;;
     display: inline;
+	margin-right: 10px;
+}
+#user-name{
+	margin-right: -10px;
 }
 #portal-personaltools li a {
     text-decoration: none;
@@ -751,6 +755,11 @@ dl.searchResults span.documentByLine {
 .card a {
     text-decoration: none;
 }
+
+.card a:hover {
+	text-decoration: none;
+}
+
 .portrait {
     background-color: &dtml-globalBackgroundColor;;
     border-color: &dtml-globalBorderColor;;
