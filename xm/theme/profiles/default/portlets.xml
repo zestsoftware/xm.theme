@@ -43,7 +43,7 @@
       key="/"
       name="calendar"
       purge="True"
-      />  
+      />
 
   <!-- Setup XM Theme assignments -->
 
@@ -56,7 +56,18 @@
     insert-before="*"
     >
   </assignment>
-  
+
+  <assignment
+    type="eXtremeManagement.storyestimation"
+    manager="plone.leftcolumn"
+    category="context"
+    key="/"
+    name="storyestimation.portlet"
+    insert-before="*"
+    >
+  </assignment>
+
+  <!-- REMOVED (TODO: zap in a setuphandlers.py)
   <assignment
     type="portlets.Classic"
     manager="plone.leftcolumn"
@@ -68,6 +79,7 @@
     <property name="template">portlet_stories</property>
     <property name="macro">portlet</property>
   </assignment>
+  -->
 
   <assignment
     type="eXtremeManagement.TasksPortlet"
@@ -80,6 +92,27 @@
   </assignment>
 
   <assignment
+    type="eXtremeManagement.poi"
+    manager="plone.leftcolumn"
+    category="context"
+    key="/"
+    name="poi.portlet"
+    insert-before="*"
+    >
+  </assignment>
+
+  <assignment
+    type="eXtremeManagement.poi_creation"
+    manager="plone.leftcolumn"
+    category="context"
+    key="/"
+    name="poi_creation.portlet"
+    insert-before="*"
+    >
+  </assignment>
+
+  <!-- REMOVED (TODO: zap in a setuphandlers.py)
+  <assignment
     type="portlets.Classic"
     manager="plone.leftcolumn"
     category="context"
@@ -90,6 +123,7 @@
     <property name="template">portlet_poi</property>
     <property name="macro">portlet</property>
   </assignment>
+  -->
 
   <assignment
     type="eXtremeManagement.managers"
@@ -120,5 +154,5 @@
     insert-before="*"
     >
   </assignment>
-  
+
 </portlets>
