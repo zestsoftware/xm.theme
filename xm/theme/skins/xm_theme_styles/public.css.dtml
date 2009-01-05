@@ -155,7 +155,6 @@ h3, h4, h5, h6 {
 
 .documentContent p {
     font-size: 95%;
-    clear: both;
 }
 
 /* Links with differently colored link underlines - only for content */
@@ -810,7 +809,6 @@ table.listing tr,
 table.listing th,
 .stx table th {
     background: #f0efea url(&dtml-portal_url;/background_tableHeader.gif) 0 0 repeat-x;
-    font-weight: normal;
     color: #505050;
     padding: 4px 7px; /* important!!! don't change the 7px, or padding overflow will occure in some page views */
     text-align: left;
