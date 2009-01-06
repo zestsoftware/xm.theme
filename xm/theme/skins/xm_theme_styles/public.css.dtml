@@ -52,6 +52,7 @@ h3, h4, h5, h6 {
 .documentFirstHeading {
     color: #505050;
     border-top: none;
+    padding-top: 5px; /*this adds extra padding, so that long title's have enough white-space on top*/
 }
 
 .documentFirstHeading img {
@@ -115,12 +116,9 @@ h3, h4, h5, h6 {
     border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
     margin: 0 0 40px 0;
     padding: 14px !important;
+    *width: 688px;
 }
 
-#region-content .documentFirstHeading {
-    padding-top: 5px !important; /*this adds extra padding, so that long title's have enough white-space on top*/
-}  
- 
 .documentContent a {
     text-decoration: none;
 }
@@ -133,7 +131,7 @@ h3, h4, h5, h6 {
 .documentContent li a:visited {
     color: &dtml-linkVisitedColor;;
 }
-.documentContent li a:active {
+    .documentContent li a:active {
     color: &dtml-linkActiveColor;;
 }
 .documentContent dd a {
