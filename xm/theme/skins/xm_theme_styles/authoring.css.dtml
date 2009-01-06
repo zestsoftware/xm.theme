@@ -207,7 +207,7 @@
 
 .list-in-iteration .actionMenu .actionMenuContent {
 	top: -4px;
-	left: 55px;
+	left: 70px;
 }
 
 .list-in-iteration .actionMenu .actionMenuHeader a:hover,
