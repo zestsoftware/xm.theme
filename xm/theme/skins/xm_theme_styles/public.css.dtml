@@ -114,9 +114,13 @@ h3, h4, h5, h6 {
     background: &dtml-backgroundColor;;
     border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
     margin: 0 0 40px 0;
-    padding: 14px 14px !important;
-    
+    padding: 14px !important;
 }
+
+#region-content .documentFirstHeading {
+    padding-top: 5px !important; /*this adds extra padding, so that long title's have enough white-space on top*/
+}  
+ 
 .documentContent a {
     text-decoration: none;
 }
