@@ -496,9 +496,6 @@ font-weight: normal;
     display: inline;
 	margin-right: 10px;
 }
-#user-name{
-	margin-right: -10px;
-}
 #portal-personaltools li a {
     text-decoration: none;
     color: &dtml-globalFontColor;;
