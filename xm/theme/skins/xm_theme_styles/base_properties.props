@@ -4,7 +4,7 @@ plone_skin:string=eXtremeManagement
 
 logoName:string=logo.jpg
 
-fontFamily:string="Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif
+fontFamily:string= Verdana, Arial, Helvetica, sans-serif
 fontBaseSize:string=69%
 fontColor:string=Black
 fontSmallSize:string=85%
@@ -23,7 +23,7 @@ globalBorderColor:string=#cccccc
 globalBackgroundColor:string=#FBFDFE
 globalFontColor:string=#3a849d
 
-headingFontFamily:string="Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif
+headingFontFamily:string= Verdana, Arial, Helvetica, sans-serif
 
 contentViewBorderColor:string=#ffffff
 contentViewBackgroundColor:string=#35B4E0
