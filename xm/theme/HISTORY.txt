@@ -1,9 +1,7 @@
 History for xm.theme
 ====================
 
-(name of developer listed in brackets)
-
-0.9 (unreleased)
+0.9 (2009-01-07)
 ----------------
 
 - Also show Documents as attachments. [mark]
