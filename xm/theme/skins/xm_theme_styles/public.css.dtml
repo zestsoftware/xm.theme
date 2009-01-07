@@ -112,7 +112,7 @@ h3, h4, h5, h6 {
     border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
     margin: 0 0 40px 0;
     padding: 14px !important;
-    *padding-top: 20px !important; /* this IE7 hack fixes a spacing issue with the .contentActions container*/
+    *padding-top: 22px !important; /* this IE7 hack fixes a spacing issue with the .contentActions container*/
     *width: 688px; /* this IE7 hack ensures that content inside documentContent doesn't strech the container up*/
     position: relative;
     z-index: 1;
