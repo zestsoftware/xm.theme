@@ -64,50 +64,46 @@ h3, h4, h5, h6 {
 }
 
 /* rounded corners content */
+
+
+#contentTopLeft, #contentTopRight {
+    top: -1px;
+}
+
+#contentBottomLeft, #contentBottomRight {
+    bottom: -1px; 
+}
+
 #contentTopLeft, #contentTopRight, #contentBottomLeft, #contentBottomRight {
-    position: relative;
+    position: absolute;
 }
 #contentTopLeft{
-    float: left;
     height: 8px;
     width: 8px;
-    right: 15px;
+    left: -1px;
     background: url(&dtml-portal_url;/rounded_top_left.gif) no-repeat top left;
 }
 
 #contentTopRight{
-    float: right;
     clear: right;
     height: 8px;
     width: 8px;
-    left: 15px;
+    right: -1px;
     background: url(&dtml-portal_url;/rounded_top_right.gif) no-repeat top right;
 }
 
 #contentBottomLeft{
-    float: left;
     height: 8px;
     width: 8px;
-    right: 15px;
+    left: -1px;
     background: url(&dtml-portal_url;/rounded_bottom_left.gif) no-repeat top left;
 }
 
 #contentBottomRight{
-    float: right;
     height: 8px;
     width: 8px;
-    left: 15px;
+    right: -1px;
     background: url(&dtml-portal_url;/rounded_bottom_right.gif) no-repeat top right;
-}
-
-/* bottom corners position fix*/
-#contentBottomLeft, #contentBottomRight {
-    position: relative;
-    top: 7px;
-}
-
-#contentTopLeft, #contentTopRight {
-    bottom: 15px;
 }
 
 .documentContent {
@@ -116,7 +112,10 @@ h3, h4, h5, h6 {
     border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
     margin: 0 0 40px 0;
     padding: 14px !important;
-    *width: 688px;
+    *padding-top: 20px !important; /* this IE7 hack fixes a spacing issue with the .contentActions container*/
+    *width: 688px; /* this IE7 hack ensures that content inside documentContent doesn't strech the container up*/
+    position: relative;
+    z-index: 1;
 }
 
 .documentContent a {
