@@ -52,8 +52,7 @@ s/*
     text-decoration: none !important;
 }
 
-.portlet .management_portletHeader,
-.portlet .ProjectAdministration {
+.portlet .management_portletHeader {
     margin-right: 14px;
     display: block;
 }

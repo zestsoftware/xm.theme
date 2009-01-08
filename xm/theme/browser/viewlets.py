@@ -10,9 +10,9 @@ class XMProjectHeaderViewlet(ViewletBase):
     render = ViewPageTemplateFile('templates/project_header.pt')
 
     def update(self):
-        self.portal_state = getMultiAdapter((self.context, self.request),
-                                            name=u'plone_portal_state')
-        self.site_url = self.portal_state.portal_url()
+        portal_state = getMultiAdapter((self.context, self.request),
+                                       name=u'plone_portal_state')
+        self.site_url = portal_state.portal_url()
         self.project_title = self._get_project_title()
         self.project_url = self._get_project_url()
 
@@ -42,15 +42,16 @@ class XMSearchBoxViewlet(ViewletBase):
     render = ViewPageTemplateFile('templates/searchbox.pt')
 
     def update(self):
-        self.portal_state = getMultiAdapter((self.context, self.request),
+        portal_state = getMultiAdapter((self.context, self.request),
                                             name=u'plone_portal_state')
         tools = getMultiAdapter((self.context, self.request),
                                         name=u'plone_tools')
         context_state = getMultiAdapter((self.context, self.request),
                                         name=u'plone_context_state')
-        self.site_url = self.portal_state.portal_url()
+        self.site_url = portal_state.portal_url()
+        self.anonymous = portal_state.anonymous()
         self.checkPermission = tools.membership().checkPermission
-        props = getToolByName(self.context, 'portal_properties')
+        props = tools.properties()
         livesearch = props.site_properties.getProperty('enable_livesearch',
                                                        False)
         if livesearch:
@@ -75,8 +76,6 @@ class XMPersonalBarViewlet(ViewletBase):
 
         context_state = getMultiAdapter((self.context, self.request),
                                          name=u'plone_context_state')
-        tools = getMultiAdapter((self.context, self.request),
-                                 name=u'plone_tools')
         self.user_actions = context_state.actions().get('user', None)
         plone_utils = getToolByName(self.context, 'plone_utils')
         self.getIconFor = plone_utils.getIconFor
@@ -89,6 +88,7 @@ class KSSFullname(KSSView):
     @kssaction
     def xm_fullname(self):
         """ replace span with username"""
+        
         mtool = getToolByName(self.context, "portal_membership")
         anonymous = mtool.isAnonymousUser()
         if not anonymous:

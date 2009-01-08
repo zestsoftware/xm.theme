@@ -83,9 +83,9 @@ elif len(projectbrains) > 1:
     member = membership_tool.getAuthenticatedMember()
     memberid = member.id
     projectbrain = projectbrains[0]
+    roles =  member.getRolesInContext(projectbrain.getObject())
     next_url = None
-    if 'Customer' in member.getRolesInContext(
-        projectbrain.getObject()):
+    if 'Customer' in roles:
         next_url = projectbrains[0].getURL()
     else:
         # For others: pick the most recent project with tasks assigned to

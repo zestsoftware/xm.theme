@@ -635,6 +635,7 @@ font-weight: normal;
 dl.portalMessage {
     font-size: &dtml-fontSmallSize;;
 	margin: 12px 0 0 0;
+	padding-bottom: 1em;
 }
 dl.portalMessage a {
     color: black;
