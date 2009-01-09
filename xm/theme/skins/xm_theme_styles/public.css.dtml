@@ -115,7 +115,7 @@ h3, h4, h5, h6 {
     *padding-top: 22px !important; /* this IE7 hack fixes a spacing issue with the .contentActions container*/
     *width: 688px; /* this IE7 hack ensures that content inside documentContent doesn't strech the container up*/
     position: relative;
-    z-index: 1;
+    z-index: 0; /* z-index 0 to fix an overlapping issue with .contentViews the livesearch*/
 }
 
 .documentContent a {
@@ -343,14 +343,15 @@ margin-top:-0.1em;
 }
 
 .LSResult {
-position: relative;
-display: block;
-text-align: right;
-margin: 0;
-padding: 0;
-top: 6px;
-left: 3px;
-z-index: 14;
+	display: block;
+	text-align: right;
+	margin: 0;
+	padding: 0;
+	width: 300px;
+	position: absolute;
+	z-index: 14;
+	top: 20px;
+	left: 14px;
 }
 
 .LSShadow {
