@@ -4,7 +4,7 @@ History for xm.theme
 1.0 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Overrode the login portlet template, added a footer to the Login portlet. [simon]
 
 
 0.9 (2009-01-07)
