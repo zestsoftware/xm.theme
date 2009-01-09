@@ -808,13 +808,19 @@ table.listing tr,
 
 /* The table used for listings - horizontal and vertical variants */
 table.listing th,
-.stx table th {
+.stx table th,
+tfoot .total {
     background: #f0efea url(&dtml-portal_url;/background_tableHeader.gif) 0 0 repeat-x;
     color: #505050;
     padding: 4px 7px; /* important!!! don't change the 7px, or padding overflow will occure in some page views */
     text-align: left;
     text-transform: &dtml-textTransform;;
 }
+
+tfoot .total {
+	font-weight: bold;
+}
+
 table.listing .top {
     border-left: &dtml-borderWidth; &dtml-borderStyle; #c0bfbf;
     border-top: &dtml-borderWidth; &dtml-borderStyle; #c0bfbf !important;
