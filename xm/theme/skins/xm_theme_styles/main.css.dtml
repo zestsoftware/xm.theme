@@ -164,10 +164,13 @@ table .IterationTitle a {
 }
 
 table.employees-overview td {
-  padding: 4px;
+  padding: 5px 4px;
   white-space: nowrap;
 }
 
+.employees-overview a {
+  color: #1C718E;
+}
 .employees-overview .name-employee {
   white-space: nowrap;
 }
