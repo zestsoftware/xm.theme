@@ -143,7 +143,7 @@ table.listing td, .stx table td {
   border-top: 1px solid #C0BFBF;
   padding: 0.25em 0.5em;
   border-collapse: collapse;
-  border-spacing: none;
+  border-spacing: 0;
 }
 
 table.listing th, .stx table th {

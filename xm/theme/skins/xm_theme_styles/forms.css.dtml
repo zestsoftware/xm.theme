@@ -150,8 +150,8 @@ dl.enableFormTabbing dd {
 .documentEditable * .destructive {
     background: &dtml-notifyBackgroundColor; url(&dtml-portal_url;/ico_notify.gif) 4px 1px no-repeat;
     border-color: &dtml-notifyBorderColor; &dtml-notifyBorderColor; &dtml-notifyBorderColor;;
-    border-style: &dtml-borderStyle;
-    border-width: &dtml-borderWidth; 
+    border-style: &dtml-borderStyle;;
+    border-width: &dtml-borderWidth;; 
     color: &dtml-fontColor;;
     cursor: pointer;
     font-size: &dtml-fontSmallSize;;

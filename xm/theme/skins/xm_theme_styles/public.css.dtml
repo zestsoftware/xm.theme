@@ -115,7 +115,7 @@ h3, h4, h5, h6 {
     *padding-top: 22px !important; /* this IE7 hack fixes a spacing issue with the .contentActions container*/
     *width: 688px; /* this IE7 hack ensures that content inside documentContent doesn't strech the container up*/
     position: relative;
-    z-index: 0; /* z-index 0 to fix an overlapping issue with .contentViews the livesearch*/
+    z-index: 1; /* z-index 0 to fix an overlapping issue with .contentViews the livesearch*/
 }
 
 .documentContent a {
@@ -784,12 +784,12 @@ dl.searchResults span.documentByLine {
 /* LS- background instead of background-color */
 table.listing .even,
 .stx table .even {
-    background: &dtml-evenRowBackgroundColor;; url(&dtml-portal_url;/background_tableFix.gif) 0 0 repeat-x;
+    background: url(&dtml-portal_url;/background_tableFix.gif) 0 0 repeat-x;
 }
 
 table.listing .odd,
 .stx table .odd {
-    background: &dtml-evenRowBackgroundColor;; url(&dtml-portal_url;/background_tableFix.gif) 0 0 repeat-x;
+    background: url(&dtml-portal_url;/background_tableFix.gif) 0 0 repeat-x;
 }
 
 table.listing,
@@ -1099,7 +1099,6 @@ div.managedPortlet.portlet {
 .portletAssignments {
     margin-top:1.5em;
 }
-
 
 /* manage portlets */
 
