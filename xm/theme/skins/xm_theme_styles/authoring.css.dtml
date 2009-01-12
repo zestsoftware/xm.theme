@@ -110,7 +110,7 @@
     padding: 0 1px 0 10px;
     z-index: 3;
     position: relative;
-    top: 26px;
+    top: 21px;
     height: 20px;
     display: block;
 }

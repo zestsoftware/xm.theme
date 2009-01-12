@@ -93,7 +93,10 @@ h3, h4, h5, h6 {
     background: url(&dtml-portal_url;/rounded_top_right.gif) no-repeat top right;
 }
 
-/* .documentEditable */
+.documentEditable #contentTopLeft,
+.documentEditable #contentTopRight {
+	display: none;
+}
 
 #contentBottomLeft{
     height: 8px;
