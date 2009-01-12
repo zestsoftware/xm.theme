@@ -37,9 +37,10 @@ s/*
 .myProject {
     border-left: 1px solid #ccc;
     border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
     display: block;
 	margin: 0;
-    padding: 0 0 0 9px;	
+    padding: 0 0 7px 9px;	
 }
 
 /*LS- underline NO-hover:a*/
