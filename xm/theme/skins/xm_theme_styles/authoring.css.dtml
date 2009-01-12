@@ -44,7 +44,7 @@
     border-bottom: 1px solid #d8d5ca;
     border-left: 1px solid #ccc;
     position: relative;
-    top: 26px;
+    top: 21px;
     height: 24px;
     z-index: 1;
 }

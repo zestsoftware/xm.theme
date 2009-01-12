@@ -33,11 +33,6 @@ s/*
 .portlet a {
     text-decoration: none;
 }
-.portlet a.tile {
-/*LS - disabled, because of displacement of portletTopLeft ----------
-    display: block;
- */
-}
 
 .myProject {
     border-left: 1px solid #ccc;

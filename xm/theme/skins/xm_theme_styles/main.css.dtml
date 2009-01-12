@@ -195,5 +195,6 @@ table.employees-overview td {
 .heading_dashboard {
     clear: both;
 }
-/* </dtml-with> */
 /* LS-  dashboard - finish*/
+
+/* </dtml-with> */
