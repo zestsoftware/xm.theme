@@ -131,9 +131,6 @@ table .IterationTitle a {
   font-size: 100%;
 }
 
-#story-listing .StatusOfStories th {
-}
-
 #story-listing .storyHeader {
   width: 50%;
 }
