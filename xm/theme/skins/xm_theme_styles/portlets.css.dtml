@@ -62,7 +62,7 @@ s/*
 
 .portletFooter a {
     color: #1C718E;
-    background: transparent url(&dtml-portal_url;/arrow_blue_inactive.gif) no-repeat scroll 10px 1px;
+    background: url(&dtml-portal_url;/arrow_blue_inactive.gif) no-repeat scroll 10px 1px;
     padding: 0 0 0 27px;
 }
 

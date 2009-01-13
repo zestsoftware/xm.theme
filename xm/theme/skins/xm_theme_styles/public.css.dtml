@@ -145,11 +145,9 @@ h3, h4, h5, h6 {
 }
 .documentContent dd a:visited {
     color: &dtml-linkVisitedColor;;
-    background-color: transparent;
 }
 .documentContent dd a:active {
     color: &dtml-linkActiveColor;;
-    background-color: transparent;
 }
 .documentContent ul {
     list-style-image: url(&dtml-portal_url;/bullet.gif);
@@ -170,11 +168,9 @@ h3, h4, h5, h6 {
 }
 .documentContent p a:visited {
     color: &dtml-linkVisitedColor;;
-    background-color: transparent;
 }
 .documentContent p a:active {
     color: &dtml-linkActiveColor;;
-    background-color: transparent;
 }
 
 /* End links */
@@ -203,14 +199,11 @@ h3, h4, h5, h6 {
     position: relative;
     z-index: 2;
     top: 1px;
-    margin: 0;
-    padding: 0;
     background: #FEFEFE url(&dtml-portal_url;/background_top.gif) no-repeat scroll 0 0;
 }
 
 /* Site-wide action menu - font size, contact, index, sitemap etc */
 #portal-siteactions {
-    background-color: transparent;
     white-space: nowrap;
     list-style-image: none;
     list-style-type: none;
@@ -224,7 +217,6 @@ h3, h4, h5, h6 {
     display: inline;
 }
 #portal-siteactions li a {
-    background-color: transparent;
     color: &dtml-discreetColor;;
     height: auto;
     padding: 0.2em;
@@ -422,7 +414,6 @@ font-weight: normal;
 /* The global section tabs. */
 #portal-globalnav {
   font-size: 100%;
-  background-color: transparent;
   padding: 0;
   white-space: nowrap;
   list-style: none;
@@ -440,7 +431,6 @@ font-weight: normal;
 }
 #portal-globalnav li a {
     /* The normal, unselected tabs. They are all links */
-    background-color: transparent;
     color: #3A849D;
     height: auto;
     margin-right: 1em;
@@ -483,14 +473,13 @@ font-weight: normal;
 }
 
 #portal-personaltools .portalUser {
-    background: transparent url(&dtml-portal_url;/user.gif) center left no-repeat;
+    background: url(&dtml-portal_url;/user.gif) center left no-repeat;
     padding-left: 18px;
 }
 #portal-personaltools .portalNotLoggedIn {
     /* Used on all descriptions relevant to those not logged in */
     color: &dtml-fontColor;;
     padding: 0;
-    background: transparent;
     background-image: none;
 }
 #portal-personaltools li {
@@ -974,7 +963,7 @@ textarea.proportional {
 /* Link types */
 a.link-parent {
     display: block;
-    background: transparent url(&dtml-portal_url;/arrowUp.gif) 4px 5px no-repeat;
+    background: url(&dtml-portal_url;/arrowUp.gif) 4px 5px no-repeat;
     padding: 1px 0px 10px 16px;
     font-size: &dtml-fontSmallSize;;
     text-decoration: none;
@@ -983,11 +972,11 @@ a.link-parent {
     color: #74ae0b !important;
 }
 #content .link-user {
-    background: transparent url(&dtml-portal_url;/user.gif) 0 1px no-repeat;
+    background: url(&dtml-portal_url;/user.gif) 0 1px no-repeat;
     padding: 1px 0px 1px 16px;
 }
 #content .link-comment {
-    background: transparent url(&dtml-portal_url;/discussionitem_icon.gif) center left no-repeat;
+    background: url(&dtml-portal_url;/discussionitem_icon.gif) center left no-repeat;
     padding: 1px 0px 1px 16px !important; /* value:  */
 }
 #content .link-anchor {
@@ -1023,37 +1012,37 @@ a.link-parent {
 /* Protocol-specific links */
 #content a[href ^="mailto:"],
 #content a.link-mailto  {
-    background: transparent url(&dtml-portal_url;/mail_icon.gif) 0px 1px no-repeat;
+    background: url(&dtml-portal_url;/mail_icon.gif) 0px 1px no-repeat;
     padding: 1px 0 1px 16px;
 }
 #content a[href ^="news:"],
 #content a.link-news {
-    background: transparent url(&dtml-portal_url;/topic_icon.gif) 0px 1px no-repeat;
+    background: url(&dtml-portal_url;/topic_icon.gif) 0px 1px no-repeat;
     padding: 1px 0 1px 16px;
 }
 #content a[href ^="ftp:"],
 #content a.link-ftp {
-    background: transparent url(&dtml-portal_url;/file_icon.gif) 0px 1px no-repeat;
+    background: url(&dtml-portal_url;/file_icon.gif) 0px 1px no-repeat;
     padding: 1px 0px 1px 16px;
 }
 #content a[href ^="irc:"],
 #content a.link-irc {
-    background: transparent url(&dtml-portal_url;/discussionitem_icon.gif) 0px 1px no-repeat;
+    background: url(&dtml-portal_url;/discussionitem_icon.gif) 0px 1px no-repeat;
     padding: 1px 0px 1px 16px;
 }
 #content a[href ^="callto:"],
 #content a.link-callto {
-    background: transparent url(&dtml-portal_url;/phone_icon.gif) 0px 1px no-repeat;
+    background: url(&dtml-portal_url;/phone_icon.gif) 0px 1px no-repeat;
     padding: 1px 0px 1px 16px;
 }
 #content a[href ^="webcal:"],
 #content a.link-webcal {
-    background: transparent url(&dtml-portal_url;/event_icon.gif) 0px 1px no-repeat;
+    background: url(&dtml-portal_url;/event_icon.gif) 0px 1px no-repeat;
     padding: 1px 0px 1px 16px;
 }
 #content a[href ^="feed:"],
 #content a.link-feed {
-    background: transparent url(&dtml-portal_url;/rss.gif) 0px 1px no-repeat;
+    background: url(&dtml-portal_url;/rss.gif) 0px 1px no-repeat;
     padding: 1px 0px 1px 18px;
 }
 

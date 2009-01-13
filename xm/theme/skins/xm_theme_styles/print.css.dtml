@@ -65,7 +65,6 @@ a {
 
 a:link, a:visited {
   color: #520;
-  background: transparent;
 }
 
 /* Page break class for use when printing */
@@ -180,7 +179,6 @@ h2.offer-story-header {
 .storyTitle-storyEstimate td {
   border-bottom: 1px solid #8CACBB !important;
   border-top: none !important;
-  background-color: transparent;
 }
 
 #offerViewHeader h2 {

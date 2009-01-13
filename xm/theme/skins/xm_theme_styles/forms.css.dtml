@@ -41,14 +41,11 @@ input {
     border: none;
     margin: 0;
     background: none;
-    background-color: transparent;
 }
 
 input[type="checkbox"] {
     border: none;
     background: none;
-    background-color: transparent;
-    /* LS- portal-searchbox causes problem in IE>>>  margin: 0; */
 }
 
 
@@ -261,7 +258,7 @@ tr.selected {
     float: left;
     position: relative;
     bottom: 3px;
-    background: transparent url(&dtml-portal_url;/side-left-grey.gif) no-repeat 4px 0;
+    background: url(&dtml-portal_url;/side-left-grey.gif) no-repeat 4px 0;
     margin: 0;
     padding: 0 0 0 8px;
 }
@@ -281,7 +278,7 @@ tr.selected {
 }
 
 .searchDiv span{
-    background: transparent url(&dtml-portal_url;/side-right-grey.gif) no-repeat;
+    background: url(&dtml-portal_url;/side-right-grey.gif) no-repeat;
     float: left;
     width: 4px;
     height: 25px;

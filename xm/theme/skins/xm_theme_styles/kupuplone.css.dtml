@@ -17,7 +17,6 @@
 
 .kupu a {
     color: &dtml-linkColor; !important;
-    background-color: transparent;
     text-decoration: none !important;
     border-bottom: 1px #cccccc solid !important;
 }
@@ -263,7 +262,7 @@ div.kupuoverride {
 }
 
 .kupu-dialog-button {
-    background: transparent url(&dtml-portal_url;/linkTransparent.gif) 9px 1px no-repeat;
+    background: url(&dtml-portal_url;/linkTransparent.gif) 9px 1px no-repeat;
     cursor: pointer;
     font-size: &dtml-fontSmallSize;;
     padding: 1px 1px 1px 15px;

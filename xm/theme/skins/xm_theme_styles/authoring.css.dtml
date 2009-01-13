@@ -20,7 +20,7 @@
 
   /*LS- rounded corners ContentViews */
 .contentViewsLeft {
-    background: transparent url(&dtml-portal_url;/rounded_contentViewsLeft.gif) no-repeat scroll 0 0;
+    background: url(&dtml-portal_url;/rounded_contentViewsLeft.gif) no-repeat scroll 0 0;
     height: 25px;
     width: 5px;
     display: block;
@@ -29,9 +29,6 @@
     float: left;
     right: 1px;
     bottom: 1px;
-}
-
-.contentViewsRight {
 }
 
 .contentViews {
@@ -57,13 +54,11 @@
 }
 
 .contentViews li a {
-    background-color: transparent;
     display: block;
     float: left;
     color: &dtml-contentViewFontColor;;
     padding: 0 10px;
     height: 24px;
-    width: auto;
     line-height: 24px;
     text-decoration: none;
     text-transform: &dtml-textTransform;;
@@ -74,7 +69,7 @@
 }
 
 .contentViews .selected .contentViewsTabLeft {
-    background: transparent url(&dtml-portal_url;/selectedTab_left.gif) no-repeat scroll 0 bottom;
+    background: url(&dtml-portal_url;/selectedTab_left.gif) no-repeat scroll 0 bottom;
     display: block;
     float: left;
     height: 24px;
@@ -82,7 +77,7 @@
 }
 
 .contentViews .selected .contentViewsTabRight {
-    background: transparent url(&dtml-portal_url;/selectedTab_right.gif) no-repeat scroll 0 bottom;
+    background: url(&dtml-portal_url;/selectedTab_right.gif) no-repeat scroll 0 bottom;
     display: block;
     float: left;
     width: 3px;
@@ -90,7 +85,7 @@
 }
 
 .contentViews .selected a {
-    background: transparent url(&dtml-portal_url;/selectedTab_contentViews.gif) repeat-x scroll 0 bottom;
+    background: url(&dtml-portal_url;/selectedTab_contentViews.gif) repeat-x scroll 0 bottom;
     color: #1C718E;
 }
 .contentViews li a:hover {
@@ -175,14 +170,14 @@
     position: relative;
 }
 .actionMenu .actionMenuHeader a {
-    background: transparent url(&dtml-portal_url;/arrow_green_inactive.gif) no-repeat scroll 0 1px;
+    background: url(&dtml-portal_url;/arrow_green_inactive.gif) no-repeat scroll 0 1px;
     padding: 0 5px 0 18px;
 }
 .actionMenu .actionMenuHeader a:hover {
-    background: transparent url(&dtml-portal_url;/arrow_green_active.gif) no-repeat scroll 0 1px;
+    background: url(&dtml-portal_url;/arrow_green_active.gif) no-repeat scroll 0 1px;
 }
 .activated .actionMenuHeader a {
-    background: transparent url(&dtml-portal_url;/arrow_green_active.gif) no-repeat scroll 0 1px;
+    background: url(&dtml-portal_url;/arrow_green_active.gif) no-repeat scroll 0 1px;
 }
 .arrowDownAlternative {
     display: none;
@@ -212,7 +207,7 @@
 
 .list-in-iteration .actionMenu .actionMenuHeader a:hover,
 .list-in-iteration .actionMenu.activated .actionMenuHeader a {
-	background: transparent url(&dtml-portal_url;/arrow_green_inactive.gif) no-repeat;
+	background: url(&dtml-portal_url;/arrow_green_inactive.gif) no-repeat;
 }
 
 .actionMenu.deactivated .actionMenuContent {
@@ -228,7 +223,6 @@
 }
 .actionMenu .actionMenuContent li {
     float: none;
-    background-color: transparent;
     display: inline;
     padding: 0;
     margin: 0;
@@ -249,7 +243,6 @@
 #portal-column-one .actionMenu .actionMenuContent li a:hover {
 	text-decoration: none;
 }
-
 
 .actionMenu .actionMenuContent .selected {
     display: block;
@@ -286,11 +279,9 @@ ul.configlets li a {
 }
 ul.configlets li a:visited {
     color: &dtml-linkColor;;
-    background-color: transparent;
 }
 ul.configlets li a:active {
     color: &dtml-linkColor;;
-    background-color: transparent;
 }
 ul.configlets li label {
     font-weight: bold;
@@ -415,7 +406,7 @@ dl.collapsedBlockCollapsible dt.collapsibleHeader {
     margin: 0;
     padding: 0 0 0 22px;
     line-height: 1em;
-    background: transparent url(treeCollapsed.gif) no-repeat 6px 50%;
+    background: url(treeCollapsed.gif) no-repeat 6px 50%;
     cursor: pointer;
 }
 dl.collapsedInlineCollapsible dd.collapsibleContent,
@@ -434,7 +425,7 @@ dl.collapsedInlineCollapsible dt.collapsibleHeader {
     margin: 0;
     padding: 0 0 0 22px;
     line-height: 1em;
-    background: transparent url(treeCollapsed.gif) no-repeat 6px 50%;
+    background: url(treeCollapsed.gif) no-repeat 6px 50%;
     cursor: pointer;
     display: inline;
 }
@@ -469,7 +460,6 @@ dl.collapsedInlineCollapsible dt.collapsibleHeader {
 }
 
 dl.searchResults .highlightedSearchTerm {
-    background-color: transparent;
     font-weight: bold;
 }
 /* for greying out inherited roles */

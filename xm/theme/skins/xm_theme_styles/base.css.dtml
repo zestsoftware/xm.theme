@@ -29,7 +29,6 @@ table {
 }
 a {
     color: &dtml-linkColor;;
-    background-color: transparent;
 }
 img {
     border: none;
@@ -113,7 +112,6 @@ dd {
 abbr, acronym, .explain {
     border-bottom: &dtml-borderWidth; dotted &dtml-fontColor;;
     color: &dtml-fontColor;;
-    background-color: transparent;
     cursor: help;
 }
 abbr .explain {

@@ -204,7 +204,6 @@ div.kupu-resource, div.kupu-collection { padding: 0; }
 div.kupu-resource span, div.kupu-collection span { padding: 4px 1ex 4px 0; }
 div.kupu-resource input, div.kupu-collection input {
   margin-bottom: 5px;
-  background: transparent;
   border: none;
 }
 
@@ -354,7 +353,7 @@ td.kupu-bm-select {
     visibility:visible;
 }
 .kupu-has-selection .kupu-locate a {
-    background: transparent url(kupuimages/treeCollapsed.gif) 4px 6px no-repeat;
+    background: url(kupuimages/treeCollapsed.gif) 4px 6px no-repeat;
     padding: 1px 0px 1px 16px;
     font-style: italic;
 }
