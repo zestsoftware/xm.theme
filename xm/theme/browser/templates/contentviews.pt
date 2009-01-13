@@ -23,7 +23,8 @@
                    i18n:translate="">
                 View name
                 </a>
-                </li>
+              <span class="contentViewsTabRight"></span>
+              </li>
             </tal:views>
         </ul>
         
