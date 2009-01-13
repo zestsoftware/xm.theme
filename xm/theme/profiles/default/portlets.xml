@@ -52,7 +52,7 @@
     manager="plone.leftcolumn"
     category="context"
     key="/"
-    name="managers.portlet"
+    name="iterations.portlet"
     insert-before="*"
     >
   </assignment>
