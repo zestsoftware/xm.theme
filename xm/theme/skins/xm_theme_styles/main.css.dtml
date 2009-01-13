@@ -79,6 +79,7 @@ h1#project-header a{
 .project-submenu li a,
 .iterations-submenu li a {
   border-width: 0;
+  text-transform: none; /* fix - this restores the capital letters for projects and increases readability */
 }
 
 .project-submenu li.selected,
