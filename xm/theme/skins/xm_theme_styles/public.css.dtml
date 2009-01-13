@@ -121,7 +121,7 @@ h3, h4, h5, h6 {
     *padding-top: 22px !important; /* this IE7 hack fixes a spacing issue with the .contentActions container*/
     *width: 688px; /* this IE7 hack ensures that content inside documentContent doesn't strech the container up*/
     position: relative;
-    z-index: 1; /* z-index 0 to fix an overlapping issue with .contentViews the livesearch*/
+    z-index: 2;
 }
 
 .documentContent a {
@@ -551,12 +551,9 @@ font-weight: normal;
     vertical-align: bottom;
 }
 .documentEditable {
-/*LS- xm theme > not necessary?
-    padding: 0em 1em 1em 1em !important;
-    margin: 0 -1em;
-    */
     position: relative;
-    bottom: 26px;
+    z-index: 1;
+    bottom: 21px;
 }
 #content-news h1 {
     margin-bottom: 1em;

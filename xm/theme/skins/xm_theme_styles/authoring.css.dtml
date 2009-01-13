@@ -46,7 +46,7 @@
     position: relative;
     top: 21px;
     height: 24px;
-    z-index: 1;
+    z-index: 3;
 }
 
 /*LS - li spacing fix: instead of display:inline > float:left */
