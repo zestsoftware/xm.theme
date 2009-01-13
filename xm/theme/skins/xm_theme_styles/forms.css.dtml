@@ -129,8 +129,7 @@ dl.enableFormTabbing dd {
 .standalone, input[type="submit"],
 .documentEditable * .standalone, 
 #sharing-save-button,
-.searchPage .searchButton,
-.configlet .searchButton,
+.searchButton,
 .context, 
 .formControls .actionButtons .button,
 .documentEditable * .context 
@@ -248,6 +247,15 @@ tr.selected {
   z-index: 999;
 }
 
+#sharing-save-button, input.searchButton {
+ /*LS- added background ico for shared search button*/
+    background:#FAFAFA url(&dtml-portal_url;/ico_tools.gif) no-repeat scroll 4px 3px;
+    height: 22px;
+    margin: 0;
+    padding: 0 0 0 18px;
+    float: none;
+}
+
   /* begin grey buttons */
 .searchDiv {
     float: left;
@@ -258,18 +266,8 @@ tr.selected {
     padding: 0 0 0 8px;
 }
 
-#sharing-save-button, .searchPage .searchButton, 
-.configlet .searchButton {
- /*LS- added background ico for shared search button*/
-    background:#FAFAFA url(&dtml-portal_url;/ico_tools.gif) no-repeat scroll 4px 3px;
-    /*LS-  little hack for IE7- by putting an !important after the heigth, IE doesn't go weird with the submit-height*/
-    height: 22px !important;
-    margin: 0;
-    padding: 0 0 0 18px;
-    float: none;
-}
 
-input.searchButton  {
+.searchDiv input.searchButton  {
     font-size: 115%;
     text-transform: &dtml-textTransform;;
     color: &dtml-fontColor;;

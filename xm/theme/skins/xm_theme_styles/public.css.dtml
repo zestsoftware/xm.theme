@@ -292,14 +292,8 @@ form.searchPage {
     text-align: center;
 }
 
-input.searchPage  {
-}
-
 .searchPage .discreet {
     padding: 10px 0 0;
-}
-
-form.searchPage input.searchButton {
 }
 
 /* LiveSearch styles */
