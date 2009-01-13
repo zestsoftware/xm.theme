@@ -14,7 +14,7 @@
                        portal_type view/requested_type">
         <h1 tal:content="view/title" />
 
-        <span tal:content="structure provider:xm.project-content" />
+        <span tal:replace="structure provider:xm.project-content" />
       </div>
     </div>
   </body>
