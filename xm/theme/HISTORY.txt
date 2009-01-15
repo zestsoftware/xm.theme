@@ -1,10 +1,10 @@
 History for xm.theme
 ====================
 
-1.0 (unreleased)
-----------------
+1.0beta2 (2009-01-15)
+---------------------
 
-- Nothing changed yet.
+- Style and portlet cleanup by laurens and jladage. [laurens, jladage]
 
 
 1.0beta1 (2009-01-09)
