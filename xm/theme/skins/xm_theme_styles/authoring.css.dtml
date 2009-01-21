@@ -86,10 +86,10 @@
 
 .contentViews .selected a {
     background: url(&dtml-portal_url;/selectedTab_contentViews.gif) repeat-x scroll 0 bottom;
-    color: #1C718E;
+    color: &dtml-itemColor;;
 }
 .contentViews li a:hover {
-    color: #1C718E;
+    color: &dtml-itemColor;;
 }
 .configlet .contentViews {
     font-size: 90%;
@@ -178,6 +178,7 @@
 }
 .activated .actionMenuHeader a {
     background: url(&dtml-portal_url;/arrow_green_active.gif) no-repeat scroll 0 1px;
+	color: &dtml-itemColor;;
 }
 .arrowDownAlternative {
     display: none;

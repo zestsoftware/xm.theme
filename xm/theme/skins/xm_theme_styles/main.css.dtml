@@ -164,7 +164,7 @@ table.employees-overview td {
 }
 
 .employees-overview a {
-  color: #1C718E;
+  color: &dtml-itemColor;;
 }
 .employees-overview .name-employee {
   white-space: nowrap;

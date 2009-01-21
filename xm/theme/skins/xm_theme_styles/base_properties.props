@@ -4,6 +4,8 @@ plone_skin:string=eXtremeManagement
 
 logoName:string=logo.jpg
 
+itemColor:string=#0380aa
+
 fontFamily:string= Verdana, Arial, Helvetica, sans-serif
 fontBaseSize:string=69%
 fontColor:string=Black

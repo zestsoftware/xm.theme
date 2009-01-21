@@ -431,7 +431,7 @@ font-weight: normal;
 }
 #portal-globalnav li a {
     /* The normal, unselected tabs. They are all links */
-    color: #3A849D;
+    color: &dtml-itemColor;;
     height: auto;
     margin-right: 1em;
     padding: 0;
@@ -483,13 +483,13 @@ font-weight: normal;
     background-image: none;
 }
 #portal-personaltools li {
-    color: &dtml-globalFontColor;;
+    color: &dtml-itemColor;;
     display: inline;
 	margin-right: 10px;
 }
 #portal-personaltools li a {
     text-decoration: none;
-    color: &dtml-globalFontColor;;
+    color: &dtml-itemColor;;
 }
 #portal-personaltools .visualIconPadding {
     padding-left: 10px;
@@ -642,7 +642,7 @@ dl.portalMessage dt {
 dl.portalMessage dd {
 	background-color: #FBFDFE;
 	border: 1px solid #BFE1EB;
-	color: #1C718E;
+	color: &dtml-itemColor;;
     margin: 0;
     padding: 0 0 0 50px;
 }
@@ -995,9 +995,6 @@ a.link-parent {
 
 /* Handling external/internal links, we first set the icon on all links, then 
    remove it from the ones that are local - for both http and https */
-#content a:hover {
-    text-decoration: none;
-}
    
 #content a[href ^="http:"],
 #content a.link-external {

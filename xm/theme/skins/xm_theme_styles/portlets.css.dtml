@@ -61,7 +61,7 @@ s/*
 }
 
 .portletFooter a {
-    color: #1C718E;
+    color: &dtml-itemColor;;
     background: url(&dtml-portal_url;/arrow_blue_inactive.gif) no-repeat scroll 10px 1px;
     padding: 0 0 0 27px;
 }
@@ -75,10 +75,6 @@ s/*
     padding: 0 0 7px 0;
     text-align: left;
 }   
-
-.portletItem a:hover {
-    color: #1C718E;
-}
 
 .portletHeader {
   background-color: #faf9f4;
@@ -171,7 +167,7 @@ s/*
   border-left: 1px solid #dfdeda;
   border-right: 1px solid #dfdeda;
   background-color: #fbfdfe !important;
-  color: #1c718e;
+  color: &dtml-itemColor;;
 }
 
 /* *** On the span in dt-tag we place the left rounded corner image *** */
@@ -244,11 +240,11 @@ s/*
 
 .managePortletsLink {
     text-align: center;
-    color: #3A849D;
+    color: &dtml-itemColor;;
 }
 
 .managePortletsLink a{
-    color: #3A849D;
+    color: &dtml-itemColor;;
     text-decoration: none;
 }
     
