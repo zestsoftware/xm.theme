@@ -796,7 +796,7 @@ table.listing tr,
 table.listing th,
 .stx table th,
 tfoot .total {
-    background: #f0efea url(&dtml-portal_url;/background_tableHeader.gif) 0 0 repeat-x;
+    background: #efefec url(&dtml-portal_url;/background_tableHeader.gif) 0 0 repeat-x;
     color: #505050;
     padding: 4px 7px; /* important!!! don't change the 7px, or padding overflow will occure in some page views */
     text-align: left;
