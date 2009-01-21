@@ -25,7 +25,7 @@ class XMProjectHeaderViewlet(ViewletBase):
 
     def _get_project_title(self):
         project = self._get_project()
-        if project is not None:
+        if project is not None and project.title != '':
             return project.title
         else:
             return u'Extreme Management'
