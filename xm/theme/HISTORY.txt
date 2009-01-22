@@ -4,6 +4,9 @@ History for xm.theme
 1.0 (unreleased)
 ----------------
 
+- Fixed issue 135, Titles of portlets are now not transformed to capitalized.
+  [jladage]
+
 - Fixed issue 126, When adding a project the header was not displayed.
   [jladage]
 

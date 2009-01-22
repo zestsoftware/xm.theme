@@ -92,6 +92,7 @@ s/*
 .portletHeader, .portletHeader a {
     color: #343434;
     white-space: nowrap;
+    text-transform: none !important;
 }
 
 .portletHeader a {
