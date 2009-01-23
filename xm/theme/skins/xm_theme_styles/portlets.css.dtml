@@ -1,4 +1,4 @@
-s/*
+/s/*
 ** Plone style sheet - Portlets
 **
 ** Style sheet documentation can be found at http://plone.org/documentation
@@ -35,15 +35,16 @@ s/*
 }
 
 .myProject {
-    border-left: 1px solid #ccc;
-    border-right: 1px solid #ccc;
-	border-bottom: 1px solid #ccc;
-    display: block;
-	margin: 0;
-    padding: 0 0 7px 9px;
+    display:block;
+    float:left;
+    margin:0;
+    padding:11px 0 10px 10px;
+    position:absolute;
+    z-index:41; 
 }
 
 /*LS- underline NO-hover:a*/
+.myProject a,
 .myProject a:hover {
     text-decoration: none !important;
 }
@@ -68,7 +69,7 @@ s/*
 #my-projects-menu li a {
     color: &dtml-itemColor;;
     background: url(&dtml-portal_url;/arrow_blue_inactive.gif) no-repeat scroll 10px 1px;
-    padding: 0 0 0 27px;
+    padding: 0 7px 0 27px;
 }
 
 .portletFooter {

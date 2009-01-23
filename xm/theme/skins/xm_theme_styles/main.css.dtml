@@ -54,62 +54,12 @@ h1#project-header a{
     margin-right: 0.5em;
 }
 
-/* *** Start submenus *** */
-/*LS- position/placement fix project-submenu*/
-
-#my-projects-menu,
-#iterations-menu {
-    z-index: 3;
-}
-
-#my-projects-menu .project-submenu,
-#iterations-menu .iterations-submenu {
-    position: relative !important;
-    z-index: 4;
-    top: 0 !important;
-}
-
-#my-projects-menu .project-submenu ul,
-#iterations-menu .iterations-submenu ul {
-  border: none !important;
-  text-indent: 7px;
-  background: none; /* fix - else it has the background of the original actionMenu*/
-}
-
-.project-submenu li a,
-.iterations-submenu li a {
-  border-width: 0;
-  text-transform: none; /* fix - this restores the capital letters for projects and increases readability */
-}
-
-.project-submenu li.selected,
-.iterations-submenu li.selected {
-  border-width: 0;
-  margin: 0;
-  padding: 0 5px 0 5px;
-  color: #FFFFFF;
-  background-color: #8CACBB;
-}
-
-.project-submenu li.selected a,
-.iterations-submenu li.selected {
-  color: #FFFFFF;
-  background-color: #8CACBB;
-  margin: 0;
-  padding: 0;
-}
-
 /*LS-  actionmenu portlet Project Links*/
-.actionMenuContent project-submenu,
+/*.actionMenuContent project-submenu,
 .actionMenuContent iterations-submenu {
     position: relative;
 }
-
-/* LS - this corrects the position for arrow_blue_inactive because it's generated different in the customer view*/
-#my-projects-menu .project-submenu ul li a {
-    background-position: 16px 3px;
-}
-
+*/
 table .IterationTitle th {
 }
 

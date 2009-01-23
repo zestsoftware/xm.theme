@@ -2,7 +2,6 @@ from Products.CMFCore.utils import getToolByName
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone.app.layout.viewlets.common import ViewletBase
 from zope.component import getMultiAdapter
-from urllib import quote_plus
 from kss.core import KSSView, kssaction
 
 
@@ -63,6 +62,12 @@ class XMSearchBoxViewlet(ViewletBase):
         self.folder_path = '/'.join(folder.getPhysicalPath())
 
 
+class XMMyProjectsViewlet(ViewletBase):
+
+    def update(self):
+        pass
+
+
 class GoogleSearchViewlet(ViewletBase):
 
         render = ViewPageTemplateFile('templates/googlesearch.pt')
@@ -88,7 +93,7 @@ class KSSFullname(KSSView):
     @kssaction
     def xm_fullname(self):
         """ replace span with username"""
-        
+
         mtool = getToolByName(self.context, "portal_membership")
         anonymous = mtool.isAnonymousUser()
         if not anonymous:
@@ -104,6 +109,5 @@ class KSSFullname(KSSView):
                 user_name = fullname
             else:
                 user_name = userid
-    
-            self.getCommandSet('core').replaceInnerHTML('.userName', user_name )
-        
+
+            self.getCommandSet('core').replaceInnerHTML('.userName', user_name)

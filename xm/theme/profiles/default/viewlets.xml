@@ -4,6 +4,7 @@
  <order manager="plone.portaltop" skinname="eXtremeManagement" purge="True">
    <viewlet name="plone.header"/>
    <viewlet name="plone.path_bar"/>
+   <viewlet name="xm.myprojects"/>
    <viewlet name="xm.searchbox"/>
    <viewlet name="xm.personal_bar"/>
 </order>

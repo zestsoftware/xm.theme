@@ -33,6 +33,15 @@
       />
 
   <browser:viewlet
+      name="xm.myprojects"
+      manager="plone.app.layout.viewlets.interfaces.IPortalTop"
+      layer=".interfaces.IThemeSpecific"
+      class=".viewlets.XMMyProjectsViewlet"
+      permission="zope2.View"
+      template="templates/my_projects_stub.pt"
+      />
+
+  <browser:viewlet
       name="xm.personal_bar"
       manager="plone.app.layout.viewlets.interfaces.IPortalTop"
       layer=".interfaces.IThemeSpecific"

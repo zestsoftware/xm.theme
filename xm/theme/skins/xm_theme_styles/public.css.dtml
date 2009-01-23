@@ -400,7 +400,7 @@ z-index: 20;
 clear: left;
 float: left;
 text-align: right;
-padding: 6px 1px 0 0;
+padding: 6px 1px 0 100px;
 display:block;
 }
 #LSNothingFound {
