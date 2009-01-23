@@ -2,6 +2,7 @@ from Acquisition import Explicit
 
 from kss.core import KSSView
 from kss.core import kssaction
+from plone.memoize.view import memoize
 from zope.component import adapts
 from zope.component import getMultiAdapter
 from zope.interface import Interface
@@ -24,6 +25,7 @@ class MyProjectList(Explicit):
         self.request = request
         self.__parent__ = view
 
+    @memoize
     def my_projects(self):
         pview = getMultiAdapter((self.context, self.request),
                                 name=u'myprojects')
@@ -35,11 +37,13 @@ class MyProjectList(Explicit):
                                  description = pbrain.Description))
         return projects
 
+    @memoize
     def has_projects(self):
         if len(self.my_projects()) > 1:
             return True
         return False
 
+    @memoize
     def has_single_project(self):
         if len(self.my_projects()) == 1:
             return True
