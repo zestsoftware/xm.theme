@@ -40,7 +40,7 @@ s/*
 	border-bottom: 1px solid #ccc;
     display: block;
 	margin: 0;
-    padding: 0 0 7px 9px;	
+    padding: 0 0 7px 9px;
 }
 
 /*LS- underline NO-hover:a*/
@@ -64,7 +64,8 @@ s/*
     border-top: none;
 }
 
-.portletFooter a {
+.portletFooter a,
+#my-projects-menu li a {
     color: &dtml-itemColor;;
     background: url(&dtml-portal_url;/arrow_blue_inactive.gif) no-repeat scroll 10px 1px;
     padding: 0 0 0 27px;
@@ -78,7 +79,7 @@ s/*
     margin: 0;
     padding: 0 0 7px 0;
     text-align: left;
-}   
+}
 
 .portletHeader {
   background-color: #faf9f4;
@@ -143,7 +144,7 @@ s/*
 .managedPortlet {
     margin: 0;
 }
-    
+
 /* dashboard portlets - finish*/
 
 /*LS- underline hover:a*/
@@ -176,7 +177,7 @@ s/*
 }
 
 /* *** On the span in dt-tag we place the left rounded corner image *** */
-.portlet .portletTopLeft, 
+.portlet .portletTopLeft,
 .portlet .portletTopRight,
 .portlet .portletBottomLeft,
 .portlet .portletBottomRight {
@@ -186,7 +187,7 @@ s/*
 	width: 8px;
 	z-index: 4;
 }
-.portlet .portletTopLeft, 
+.portlet .portletTopLeft,
 .portlet .portletTopRight{
 	top: 16px;
 }
@@ -252,7 +253,7 @@ s/*
     color: &dtml-itemColor;;
     text-decoration: none;
 }
-    
+
 div.portlets-manager div.section {
     padding-top: 1em !important;
 }
@@ -301,4 +302,3 @@ div.managedPortlet {
 }
 
 /* </dtml-with> */
-
