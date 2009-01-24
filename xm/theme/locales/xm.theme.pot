@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2008-11-28 09:00+0000\n"
+"POT-Creation-Date: 2009-01-24 07:50+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,46 +17,9 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: xm.theme\n"
 
-#: ./browser/viewlets_project_tabs.py:228
-msgid "Closed"
-msgstr ""
-
-#: ./browser/viewlets_project_tabs.py:235
-msgid "Closed iterations"
-msgstr ""
-
-#: ./browser/viewlets_project_tabs.py:122
-msgid "Current"
-msgstr ""
-
-#: ./browser/viewlets_project_tabs.py:129
-msgid "Current iterations"
-msgstr ""
-
-#: ./browser/viewlets_project_tabs.py:98
-msgid "Example"
-msgstr ""
-
-#: ./browser/viewlets_project_tabs.py:103
-msgid "Example tab"
-msgstr ""
-
-#. Default: "Iterations"
-#: ./browser/templates/project_tabs_viewlet.pt:3
-msgid "Iterations"
-msgstr ""
-
 #. Default: "No content found"
 #: ./browser/templates/project_content.pt:12
 msgid "No content found"
-msgstr ""
-
-#: ./browser/viewlets_project_tabs.py:175
-msgid "Open"
-msgstr ""
-
-#: ./browser/viewlets_project_tabs.py:182
-msgid "Open iterations"
 msgstr ""
 
 #: ./skins/xm_theme_custom_templates/login_next.cpy:77
@@ -70,6 +33,16 @@ msgstr ""
 #. Default: "Advanced Search…"
 #: ./skins/xm_theme_custom_templates/livesearch_reply.py:85
 msgid "label_advanced_search"
+msgstr ""
+
+#. Default: "my project"
+#: ./browser/templates/my_projects.pt:3
+msgid "label_my_project"
+msgstr ""
+
+#. Default: "my projects"
+#: ./browser/templates/my_projects.pt:16
+msgid "label_my_projects"
 msgstr ""
 
 #. Default: "No matching results found."

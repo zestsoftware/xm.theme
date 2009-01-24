@@ -6,7 +6,7 @@
                        title project/description"
        i18n:domain="xm.theme"
        i18n:translate="label_my_project">
-      My Project
+      my project
     </a>
   </tal:single>
   <tal:multiple condition="view/has_projects">
@@ -14,7 +14,7 @@
       <dt class="actionMenuHeader label-my-projects">
         <a href="#">
           <span i18n:domain="xm.theme"
-                i18n:translate="label_my_projects">My Projects</span>
+                i18n:translate="label_my_projects">my projects</span>
           <span class="arrowDownAlternative">&#9660;</span>
         </a>
       </dt>
