@@ -339,11 +339,11 @@ margin-top:-0.1em;
 	text-align: right;
 	margin: 0;
 	padding: 0;
-	width: 300px;
+	width: 400px;
 	position: absolute;
 	z-index: 14;
-	top: 20px;
-	left: 14px;
+	top: 0px;
+	left: 355px;
 }
 
 .LSShadow {
@@ -400,7 +400,7 @@ z-index: 20;
 clear: left;
 float: left;
 text-align: right;
-padding: 6px 1px 0 100px;
+padding: 6px 1px 0 140px;
 display:block;
 }
 #LSNothingFound {

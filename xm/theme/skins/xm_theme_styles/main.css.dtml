@@ -16,17 +16,9 @@
 .searchGadgetFix {
     float: left;
     margin: 0;
-    padding: 0 10px;
+    padding: 0 3px;
     position: relative;
-    top: 3px;
-}
- 
-  /*search- icon fix*/
-.searchIcon{
-    float: left;
-    background: url(&dtml-portal_url;/search_icon.gif) 0 4px no-repeat;
-    width: 14px;
-    height: 26px;
+    top: 1px;
 }
   
 #portal-header {
