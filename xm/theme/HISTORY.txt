@@ -1,8 +1,8 @@
 History for xm.theme
 ====================
 
-1.0 (unreleased)
-----------------
+1.0rc1 (2009-01-25)
+-------------------
 
 - Added extra viewlet for the my project stub in portaltop. [jladage]
 
