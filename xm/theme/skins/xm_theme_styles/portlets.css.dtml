@@ -1,4 +1,4 @@
-/s/*
+/*
 ** Plone style sheet - Portlets
 **
 ** Style sheet documentation can be found at http://plone.org/documentation
@@ -35,18 +35,15 @@
 }
 
 .myProject {
-    display:block;
-    float:left;
-    margin:0;
-    padding:12px 0 10px 13px;
-    position:absolute;
-    z-index:41; 
+    height: 18px; /* fix for Safari */
+    position: absolute;
+    z-index: 41;
+    top: 94px;
+    left: 12px;
 }
 
-/*LS- underline NO-hover:a*/
-.myProject a,
-.myProject a:hover {
-    text-decoration: none !important;
+.myProject a {
+    text-decoration: none;
 }
 
 .portlet .management_portletHeader {

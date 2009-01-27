@@ -118,8 +118,6 @@ h3, h4, h5, h6 {
     border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
     margin: 0 0 40px 0;
     padding: 14px !important;
-    *padding-top: 22px !important; /* this IE7 hack fixes a spacing issue with the .contentActions container*/
-    *width: 688px; /* this IE7 hack ensures that content inside documentContent doesn't strech the container up*/
     position: relative;
     z-index: 2;
 }
@@ -234,29 +232,16 @@ h3, h4, h5, h6 {
     border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
 }
 
-/*LS-  no hover-background
-#portal-siteactions li a:hover {
-    background-color: &dtml-globalBackgroundColor;;
-    color: &dtml-globalFontColor;;
-    border: &dtml-borderWidth; &dtml-borderStyle;;
-    border-color: #C9E5EE;
-}
-*/
-
 /* Searchbox style and positioning */
 
 #portal-searchbox {
-  /* ie7 FIX : backgroundheader.gif is included */
-  background: #F9F7F0 url(&dtml-portal_url;/backgroundheader.gif) repeat-x scroll 0 0;
-  border-top: 1px solid #fff;
-  border-left: 1px solid #fff;
-  text-align: left;
+  background: transparent;
   text-transform: &dtml-textTransform;;
   height: 32px;
-  margin: 0;
-  padding: 0 0 0 14px;
   position: absolute;
   z-index: 40;
+  top: 91px;
+  left: 120px;
 }
 
 #portal-advanced-search {
@@ -395,13 +380,6 @@ position: relative;
 background-color: &dtml-backgroundColor;;
 padding: 0.5em !important;
 z-index: 20;
-}
-.LSBox {
-clear: left;
-float: left;
-text-align: right;
-padding: 6px 1px 0 140px;
-display:block;
 }
 #LSNothingFound {
 text-align: center;

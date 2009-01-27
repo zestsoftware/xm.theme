@@ -177,4 +177,9 @@ table.ploneCalendar caption {
     margin-right: 0;
 }
 
+.documentContent {
+    *padding-top: 22px !important; /* this IE7 hack fixes a spacing issue with the .contentActions container*/
+    *width: 688px; /* this IE7 hack ensures that content inside documentContent doesn't strech the container up*/
+}
+
 /* </dtml-with> */
