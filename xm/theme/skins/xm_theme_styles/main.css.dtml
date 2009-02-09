@@ -59,7 +59,7 @@ table .IterationTitle a {
   color: #000;
 }
 
-#story-listing a:hover {
+.story-listing a:hover {
   text-decoration: underline;
 }
 
@@ -67,31 +67,31 @@ table .IterationTitle a {
   display: none;
 }
 
-#story-listing #task-list-for-story {
+.story-listing #task-list-for-story {
   font-size: 100%;
 }
 
-#story-listing .storyHeader {
+.story-listing .storyHeader {
   width: 50%;
 }
 
-#story-listing .statusHeader {
+.story-listing .statusHeader {
   width: 10%;
 }
 
-#story-listing .initEstimateHeader {
+.story-listing .initEstimateHeader {
   width: 10%;  
 }
 
-#story-listing .tasksEstimateHeader {
+.story-listing .tasksEstimateHeader {
   width: 10%;
 }
 
-#story-listing .actualHoursHeader {
+.story-listing .actualHoursHeader {
   width: 10%;
 }
 
-#story-listing .totalOfProject th {
+.story-listing .totalOfProject th {
   text-align: right;
   font-weight: bold;
   text-transform: none;
