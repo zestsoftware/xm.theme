@@ -35,6 +35,7 @@ class MyProjectList(Explicit):
             projects.append(dict(title = pbrain.Title,
                                  url = pbrain.getURL,
                                  description = pbrain.Description))
+        projects.sort(cmp=lambda x,y: cmp(x['title'].lower(), y['title'].lower()))
         return projects
 
     @memoize
