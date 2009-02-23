@@ -336,6 +336,7 @@ position: relative;
 text-align: right;
 }
 .livesearchContainer {
+    _display: none; /* disabled livesearch for ie6*/
     background-color: &dtml-backgroundColor;;
     border: &dtml-borderWidth; #fff;
     border-style: outset;
