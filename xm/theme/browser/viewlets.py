@@ -106,6 +106,9 @@ class KSSFullname(KSSView):
             else:
                 fullname = None
             if fullname:
+                plone_utils = getToolByName(self.context, 'plone_utils')
+                charset = plone_utils.getSiteEncoding()
+                fullname = fullname.decode(charset)
                 user_name = fullname
             else:
                 user_name = userid

@@ -4,6 +4,9 @@ History for xm.theme
 1.0rc2 (2009-02-25)
 -------------------
 
+- Fixed KSSUnicodeError in the fullname viewlet when you have a
+  non-ascii name.  [maurits]
+
 - Added Products.eXtremeManagement>=2.0alpha3 to our dependencies in
   setup.py.  http://plone.org/products/extreme-management-tool/issues/157
   shows we need at least that version.  [maurits]
