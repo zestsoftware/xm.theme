@@ -1,4 +1,5 @@
 <tal:block>
+<!-- #148 - Do we really want *nothing* here? SMH
   <tal:single condition="view/has_single_project">
     <a href=""
        tal:define="project python:view.my_projects()[0]"
@@ -9,6 +10,7 @@
       my project
     </a>
   </tal:single>
+-->
   <tal:multiple condition="view/has_projects">
     <dl id="my-projects-menu" class="actionMenu deactivated">
       <dt class="actionMenuHeader label-my-projects">
