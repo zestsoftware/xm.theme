@@ -148,4 +148,14 @@
         layer=".interfaces.IThemeSpecific"
         />
 
+    <!-- Overriding path_bar template -->    
+    <browser:viewlet
+        name="plone.path_bar"
+        layer=".interfaces.IThemeSpecific"
+        manager="plone.app.layout.viewlets.interfaces.IPortalTop"
+        class="plone.app.layout.viewlets.common.PathBarViewlet"
+        permission="zope2.View"
+        template="templates/path_bar.pt"
+        />
+
 </configure>
