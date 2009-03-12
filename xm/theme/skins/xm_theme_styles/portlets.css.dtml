@@ -51,6 +51,10 @@
     display: block;
 }
 
+.portletProjectPortlet li {
+    list-style-type: none;
+}
+
 .portletProjectPortlet select {
 	width: 155px;
 }
