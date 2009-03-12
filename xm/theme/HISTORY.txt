@@ -4,6 +4,8 @@ History for xm.theme
 1.0rc2 (2009-02-25)
 -------------------
 
+- moved two xm.theme specefic classes from extreme.css to xm.theme's main.css [laurens]
+- removed two images from eXtremeManagement that weren't being used [laurens]
 - disabled .myProject in print.css [laurens]
 
 - Ticket #148 - Removed 'my project' link. [simon]
