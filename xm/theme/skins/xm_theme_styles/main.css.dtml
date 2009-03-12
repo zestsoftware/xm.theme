@@ -100,6 +100,15 @@ table .IterationTitle a {
   font-size: 110%;
 }
 
+.td-story-title .story-title {
+    background: url(&dtml-portal_url;/arrow_blue_inactive.gif) no-repeat scroll 2px 0;
+    padding: 0 0 0 20px;
+}
+
+.clear-bottom .story-title {
+    background: url(&dtml-portal_url;/arrow_blue_active.gif) no-repeat scroll 2px 0;
+}
+
 table.employees-overview td {
   padding: 5px 4px;
   white-space: nowrap;
@@ -132,6 +141,29 @@ table.employees-overview td {
 .heading_dashboard {
     clear: both;
 }
+
+/* styling expanded add-task form*/ 
+#task-form-expanded legend {
+    padding: 4px 4px 4px 22px;
+    background: url(&dtml-portal_url;/arrow_blue_active.gif) no-repeat scroll 4px 7px;
+    color: &dtml-itemColor;;
+    text-transform: lowercase;
+}
+
+/* Add task button */
+
+#task-form-button {
+    font-size: 90%;
+    cursor: pointer;
+    margin: 0;
+    padding: 4px 4px 4px 18px;
+    background: url(&dtml-portal_url;/arrow_blue_inactive.gif) no-repeat scroll 0 5px;
+    border: 0;
+    float: left;
+    color: &dtml-itemColor;;
+    text-transform: lowercase;
+}
+
 /* LS-  dashboard - finish*/
 
 /* </dtml-with> */
