@@ -123,7 +123,8 @@ div.top,
 .header_iteration_project_overview img,
 .iteration-state img,
 #project-header,
-.discussion input {
+.discussion input,
+.myProject {
     display: none;
 }
 
