@@ -3,8 +3,8 @@ History for xm.theme
 
 1.0rc2 (2009-02-25)
 -------------------
-
-- - added mockup folder for design proposals [laurens]
+- added title to my projects menu
+- added mockup folder for design proposals [laurens]
 - moved two xm.theme specefic classes from extreme.css to xm.theme's main.css [laurens]
 - removed two images from eXtremeManagement that weren't being used [laurens]
 - disabled .myProject in print.css [laurens]
