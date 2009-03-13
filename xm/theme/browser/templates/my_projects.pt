@@ -14,7 +14,7 @@
   <tal:multiple condition="view/has_projects">
     <dl id="my-projects-menu" class="actionMenu deactivated">
       <dt class="actionMenuHeader label-my-projects">
-        <a href="#">
+        <a title="The projects that are assigned to you" href="#">
           <span i18n:domain="xm.theme"
                 i18n:translate="label_my_projects">my projects</span>
           <span class="arrowDownAlternative">&#9660;</span>
