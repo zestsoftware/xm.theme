@@ -159,7 +159,6 @@ table.employees-overview td {
     padding: 4px 4px 4px 18px;
     background: url(&dtml-portal_url;/arrow_blue_inactive.gif) no-repeat scroll 0 5px;
     border: 0;
-    float: left;
     color: &dtml-itemColor;;
     text-transform: lowercase;
 }
