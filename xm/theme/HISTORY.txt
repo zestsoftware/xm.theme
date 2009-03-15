@@ -1,8 +1,8 @@
 History for xm.theme
 ====================
 
-1.0rc3 (unreleased)
--------------------
+1.0 (2009-03-15)
+----------------
 - removed cachesettings.xml because it contains site specifice configuration.
   It's now located in project.setup [jladage]
 
