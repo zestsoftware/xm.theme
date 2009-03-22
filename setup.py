@@ -29,7 +29,7 @@ setup(name='xm.theme',
       install_requires=[
           'setuptools',
           # -*- Extra requirements: -*-
-          'Products.eXtremeManagement>=2.0alpha3',
+          'Products.eXtremeManagement>=2.0',
       ],
       entry_points="""
       # -*- Entry points: -*-
