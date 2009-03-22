@@ -4,7 +4,7 @@ History for xm.theme
 1.0.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add-iteration css updated for planned iterations view [jladage]
 
 
 1.0 (2009-03-15)

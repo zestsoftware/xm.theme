@@ -143,7 +143,8 @@ table.employees-overview td {
 }
 
 /* styling expanded add-task form*/ 
-#task-form-expanded legend {
+#task-form-expanded legend,
+#iteration-form-expanded legend {
     padding: 4px 4px 4px 22px;
     background: url(&dtml-portal_url;/arrow_blue_active.gif) no-repeat scroll 4px 7px;
     color: &dtml-itemColor;;
@@ -152,7 +153,8 @@ table.employees-overview td {
 
 /* Add task button */
 
-#task-form-button {
+#task-form-button,
+#iteration-form-button {
     font-size: 90%;
     cursor: pointer;
     margin: 0;
