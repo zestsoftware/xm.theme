@@ -122,6 +122,10 @@ h3, h4, h5, h6 {
     z-index: 2;
 }
 
+.kupu-fulleditor-zoomed .documentContent {
+    z-index: 4;
+}
+
 .documentContent a {
     text-decoration: none;
 }
@@ -198,6 +202,10 @@ h3, h4, h5, h6 {
     z-index: 10; /* keep this value high enough to ensure overlap with column-content */
     top: 1px;
     background: #FEFEFE url(&dtml-portal_url;/background_top.gif) no-repeat scroll 0 0;
+}
+
+.kupu-fulleditor-zoomed #portal-top {
+   z-index: 1;
 }
 
 /* Site-wide action menu - font size, contact, index, sitemap etc */
