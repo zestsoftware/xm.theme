@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2009-01-24 07:50+0000\n"
+"POT-Creation-Date: 2009-05-19 22:07+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -35,13 +35,8 @@ msgstr ""
 msgid "label_advanced_search"
 msgstr ""
 
-#. Default: "my project"
-#: ./browser/templates/my_projects.pt:3
-msgid "label_my_project"
-msgstr ""
-
 #. Default: "my projects"
-#: ./browser/templates/my_projects.pt:16
+#: ./browser/templates/my_projects.pt:18
 msgid "label_my_projects"
 msgstr ""
 
