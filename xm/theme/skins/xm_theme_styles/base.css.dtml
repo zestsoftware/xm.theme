@@ -19,7 +19,7 @@
 
 body {
     font: &dtml-fontBaseSize; <dtml-var fontFamily>;
-    background-color: &dtml-backgroundColor;;
+    background: #f3f2ec;
     color: &dtml-fontColor;;
     margin: 0;
     padding: 0;
@@ -49,108 +49,82 @@ hr {
     background-color: &dtml-globalBorderColor;;
     margin: 0.5em 0 1em 0;
 }
+
 h1, h2, h3, h4, h5, h6 {
-    color: #505050;
     font-family: <dtml-var headingFontFamily>;
     margin: 8px 0 4px 0;
     clear: both;
 }
-h1 a,
-h2 a,
-h3 a,
-h4 a,
-h5 a,
-h6 a {
-    /*color: &dtml-fontColor; ! important; */
-    text-decoration: none;
+
+h1, h2, h3, h4 { color: #505050; }
+
+h5, h6 { color: &dtml-discreetColor;; }
+
+h1 a, h2 a,
+h3 a, h4 a,
+h5 a, h6 a { text-decoration: none; }
+
+h3, h4, h5, h6 {
+  border-bottom: none;
+  font-weight: bold;
 }
-h1 {
-    font-size: 160%;
+h1 { font-size: 160%; }
+h2 { font-size: 150%; }
+h3 { font-size: 125%; }
+h4 { font-size: 110%; }
+h5 { font-size: 100%; }
+h6 { font-size: &dtml-fontSmallSize;; }
+
+ul, ol {
+  line-height: 1.5em;
+  padding: 0;
 }
-h2 {
-    font-size: 150%;
-}
-h3 {
-    font-size: 125%;
-    border-bottom: none;
-    font-weight: bold;
-}
-h4 {
-    font-size: 110%;
-    border-bottom: none;
-    font-weight: bold;
-}
-h5 {
-    font-size: 100%;
-    border-bottom: none;
-    font-weight: bold;
-}
-h6 {
-    font-size: &dtml-fontSmallSize;;
-    border-bottom: none;
-    font-weight: bold;
-}
-ul {
-    line-height: 1.5em;
-    padding: 0;
-}
-ol {
-    line-height: 1.5em;
-    padding: 0;
-}
-li {
-    margin-bottom: 0.5em;
-}
-dt {
-    font-weight: bold;
-}
+li { margin-bottom: 0.5em; }
+dt { font-weight: bold; }
+
 dd {
-    line-height: 1.5em;
-    margin: 0; /* fix for class not-startable */
-    margin-bottom: 1em;
+  line-height: 1.5em;
+  margin: 0; /* fix for class not-startable */
+  margin-bottom: 1em;
 }
 abbr, acronym, .explain {
-    border-bottom: &dtml-borderWidth; dotted &dtml-fontColor;;
-    color: &dtml-fontColor;;
-    cursor: help;
+  border-bottom: &dtml-borderWidth; dotted &dtml-fontColor;;
+  color: &dtml-fontColor;;
+  cursor: help;
 }
-abbr .explain {
-    border-bottom: none;
-}
+abbr .explain { border-bottom: none; }
 q {
-    font-family: Baskerville, Georgia, serif;
-    font-style: italic;
-    font-size: 120%;
+  font-family: Baskerville, Georgia, serif;
+  font-style: italic;
+  font-size: 120%;
 }
 blockquote {
-    padding-left: 0.5em;
-    margin-left: 0;
-    border-left: 4px solid &dtml-globalBorderColor;;
-    color: &dtml-discreetColor;;
+  padding-left: 0.5em;
+  margin-left: 0;
+  border-left: 4px solid &dtml-globalBorderColor;;
+  color: &dtml-discreetColor;;
+}
+code, tt, pre {
+  font-family: Monaco, "Courier New", Courier, monospace;
+  color: &dtml-fontColor;;
+  background-color: &dtml-globalBackgroundColor;;
 }
 code, tt {
-    font-family: Monaco, "Courier New", Courier, monospace;
-    font-size: 120%;
-    color: &dtml-fontColor;;
-    background-color: &dtml-globalBackgroundColor;;
-    padding: 0 0.1em;
+  font-size: 120%;
+  padding: 0 0.1em;
 }
 pre {
-    font-family: Monaco, "Courier New", Courier, monospace;
-    font-size: 100%;
-    padding: 1em;
-    border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
-    color: &dtml-fontColor;;
-    background-color: &dtml-globalBackgroundColor;;
-    overflow: auto;
+  font-size: 100%;
+  padding: 1em;
+  border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
+  overflow: auto;
 }
 ins {
-    color: green;
-    text-decoration: none;
+  color: green;
+  text-decoration: none;
 }
 del {
-    color: red;
-    text-decoration: line-through;
+  color: red;
+  text-decoration: line-through;
 }
-
 /* </dtml-with> */
