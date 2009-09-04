@@ -4,6 +4,8 @@ History for xm.theme
 1.0.2 (unreleased)
 ------------------
 
+- started with cleaning up authoring.css [mirella]
+
 - cleaned up public.css and base.css [mirella]
 
 - more css code clean up [mirella]
