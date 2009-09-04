@@ -4,6 +4,10 @@ History for xm.theme
 1.0.2 (unreleased)
 ------------------
 
+- cleaned up IEfixes [mirella]
+
+- cleaned up forms.css.dtml [mirella]
+
 - cleaned up columns.css [mirella]
 
 - finished cleaning up authoring.css [mirella]
