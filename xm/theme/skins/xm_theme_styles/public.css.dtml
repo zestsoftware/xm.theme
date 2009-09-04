@@ -7,17 +7,13 @@ body.largeText { font-size: 95%; }
 body.smallText { font-size: 60%; }
 
 /* Padding for the columns */
-
 #portal-column-one .visualPadding {
   padding: 20px 0 11px 22px;
 }
 #portal-column-two .visualPadding {
   padding: 2em 2em 1em 0em;
 }
-/* Content area */
-h1, h2 {
-  font-weight: normal;
-}
+
 /* Compensate for the inline editing hover, since we have a 1px border */
 body.kssActive h2.inlineEditable:hover,
 body.kssActive h1.inlineEditable:hover {
@@ -42,22 +38,20 @@ body.kssActive h1.inlineEditable:hover {
 #contentTopLeft, #contentTopRight, 
 #contentBottomLeft, #contentBottomRight { position: absolute; }
 
-#contentTopLeft {
-  height: 8px;
-  width: 8px;
-  left: -1px;
-  background: url(&dtml-portal_url;/rounded_top_left.gif) no-repeat top left;
-}
-#contentTopRight{
-  clear: right;
-  height: 8px;
-  width: 8px;
-  right: -1px;
-  background: url(&dtml-portal_url;/rounded_top_right.gif) no-repeat top right;
-}
+#contentTopLeft, #contentTopRight,
 #contentBottomLeft, #contentBottomRight {
   height: 8px;
   width: 8px;
+}
+#contentTopLeft {
+  background: url(&dtml-portal_url;/rounded_top_left.gif) no-repeat top left;
+}
+#contentTopRight {
+  clear: right;
+  right: -1px;
+  background: url(&dtml-portal_url;/rounded_top_right.gif) no-repeat top right;
+}
+#contentBottomLeft, #contentBottomRight, #contentTopLeft {
   left: -1px;
 }
 #contentBottomLeft {
@@ -76,7 +70,6 @@ body.kssActive h1.inlineEditable:hover {
   z-index: 2;
 }
 .kupu-fulleditor-zoomed .documentContent { z-index: 4; }
-.documentContent a, .documentContent li a { text-decoration: none; }
 .documentContent a:hover { text-decoration: underline; }
 .documentContent li a:visited,
 .documentContent dd a:visited,
@@ -96,10 +89,10 @@ body.kssActive h1.inlineEditable:hover {
 }
 .documentContent ol { margin: 0.5em 0 0 2.5em; }
 
-.documentContent p a, .card a,
-.card a:hover, table.listing a,
-.listingBar a, .tileHeadline a {
-    text-decoration: none;
+.documentContent p a, .card a, .card a:hover, table.listing a,
+.listingBar a, .tileHeadline a, .documentContent a, 
+.documentContent li a  {
+  text-decoration: none;
 }
 /* End edit form elements */
 
@@ -126,11 +119,17 @@ body.kssActive h1.inlineEditable:hover {
 }
 .kupu-fulleditor-zoomed #portal-top { z-index: 1; }
 
+#portal-siteactions, .LSRes, .LSRow,
+.newsContent ul, .newsContent li,
+.newsAbout, .documentActions ul,
+#category ul, ul.visualNoMarker,
+ol.visualNoMarker {
+  list-style-image: none;
+  list-style-type: none;
+}
 /* Site-wide action menu - font size, contact, index, sitemap etc */
 #portal-siteactions {
   white-space: nowrap;
-  list-style-image: none;
-  list-style-type: none;
   margin: 1px 0 0 0;
   height: auto;
   line-height: normal;
@@ -195,8 +194,6 @@ form.searchPage { text-align: center; }
   background-color: &dtml-backgroundColor;;
   vertical-align: middle;
   display:block;
-  list-style-image: none;
-  list-style-type: none;
   text-align: left;
   min-width: 16.5em;
   text-transform: none;
@@ -216,8 +213,6 @@ form.searchPage { text-align: center; }
   white-space: normal;
   padding:0;
   margin: 0;
-  list-style-image: none;
-  list-style-type: none;
 }
 .LSRow a {
   text-decoration: none;
@@ -410,8 +405,6 @@ form.searchPage { text-align: center; }
 .newsContent ul,
 .newsContent li {
   display: block;
-  list-style: none;
-  list-style-image: none;
   margin: 0;
   padding: 0;
 }
@@ -421,8 +414,6 @@ form.searchPage { text-align: center; }
   font-size: &dtml-fontSmallSize;;
   padding: 0;
   margin-top: 0;
-  list-style: none;
-  list-style-image: none;
   float: right;
   text-align: right;
 }
@@ -443,8 +434,6 @@ form.searchPage { text-align: center; }
   padding: 0 0.5em;
   display: block;
   margin-top: -0.9em;
-  list-style-type: none;
-  list-style-image: none;
 }
 .documentActions li {
   display: inline;
@@ -519,8 +508,6 @@ dl.error dt {
 dl.searchResults span.documentByLine { display: block; }
 
 #category ul {
-  list-style-image: none;
-  list-style-type: none;
   display: inline;
   margin: 0;
 }
@@ -555,26 +542,21 @@ dl.searchResults span.documentByLine { display: block; }
 .documentEditable * .notify {
   border: &dtml-borderWidth; &dtml-borderStyle; &dtml-notifyBorderColor;;
 }
-.card {
+.card, .portrait {
   background-color: &dtml-globalBackgroundColor;;
-  border-color: &dtml-globalBorderColor;;
-  border-width: &dtml-borderWidth;;
-  border-style: &dtml-borderStyle;;
+  border: &dtml-globalBorderColor; &dtml-borderWidth; &dtml-borderStyle;;
+  text-align: center;
+}
+.card {
   float: left;
   margin: 1em;
-  text-align: center;
   width: 110px;
   padding: 1em 0;
 }
 .portrait {
-  background-color: &dtml-globalBackgroundColor;;
-  border-color: &dtml-globalBorderColor;;
-  border-width: &dtml-borderWidth;;
-  border-style: &dtml-borderStyle;;
   font-size: &dtml-fontSmallSize;;
   margin: 0.5em;
   padding: 1em 0 0.5em 0;
-  text-align: center;
   width: 100px;
 }
 .portraitPhoto { border: 1px solid black; }
@@ -660,9 +642,7 @@ table.plain th {
 /* Batch selector */
 .listingBar {
   background-color: &dtml-globalBackgroundColor;;
-  border-color: &dtml-globalBorderColor;;
-  border-style: &dtml-borderStyle;;
-  border-width: &dtml-borderWidth;;
+  border: &dtml-globalBorderColor; &dtml-borderStyle; &dtml-borderWidth;;
   padding: 0em 1em;
   text-align: center;
   text-transform: &dtml-textTransform;;
@@ -709,8 +689,6 @@ table.plain th {
 /* List classes without markers */
 ul.visualNoMarker,
 ol.visualNoMarker {
-  list-style-type: none;
-  list-style-image: none;
   margin: 0.5em 0 0 0;
   line-height: 1em;
 }
@@ -764,40 +742,38 @@ a.link-parent {
 #content .link-wiki-add { color: red; }
 
 /* Protocol-specific links */
-#content a[href ^="mailto:"],
-#content a.link-mailto,  {
+#content a[href ^="mailto:"], #content a.link-mailto, 
+#content a[href ^="news:"], #content a.link-news,
+#content a[href ^="ftp:"], #content a.link-ftp,
+#content a[href ^="ftp:"], #content a.link-ftp,
+#content a[href ^="irc:"], #content a.link-irc,
+#content a[href ^="callto:"], #content a.link-callto,
+#content a[href ^="webcal:"], #content a.link-webcal {
   padding: 1px 0 1px 16px;
 }
-
-
 #content a[href ^="mailto:"],
 #content a.link-mailto  {
-  padding: 1px 0 1px 16px;
+  background: url(&dtml-portal_url;/mail_icon.gif) 0px 1px no-repeat;
 }
 #content a[href ^="news:"],
 #content a.link-news {
-    background: url(&dtml-portal_url;/topic_icon.gif) 0px 1px no-repeat;
-    padding: 1px 0 1px 16px;
+  background: url(&dtml-portal_url;/topic_icon.gif) 0px 1px no-repeat;
 }
 #content a[href ^="ftp:"],
 #content a.link-ftp {
-    background: url(&dtml-portal_url;/file_icon.gif) 0px 1px no-repeat;
-    padding: 1px 0px 1px 16px;
+  background: url(&dtml-portal_url;/file_icon.gif) 0px 1px no-repeat;
 }
 #content a[href ^="irc:"],
 #content a.link-irc {
-    background: url(&dtml-portal_url;/discussionitem_icon.gif) 0px 1px no-repeat;
-    padding: 1px 0px 1px 16px;
+  background: url(&dtml-portal_url;/discussionitem_icon.gif) 0px 1px no-repeat;
 }
 #content a[href ^="callto:"],
 #content a.link-callto {
-    background: url(&dtml-portal_url;/phone_icon.gif) 0px 1px no-repeat;
-    padding: 1px 0px 1px 16px;
+  background: url(&dtml-portal_url;/phone_icon.gif) 0px 1px no-repeat;
 }
 #content a[href ^="webcal:"],
 #content a.link-webcal {
-    background: url(&dtml-portal_url;/event_icon.gif) 0px 1px no-repeat;
-    padding: 1px 0px 1px 16px;
+  background: url(&dtml-portal_url;/event_icon.gif) 0px 1px no-repeat;
 }
 #content a[href ^="feed:"],
 #content a.link-feed {

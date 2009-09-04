@@ -49,15 +49,13 @@ hr {
     background-color: &dtml-globalBorderColor;;
     margin: 0.5em 0 1em 0;
 }
-
 h1, h2, h3, h4, h5, h6 {
     font-family: <dtml-var headingFontFamily>;
     margin: 8px 0 4px 0;
     clear: both;
 }
-
+h1, h2 { font-weight: normal; }
 h1, h2, h3, h4 { color: #505050; }
-
 h5, h6 { color: &dtml-discreetColor;; }
 
 h1 a, h2 a,
