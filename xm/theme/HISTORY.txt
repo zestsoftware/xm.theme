@@ -3,6 +3,9 @@ History for xm.theme
 
 1.0.2 (unreleased)
 ------------------
+
+- more css code clean up [mirella]
+
 - started with cleaning up css code [mirella]
 
 - added german translation [jensens]
