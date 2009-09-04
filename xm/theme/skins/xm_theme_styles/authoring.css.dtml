@@ -1,17 +1,12 @@
 /* <dtml-with base_properties> (do not remove this :) */
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 
-/* Editable border */
-
-/*LS- rounded corners ContentViews */
 .contentViewsLeft {
   background: url(&dtml-portal_url;/rounded_contentViewsLeft.gif) no-repeat scroll 0 0;
   height: 25px;
   width: 5px;
-  display: block;
   position: relative;
   z-index: 2;
-  float: left;
   right: 1px;
   bottom: 1px;
 }
@@ -20,24 +15,23 @@
   line-height: 0;
   margin: 0;
   list-style: none;
-  border-top: 1px solid #ccc;
-  border-right: 1px solid #ccc;
+  border: 1px solid #ccc;
   border-bottom: 1px solid #d8d5ca;
-  border-left: 1px solid #ccc;
   position: relative;
   top: 21px;
   height: 24px;
   z-index: 3;
 }
-/*LS - li spacing fix: instead of display:inline > float:left */
-.contentViews li {
+.contentViews li, .contentViews li a,
+.contentViews .selected .contentViewsTabLeft,
+.contentViews .selected .contentViewsTabRight,
+dl.collapsible dt.collapsibleHeader, .contentViewsLeft {
   display: block;
   float: left;
-  margin-bottom: 0;
 }
+/*LS - li spacing fix: instead of display:inline > float:left */
+.contentViews li { margin-bottom: 0; }
 .contentViews li a {
-  display: block;
-  float: left;
   color: &dtml-contentViewFontColor;;
   padding: 0 10px;
   height: 24px;
@@ -47,19 +41,16 @@
 }
 .contentViews .selected { border-bottom: 1px solid #F5F7F7; }
 
-.contentViews .selected .contentViewsTabLeft {
-  background: url(&dtml-portal_url;/selectedTab_left.gif) no-repeat scroll 0 bottom;
-  display: block;
-  float: left;
+.contentViews .selected .contentViewsTabLeft,
+.contentViews .selected .contentViewsTabRight {
   height: 24px;
   width: 3px;
 }
+.contentViews .selected .contentViewsTabLeft {
+  background: url(&dtml-portal_url;/selectedTab_left.gif) no-repeat scroll 0 bottom;
+}
 .contentViews .selected .contentViewsTabRight {
   background: url(&dtml-portal_url;/selectedTab_right.gif) no-repeat scroll 0 bottom;
-  display: block;
-  float: left;
-  width: 3px;
-  height: 24px;
 }
 .contentViews .selected a {
   background: url(&dtml-portal_url;/selectedTab_contentViews.gif) repeat-x scroll 0 bottom;
@@ -80,12 +71,15 @@
   height: 20px;
   display: block;
 }
+.contentActions ul, .contentActions li, ul.configlets,
+ul.configletDetails {
+  list-style: none;
+  list-style-image: none;
+}
 .contentActions ul,
 .contentActions li {
   margin: 0;
   padding: 0 0 0 10px;
-  list-style: none;
-  list-style-image: none;
   color: &dtml-fontColor;;
   text-align: left;
   line-height: 1.6em;
@@ -115,17 +109,17 @@
   height: 20px;
   margin-bottom: 0;
 }
-.actionMenu {
-/*  The spec says we can't put this on an element with a float (although
-    Opera is the only one that cares) and we need it in order to catch
-    the position:absolute bubbling up */
-  position: relative;
+.actionMenu, .actionMenu .actionMenuHeader,
+.actionMenu .actionMenuContent, .actionMenu .actionMenuContent ul,
+.actionMenu .actionMenuContent li, .stx table p,
+/* for IE the following isn't needed, that's why the css2 selector is used */
+dl.collapsible dd.collapsibleContent > dl, li.formTab {
   margin: 0;
   padding: 0;
 }
+.actionMenu { position: relative; }
+
 .actionMenu .actionMenuHeader {
-  margin: 0;
-  padding: 0;
   font-weight: normal;
   z-index: 6;
 }
@@ -149,8 +143,6 @@
   top: 1.6em;
   left: -10px;
   height: auto;
-  padding: 0;
-  margin: 0;
 }
 .actionMenu.activated .actionMenuContent { display: block !important; }
 .actionMenu.activated .actionMenuContent {
@@ -171,19 +163,18 @@
   background-color: #ebeae6;
   border: &dtml-borderWidth; &dtml-contentViewBorderColor;;
   border-style: outset;
-  margin: 0;
-  padding: 0;
 }
 .actionMenu .actionMenuContent li {
   float: none;
   display: inline;
-  padding: 0;
-  margin: 0;
   border: 0;
 }
-.actionMenu .actionMenuContent li a {
+.actionMenu .actionMenuContent li a, 
+.actionMenu .actionMenuContent .selected {
   display: block;
   white-space: nowrap;
+}
+.actionMenu .actionMenuContent li a {
   margin: 0.2em 0;
 }
 #portal-column-one .actionMenu .actionMenuContent li a {
@@ -191,12 +182,11 @@
   margin: 0.2em 0 0 1px;
   padding-right: 4px;
 }
-#portal-column-one .actionMenu .actionMenuContent li a:hover {
+#portal-column-one .actionMenu .actionMenuContent li a:hover,
+ul.configletDetails li a {
   text-decoration: none;
 }
 .actionMenu .actionMenuContent .selected {
-  display: block;
-  white-space: nowrap;
   padding: 0 0.5em;
   margin: 0.2em 0;
 }
@@ -212,11 +202,7 @@
 /*
 ** end ECMAScript Content Action Menus
 */
-ul.configlets {
-  margin: 1em 0;
-  list-style-image: none;
-  list-style: none;
-}
+ul.configlets { margin: 1em 0; }
 ul.configlets li { margin-bottom: 1em; }
 
 ul.configlets li a {
@@ -225,30 +211,17 @@ ul.configlets li a {
 }
 ul.configlets li a:visited,
 ul.configlets li a:active { color: &dtml-linkColor;; }
-ul.configlets li label, ul.configletDetails li label { font-weight: bold; }
 
-ul.configletDetails {
-  margin: 0em 1em 1em 4em;
-  list-style-image: none;
-  list-style: none;
-}
+ul.configletDetails { margin: 0em 1em 1em 4em; }
 ul.configletDetails li {
   margin-bottom: 1em;
   display: inline;
 }
-ul.configletDetails li a { text-decoration: none; }
-
 ul.configletDetails li.configletDescription {
   display: block;
   color: &dtml-discreetColor;;
   font-size: &dtml-fontSmallSize;;
   margin: 0;
-}
-
-/* Additional STX workaround classes */
-.stx table p {
-  margin: 0;
-  padding: 0;
 }
 .stx table {
   border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor; ! important;
@@ -297,8 +270,6 @@ dl.collapsible {
   padding: 0;
 }
 dl.collapsible dt.collapsibleHeader {
-  display: block;
-  float: left;
   background: &dtml-backgroundColor;;
   line-height: 1.2em;
   vertical-align: middle;
@@ -314,13 +285,6 @@ dl.collapsible dd.collapsibleContent {
   padding: 0 1em;
   clear: left;
 }
-
-/* for IE the following isn't needed, that's why the css2 selector is used */
-dl.collapsible dd.collapsibleContent > dl {
-  margin: 0;
-  padding: 0;
-}
-
 dl.expandedInlineCollapsible dt.collapsibleHeader,
 dl.expandedBlockCollapsible dt.collapsibleHeader {
   padding: 0 6px 0 22px;
@@ -332,7 +296,8 @@ dl.collapsedBlockCollapsible {
   height: 1em;
   width: auto;
 }
-dl.collapsedBlockCollapsible dt.collapsibleHeader {
+dl.collapsedBlockCollapsible dt.collapsibleHeader,
+dl.collapsedInlineCollapsible dt.collapsibleHeader {
   float: none;
   position: static;
   margin: 0;
@@ -342,25 +307,15 @@ dl.collapsedBlockCollapsible dt.collapsibleHeader {
   cursor: pointer;
 }
 dl.collapsedInlineCollapsible dd.collapsibleContent,
-dl.collapsedBlockCollapsible dd.collapsibleContent {
-  display: none;
-}
+dl.collapsedBlockCollapsible dd.collapsibleContent { display: none; }
+
 dl.collapsedInlineCollapsible {
   border: none !important;
   height: 1em;
   width: auto;
   display: inline;
 }
-dl.collapsedInlineCollapsible dt.collapsibleHeader {
-  position: static;
-  float: none;
-  margin: 0;
-  padding: 0 0 0 22px;
-  line-height: 1em;
-  background: url(treeCollapsed.gif) no-repeat 6px 50%;
-  cursor: pointer;
-  display: inline;
-}
+dl.collapsedInlineCollapsible dt.collapsibleHeader, li.formTab { display: inline; }
 .configlet .documentEditable { padding: 0em !important; }
 
 .label {
@@ -383,7 +338,8 @@ dl.collapsedInlineCollapsible dt.collapsibleHeader {
 
 /* for highlighting of search terms */
 .highlightedSearchTerm { background-color: #ffa; }
-dl.searchResults .highlightedSearchTerm { font-weight: bold; }
+dl.searchResults .highlightedSearchTerm,
+ul.configlets li label, ul.configletDetails li label { font-weight: bold; }
 /* for greying out inherited roles */
 .noInheritedRoles { color: #a0a0a0; }
 
@@ -407,14 +363,9 @@ ul.formTabs {
   list-style-type: none;
   text-align: center;
 }
-li.formTab {
-  display: inline;
-  margin: 0;
-  padding: 0;
-}
 li.formTab a {
-    /* this isn't supported by all browsers, so we keep it in a separate rule */
-    display: inline-block;
+  /* this isn't supported by all browsers, so we keep it in a separate rule */
+  display: inline-block;
 }
 li.formTab a {
   border-top: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
@@ -440,9 +391,8 @@ li.formTab a.notify {
   color: &dtml-fontColor;;
 }
 li.formTab a.required span {
-  background-image: url(&dtml-portal_url;/required.gif);
+  background: url(&dtml-portal_url;/required.gif) no-repeat;
   background-position: center right;
-  background-repeat: no-repeat;
   padding-right: 8px;
 }
 li.formTab a.notify:hover { background-color: &dtml-notifyBorderColor;; }
