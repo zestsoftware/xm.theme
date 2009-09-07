@@ -1,24 +1,15 @@
 /* <dtml-with base_properties> (do not remove this :) */
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 
-
-/* Accessibility elements, applied by JS */
 body.largeText { font-size: 95%; }
 body.smallText { font-size: 60%; }
-
-/* Padding for the columns */
-#portal-column-one .visualPadding {
-  padding: 20px 0 11px 22px;
-}
-#portal-column-two .visualPadding {
-  padding: 2em 2em 1em 0em;
-}
+#portal-column-one .visualPadding { padding: 20px 0 11px 22px; }
+#portal-column-two .visualPadding { padding: 2em 2em 1em 0em; }
 
 /* Compensate for the inline editing hover, since we have a 1px border */
 body.kssActive h2.inlineEditable:hover,
-body.kssActive h1.inlineEditable:hover {
-  padding-bottom: 1px;
-}
+body.kssActive h1.inlineEditable:hover { padding-bottom: 1px; }
+
 .documentFirstHeading {
   color: #505050;
   border-top: none;
@@ -26,10 +17,7 @@ body.kssActive h1.inlineEditable:hover {
 }
 .documentFirstHeading img, .documentEditable #contentTopLeft,
 .documentEditable #contentTopRight, #breadcrumbs-you-are-here,
-.default_arrow {
-  display: none;
-}
-#content a:target { background-color: #fd7 !important; }
+.default_arrow { display: none; }
 
 /* rounded corners content */
 #contentTopLeft, #contentTopRight { top: -1px; }
@@ -51,9 +39,8 @@ body.kssActive h1.inlineEditable:hover {
   right: -1px;
   background: url(&dtml-portal_url;/rounded_top_right.gif) no-repeat top right;
 }
-#contentBottomLeft, #contentBottomRight, #contentTopLeft {
-  left: -1px;
-}
+#contentBottomLeft, #contentBottomRight, #contentTopLeft { left: -1px; }
+
 #contentBottomLeft {
   background: url(&dtml-portal_url;/rounded_bottom_left.gif) no-repeat top left;
 }
@@ -87,8 +74,6 @@ body.kssActive h1.inlineEditable:hover {
   list-style-type: square;
   margin: 0.5em 0 0 1.5em;
 }
-.documentContent ol { margin: 0.5em 0 0 2.5em; }
-
 .documentContent p a, .card a, .card a:hover, table.listing a,
 .listingBar a, .tileHeadline a, .documentContent a, 
 .documentContent li a  {
@@ -117,8 +102,6 @@ body.kssActive h1.inlineEditable:hover {
   top: 1px;
   background: #FEFEFE url(&dtml-portal_url;/background_top.gif) no-repeat scroll 0 0;
 }
-.kupu-fulleditor-zoomed #portal-top { z-index: 1; }
-
 #portal-siteactions, .LSRes, .LSRow,
 .newsContent ul, .newsContent li,
 .newsAbout, .documentActions ul,
@@ -505,8 +488,6 @@ dl.error dt {
   color: &dtml-discreetColor;;
   margin-bottom: 0.5em;
 }
-dl.searchResults span.documentByLine { display: block; }
-
 #category ul {
   display: inline;
   margin: 0;
@@ -559,8 +540,6 @@ dl.searchResults span.documentByLine { display: block; }
   padding: 1em 0 0.5em 0;
   width: 100px;
 }
-.portraitPhoto { border: 1px solid black; }
-
 /* LS - table extra-design*/
 .nosort, #user-group-sharing-head th {
   border-top: &dtml-borderWidth; &dtml-borderStyle; #d1d0cb;
@@ -595,8 +574,6 @@ tfoot .total {
   text-align: left;
   text-transform: &dtml-textTransform;;
 }
-tfoot .total { font-weight: bold; }
-
 table.listing .top {
   border-left: &dtml-borderWidth; &dtml-borderStyle; #c0bfbf;
   border-top: &dtml-borderWidth; &dtml-borderStyle; #c0bfbf !important;
@@ -604,19 +581,17 @@ table.listing .top {
   text-align: right ! important;
   padding: 0em 0em 1em 0em;
 }
-table.listing .listingCheckbox { text-align: center; }
-
 table.listing td,
 .stx table td,
 .td-story-title {
   border-right: medium none !important;
   padding: 4px 10px;
 }
-table.listing img { vertical-align: middle; }
 
+table.listing .listingCheckbox { text-align: center; }
+table.listing img { vertical-align: middle; }
 table.listing td a label,
 .stx table td a label { cursor: pointer; }
-/* Vertical addition class */
 table.vertical { background-color: &dtml-backgroundColor;; }
 table.vertical th { padding: 0.5em; }
 
@@ -674,8 +649,6 @@ table.plain th {
   font-size: 110%;
   font-weight: bold;
 }
-.tileBody { margin-bottom: 0.5em; }
-
 .tileImage {
   float: right;
   margin: 0 0 0.5em 0.5em;
@@ -696,8 +669,6 @@ ul.discreet {
   list-style-image: none;    
   list-style-type: disc;
 }
-textarea.proportional { font: 100% <dtml-var fontFamily>; }
-
 .feedButton {
   display: block; 
   float: right; 
@@ -719,8 +690,6 @@ a.link-parent {
   font-size: &dtml-fontSmallSize;;
   text-decoration: none;
 }
-#content .link-category { color: #74ae0b !important; }
-
 #content .link-user {
   background: url(&dtml-portal_url;/user.gif) 0 1px no-repeat;
   padding: 1px 0px 1px 16px;
@@ -738,9 +707,6 @@ a.link-parent {
   font-size: 90%;
   text-align: center;
 }
-
-#content .link-wiki-add { color: red; }
-
 /* Protocol-specific links */
 #content a[href ^="mailto:"], #content a.link-mailto, 
 #content a[href ^="news:"], #content a.link-news,
@@ -784,9 +750,6 @@ a.link-parent {
   background-image: none !important;
   padding: 0 !important;
 }
-/* For ghosted elements */
-.visualGhosted { opacity: 0.2; }
-
 /* Kupu image alignment classes */
 .image-left {
   float: left;
@@ -794,8 +757,6 @@ a.link-parent {
   margin: 0.5em 1em 0.5em 0;
   border: 1px solid Black;
 }
-.image-inline { float: none; }
-
 .image-right {
    float: right;
    clear: both;
@@ -806,13 +767,25 @@ dd.image-caption {
    text-align:left;
    padding: 0; margin:0;
 }
-dl.captioned { padding: 10px; }
-div.managedPortlet.portlet { border-bottom: none; }
-.portletAssignments { margin-top: 1.5em; }
-/* manage portlets */
 .section div {
   padding-top: 0.5em;
   padding-bottom: 0.5em;
 }
+.visualGhosted { opacity: 0.2; }
+.image-inline { float: none; }
+dl.captioned { padding: 10px; }
+div.managedPortlet.portlet { border-bottom: none; }
+.portletAssignments { margin-top: 1.5em; }
 
+#content .link-wiki-add { color: red; }
+#content a:target { background-color: #fd7 !important; }
+.documentContent ol { margin: 0.5em 0 0 2.5em; }
+#content .link-category { color: #74ae0b !important; }
+textarea.proportional { font: 100% <dtml-var fontFamily>; }
+
+.tileBody { margin-bottom: 0.5em; }
+tfoot .total { font-weight: bold; }
+.kupu-fulleditor-zoomed #portal-top { z-index: 1; }
+dl.searchResults span.documentByLine { display: block; }
+.portraitPhoto { border: 1px solid black; }
 /* </dtml-with> */

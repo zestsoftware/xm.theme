@@ -1,31 +1,12 @@
-/*
-** Plone Print style sheet for CSS2-capable browsers.
-** Copyright Plone Foundation, et al
-**
-** Style sheet documentation can be found at http://plone.org/documentation
-**
-** You should preferrably use ploneCustom.css to add your own CSS classes and to
-** customize your portal, as these are the base fundaments of Plone, and will 
-** change and be refined in newer versions. Keeping your changes in
-** ploneCustom.css will make it easier to upgrade. 
-**
-** Feel free to use whole or parts of this for your own designs, but give credit
-** where credit is due.
-**
-*/
-
 body {
   font-family: Verdana, Arial, Sans-serif;
   font-size: 10pt !important;
 }
 
-h1 {
-  font-size: 120%;
-}
-
-h2 {
-  font-size: 100%;
-}
+h1 { font-size: 120%; }
+h2 { font-size: 100%; }
+div, p, ul, dl, ol { width: auto; }
+div.pageBreak { page-break-before: always; }
 
 h1, h2, h3, h4, h5, h6 {
   border: none;
@@ -33,21 +14,10 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 2px;
 }
 
-div, p, ul, dl, ol {
-  width: auto;
-}
-
-ul, ol, dl {
-  padding-right: 0.5em;	
-}
-
-ul { 
-  list-style-type: square;
-}
-
-.documentDescription {
-  font-weight: bold;
-}
+ul, ol, dl { padding-right: 0.5em; }
+ul { list-style-type: square; }
+.documentDescription { font-weight: bold; }
+a:link, a:visited { color: #520; }
 
 pre {
   border: 1pt dotted black;
@@ -56,43 +26,21 @@ pre {
   overflow: auto;
   padding: 1em 0;
 }
-
 a {
-  color: Black !important;
+  color: #000 !important;
   padding: 0 !important;
   text-decoration: none !important;
 }
-
-a:link, a:visited {
-  color: #520;
-}
-
-/* Page break class for use when printing */
-div.pageBreak {
-  page-break-before: always;
-}
-
 h1#project-header {
   font-size: 16pt;
   margin-bottom: 5px;
   margin-top: 0px;
 }
-
 h1.documentFirstHeading {
   font-size: 14pt;
   margin-bottom: 5px;
   margin-top: 0px;
 }
-
-/* Uncomment these to get link addresses inserted along with the link text
-   when you print.
-#content a:link:after, 
-#content a:visited:after {
-   content: " [" attr(href) "] ";
-}
-*/
-
-/* Hide all the elements that are irrelevant for printing */
 div.top,
 #portal-logo,
 #portal-siteactions,
@@ -125,19 +73,13 @@ div.top,
 #project-header,
 .discussion input,
 .myProject {
-    display: none;
+  display: none;
 }
-
-.td-story-title a {
-  font-weight: normal;
-}
-
 table.listing, .stx table {
   border: 1px solid #C0BFBF !important;
   font-size: 85%;
   margin: 1em 0em;
 }
-
 table.listing td, .stx table td {
   border: none;
   border-top: 1px solid #C0BFBF;
@@ -145,43 +87,27 @@ table.listing td, .stx table td {
   border-collapse: collapse;
   border-spacing: 0;
 }
-
 table.listing th, .stx table th {
   border: none;
   padding: 0.25em 0.5em;
   text-transform: lowercase;
 }
-
-#totalTasks th {
-  border-top: 1px solid #C0BFBF;
-}
-
 .visualClear {
   clear:both;
   display:block;
 }
-
-/* *** Offer print view ** */
-
-#offerView {
-  border: none !important;
-}
-
-#offerView h2 {
-  font-size: 100% !important;
-}
-
 h2.offer-story-estimate-header,
 h2.offer-story-header {
   font-size: 100% !important;
   font-weight: normal !important;
 }
-
 .storyTitle-storyEstimate td {
   border-bottom: 1px solid #8CACBB !important;
   border-top: none !important;
 }
 
-#offerViewHeader h2 {
-  border-bottom: none !important;
-}
+#offerView { border: none !important; }
+#offerView h2 { font-size: 100% !important; }
+#offerViewHeader h2 { border-bottom: none !important; }
+#totalTasks th { border-top: 1px solid #C0BFBF; }
+.td-story-title a { font-weight: normal; }
