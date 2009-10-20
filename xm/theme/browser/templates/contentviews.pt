@@ -1,4 +1,4 @@
-<div i18n:domain="plone" 
+<div i18n:domain="plone"
      tal:omit-tag=""
      tal:define="ploneview context/@@plone;"
      tal:condition="ploneview/showEditableBorder">
@@ -27,7 +27,7 @@
               </li>
             </tal:views>
         </ul>
-        
+
     </tal:block>
 
 </div>

@@ -7,7 +7,7 @@
     tal:condition="python:view.user_actions or not view.anonymous"
     class="visualInline">
    <tal:block condition="not: view/anonymous">
-       <li><a 
+       <li><a
            id="user-name"
            tal:attributes="href string:${view/site_url}/personalize_form"
           ><img src="" tal:replace="structure here/user.gif" />
@@ -24,7 +24,7 @@
             <a href=""
                tal:attributes="href action/url;
                                class python:icon is not None and 'visualIconPadding' or nothing;"
-            ><tal:actionname i18n:translate="" 
+            ><tal:actionname i18n:translate=""
                              tal:content="action/title">dummy</tal:actionname
             ></a>
         </li>

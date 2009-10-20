@@ -8,9 +8,9 @@
     <label for="searchGadget" class="hiddenStructure"
            i18n:translate="text_search">Search Site</label>
     <div class="LSBox">
-    
+
       <div class="searchIcon"></div>
-     
+
      <div class="searchGadgetFix" i18n:domain="xm.theme">
        <span tal:omit-tag=""
              tal:condition="python: view.checkPermission('eXtremeManagement: Add Booking', here)">
@@ -41,20 +41,20 @@
              tal:attributes="value request/SearchableText|nothing;
                              id view/search_input_id"
              class="inputLabel" />
-          
+
        <div class="searchDiv">
                 <input class="searchButton"
                         type="submit"
                         value="Search"
                         i18n:attributes="value label_search;" />
        <span></span>
-       </div> 
-   
+       </div>
+
      <div class="LSResult" id="LSResult" style=""><div class="LSShadow" id="LSShadow"></div></div>
 
      </div>
   </form>
-  
+
 
 
   <div id="portal-advanced-search"

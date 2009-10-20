@@ -148,7 +148,7 @@
         layer=".interfaces.IThemeSpecific"
         />
 
-    <!-- Overriding path_bar template -->    
+    <!-- Overriding path_bar template -->
     <browser:viewlet
         name="plone.path_bar"
         layer=".interfaces.IThemeSpecific"

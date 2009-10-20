@@ -22,7 +22,7 @@
      <div class="documentEditable">
 
             <h5 class="hiddenStructure">Views</h5>
-        
+
             <ul class="contentViews">
               <span class="contentViewsLeft"></span>
               <li>
@@ -83,7 +83,7 @@
                                           showAfterPrimary python:after_primary;">
 
                         <legend i18n:translate="legend_personal_details">Personal Details</legend>
-                        
+
                         <tal:macro condition="showTop">
                             <div metal:use-macro="top_macro"/>
                         </tal:macro>
@@ -131,7 +131,7 @@
                                    />
 
                         </div>
-                        
+
                         <tal:macro condition="showAfterPrimary">
                             <div metal:use-macro="after_primary"/>
                         </tal:macro>
@@ -288,7 +288,7 @@
                              <div class="formHelp" i18n:translate="help_content_ext_editor">
                              When checked, an icon will be made visible on each page which allows
                              you to edit content with your favorite editor instead of using
-                             browser-based editors. This requires an additional application 
+                             browser-based editors. This requires an additional application
                              called ExternalEditor installed client-side.
                              Ask your administrator for more information if needed.
                              </div>
@@ -325,7 +325,7 @@
                                                    disabled python:member.canWriteProperty('visible_ids') and default or 'disabled'"
                                    />
 
-                            <label for="cb_invisible_ids" 
+                            <label for="cb_invisible_ids"
                                    i18n:translate="label_edit_short_names">Allow editing of Short Names</label>
 
                             <div class="formHelp" i18n:translate="help_display_names">
@@ -401,11 +401,11 @@
                             <label for="pdelete" i18n:translate="label_delete_portrait">Delete Portrait</label>
 
                         </div>
-                        
+
                         <tal:macro condition="showBottom">
                             <div metal:use-macro="bottom_macro" />
                         </tal:macro>
-                        
+
                         <div class="formControls">
                             <input class="context"
                                    type="submit"

@@ -45,14 +45,14 @@
 
 
         <tal:haveAuthor condition="authorinfo">
- 
+
     <div class="documentEditable"
          tal:define="isOwner python:member.getId()==author"
          tal:attributes="class python: test(isOwner, 'documentEditable', '')">
 
         <h5 class="hiddenStructure"
             tal:condition="isOwner">Views</h5>
-        
+
         <ul class="contentViews"
             tal:condition="isOwner">
           <span class="contentViewsLeft"></span>
@@ -83,7 +83,7 @@
           <span id="contentTopRight"></span>
 
             <a name="documentContent"></a>
-                    
+
             <div metal:use-macro="here/global_statusmessage/macros/portal_message">
                 Portal status message
             </div>
@@ -121,28 +121,28 @@
                  width="75"
                  style="float: left; margin: 1em;"
                  tal:attributes="src portrait/absolute_url" />
-                      
+
 
             <p class="documentDescription" tal:content="authorinfo/description">
                 Author description.
             </p>
 
             <div class="visualClear"><!-- --></div>
-            
+
             <p tal:condition="python:mtool.getHomeFolder(id=author)">
             <a href="#" tal:attributes="href python:mtool.getHomeFolder(id=author).absolute_url()"
                i18n:translate="label_author_internal_home_page">Author's home page in this site&hellip;</a>
             </p>
 
             <p tal:condition="python: not mtool.getHomeFolder(id=author) and authorinfo['home_page']">
-            <a href="#" 
+            <a href="#"
                rel="nofollow"
                tal:attributes="href authorinfo/home_page"
                i18n:translate="label_author_external_home_page">Author's external home page&hellip;</a>
             </p>
 
             <div class="formControls" tal:condition="isAnon">
-            <form 
+            <form
               tal:define="pss modules/Products/PythonScripts/standard"
               tal:attributes="action string:$portal_url/login_form">
                <input class="standalone"
@@ -153,7 +153,7 @@
             </form>
             </div>
 
-            <!-- feedback form -->        
+            <!-- feedback form -->
             <tal:feedbackForm
                 tal:condition="not:isAnon"
                 tal:define="email_from_address portal/email_from_address">
@@ -162,7 +162,7 @@
                 <p class="discreet"
                    i18n:translate="text_no_email_setup">
                     This site doesn't have a valid email setup, so you cannot use
-                    any contact forms. 
+                    any contact forms.
                 </p>
             </tal:noemailsetup>
 
@@ -195,11 +195,11 @@
                               i18n:translate="label_required">(Required)</span>
 
                       <br />
-                      <input type="text" 
-                             id="subject" 
-                             name="subject" 
-                             size="25" 
-                             value="" 
+                      <input type="text"
+                             id="subject"
+                             name="subject"
+                             size="25"
+                             value=""
                              tal:attributes="value request/subject|nothing"
                              />
                     </div>
@@ -209,7 +209,7 @@
                       <label for="message" i18n:translate="label_message">
                         Message
                       </label>
-        
+
                       <span class="fieldRequired" title="Required"
                               i18n:attributes="title title_required;"
                               i18n:translate="label_required">(Required)</span>
@@ -221,7 +221,7 @@
                                 tal:content="request/message|nothing"
                                 ></textarea>
                     </div>
-        
+
                     <div class="formControls">
 
                         <input class="context"
@@ -235,7 +235,7 @@
                     </fieldset>
 
                     <input type="hidden" name="author" value="" tal:attributes="value author" />
-                    <input type="hidden" name="referer" value="" 
+                    <input type="hidden" name="referer" value=""
                       tal:attributes="value python:request.get('referer', request.get('HTTP_REFERER', 'unknown url') )" />
                     <input type="hidden" name="form.submitted" value="1" />
 
@@ -244,14 +244,14 @@
             </tal:emailsetup>
             </tal:feedbackForm>
             <!-- listing of content created by this user -->
-        
+
             <tal:authorContent define="author_content python:here.author_find_content(author);"
                                condition="author_content">
-        
+
                 <h2 i18n:translate="heading_author_content">
                     Latest content created by this user
                 </h2>
-                
+
                 <div metal:define-macro="user_content_listing">
                 <table class="listing" summary="Lists content written by an author grouped by content type" i18n:attributes="summary summary_author_content_list;">
                     <tal:repeat repeat="content_by_type author_content">
@@ -288,7 +288,7 @@
                 <a href=""
                    tal:attributes="href string:$here_url/search?Creator=${author}&amp;sort_on=Date&amp;sort_order=reverse"
                    i18n:translate="go_to_search_author_content">
-                    All content created by 
+                    All content created by
                     <span i18n:name="user" tal:omit-tag="" tal:content="python:authorinfo['fullname'] or author"/>&hellip;
                 </a>
 
@@ -297,7 +297,7 @@
           <span id="contentBottomRight"></span>
         </div>
     </div> <!-- end simulated tabs -->
-        
+
     </tal:haveAuthor>
 
     </tal:main-macro>
