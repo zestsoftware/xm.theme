@@ -40,7 +40,7 @@ class MyProjectList(Explicit):
 
     @memoize
     def has_projects(self):
-        if len(self.my_projects()) > 1:
+        if len(self.my_projects()) >= 1:
             return True
         return False
 
