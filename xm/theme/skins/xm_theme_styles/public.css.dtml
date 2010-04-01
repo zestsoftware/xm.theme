@@ -46,6 +46,8 @@ body.kssActive h1.inlineEditable:hover { padding-bottom: 1px; }
 }
 #contentBottomRight{
   background: url(&dtml-portal_url;/rounded_bottom_right.gif) no-repeat top right;
+  left: auto;
+  right: -1px;
 }
 .documentContent {
   font-size: 110%;
