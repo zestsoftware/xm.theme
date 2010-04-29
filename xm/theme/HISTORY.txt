@@ -4,6 +4,11 @@ History for xm.theme
 1.0.2 (unreleased)
 ------------------
 
+- Show Plone Site title in the header when you are not in a project,
+  instead of showing hardcoded 'Extreme Management'.
+  Fixes http://plone.org/products/extreme-management-tool/issues/203
+  [maurits]
+
 - cleaned up the other css files [mirella]
 
 - cleaned up IEfixes [mirella]

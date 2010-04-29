@@ -12,6 +12,7 @@ class XMProjectHeaderViewlet(ViewletBase):
         portal_state = getMultiAdapter((self.context, self.request),
                                        name=u'plone_portal_state')
         self.site_url = portal_state.portal_url()
+        self.site_title = portal_state.portal_title()
         self.project_title = self._get_project_title()
         self.project_url = self._get_project_url()
 
@@ -27,7 +28,7 @@ class XMProjectHeaderViewlet(ViewletBase):
         if project is not None and project.title != '':
             return project.title
         else:
-            return u'Extreme Management'
+            return self.site_title
 
     def _get_project_url(self):
         project = self._get_project()
