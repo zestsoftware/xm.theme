@@ -1,8 +1,8 @@
 History for xm.theme
 ====================
 
-1.0.2 (unreleased)
-------------------
+1.1 (2010-05-01)
+----------------
 
 - Show Plone Site title in the header when you are not in a project,
   instead of showing hardcoded 'Extreme Management'.
