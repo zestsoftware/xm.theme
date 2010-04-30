@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: eXtremeManagement theme\n"
-"POT-Creation-Date: 2009-01-22 16:25+0000\n"
+"POT-Creation-Date: 2010-04-30 23:33+0000\n"
 "PO-Revision-Date: 2009-05-19 21:07+0100\n"
 "Last-Translator: Jens Klein <jens@bluedynamics.com>\n"
 "Language-Team: BlueDynamics Alliance <dev@bluedynamics.com>\n"
@@ -35,13 +35,8 @@ msgstr "Sie wurden zu ihrem aktuellsten Projekt weitergeleitet."
 msgid "label_advanced_search"
 msgstr "Erweiterte Suche…"
 
-#. Default: "my project"
-#: ./browser/templates/my_projects.pt:3
-msgid "label_my_project"
-msgstr "Mein Projekt"
-
 #. Default: "my projects"
-#: ./browser/templates/my_projects.pt:16
+#: ./browser/templates/my_projects.pt:18
 msgid "label_my_projects"
 msgstr "Meine Projekte"
 
