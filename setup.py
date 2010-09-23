@@ -9,7 +9,6 @@ setup(name='xm.theme',
       description="Theme for eXtremeManagement",
       long_description="""\
 """,
-      # Get more strings from http://www.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
         "Framework :: Plone",
         "Framework :: Zope2",
@@ -28,10 +27,10 @@ setup(name='xm.theme',
       zip_safe=False,
       install_requires=[
           'setuptools',
-          # -*- Extra requirements: -*-
           'Products.eXtremeManagement>=2.0alpha3',
       ],
       entry_points="""
-      # -*- Entry points: -*-
+      [z3c.autoinclude.plugin]
+      target = plone
       """,
       )
