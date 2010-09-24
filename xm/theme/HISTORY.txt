@@ -1,7 +1,7 @@
 History for xm.theme
 ====================
 
-1.2 (unreleased)
+1.2 (2010-09-24)
 ----------------
 
 - Added z3c.autoinclude.plugin target plone.
