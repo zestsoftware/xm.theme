@@ -101,7 +101,7 @@
       name="plone.contentviews"
       layer=".interfaces.IThemeSpecific"
       manager="plone.app.layout.viewlets.interfaces.IContentViews"
-      template="templates/contentviews.pt"
+      class=".viewlets.XMContentViewsViewlet"
       permission="zope2.View"
       />
 

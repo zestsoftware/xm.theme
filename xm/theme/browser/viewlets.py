@@ -1,6 +1,13 @@
 from Products.CMFCore.utils import getToolByName
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone.app.layout.viewlets.common import ViewletBase
+
+try:
+    # Plone 4
+    from plone.app.layout.viewlets.common import ContentViewsViewlet
+except ImportError:
+    # Plone 3 only had a template here, not a class
+    ContentViewsViewlet = ViewletBase
 from zope.component import getMultiAdapter
 from kss.core import KSSView, kssaction
 
@@ -115,3 +122,7 @@ class KSSFullname(KSSView):
                 user_name = userid
 
             self.getCommandSet('core').replaceInnerHTML('.userName', user_name)
+
+
+class XMContentViewsViewlet(ContentViewsViewlet):
+    index = ViewPageTemplateFile('templates/contentviews.pt')
