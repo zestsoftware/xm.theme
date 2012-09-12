@@ -1,6 +1,12 @@
 History for xm.theme
 ====================
 
+1.4 (unreleased)
+----------------
+
+- Nothing changed yet.
+
+
 1.3 (2012-09-12)
 ----------------
 
