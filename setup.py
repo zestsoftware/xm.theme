@@ -1,11 +1,7 @@
 from setuptools import setup, find_packages
-import os.path
-
-versionfile = os.path.join('xm', 'theme', 'version.txt')
-version = open(versionfile).read().strip()
 
 setup(name='xm.theme',
-      version=version,
+      version='1.3.dev0',
       description="Theme for eXtremeManagement",
       long_description="""\
 """,
