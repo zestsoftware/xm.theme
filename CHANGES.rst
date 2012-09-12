@@ -4,6 +4,9 @@ History for xm.theme
 1.3 (unreleased)
 ----------------
 
+- Moved to github: https://github.com/zestsoftware/xm.theme
+  [maurits]
+
 - Let the plone.contentviews viewlet work in both Plone 3 and 4,
   without AttributeError in Plone 4 for prepareObjectTabs.
   [maurits]
